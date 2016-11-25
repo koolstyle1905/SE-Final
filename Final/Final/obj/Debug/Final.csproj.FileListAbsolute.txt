@@ -1,0 +1,9 @@
+C:\Users\seven  64bit\Desktop\Final\Final\Final\bin\Debug\Final.exe.config
+C:\Users\seven  64bit\Desktop\Final\Final\Final\bin\Debug\Final.exe
+C:\Users\seven  64bit\Desktop\Final\Final\Final\bin\Debug\Final.pdb
+C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.csprojResolveAssemblyReference.cache
+C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.Form1.resources
+C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.Properties.Resources.resources
+C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.csproj.GenerateResource.Cache
+C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.exe
+C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.pdb
