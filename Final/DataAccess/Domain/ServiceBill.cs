@@ -9,12 +9,11 @@ namespace DataAccess.Domain
     public partial class ServiceBill
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int BillID { get; set; }
+        public string BillID { get; set; }
 
-        public int? RoomID { get; set; }
+        public string RoomID { get; set; }
 
-        public int? StudentID { get; set; }
+        public string StudentID { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

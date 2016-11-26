@@ -15,10 +15,9 @@ namespace DataAccess.Domain
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ContractID { get; set; }
+        public string ContractID { get; set; }
 
-        public int? StudentID { get; set; }
+        public string StudentID { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

@@ -14,8 +14,7 @@ namespace DataAccess.Domain
             Classes = new HashSet<Class>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int FacultyID { get; set; }
+        public string FacultyID { get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }

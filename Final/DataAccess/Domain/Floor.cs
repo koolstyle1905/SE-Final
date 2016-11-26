@@ -14,10 +14,9 @@ namespace DataAccess.Domain
             Rooms = new HashSet<Room>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int FloorID { get; set; }
+        public string FloorID { get; set; }
 
-        public int BuildingID { get; set; }
+        public string BuildingID { get; set; }
 
         public virtual Building Building { get; set; }
 

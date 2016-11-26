@@ -14,10 +14,9 @@ namespace DataAccess.Domain
             Students = new HashSet<Student>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ClassID { get; set; }
+        public string ClassID { get; set; }
 
-        public int? FacultyID { get; set; }
+        public string FacultyID { get; set; }
 
         public virtual Faculty Faculty { get; set; }
 

@@ -10,12 +10,11 @@ namespace DataAccess.Domain
     public partial class DamageClaim
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ClaimID { get; set; }
+        public string ClaimID { get; set; }
 
-        public int? StudentID { get; set; }
+        public string StudentID { get; set; }
 
-        public int? EmployeeID { get; set; }
+        public string EmployeeID { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

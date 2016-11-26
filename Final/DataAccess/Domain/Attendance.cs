@@ -15,10 +15,9 @@ namespace DataAccess.Domain
             Students = new HashSet<Student>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int AttendanceId { get; set; }
+        public string AttendanceId { get; set; }
 
-        public int? StudentID { get; set; }
+        public string StudentID { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

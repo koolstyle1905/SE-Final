@@ -10,10 +10,9 @@ namespace DataAccess.Domain
     public partial class Carer
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CareID { get; set; }
+        public string CareID { get; set; }
 
-        public int StudentID { get; set; }
+        public string StudentID { get; set; }
 
         [StringLength(50)]
         public string Job { get; set; }

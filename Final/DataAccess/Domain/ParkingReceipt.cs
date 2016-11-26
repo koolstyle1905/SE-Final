@@ -10,13 +10,11 @@ namespace DataAccess.Domain
     {
         [Key]
         [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int TicketID { get; set; }
+        public string TicketID { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int EmployeeID { get; set; }
+        public string EmployeeID { get; set; }
 
         [Column(TypeName = "money")]
         public decimal TotalPrice { get; set; }

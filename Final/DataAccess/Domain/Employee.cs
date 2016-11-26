@@ -20,8 +20,7 @@ namespace DataAccess.Domain
             TemporaryAbsences = new HashSet<TemporaryAbsence>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int EmployeeID { get; set; }
+        public string EmployeeID { get; set; }
 
 		[Required]
         [StringLength(20)]

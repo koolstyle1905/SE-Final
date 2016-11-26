@@ -22,14 +22,13 @@ namespace DataAccess.Domain
             Priorities = new HashSet<Priority>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int StudentID { get; set; }
+        public string StudentID { get; set; }
 
-        public int ClubID { get; set; }
+        public string ClubID { get; set; }
 
-        public int ClassID { get; set; }
+        public string ClassID { get; set; }
 
-        public int RoomID { get; set; }
+        public string RoomID { get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }

@@ -14,7 +14,7 @@ namespace DataAccess.Domain
             Floors = new HashSet<Floor>();
         }
 
-        public int BuildingID { get; set; }
+        public string BuildingID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Floor> Floors { get; set; }

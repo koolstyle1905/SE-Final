@@ -10,13 +10,11 @@ namespace DataAccess.Domain
     {
         [Key]
         [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int StudentID { get; set; }
+        public string StudentID { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ContractID { get; set; }
+        public string ContractID { get; set; }
 
         public DateTime EndDate { get; set; }
 

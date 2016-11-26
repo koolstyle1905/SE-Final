@@ -9,12 +9,11 @@ namespace DataAccess.Domain
     [Table("Discipline")]
     public partial class Discipline
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int DisciplineId { get; set; }
+        public string DisciplineId { get; set; }
 
-        public int StudentID { get; set; }
+        public string StudentID { get; set; }
 
-        public int EmployeeID { get; set; }
+        public string EmployeeID { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Description { get; set; }

@@ -14,8 +14,7 @@ namespace DataAccess.Domain
             Students = new HashSet<Student>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PriorityID { get; set; }
+        public string PriorityID { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Content { get; set; }

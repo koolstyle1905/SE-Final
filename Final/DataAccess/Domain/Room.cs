@@ -15,10 +15,9 @@ namespace DataAccess.Domain
             Students = new HashSet<Student>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RoomID { get; set; }
+        public string RoomID { get; set; }
 
-        public int FloorID { get; set; }
+        public string FloorID { get; set; }
 
         public int NumOfStudent { get; set; }
 

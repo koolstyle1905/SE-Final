@@ -9,12 +9,11 @@ namespace DataAccess.Domain
     public partial class TemporaryAbsence
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int AbsenceID { get; set; }
+        public string AbsenceID { get; set; }
 
-        public int StudentID { get; set; }
+        public string StudentID { get; set; }
 
-        public int EmployeeID { get; set; }
+        public string EmployeeID { get; set; }
 
         public DateTime StartDate { get; set; }
 

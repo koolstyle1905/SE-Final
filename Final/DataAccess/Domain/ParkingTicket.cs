@@ -15,10 +15,9 @@ namespace DataAccess.Domain
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int TicketID { get; set; }
+        public string TicketID { get; set; }
 
-        public int? StudentID { get; set; }
+        public string StudentID { get; set; }
 
         [StringLength(50)]
         public string OwnerName { get; set; }

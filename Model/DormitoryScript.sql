@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2012                    */
-/* Created on:     11/26/2016 8:04:55 PM                        */
+/* Created on:     11/26/2016 10:38:23 PM                       */
 /*==============================================================*/
 
 
@@ -590,8 +590,8 @@ if exists (select 1
    drop table TemporaryAbsences
 go
 
-if exists(select 1 from systypes where name='ID_INT')
-   drop type ID_INT
+if exists(select 1 from systypes where name='ID_10')
+   drop type ID_10
 go
 
 if exists(select 1 from systypes where name='NDATE')
@@ -619,10 +619,10 @@ if exists(select 1 from systypes where name='NVARCHAR50')
 go
 
 /*==============================================================*/
-/* Domain: ID_INT                                               */
+/* Domain: ID_10                                                */
 /*==============================================================*/
-create type ID_INT
-   from int not null
+create type ID_10
+   from nvarchar(10) not null
 go
 
 /*==============================================================*/
@@ -671,8 +671,8 @@ go
 /* Table: Attendance                                            */
 /*==============================================================*/
 create table Attendance (
-   AttendanceId         ID_INT               not null,
-   StudentID            ID_INT               null,
+   AttendanceId         ID_10                not null,
+   StudentID            ID_10                null,
    CreatedDate          NDATE                not null,
    constraint PK_ATTENDANCE primary key nonclustered (AttendanceId)
 )
@@ -690,8 +690,8 @@ go
 /* Table: AttendanceDetail                                      */
 /*==============================================================*/
 create table AttendanceDetail (
-   AttendanceId         ID_INT               not null,
-   PersonID             ID_INT               not null,
+   AttendanceId         ID_10                not null,
+   PersonID             ID_10                not null,
    constraint PK_ATTENDANCEDETAIL primary key (AttendanceId, PersonID)
 )
 go
@@ -716,7 +716,7 @@ go
 /* Table: Buildings                                             */
 /*==============================================================*/
 create table Buildings (
-   BuildingID           ID_INT               not null,
+   BuildingID           ID_10                not null,
    constraint PK_BUILDINGS primary key nonclustered (BuildingID)
 )
 go
@@ -725,8 +725,8 @@ go
 /* Table: Carer                                                 */
 /*==============================================================*/
 create table Carer (
-   CareID               ID_INT               not null,
-   StudentID            ID_INT               null,
+   CareID               ID_10                not null,
+   StudentID            ID_10                null,
    Job                  NVARCHAR50           null,
    Name                 NVARCHAR50           null,
    Gender               NVARCHAR20           null,
@@ -750,8 +750,8 @@ go
 /* Table: Classes                                               */
 /*==============================================================*/
 create table Classes (
-   ClassID              ID_INT               not null,
-   FacultyID            ID_INT               null,
+   ClassID              ID_10                not null,
+   FacultyID            ID_10                null,
    constraint PK_CLASSES primary key nonclustered (ClassID)
 )
 go
@@ -768,7 +768,7 @@ go
 /* Table: Clubs                                                 */
 /*==============================================================*/
 create table Clubs (
-   ClubID               ID_INT               not null,
+   ClubID               ID_10                not null,
    Name                 NVARCHAR50           null,
    constraint PK_CLUBS primary key nonclustered (ClubID)
 )
@@ -778,9 +778,9 @@ go
 /* Table: DamageClaim                                           */
 /*==============================================================*/
 create table DamageClaim (
-   ClaimID              ID_INT               not null,
-   StudentID            ID_INT               null,
-   EmployeeID           ID_INT               null,
+   ClaimID              ID_10                not null,
+   StudentID            ID_10                null,
+   EmployeeID           ID_10                null,
    CreatedDate          NDATE                not null,
    TotalPrice           money                not null,
    constraint PK_DAMAGECLAIM primary key nonclustered (ClaimID)
@@ -807,9 +807,9 @@ go
 /* Table: Discipline                                            */
 /*==============================================================*/
 create table Discipline (
-   DisciplineId         ID_INT               not null,
-   StudentID            ID_INT               null,
-   EmployeeID           ID_INT               null,
+   DisciplineId         ID_10                not null,
+   StudentID            ID_10                null,
+   EmployeeID           ID_10                null,
    Description          NTEXT1               null,
    CreatedDate          NDATE                not null,
    constraint PK_DISCIPLINE primary key nonclustered (DisciplineId)
@@ -836,7 +836,7 @@ go
 /* Table: Employees                                             */
 /*==============================================================*/
 create table Employees (
-   EmployeeID           ID_INT               not null,
+   EmployeeID           ID_10                not null,
    Username             NVARCHAR20           null,
    Password             NVARCHAR20           null,
    Position             NVARCHAR20           null,
@@ -854,7 +854,7 @@ go
 /* Table: Faculties                                             */
 /*==============================================================*/
 create table Faculties (
-   FacultyID            ID_INT               not null,
+   FacultyID            ID_10                not null,
    Name                 NVARCHAR50           null,
    constraint PK_FACULTIES primary key nonclustered (FacultyID)
 )
@@ -864,8 +864,8 @@ go
 /* Table: Floors                                                */
 /*==============================================================*/
 create table Floors (
-   FloorID              ID_INT               not null,
-   BuildingID           ID_INT               null,
+   FloorID              ID_10                not null,
+   BuildingID           ID_10                null,
    constraint PK_FLOORS primary key nonclustered (FloorID)
 )
 go
@@ -882,8 +882,8 @@ go
 /* Table: LateArrivalInfo                                       */
 /*==============================================================*/
 create table LateArrivalInfo (
-   LateID               ID_INT               not null,
-   StudentID            ID_INT               null,
+   LateID               ID_10                not null,
+   StudentID            ID_10                null,
    WorkingAddress       NTEXT1               null,
    ArrivalTime          NDATE                not null,
    CreatedDate          NDATE                not null,
@@ -904,8 +904,8 @@ go
 /* Table: LeaseContracts                                        */
 /*==============================================================*/
 create table LeaseContracts (
-   ContractID           ID_INT               not null,
-   StudentID            ID_INT               null,
+   ContractID           ID_10                not null,
+   StudentID            ID_10                null,
    CreatedDate          NDATE                not null,
    constraint PK_LEASECONTRACTS primary key nonclustered (ContractID)
 )
@@ -923,8 +923,8 @@ go
 /* Table: LeaseReceipts                                         */
 /*==============================================================*/
 create table LeaseReceipts (
-   StudentID            ID_INT               not null,
-   ContractID           ID_INT               not null,
+   StudentID            ID_10                not null,
+   ContractID           ID_10                not null,
    EndDate              NDATE                not null,
    TotalPrice           money                null,
    constraint PK_LEASERECEIPTS primary key (StudentID, ContractID)
@@ -951,8 +951,8 @@ go
 /* Table: ParkingReceipts                                       */
 /*==============================================================*/
 create table ParkingReceipts (
-   TicketID             ID_INT               not null,
-   EmployeeID           ID_INT               not null,
+   TicketID             ID_10                not null,
+   EmployeeID           ID_10                not null,
    TotalPrice           money                not null,
    EndDate              NDATE                not null,
    constraint PK_PARKINGRECEIPTS primary key (TicketID, EmployeeID)
@@ -979,8 +979,8 @@ go
 /* Table: ParkingTickets                                        */
 /*==============================================================*/
 create table ParkingTickets (
-   TicketID             ID_INT               not null,
-   StudentID            ID_INT               null,
+   TicketID             ID_10                not null,
+   StudentID            ID_10                null,
    OwnerName            NVARCHAR50           null,
    OwnerAddress         NTEXT1               null,
    VehicleType          NVARCHAR50           null,
@@ -1004,7 +1004,7 @@ go
 /* Table: Priorities                                            */
 /*==============================================================*/
 create table Priorities (
-   PriorityID           ID_INT               not null,
+   PriorityID           ID_10                not null,
    Content              NTEXT1               null,
    constraint PK_PRIORITIES primary key nonclustered (PriorityID)
 )
@@ -1014,8 +1014,8 @@ go
 /* Table: PriorityTarget                                        */
 /*==============================================================*/
 create table PriorityTarget (
-   StudentID            ID_INT               not null,
-   PriorityID           ID_INT               not null,
+   StudentID            ID_10                not null,
+   PriorityID           ID_10                not null,
    constraint PK_PRIORITYTARGET primary key (StudentID, PriorityID)
 )
 go
@@ -1040,8 +1040,8 @@ go
 /* Table: Rooms                                                 */
 /*==============================================================*/
 create table Rooms (
-   RoomID               ID_INT               not null,
-   FloorID              ID_INT               null,
+   RoomID               ID_10                not null,
+   FloorID              ID_10                null,
    NumOfStudent         int                  not null default 0
       constraint CKC_NUMOFSTUDENT_ROOMS check (NumOfStudent between 0 and 8),
    constraint PK_ROOMS primary key nonclustered (RoomID)
@@ -1060,9 +1060,9 @@ go
 /* Table: ServiceBills                                          */
 /*==============================================================*/
 create table ServiceBills (
-   BillID               ID_INT               not null,
-   RoomID               ID_INT               null,
-   StudentID            ID_INT               null,
+   BillID               ID_10                not null,
+   RoomID               ID_10                null,
+   StudentID            ID_10                null,
    CreatedDate          NDATE                not null,
    TotalPrice           money                not null,
    constraint PK_SERVICEBILLS primary key nonclustered (BillID)
@@ -1089,10 +1089,10 @@ go
 /* Table: Students                                              */
 /*==============================================================*/
 create table Students (
-   StudentID            ID_INT               not null,
-   ClubID               ID_INT               null,
-   ClassID              ID_INT               null,
-   RoomID               ID_INT               null,
+   StudentID            ID_10                not null,
+   ClubID               ID_10                null,
+   ClassID              ID_10                null,
+   RoomID               ID_10                null,
    Name                 NVARCHAR50           null,
    Gender               NVARCHAR20           null,
    DateOfBirth          NDATE                not null,
@@ -1137,9 +1137,9 @@ go
 /* Table: TemporaryAbsences                                     */
 /*==============================================================*/
 create table TemporaryAbsences (
-   AbsenceID            ID_INT               not null,
-   StudentID            ID_INT               null,
-   EmployeeID           ID_INT               null,
+   AbsenceID            ID_10                not null,
+   StudentID            ID_10                null,
+   EmployeeID           ID_10                null,
    StartDate            NDATE                not null,
    NumOfAbsence         int                  not null,
    Reason               NTEXT1               null,
