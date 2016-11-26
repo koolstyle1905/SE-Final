@@ -18,7 +18,7 @@ namespace DataAccess.Domain
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RoomID { get; set; }
 
-        public int? FloorID { get; set; }
+        public int FloorID { get; set; }
 
         public int NumOfStudent { get; set; }
 

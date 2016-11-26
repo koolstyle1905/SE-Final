@@ -57,19 +57,19 @@ namespace DataAccess.Domain
         [StringLength(50)]
         public string Religion { get; set; }
 
-        public int Course { get; set; }
-
         [StringLength(20)]
         public string Position { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Carer> Carers { get; set; }
+        public int Course { get; set; }
 
         public virtual Class Class { get; set; }
 
         public virtual Club Club { get; set; }
 
         public virtual Room Room { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Carer> Carers { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DamageClaim> DamageClaims { get; set; }
