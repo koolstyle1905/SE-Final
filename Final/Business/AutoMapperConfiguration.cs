@@ -16,6 +16,7 @@
 				c.CreateMap<Carer, CarerDto>();
 				c.CreateMap<Employee, EmployeeDto>();
 				c.CreateMap<Floor, FloorDto>();
+				c.CreateMap<Room, RoomDto>();
 				c.CreateMap<Student, StudentDto>();
 
 				c.CreateMap<BuildingDto, Building>();

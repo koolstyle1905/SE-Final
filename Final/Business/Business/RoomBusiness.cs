@@ -6,6 +6,7 @@
 	using System.Text;
 	using System.Threading.Tasks;
 	using System.Windows.Forms;
+	using AutoMapper;
 	using DataAccess;
 	using DataAccess.Domain;
 	using DataTransfer;
@@ -27,6 +28,15 @@
 					}
 					treeView.Nodes.Add(parent);
 				}
+			}
+		}
+
+		public static List<RoomDto> GetRoomsByFloorID(string floorID)
+		{
+			using (var unitOfWork = new UnitOfWork())
+			{
+				var rooms = unitOfWork.Rooms.FindBy(r => r.FloorID == floorID).ToList();
+				return Mapper.Map<List<Room>, List<RoomDto>>(rooms);
 			}
 		}
 	}

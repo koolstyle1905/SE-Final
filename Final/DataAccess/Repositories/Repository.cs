@@ -28,7 +28,7 @@
 			}
 		}
 
-		public TEntity FindById(string id)
+		public TEntity FindByID(string id)
 		{
 			return this.dbSet.Find(id);
 		}

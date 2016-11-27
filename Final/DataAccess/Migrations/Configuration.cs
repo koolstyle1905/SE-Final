@@ -42,8 +42,8 @@
 			//System.Diagnostics.Debugger.Launch();
 
 			var buildings = new List<Building>();
-			buildings.Add(new Building() { BuildingID = BuildingName.G.ToString() });
 			buildings.Add(new Building() { BuildingID = BuildingName.H.ToString() });
+			buildings.Add(new Building() { BuildingID = BuildingName.I.ToString() });
 
 			var floors = new List<Floor>();
 			var rooms = new List<Room>();
@@ -66,10 +66,11 @@
 							temp = "0" + k.ToString();
 						}
 						roomId = floors[i * 10 + j - 1].FloorID.ToString() + temp;
-						rooms.Add(new Room() { RoomID = roomId, Floor = floors[i * 10 + j - 1] });
+						rooms.Add(new Room() { RoomID = roomId, FloorID = floors[i * 10 + j - 1].FloorID });
 					}
 				}
 			}
+			floors.ForEach(f => context.Floors.AddOrUpdate(x => x.FloorID, f));
 			rooms.ForEach(r => context.Rooms.AddOrUpdate(x => x.RoomID, r));
 
 			var clubs = new List<Club>();

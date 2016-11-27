@@ -5,13 +5,13 @@
 
 	public class StudentDto : PersonDto
 	{
-		public int StudentID { get; set; }
+		public string StudentID { get; set; }
 
-		public int ClubID { get; set; }
+		public string ClubID { get; set; }
 
-		public int ClassID { get; set; }
+		public string ClassID { get; set; }
 
-		public int RoomID { get; set; }
+		public string RoomID { get; set; }
 
 		public string PlaceOfBirth { get; set; }
 

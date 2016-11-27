@@ -56,7 +56,9 @@
   <ItemGroup>
     <Compile Include="AutoMapperConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoomBusiness.cs" />
+    <Compile Include="Business\RoomBusiness.cs" />
+    <Compile Include="Business\StudentBusiness.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -72,9 +74,7 @@
       <Name>DataTransfer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

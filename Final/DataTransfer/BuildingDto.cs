@@ -6,12 +6,12 @@
 	public enum BuildingName
 	{
 		H,
-		G
+		I
 	}
 
 	public class BuildingDto
 	{
-		public int BuildingID { get; set; }
+		public string BuildingID { get; set; }
 
 		public List<FloorDto> Floors { get; set; }
 	}

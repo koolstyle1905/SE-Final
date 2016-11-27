@@ -15,9 +15,9 @@
 		{
 		}
 
-		public IEnumerable<Floor> GetFloorByBuildingId(string buildingId)
+		public IEnumerable<Floor> GetFloorByBuildingID(string buildingID)
 		{
-			return this.Dbset.Where(x => x.BuildingID == buildingId).OrderBy(f => f.FloorID.Length).ThenBy(f => f.FloorID);
+			return this.Dbset.Where(x => x.BuildingID == buildingID).OrderBy(f => f.FloorID.Length).ThenBy(f => f.FloorID);
 		}
 
 		public IEnumerable<Floor> OrderById()

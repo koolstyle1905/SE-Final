@@ -5,6 +5,6 @@
 
 	public class PriorityTargetDto
 	{
-		public int PriorityID { get; set; }
+		public string PriorityID { get; set; }
 	}
 }

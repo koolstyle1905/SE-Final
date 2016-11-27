@@ -5,7 +5,7 @@
 
 	public class EmployeeDto : PersonDto
 	{
-		public int EmployeeID { get; set; }
+		public string EmployeeID { get; set; }
 
 		public string Username { get; set; }
 

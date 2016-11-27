@@ -5,11 +5,17 @@
 
 	public class RoomDto
 	{
-		public int RoomID { get; set; }
+		public string RoomID { get; set; }
 
-		public int FloorID { get; set; }
+		public string FloorID { get; set; }
 
-		public int NumOfStudent { get; set; }
+		public int NumOfStudent
+		{
+			get
+			{
+				return this.Students.Count;
+			}
+		}
 
 		public List<StudentDto> Students { get; set;}
 	}
