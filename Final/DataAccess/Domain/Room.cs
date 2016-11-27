@@ -11,8 +11,9 @@ namespace DataAccess.Domain
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Room()
         {
-            ServiceBills = new HashSet<ServiceBill>();
-            Students = new HashSet<Student>();
+			this.ServiceBills = new HashSet<ServiceBill>();
+			this.Students = new HashSet<Student>();
+			this.NumOfStudent = 0;
         }
 
         public string RoomID { get; set; }

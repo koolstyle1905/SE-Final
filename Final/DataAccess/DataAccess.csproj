@@ -68,7 +68,7 @@
     <Compile Include="Domain\ParkingReceipt.cs" />
     <Compile Include="Domain\ParkingTicket.cs" />
     <Compile Include="Domain\Priority.cs" />
-    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Migrations\201611261608565_Init.cs" />
     <Compile Include="Migrations\201611261608565_Init.Designer.cs">
       <DependentUpon>201611261608565_Init.cs</DependentUpon>
@@ -80,9 +80,13 @@
     <Compile Include="Domain\Student.cs" />
     <Compile Include="Domain\TemporaryAbsence.cs" />
     <Compile Include="Repositories\BuildingRepository.cs" />
+    <Compile Include="Repositories\ClassRepository.cs" />
     <Compile Include="Repositories\ClubRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\FacultyRepository.cs" />
     <Compile Include="Repositories\FloorRepository.cs" />
+    <Compile Include="Core\IRepository.cs" />
+    <Compile Include="Repositories\PriorityRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\RoomRepository.cs" />
     <Compile Include="Repositories\StudentRepository.cs" />
