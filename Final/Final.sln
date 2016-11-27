@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransfer", "DataTransfer\DataTransfer.csproj", "{09D94957-6D12-4E93-88CF-DB67CCC211B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{32FD7544-B933-4307-9376-0BBAB27444ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{09D94957-6D12-4E93-88CF-DB67CCC211B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09D94957-6D12-4E93-88CF-DB67CCC211B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D94957-6D12-4E93-88CF-DB67CCC211B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32FD7544-B933-4307-9376-0BBAB27444ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FD7544-B933-4307-9376-0BBAB27444ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FD7544-B933-4307-9376-0BBAB27444ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FD7544-B933-4307-9376-0BBAB27444ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

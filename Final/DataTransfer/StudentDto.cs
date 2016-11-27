@@ -19,8 +19,6 @@
 
 		public int Course { get; set; }
 
-		public string Position { get; set; }
-
 		public ClubDto Club { get; set; }
 
 		public List<PriorityTargetDto> PriorityTargets { get; set; }

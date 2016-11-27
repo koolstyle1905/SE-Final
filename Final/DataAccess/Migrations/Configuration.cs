@@ -111,6 +111,7 @@
 			students1.Add(new Student()
 			{
 				StudentID = "51403001",
+				ClubID = clubs[0].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 				Address = "TDT",
@@ -118,18 +119,21 @@
 			students1.Add(new Student()
 			{
 				StudentID = "51403002",
+				ClubID = clubs[0].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 			});
 			students1.Add(new Student()
 			{
 				StudentID = "51403003",
+				ClubID = clubs[0].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 			});
 			students1.Add(new Student()
 			{
 				StudentID = "51403004",
+				ClubID = clubs[0].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 			});
@@ -138,6 +142,7 @@
 			students2.Add(new Student()
 			{
 				StudentID = "51403101",
+				ClubID = clubs[1].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 				Address = "TDT",
@@ -145,18 +150,21 @@
 			students2.Add(new Student()
 			{
 				StudentID = "51403102",
+				ClubID = clubs[1].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 			});
 			students2.Add(new Student()
 			{
 				StudentID = "51403103",
+				ClubID = clubs[1].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 			});
 			students2.Add(new Student()
 			{
 				StudentID = "51403104",
+				ClubID = clubs[2].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Female.ToString(),
 			});
@@ -165,6 +173,7 @@
 			students1.Add(new Student()
 			{
 				StudentID = "51403201",
+				ClubID = clubs[3].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 				Address = "TDT",
@@ -172,18 +181,21 @@
 			students3.Add(new Student()
 			{
 				StudentID = "51403202",
+				ClubID = clubs[3].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 			});
 			students3.Add(new Student()
 			{
 				StudentID = "51403203",
+				ClubID = clubs[3].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 			});
 			students3.Add(new Student()
 			{
 				StudentID = "51403204",
+				ClubID = clubs[3].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Female.ToString(),
 			});
