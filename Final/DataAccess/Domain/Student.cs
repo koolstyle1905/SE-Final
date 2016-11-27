@@ -6,20 +6,27 @@ namespace DataAccess.Domain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+	public enum Gender
+	{
+		Male,
+		Female
+	}
+
     public partial class Student
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Student()
         {
-            Carers = new HashSet<Carer>();
-            DamageClaims = new HashSet<DamageClaim>();
-            Disciplines = new HashSet<Discipline>();
-            LateArrivalInfoes = new HashSet<LateArrivalInfo>();
-            LeaseContracts = new HashSet<LeaseContract>();
-            ParkingTickets = new HashSet<ParkingTicket>();
-            TemporaryAbsences = new HashSet<TemporaryAbsence>();
-            Attendances = new HashSet<Attendance>();
-            Priorities = new HashSet<Priority>();
+            this.Carers = new HashSet<Carer>();
+			this.DamageClaims = new HashSet<DamageClaim>();
+			this.Disciplines = new HashSet<Discipline>();
+			this.LateArrivalInfoes = new HashSet<LateArrivalInfo>();
+			this.LeaseContracts = new HashSet<LeaseContract>();
+			this.ParkingTickets = new HashSet<ParkingTicket>();
+			this.TemporaryAbsences = new HashSet<TemporaryAbsence>();
+			this.Attendances = new HashSet<Attendance>();
+			this.Priorities = new HashSet<Priority>();
+			this.DateOfBirth = new DateTime(2000, 1, 1);
         }
 
         public string StudentID { get; set; }

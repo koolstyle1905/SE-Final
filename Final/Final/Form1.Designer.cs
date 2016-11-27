@@ -30,9 +30,9 @@
         {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
 			this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
 			this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
@@ -91,29 +91,6 @@
 			this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
 			this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
 			this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-			this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-			this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.RoomID = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.treeView1 = new System.Windows.Forms.TreeView();
-			this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
-			this.dataGridViewX3 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-			this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-			this.comboBoxEx4 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-			this.comboBoxEx3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-			this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX11 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelX11 = new DevComponents.DotNetBar.LabelX();
-			this.labelX16 = new DevComponents.DotNetBar.LabelX();
-			this.labelX12 = new DevComponents.DotNetBar.LabelX();
-			this.labelX13 = new DevComponents.DotNetBar.LabelX();
-			this.labelX14 = new DevComponents.DotNetBar.LabelX();
-			this.labelX15 = new DevComponents.DotNetBar.LabelX();
-			this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-			this.dataGridViewX2 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-			this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
 			this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
 			this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -140,6 +117,28 @@
 			this.labelX5 = new DevComponents.DotNetBar.LabelX();
 			this.labelX1 = new DevComponents.DotNetBar.LabelX();
 			this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
+			this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+			this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.treeView1 = new System.Windows.Forms.TreeView();
+			this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+			this.dataGridViewX3 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+			this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+			this.comboBoxEx4 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+			this.comboBoxEx3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+			this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX11 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.labelX11 = new DevComponents.DotNetBar.LabelX();
+			this.labelX16 = new DevComponents.DotNetBar.LabelX();
+			this.labelX12 = new DevComponents.DotNetBar.LabelX();
+			this.labelX13 = new DevComponents.DotNetBar.LabelX();
+			this.labelX14 = new DevComponents.DotNetBar.LabelX();
+			this.labelX15 = new DevComponents.DotNetBar.LabelX();
+			this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+			this.dataGridViewX2 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+			this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
 			this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
 			this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
 			this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
@@ -202,7 +201,8 @@
 			this.labelX40 = new DevComponents.DotNetBar.LabelX();
 			this.labelX41 = new DevComponents.DotNetBar.LabelX();
 			this.tabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
-			this.NumOfStudent = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.ribbonControl1.SuspendLayout();
 			this.ribbonPanel4.SuspendLayout();
 			this.ribbonPanel3.SuspendLayout();
@@ -210,6 +210,13 @@
 			this.ribbonPanel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
 			this.tabControl1.SuspendLayout();
+			this.tabControlPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+			this.groupControl2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+			this.groupControl1.SuspendLayout();
 			this.tabControlPanel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -221,13 +228,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
 			this.groupControl3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
-			this.tabControlPanel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-			this.groupControl2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-			this.groupControl1.SuspendLayout();
 			this.tabControlPanel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
 			this.groupControl6.SuspendLayout();
@@ -255,10 +255,10 @@
 			// 
 			this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
 			this.ribbonControl1.CaptionVisible = true;
-			this.ribbonControl1.Controls.Add(this.ribbonPanel4);
-			this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-			this.ribbonControl1.Controls.Add(this.ribbonPanel2);
 			this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+			this.ribbonControl1.Controls.Add(this.ribbonPanel3);
+			this.ribbonControl1.Controls.Add(this.ribbonPanel4);
+			this.ribbonControl1.Controls.Add(this.ribbonPanel2);
 			this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.applicationButton1,
@@ -315,6 +315,7 @@
 			// 
 			this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
 			this.ribbonPanel4.TabIndex = 4;
+			this.ribbonPanel4.Visible = false;
 			// 
 			// ribbonBar4
 			// 
@@ -597,7 +598,6 @@
 			// 
 			this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
 			this.ribbonPanel1.TabIndex = 1;
-			this.ribbonPanel1.Visible = false;
 			// 
 			// ribbonBar1
 			// 
@@ -885,6 +885,7 @@
 			// 
 			// ribbonTabItem1
 			// 
+			this.ribbonTabItem1.Checked = true;
 			this.ribbonTabItem1.Name = "ribbonTabItem1";
 			this.ribbonTabItem1.Panel = this.ribbonPanel1;
 			this.ribbonTabItem1.Text = "Student Management";
@@ -903,7 +904,6 @@
 			// 
 			// ribbonTabItem4
 			// 
-			this.ribbonTabItem4.Checked = true;
 			this.ribbonTabItem4.Name = "ribbonTabItem4";
 			this.ribbonTabItem4.Panel = this.ribbonPanel4;
 			this.ribbonTabItem4.Text = "Report Mananement";
@@ -921,8 +921,8 @@
 			// 
 			this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
 			this.tabControl1.CanReorderTabs = true;
-			this.tabControl1.Controls.Add(this.tabControlPanel1);
 			this.tabControl1.Controls.Add(this.tabControlPanel2);
+			this.tabControl1.Controls.Add(this.tabControlPanel1);
 			this.tabControl1.Controls.Add(this.tabControlPanel3);
 			this.tabControl1.Controls.Add(this.tabControlPanel4);
 			this.tabControl1.Location = new System.Drawing.Point(5, 160);
@@ -937,291 +937,6 @@
 			this.tabControl1.Tabs.Add(this.tabItem3);
 			this.tabControl1.Tabs.Add(this.tabItem4);
 			this.tabControl1.Text = "tabControl1";
-			// 
-			// tabControlPanel2
-			// 
-			this.tabControlPanel2.Controls.Add(this.gridControl2);
-			this.tabControlPanel2.Controls.Add(this.treeView1);
-			this.tabControlPanel2.Controls.Add(this.groupControl5);
-			this.tabControlPanel2.Controls.Add(this.groupControl4);
-			this.tabControlPanel2.Controls.Add(this.groupControl3);
-			this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-			this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
-			this.tabControlPanel2.Name = "tabControlPanel2";
-			this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-			this.tabControlPanel2.Size = new System.Drawing.Size(1163, 432);
-			this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-			this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-			this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-			this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-			this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-			this.tabControlPanel2.Style.GradientAngle = 90;
-			this.tabControlPanel2.TabIndex = 5;
-			this.tabControlPanel2.TabItem = this.tabItem2;
-			// 
-			// gridControl2
-			// 
-			this.gridControl2.Location = new System.Drawing.Point(137, 5);
-			this.gridControl2.MainView = this.gridView2;
-			this.gridControl2.Name = "gridControl2";
-			this.gridControl2.Size = new System.Drawing.Size(189, 418);
-			this.gridControl2.TabIndex = 5;
-			this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-			// 
-			// gridView2
-			// 
-			this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.RoomID,
-            this.NumOfStudent});
-			this.gridView2.GridControl = this.gridControl2;
-			this.gridView2.Name = "gridView2";
-			this.gridView2.OptionsBehavior.ReadOnly = true;
-			this.gridView2.OptionsView.ShowIndicator = false;
-			// 
-			// RoomID
-			// 
-			this.RoomID.Caption = "RoomID";
-			this.RoomID.FieldName = "RoomID";
-			this.RoomID.Name = "RoomID";
-			// 
-			// treeView1
-			// 
-			this.treeView1.Location = new System.Drawing.Point(10, 5);
-			this.treeView1.Name = "treeView1";
-			this.treeView1.Size = new System.Drawing.Size(121, 418);
-			this.treeView1.TabIndex = 4;
-			this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
-			// 
-			// groupControl5
-			// 
-			this.groupControl5.Controls.Add(this.dataGridViewX3);
-			this.groupControl5.Location = new System.Drawing.Point(750, 248);
-			this.groupControl5.Name = "groupControl5";
-			this.groupControl5.Size = new System.Drawing.Size(409, 179);
-			this.groupControl5.TabIndex = 3;
-			this.groupControl5.Text = "Move List";
-			// 
-			// dataGridViewX3
-			// 
-			this.dataGridViewX3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewX3.DefaultCellStyle = dataGridViewCellStyle1;
-			this.dataGridViewX3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-			this.dataGridViewX3.Location = new System.Drawing.Point(6, 28);
-			this.dataGridViewX3.Name = "dataGridViewX3";
-			this.dataGridViewX3.RowTemplate.Height = 24;
-			this.dataGridViewX3.Size = new System.Drawing.Size(398, 146);
-			this.dataGridViewX3.TabIndex = 0;
-			// 
-			// groupControl4
-			// 
-			this.groupControl4.Controls.Add(this.comboBoxEx4);
-			this.groupControl4.Controls.Add(this.comboBoxEx3);
-			this.groupControl4.Controls.Add(this.textBoxX5);
-			this.groupControl4.Controls.Add(this.textBoxX9);
-			this.groupControl4.Controls.Add(this.textBoxX10);
-			this.groupControl4.Controls.Add(this.textBoxX11);
-			this.groupControl4.Controls.Add(this.labelX11);
-			this.groupControl4.Controls.Add(this.labelX16);
-			this.groupControl4.Controls.Add(this.labelX12);
-			this.groupControl4.Controls.Add(this.labelX13);
-			this.groupControl4.Controls.Add(this.labelX14);
-			this.groupControl4.Controls.Add(this.labelX15);
-			this.groupControl4.Location = new System.Drawing.Point(363, 244);
-			this.groupControl4.Name = "groupControl4";
-			this.groupControl4.Size = new System.Drawing.Size(470, 179);
-			this.groupControl4.TabIndex = 2;
-			this.groupControl4.Text = "Student Information";
-			// 
-			// comboBoxEx4
-			// 
-			this.comboBoxEx4.DisplayMember = "Text";
-			this.comboBoxEx4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.comboBoxEx4.FormattingEnabled = true;
-			this.comboBoxEx4.ItemHeight = 18;
-			this.comboBoxEx4.Location = new System.Drawing.Point(339, 126);
-			this.comboBoxEx4.Name = "comboBoxEx4";
-			this.comboBoxEx4.Size = new System.Drawing.Size(100, 24);
-			this.comboBoxEx4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-			this.comboBoxEx4.TabIndex = 12;
-			// 
-			// comboBoxEx3
-			// 
-			this.comboBoxEx3.DisplayMember = "Text";
-			this.comboBoxEx3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.comboBoxEx3.FormattingEnabled = true;
-			this.comboBoxEx3.ItemHeight = 18;
-			this.comboBoxEx3.Location = new System.Drawing.Point(110, 126);
-			this.comboBoxEx3.Name = "comboBoxEx3";
-			this.comboBoxEx3.Size = new System.Drawing.Size(100, 24);
-			this.comboBoxEx3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-			this.comboBoxEx3.TabIndex = 12;
-			// 
-			// textBoxX5
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX5.Border.Class = "TextBoxBorder";
-			this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX5.Location = new System.Drawing.Point(339, 89);
-			this.textBoxX5.Name = "textBoxX5";
-			this.textBoxX5.PreventEnterBeep = true;
-			this.textBoxX5.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX5.TabIndex = 8;
-			// 
-			// textBoxX9
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX9.Border.Class = "TextBoxBorder";
-			this.textBoxX9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX9.Location = new System.Drawing.Point(110, 89);
-			this.textBoxX9.Name = "textBoxX9";
-			this.textBoxX9.PreventEnterBeep = true;
-			this.textBoxX9.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX9.TabIndex = 9;
-			// 
-			// textBoxX10
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX10.Border.Class = "TextBoxBorder";
-			this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX10.Location = new System.Drawing.Point(339, 51);
-			this.textBoxX10.Name = "textBoxX10";
-			this.textBoxX10.PreventEnterBeep = true;
-			this.textBoxX10.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX10.TabIndex = 10;
-			// 
-			// textBoxX11
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX11.Border.Class = "TextBoxBorder";
-			this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX11.Location = new System.Drawing.Point(110, 51);
-			this.textBoxX11.Name = "textBoxX11";
-			this.textBoxX11.PreventEnterBeep = true;
-			this.textBoxX11.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX11.TabIndex = 11;
-			// 
-			// labelX11
-			// 
-			// 
-			// 
-			// 
-			this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX11.Location = new System.Drawing.Point(251, 87);
-			this.labelX11.Name = "labelX11";
-			this.labelX11.Size = new System.Drawing.Size(75, 23);
-			this.labelX11.TabIndex = 3;
-			this.labelX11.Text = "Faculty ID";
-			// 
-			// labelX16
-			// 
-			// 
-			// 
-			// 
-			this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX16.Location = new System.Drawing.Point(251, 125);
-			this.labelX16.Name = "labelX16";
-			this.labelX16.Size = new System.Drawing.Size(75, 23);
-			this.labelX16.TabIndex = 4;
-			this.labelX16.Text = "Role";
-			// 
-			// labelX12
-			// 
-			// 
-			// 
-			// 
-			this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX12.Location = new System.Drawing.Point(22, 125);
-			this.labelX12.Name = "labelX12";
-			this.labelX12.Size = new System.Drawing.Size(75, 23);
-			this.labelX12.TabIndex = 4;
-			this.labelX12.Text = "Sex";
-			// 
-			// labelX13
-			// 
-			// 
-			// 
-			// 
-			this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX13.Location = new System.Drawing.Point(22, 87);
-			this.labelX13.Name = "labelX13";
-			this.labelX13.Size = new System.Drawing.Size(75, 23);
-			this.labelX13.TabIndex = 5;
-			this.labelX13.Text = "Name";
-			// 
-			// labelX14
-			// 
-			// 
-			// 
-			// 
-			this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX14.Location = new System.Drawing.Point(251, 49);
-			this.labelX14.Name = "labelX14";
-			this.labelX14.Size = new System.Drawing.Size(75, 23);
-			this.labelX14.TabIndex = 6;
-			this.labelX14.Text = "Class ID";
-			// 
-			// labelX15
-			// 
-			// 
-			// 
-			// 
-			this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX15.Location = new System.Drawing.Point(22, 49);
-			this.labelX15.Name = "labelX15";
-			this.labelX15.Size = new System.Drawing.Size(75, 23);
-			this.labelX15.TabIndex = 7;
-			this.labelX15.Text = "Student ID";
-			// 
-			// groupControl3
-			// 
-			this.groupControl3.Controls.Add(this.dataGridViewX2);
-			this.groupControl3.Location = new System.Drawing.Point(358, 5);
-			this.groupControl3.Name = "groupControl3";
-			this.groupControl3.Size = new System.Drawing.Size(801, 237);
-			this.groupControl3.TabIndex = 1;
-			this.groupControl3.Text = "Student List";
-			// 
-			// dataGridViewX2
-			// 
-			this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle2;
-			this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-			this.dataGridViewX2.Location = new System.Drawing.Point(15, 28);
-			this.dataGridViewX2.Name = "dataGridViewX2";
-			this.dataGridViewX2.RowTemplate.Height = 24;
-			this.dataGridViewX2.Size = new System.Drawing.Size(755, 204);
-			this.dataGridViewX2.TabIndex = 0;
-			// 
-			// tabItem2
-			// 
-			this.tabItem2.AttachedControl = this.tabControlPanel2;
-			this.tabItem2.Name = "tabItem2";
-			this.tabItem2.Text = "Room";
 			// 
 			// tabControlPanel1
 			// 
@@ -1544,6 +1259,285 @@
 			this.tabItem1.AttachedControl = this.tabControlPanel1;
 			this.tabItem1.Name = "tabItem1";
 			this.tabItem1.Text = "Student";
+			// 
+			// tabControlPanel2
+			// 
+			this.tabControlPanel2.Controls.Add(this.gridControl2);
+			this.tabControlPanel2.Controls.Add(this.treeView1);
+			this.tabControlPanel2.Controls.Add(this.groupControl5);
+			this.tabControlPanel2.Controls.Add(this.groupControl4);
+			this.tabControlPanel2.Controls.Add(this.groupControl3);
+			this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+			this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
+			this.tabControlPanel2.Name = "tabControlPanel2";
+			this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
+			this.tabControlPanel2.Size = new System.Drawing.Size(1163, 432);
+			this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+			this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+			this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+			this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+			this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+			this.tabControlPanel2.Style.GradientAngle = 90;
+			this.tabControlPanel2.TabIndex = 5;
+			this.tabControlPanel2.TabItem = this.tabItem2;
+			// 
+			// gridControl2
+			// 
+			this.gridControl2.Location = new System.Drawing.Point(137, 9);
+			this.gridControl2.MainView = this.gridView2;
+			this.gridControl2.Name = "gridControl2";
+			this.gridControl2.Size = new System.Drawing.Size(214, 418);
+			this.gridControl2.TabIndex = 5;
+			this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+			// 
+			// gridView2
+			// 
+			this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2});
+			this.gridView2.GridControl = this.gridControl2;
+			this.gridView2.Name = "gridView2";
+			this.gridView2.OptionsBehavior.ReadOnly = true;
+			this.gridView2.OptionsView.ShowIndicator = false;
+			// 
+			// treeView1
+			// 
+			this.treeView1.Location = new System.Drawing.Point(10, 5);
+			this.treeView1.Name = "treeView1";
+			this.treeView1.Size = new System.Drawing.Size(121, 418);
+			this.treeView1.TabIndex = 4;
+			this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+			// 
+			// groupControl5
+			// 
+			this.groupControl5.Controls.Add(this.dataGridViewX3);
+			this.groupControl5.Location = new System.Drawing.Point(750, 248);
+			this.groupControl5.Name = "groupControl5";
+			this.groupControl5.Size = new System.Drawing.Size(409, 179);
+			this.groupControl5.TabIndex = 3;
+			this.groupControl5.Text = "Move List";
+			// 
+			// dataGridViewX3
+			// 
+			this.dataGridViewX3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 7.8F);
+			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewX3.DefaultCellStyle = dataGridViewCellStyle7;
+			this.dataGridViewX3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+			this.dataGridViewX3.Location = new System.Drawing.Point(6, 28);
+			this.dataGridViewX3.Name = "dataGridViewX3";
+			this.dataGridViewX3.RowTemplate.Height = 24;
+			this.dataGridViewX3.Size = new System.Drawing.Size(398, 146);
+			this.dataGridViewX3.TabIndex = 0;
+			// 
+			// groupControl4
+			// 
+			this.groupControl4.Controls.Add(this.comboBoxEx4);
+			this.groupControl4.Controls.Add(this.comboBoxEx3);
+			this.groupControl4.Controls.Add(this.textBoxX5);
+			this.groupControl4.Controls.Add(this.textBoxX9);
+			this.groupControl4.Controls.Add(this.textBoxX10);
+			this.groupControl4.Controls.Add(this.textBoxX11);
+			this.groupControl4.Controls.Add(this.labelX11);
+			this.groupControl4.Controls.Add(this.labelX16);
+			this.groupControl4.Controls.Add(this.labelX12);
+			this.groupControl4.Controls.Add(this.labelX13);
+			this.groupControl4.Controls.Add(this.labelX14);
+			this.groupControl4.Controls.Add(this.labelX15);
+			this.groupControl4.Location = new System.Drawing.Point(363, 244);
+			this.groupControl4.Name = "groupControl4";
+			this.groupControl4.Size = new System.Drawing.Size(470, 179);
+			this.groupControl4.TabIndex = 2;
+			this.groupControl4.Text = "Student Information";
+			// 
+			// comboBoxEx4
+			// 
+			this.comboBoxEx4.DisplayMember = "Text";
+			this.comboBoxEx4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.comboBoxEx4.FormattingEnabled = true;
+			this.comboBoxEx4.ItemHeight = 18;
+			this.comboBoxEx4.Location = new System.Drawing.Point(339, 126);
+			this.comboBoxEx4.Name = "comboBoxEx4";
+			this.comboBoxEx4.Size = new System.Drawing.Size(100, 24);
+			this.comboBoxEx4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+			this.comboBoxEx4.TabIndex = 12;
+			// 
+			// comboBoxEx3
+			// 
+			this.comboBoxEx3.DisplayMember = "Text";
+			this.comboBoxEx3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.comboBoxEx3.FormattingEnabled = true;
+			this.comboBoxEx3.ItemHeight = 18;
+			this.comboBoxEx3.Location = new System.Drawing.Point(110, 126);
+			this.comboBoxEx3.Name = "comboBoxEx3";
+			this.comboBoxEx3.Size = new System.Drawing.Size(100, 24);
+			this.comboBoxEx3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+			this.comboBoxEx3.TabIndex = 12;
+			// 
+			// textBoxX5
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX5.Border.Class = "TextBoxBorder";
+			this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX5.Location = new System.Drawing.Point(339, 89);
+			this.textBoxX5.Name = "textBoxX5";
+			this.textBoxX5.PreventEnterBeep = true;
+			this.textBoxX5.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX5.TabIndex = 8;
+			// 
+			// textBoxX9
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX9.Border.Class = "TextBoxBorder";
+			this.textBoxX9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX9.Location = new System.Drawing.Point(110, 89);
+			this.textBoxX9.Name = "textBoxX9";
+			this.textBoxX9.PreventEnterBeep = true;
+			this.textBoxX9.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX9.TabIndex = 9;
+			// 
+			// textBoxX10
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX10.Border.Class = "TextBoxBorder";
+			this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX10.Location = new System.Drawing.Point(339, 51);
+			this.textBoxX10.Name = "textBoxX10";
+			this.textBoxX10.PreventEnterBeep = true;
+			this.textBoxX10.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX10.TabIndex = 10;
+			// 
+			// textBoxX11
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX11.Border.Class = "TextBoxBorder";
+			this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX11.Location = new System.Drawing.Point(110, 51);
+			this.textBoxX11.Name = "textBoxX11";
+			this.textBoxX11.PreventEnterBeep = true;
+			this.textBoxX11.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX11.TabIndex = 11;
+			// 
+			// labelX11
+			// 
+			// 
+			// 
+			// 
+			this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX11.Location = new System.Drawing.Point(251, 87);
+			this.labelX11.Name = "labelX11";
+			this.labelX11.Size = new System.Drawing.Size(75, 23);
+			this.labelX11.TabIndex = 3;
+			this.labelX11.Text = "Faculty ID";
+			// 
+			// labelX16
+			// 
+			// 
+			// 
+			// 
+			this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX16.Location = new System.Drawing.Point(251, 125);
+			this.labelX16.Name = "labelX16";
+			this.labelX16.Size = new System.Drawing.Size(75, 23);
+			this.labelX16.TabIndex = 4;
+			this.labelX16.Text = "Role";
+			// 
+			// labelX12
+			// 
+			// 
+			// 
+			// 
+			this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX12.Location = new System.Drawing.Point(22, 125);
+			this.labelX12.Name = "labelX12";
+			this.labelX12.Size = new System.Drawing.Size(75, 23);
+			this.labelX12.TabIndex = 4;
+			this.labelX12.Text = "Sex";
+			// 
+			// labelX13
+			// 
+			// 
+			// 
+			// 
+			this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX13.Location = new System.Drawing.Point(22, 87);
+			this.labelX13.Name = "labelX13";
+			this.labelX13.Size = new System.Drawing.Size(75, 23);
+			this.labelX13.TabIndex = 5;
+			this.labelX13.Text = "Name";
+			// 
+			// labelX14
+			// 
+			// 
+			// 
+			// 
+			this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX14.Location = new System.Drawing.Point(251, 49);
+			this.labelX14.Name = "labelX14";
+			this.labelX14.Size = new System.Drawing.Size(75, 23);
+			this.labelX14.TabIndex = 6;
+			this.labelX14.Text = "Class ID";
+			// 
+			// labelX15
+			// 
+			// 
+			// 
+			// 
+			this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX15.Location = new System.Drawing.Point(22, 49);
+			this.labelX15.Name = "labelX15";
+			this.labelX15.Size = new System.Drawing.Size(75, 23);
+			this.labelX15.TabIndex = 7;
+			this.labelX15.Text = "Student ID";
+			// 
+			// groupControl3
+			// 
+			this.groupControl3.Controls.Add(this.dataGridViewX2);
+			this.groupControl3.Location = new System.Drawing.Point(358, 5);
+			this.groupControl3.Name = "groupControl3";
+			this.groupControl3.Size = new System.Drawing.Size(801, 237);
+			this.groupControl3.TabIndex = 1;
+			this.groupControl3.Text = "Student List";
+			// 
+			// dataGridViewX2
+			// 
+			this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 7.8F);
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle8;
+			this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+			this.dataGridViewX2.Location = new System.Drawing.Point(15, 28);
+			this.dataGridViewX2.Name = "dataGridViewX2";
+			this.dataGridViewX2.RowTemplate.Height = 24;
+			this.dataGridViewX2.Size = new System.Drawing.Size(755, 204);
+			this.dataGridViewX2.TabIndex = 0;
+			// 
+			// tabItem2
+			// 
+			this.tabItem2.AttachedControl = this.tabControlPanel2;
+			this.tabItem2.Name = "tabItem2";
+			this.tabItem2.Text = "Room";
 			// 
 			// tabControlPanel3
 			// 
@@ -2140,14 +2134,14 @@
 			// dataGridViewX4
 			// 
 			this.dataGridViewX4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewX4.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 7.8F);
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewX4.DefaultCellStyle = dataGridViewCellStyle9;
 			this.dataGridViewX4.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
 			this.dataGridViewX4.Location = new System.Drawing.Point(6, 28);
 			this.dataGridViewX4.Name = "dataGridViewX4";
@@ -2325,11 +2319,21 @@
 			this.tabItem4.Name = "tabItem4";
 			this.tabItem4.Text = "Report";
 			// 
-			// NumOfStudent
+			// gridColumn1
 			// 
-			this.NumOfStudent.Caption = "NumOfStudent";
-			this.NumOfStudent.FieldName = "NumOfStudent";
-			this.NumOfStudent.Name = "NumOfStudent";
+			this.gridColumn1.Caption = "RoomID";
+			this.gridColumn1.FieldName = "RoomID";
+			this.gridColumn1.Name = "gridColumn1";
+			this.gridColumn1.Visible = true;
+			this.gridColumn1.VisibleIndex = 0;
+			// 
+			// gridColumn2
+			// 
+			this.gridColumn2.Caption = "NumOfStudent";
+			this.gridColumn2.FieldName = "NumOfStudent";
+			this.gridColumn2.Name = "gridColumn2";
+			this.gridColumn2.Visible = true;
+			this.gridColumn2.VisibleIndex = 1;
 			// 
 			// Form1
 			// 
@@ -2349,6 +2353,13 @@
 			this.ribbonPanel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
 			this.tabControl1.ResumeLayout(false);
+			this.tabControlPanel1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+			this.groupControl2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+			this.groupControl1.ResumeLayout(false);
 			this.tabControlPanel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -2360,13 +2371,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
 			this.groupControl3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
-			this.tabControlPanel1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-			this.groupControl2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-			this.groupControl1.ResumeLayout(false);
 			this.tabControlPanel3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
 			this.groupControl6.ResumeLayout(false);
@@ -2559,7 +2563,7 @@
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
 		private DevExpress.XtraGrid.GridControl gridControl2;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-		private DevExpress.XtraGrid.Columns.GridColumn RoomID;
-		private DevExpress.XtraGrid.Columns.GridColumn NumOfStudent;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
 	}
 }

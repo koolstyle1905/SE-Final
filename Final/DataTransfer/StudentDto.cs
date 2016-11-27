@@ -7,8 +7,6 @@
 	{
 		public string StudentID { get; set; }
 
-		public string ClubID { get; set; }
-
 		public string ClassID { get; set; }
 
 		public string RoomID { get; set; }
@@ -22,6 +20,8 @@
 		public int Course { get; set; }
 
 		public string Position { get; set; }
+
+		public ClubDto Club { get; set; }
 
 		public List<PriorityTargetDto> PriorityTargets { get; set; }
 	}

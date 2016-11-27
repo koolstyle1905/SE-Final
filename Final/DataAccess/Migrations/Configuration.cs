@@ -22,6 +22,10 @@
 				DbClear.Exec(context.Rooms);
 				DbClear.Exec(context.Floors);
 				DbClear.Exec(context.Buildings);
+				DbClear.Exec(context.Students);
+				DbClear.Exec(context.Classes);
+				DbClear.Exec(context.Faculties);
+				DbClear.Exec(context.Clubs);
 				DbClear.Exec(context.Employees);
 				context.SaveChanges();
 			}
@@ -40,7 +44,7 @@
 		{
 			//DbClear.ClearAllData();
 			//System.Diagnostics.Debugger.Launch();
-
+			#region Add Buildings, Floors, Rooms
 			var buildings = new List<Building>();
 			buildings.Add(new Building() { BuildingID = BuildingName.H.ToString() });
 			buildings.Add(new Building() { BuildingID = BuildingName.I.ToString() });
@@ -49,30 +53,36 @@
 			var rooms = new List<Room>();
 			var roomId = string.Empty;
 			var temp = string.Empty;
-			for (int i = 0; i < 2; i++)
+
+			for (int k = 0; k < 2; k++)
 			{
-				for (int j = 1; j <= 10; j++)
+				for (int i = 1; i <= 10; i++)
 				{
 					floors.Add(new Floor()
 					{
-						FloorID = buildings[i].BuildingID + j.ToString(),
-						Building = buildings[i]
+						FloorID = buildings[k].BuildingID + i.ToString(),
 					});
-					for (int k = 1; k <= 16; k++)
+					for (int j = 1; j <= 16; j++)
 					{
-						temp = k.ToString();
-						if (k < 10)
+						temp = j.ToString();
+						if (j < 10)
 						{
-							temp = "0" + k.ToString();
+							temp = "0" + j.ToString();
 						}
-						roomId = floors[i * 10 + j - 1].FloorID.ToString() + temp;
-						rooms.Add(new Room() { RoomID = roomId, FloorID = floors[i * 10 + j - 1].FloorID });
+						roomId = floors[i - 1].FloorID.ToString() + temp;
+						rooms.Add(new Room() { RoomID = roomId });
 					}
+					floors[i - 1].Rooms = rooms;
+					rooms = new List<Room>();
 				}
+				buildings[k].Floors = floors;
+				floors = new List<Floor>();
 			}
-			floors.ForEach(f => context.Floors.AddOrUpdate(x => x.FloorID, f));
-			rooms.ForEach(r => context.Rooms.AddOrUpdate(x => x.RoomID, r));
+			context.Buildings.AddOrUpdate(x => x.BuildingID, buildings[(int)BuildingName.H]);
+			context.Buildings.AddOrUpdate(x => x.BuildingID, buildings[(int)BuildingName.I]);
+			#endregion
 
+			#region Clubs
 			var clubs = new List<Club>();
 			clubs.Add(new Club() { ClubID = "01", Name = "Bơi lội" });
 			clubs.Add(new Club() { ClubID = "02", Name = "Bóng rổ" });
@@ -94,22 +104,120 @@
 			clubs.Add(new Club() { ClubID = "18", Name = "Street workout" });
 			clubs.Add(new Club() { ClubID = "19", Name = "Cheerleading" });
 			clubs.Add(new Club() { ClubID = "20", Name = "GYM" });
-
 			clubs.ForEach(c => context.Clubs.AddOrUpdate(x => x.ClubID, c));
+			#endregion
+
+			var students1 = new List<Student>();
+			students1.Add(new Student()
+			{
+				StudentID = "51403001",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+				Address = "TDT",
+			});
+			students1.Add(new Student()
+			{
+				StudentID = "51403002",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+			});
+			students1.Add(new Student()
+			{
+				StudentID = "51403003",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+			});
+			students1.Add(new Student()
+			{
+				StudentID = "51403004",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+			});
+			////////////////////////////////////////////////////////////////////
+			var students2 = new List<Student>();
+			students2.Add(new Student()
+			{
+				StudentID = "51403101",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+				Address = "TDT",
+			});
+			students2.Add(new Student()
+			{
+				StudentID = "51403102",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+			});
+			students2.Add(new Student()
+			{
+				StudentID = "51403103",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+			});
+			students2.Add(new Student()
+			{
+				StudentID = "51403104",
+				Name = "Neptune",
+				Gender = Gender.Female.ToString(),
+			});
+			////////////////////////////////
+			var students3 = new List<Student>();
+			students1.Add(new Student()
+			{
+				StudentID = "51403201",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+				Address = "TDT",
+			});
+			students3.Add(new Student()
+			{
+				StudentID = "51403202",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+			});
+			students3.Add(new Student()
+			{
+				StudentID = "51403203",
+				Name = "Neptune",
+				Gender = Gender.Male.ToString(),
+			});
+			students3.Add(new Student()
+			{
+				StudentID = "51403204",
+				Name = "Neptune",
+				Gender = Gender.Female.ToString(),
+			});
 
 			var classes = new List<Class>();
-			var faculties = new List<Faculty>();
-
-			faculties.Add(new Faculty()
+			classes.Add(new Class()
 			{
-				FacultyID = "5",
-				Name = "Công nghệ thông tin"
+				ClassID = "14050301",
+				Students = students1
 			});
 			classes.Add(new Class()
 			{
 				ClassID = "14050302",
-				Faculty = faculties[0]
+				Students = students2
 			});
+			classes.Add(new Class()
+			{
+				ClassID = "14050303",
+				Students = students3
+			});
+
+			var faculties = new List<Faculty>();
+			faculties.Add(new Faculty()
+			{
+				FacultyID = "5",
+				Name = "Công nghệ thông tin",
+				Classes = classes
+			});
+			faculties.Add(new Faculty()
+			{
+				FacultyID = "4",
+				Name = "Điện"
+			});
+			faculties.ForEach(f => context.Faculties.AddOrUpdate(x => x.FacultyID, f));
 
 			var employee = new Employee()
 			{
