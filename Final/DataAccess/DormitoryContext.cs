@@ -1,14 +1,18 @@
 namespace DataAccess
 {
 	using System;
-	using System.Data.Entity;
 	using System.ComponentModel.DataAnnotations.Schema;
+	using System.Data.Entity;
 	using System.Linq;
 	using DataAccess.Domain;
 
 	public partial class DormitoryContext : DbContext
 	{
-		public DormitoryContext()  : base("name=DormitoryContext")
+		public DormitoryContext() : base(Connection.ConnectionString)
+		{
+		}
+
+		public DormitoryContext(string connectionString)  : base(connectionString)
 		{
 		}
 

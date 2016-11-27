@@ -18,6 +18,8 @@
 
 		TEntity FindById(string id);
 
+		IEnumerable<TEntity> GetAll();
+
 		IEnumerable<TEntity> OrderBy<TKey>(Expression<Func<TEntity, TKey>> keySelector);
 
 		IEnumerable<TEntity> OrderByDescending<TKey>(Expression<Func<TEntity, TKey>> keySelector);

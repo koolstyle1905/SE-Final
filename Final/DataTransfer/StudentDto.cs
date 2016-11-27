@@ -23,6 +23,6 @@
 
 		public string Position { get; set; }
 
-		List<PriorityTargetDto> PriorityTargets { get; set; }
+		public List<PriorityTargetDto> PriorityTargets { get; set; }
 	}
 }

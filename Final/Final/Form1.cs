@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutoMapper;
+using Business;
+using DataTransfer;
+using DevExpress.XtraTreeList.Nodes;
 
 namespace Final
 {
@@ -19,7 +23,7 @@ namespace Final
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-
+			RoomBusiness.CreateTreeRoom(treeView1);
 		}
 	}
 }

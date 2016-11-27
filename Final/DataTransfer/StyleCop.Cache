@@ -6,7 +6,7 @@
   <sourcecode name="BuildingDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:02:49.672</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -35,7 +35,7 @@
   <sourcecode name="CarerDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 21:39:02.714</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -58,7 +58,7 @@
   <sourcecode name="ClubDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:18:39.843</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -81,7 +81,7 @@
   <sourcecode name="EmployeeDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:18:39.890</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -104,7 +104,7 @@
   <sourcecode name="FloorDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:18:39.875</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -127,7 +127,7 @@
   <sourcecode name="PersonDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:18:39.875</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -150,7 +150,7 @@
   <sourcecode name="PriorityDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:18:39.828</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -199,7 +199,7 @@
   <sourcecode name="PriorityTargetDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:18:39.812</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -222,7 +222,7 @@
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 21:04:05.257</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -245,7 +245,7 @@
   <sourcecode name="RoomDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:18:39.859</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>
@@ -291,7 +291,7 @@
   <sourcecode name="StudentDto.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/05/12 20:26:32.000</styleCop>
-      <settingsFile>2016/11/27 10:06:20.533</settingsFile>
+      <settingsFile>2016/11/27 10:11:35.714</settingsFile>
       <sourceFile>2016/11/26 22:18:39.859</sourceFile>
       <parser>2016/05/12 20:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 20:26:32.000</StyleCop.CSharp.DocumentationRules>

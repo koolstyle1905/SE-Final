@@ -1,4 +1,4 @@
-﻿namespace DataAccess
+﻿namespace DataAccess.Core
 {
 	using System;
 	using System.Collections.Generic;

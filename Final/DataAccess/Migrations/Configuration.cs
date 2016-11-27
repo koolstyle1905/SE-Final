@@ -42,14 +42,9 @@
 			//System.Diagnostics.Debugger.Launch();
 
 			var buildings = new List<Building>();
-			buildings.Add(new Building()
-			{
-				BuildingID = BuildingName.G.ToString()
-			});
-			buildings.Add(new Building()
-			{
-				BuildingID = BuildingName.H.ToString()
-			});
+			buildings.Add(new Building() { BuildingID = BuildingName.G.ToString() });
+			buildings.Add(new Building() { BuildingID = BuildingName.H.ToString() });
+
 			var floors = new List<Floor>();
 			var rooms = new List<Room>();
 			var roomId = string.Empty;
@@ -65,13 +60,10 @@
 					});
 					for (int k = 1; k <= 16; k++)
 					{
+						temp = k.ToString();
 						if (k < 10)
 						{
 							temp = "0" + k.ToString();
-						}
-						else
-						{
-							temp = k.ToString();
 						}
 						roomId = floors[i * 10 + j - 1].FloorID.ToString() + temp;
 						rooms.Add(new Room() { RoomID = roomId, Floor = floors[i * 10 + j - 1] });
@@ -81,15 +73,15 @@
 			rooms.ForEach(r => context.Rooms.AddOrUpdate(x => x.RoomID, r));
 
 			var clubs = new List<Club>();
-			clubs.Add(new Club() { ClubID = "1", Name = "Bơi lội" });
-			clubs.Add(new Club() { ClubID = "2", Name = "Bóng rổ" });
-			clubs.Add(new Club() { ClubID = "3", Name = "Bóng đá" });
-			clubs.Add(new Club() { ClubID = "4", Name = "Bóng chuyền" });
-			clubs.Add(new Club() { ClubID = "5", Name = "Tennis" });
-			clubs.Add(new Club() { ClubID = "6", Name = "Cầu lông" });
-			clubs.Add(new Club() { ClubID = "7", Name = "Bóng bàn" });
-			clubs.Add(new Club() { ClubID = "8", Name = "Taekwondo" });
-			clubs.Add(new Club() { ClubID = "9", Name = "Karatedo" });
+			clubs.Add(new Club() { ClubID = "01", Name = "Bơi lội" });
+			clubs.Add(new Club() { ClubID = "02", Name = "Bóng rổ" });
+			clubs.Add(new Club() { ClubID = "03", Name = "Bóng đá" });
+			clubs.Add(new Club() { ClubID = "04", Name = "Bóng chuyền" });
+			clubs.Add(new Club() { ClubID = "05", Name = "Tennis" });
+			clubs.Add(new Club() { ClubID = "06", Name = "Cầu lông" });
+			clubs.Add(new Club() { ClubID = "07", Name = "Bóng bàn" });
+			clubs.Add(new Club() { ClubID = "08", Name = "Taekwondo" });
+			clubs.Add(new Club() { ClubID = "09", Name = "Karatedo" });
 			clubs.Add(new Club() { ClubID = "10", Name = "Judo" });
 			clubs.Add(new Club() { ClubID = "11", Name = "Muay Thái" });
 			clubs.Add(new Club() { ClubID = "12", Name = "Vovinam" });
@@ -103,6 +95,20 @@
 			clubs.Add(new Club() { ClubID = "20", Name = "GYM" });
 
 			clubs.ForEach(c => context.Clubs.AddOrUpdate(x => x.ClubID, c));
+
+			var classes = new List<Class>();
+			var faculties = new List<Faculty>();
+
+			faculties.Add(new Faculty()
+			{
+				FacultyID = "5",
+				Name = "Công nghệ thông tin"
+			});
+			classes.Add(new Class()
+			{
+				ClassID = "14050302",
+				Faculty = faculties[0]
+			});
 
 			var employee = new Employee()
 			{

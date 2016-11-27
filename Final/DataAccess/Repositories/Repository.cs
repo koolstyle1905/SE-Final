@@ -12,22 +12,25 @@
 	public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : class
 	{
 		private readonly DbContext context;
-		protected DbSet<TEntity> dbSet;
-	
+		private DbSet<TEntity> dbSet;
+
 		public Repository(DbContext context)
 		{
 			this.context = context;
 			this.dbSet = this.context.Set<TEntity>();
 		}
 
+		public DbSet<TEntity> Dbset
+		{
+			get
+			{
+				return this.dbSet;
+			}
+		}
+
 		public TEntity FindById(string id)
 		{
 			return this.dbSet.Find(id);
-		}
-
-		public List<TEntity> ToList()
-		{
-			return this.dbSet.ToList();
 		}
 
 		public IEnumerable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate)
@@ -78,6 +81,16 @@
 		public int Count()
 		{
 			return this.dbSet.Count();
+		}
+
+		public IEnumerable<TEntity> GetAll()
+		{
+			return this.dbSet.AsEnumerable();
+		}
+
+		public List<TEntity> ToList()
+		{
+			return this.dbSet.ToList();
 		}
 	}
 }

@@ -7,11 +7,22 @@
 	using System.Text;
 	using System.Threading.Tasks;
 	using Domain;
+	using System.Collections;
 
 	public class FloorRepository : Repository<Floor>
 	{
 		public FloorRepository(DbContext context) : base(context)
 		{
+		}
+
+		public IEnumerable<Floor> GetFloorByBuildingId(string buildingId)
+		{
+			return this.Dbset.Where(x => x.BuildingID == buildingId).OrderBy(f => f.FloorID.Length).ThenBy(f => f.FloorID);
+		}
+
+		public IEnumerable<Floor> OrderById()
+		{
+			return this.Dbset.OrderBy(x => x.FloorID.Length).ThenBy(f => f.FloorID);
 		}
 	}
 }

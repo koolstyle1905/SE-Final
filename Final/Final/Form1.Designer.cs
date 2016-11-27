@@ -1,6 +1,6 @@
 ﻿namespace Final
 {
-    partial class Form1
+    public partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,10 @@
         {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
 			this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
 			this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
@@ -92,23 +92,50 @@
 			this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
 			this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
 			this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-			this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
-			this.groupControl12 = new DevExpress.XtraEditors.GroupControl();
-			this.dataGridViewX4 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-			this.groupControl11 = new DevExpress.XtraEditors.GroupControl();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-			this.textBoxX25 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX26 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX27 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX28 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX29 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelX36 = new DevComponents.DotNetBar.LabelX();
-			this.labelX37 = new DevComponents.DotNetBar.LabelX();
-			this.labelX38 = new DevComponents.DotNetBar.LabelX();
-			this.labelX39 = new DevComponents.DotNetBar.LabelX();
-			this.labelX40 = new DevComponents.DotNetBar.LabelX();
-			this.labelX41 = new DevComponents.DotNetBar.LabelX();
-			this.tabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
+			this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+			this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+			this.dataGridViewX3 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+			this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+			this.comboBoxEx4 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+			this.comboBoxEx3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+			this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX11 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.labelX11 = new DevComponents.DotNetBar.LabelX();
+			this.labelX16 = new DevComponents.DotNetBar.LabelX();
+			this.labelX12 = new DevComponents.DotNetBar.LabelX();
+			this.labelX13 = new DevComponents.DotNetBar.LabelX();
+			this.labelX14 = new DevComponents.DotNetBar.LabelX();
+			this.labelX15 = new DevComponents.DotNetBar.LabelX();
+			this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+			this.dataGridViewX2 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+			this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+			this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+			this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+			this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+			this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+			this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+			this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.labelX9 = new DevComponents.DotNetBar.LabelX();
+			this.labelX10 = new DevComponents.DotNetBar.LabelX();
+			this.labelX8 = new DevComponents.DotNetBar.LabelX();
+			this.labelX7 = new DevComponents.DotNetBar.LabelX();
+			this.labelX4 = new DevComponents.DotNetBar.LabelX();
+			this.labelX2 = new DevComponents.DotNetBar.LabelX();
+			this.labelX6 = new DevComponents.DotNetBar.LabelX();
+			this.labelX3 = new DevComponents.DotNetBar.LabelX();
+			this.labelX5 = new DevComponents.DotNetBar.LabelX();
+			this.labelX1 = new DevComponents.DotNetBar.LabelX();
+			this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
 			this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
 			this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
 			this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
@@ -154,51 +181,24 @@
 			this.labelX19 = new DevComponents.DotNetBar.LabelX();
 			this.labelX20 = new DevComponents.DotNetBar.LabelX();
 			this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
-			this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-			this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
-			this.dataGridViewX3 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-			this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-			this.comboBoxEx4 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-			this.comboBoxEx3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-			this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX11 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelX11 = new DevComponents.DotNetBar.LabelX();
-			this.labelX16 = new DevComponents.DotNetBar.LabelX();
-			this.labelX12 = new DevComponents.DotNetBar.LabelX();
-			this.labelX13 = new DevComponents.DotNetBar.LabelX();
-			this.labelX14 = new DevComponents.DotNetBar.LabelX();
-			this.labelX15 = new DevComponents.DotNetBar.LabelX();
-			this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-			this.dataGridViewX2 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-			this.treeList1 = new DevExpress.XtraTreeList.TreeList();
-			this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
-			this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-			this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-			this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-			this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-			this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-			this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-			this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelX9 = new DevComponents.DotNetBar.LabelX();
-			this.labelX10 = new DevComponents.DotNetBar.LabelX();
-			this.labelX8 = new DevComponents.DotNetBar.LabelX();
-			this.labelX7 = new DevComponents.DotNetBar.LabelX();
-			this.labelX4 = new DevComponents.DotNetBar.LabelX();
-			this.labelX2 = new DevComponents.DotNetBar.LabelX();
-			this.labelX6 = new DevComponents.DotNetBar.LabelX();
-			this.labelX3 = new DevComponents.DotNetBar.LabelX();
-			this.labelX5 = new DevComponents.DotNetBar.LabelX();
-			this.labelX1 = new DevComponents.DotNetBar.LabelX();
-			this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
+			this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
+			this.groupControl12 = new DevExpress.XtraEditors.GroupControl();
+			this.dataGridViewX4 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+			this.groupControl11 = new DevExpress.XtraEditors.GroupControl();
+			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.textBoxX25 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX26 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX27 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX28 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.textBoxX29 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.labelX36 = new DevComponents.DotNetBar.LabelX();
+			this.labelX37 = new DevComponents.DotNetBar.LabelX();
+			this.labelX38 = new DevComponents.DotNetBar.LabelX();
+			this.labelX39 = new DevComponents.DotNetBar.LabelX();
+			this.labelX40 = new DevComponents.DotNetBar.LabelX();
+			this.labelX41 = new DevComponents.DotNetBar.LabelX();
+			this.tabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
+			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.ribbonControl1.SuspendLayout();
 			this.ribbonPanel4.SuspendLayout();
 			this.ribbonPanel3.SuspendLayout();
@@ -206,13 +206,21 @@
 			this.ribbonPanel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
 			this.tabControl1.SuspendLayout();
-			this.tabControlPanel4.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl12)).BeginInit();
-			this.groupControl12.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX4)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl11)).BeginInit();
-			this.groupControl11.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			this.tabControlPanel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+			this.groupControl5.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+			this.groupControl4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+			this.groupControl3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
+			this.tabControlPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+			this.groupControl2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+			this.groupControl1.SuspendLayout();
 			this.tabControlPanel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
 			this.groupControl6.SuspendLayout();
@@ -224,22 +232,13 @@
 			this.groupControl9.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl8)).BeginInit();
 			this.groupControl8.SuspendLayout();
-			this.tabControlPanel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
-			this.groupControl5.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-			this.groupControl4.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-			this.groupControl3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
-			this.tabControlPanel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-			this.groupControl2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-			this.groupControl1.SuspendLayout();
+			this.tabControlPanel4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl12)).BeginInit();
+			this.groupControl12.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl11)).BeginInit();
+			this.groupControl11.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// ribbonControl1
@@ -915,10 +914,10 @@
 			// 
 			this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(221)))), ((int)(((byte)(238)))));
 			this.tabControl1.CanReorderTabs = true;
-			this.tabControl1.Controls.Add(this.tabControlPanel1);
 			this.tabControl1.Controls.Add(this.tabControlPanel2);
-			this.tabControl1.Controls.Add(this.tabControlPanel4);
+			this.tabControl1.Controls.Add(this.tabControlPanel1);
 			this.tabControl1.Controls.Add(this.tabControlPanel3);
+			this.tabControl1.Controls.Add(this.tabControlPanel4);
 			this.tabControl1.Location = new System.Drawing.Point(5, 160);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
@@ -932,222 +931,580 @@
 			this.tabControl1.Tabs.Add(this.tabItem4);
 			this.tabControl1.Text = "tabControl1";
 			// 
-			// tabControlPanel4
+			// tabControlPanel2
 			// 
-			this.tabControlPanel4.Controls.Add(this.groupControl12);
-			this.tabControlPanel4.Controls.Add(this.groupControl11);
-			this.tabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty;
-			this.tabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabControlPanel4.Location = new System.Drawing.Point(0, 26);
-			this.tabControlPanel4.Name = "tabControlPanel4";
-			this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
-			this.tabControlPanel4.Size = new System.Drawing.Size(1163, 432);
-			this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-			this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-			this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-			this.tabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-			this.tabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+			this.tabControlPanel2.Controls.Add(this.treeView1);
+			this.tabControlPanel2.Controls.Add(this.groupControl5);
+			this.tabControlPanel2.Controls.Add(this.groupControl4);
+			this.tabControlPanel2.Controls.Add(this.groupControl3);
+			this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+			this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
+			this.tabControlPanel2.Name = "tabControlPanel2";
+			this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
+			this.tabControlPanel2.Size = new System.Drawing.Size(1163, 432);
+			this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+			this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+			this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+			this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+			this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
-			this.tabControlPanel4.Style.GradientAngle = 90;
-			this.tabControlPanel4.TabIndex = 19;
-			this.tabControlPanel4.TabItem = this.tabItem4;
+			this.tabControlPanel2.Style.GradientAngle = 90;
+			this.tabControlPanel2.TabIndex = 5;
+			this.tabControlPanel2.TabItem = this.tabItem2;
+			// 
+			// groupControl5
+			// 
+			this.groupControl5.Controls.Add(this.dataGridViewX3);
+			this.groupControl5.Location = new System.Drawing.Point(750, 248);
+			this.groupControl5.Name = "groupControl5";
+			this.groupControl5.Size = new System.Drawing.Size(409, 179);
+			this.groupControl5.TabIndex = 3;
+			this.groupControl5.Text = "Move List";
+			// 
+			// dataGridViewX3
+			// 
+			this.dataGridViewX3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewX3.DefaultCellStyle = dataGridViewCellStyle1;
+			this.dataGridViewX3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+			this.dataGridViewX3.Location = new System.Drawing.Point(6, 28);
+			this.dataGridViewX3.Name = "dataGridViewX3";
+			this.dataGridViewX3.RowTemplate.Height = 24;
+			this.dataGridViewX3.Size = new System.Drawing.Size(398, 146);
+			this.dataGridViewX3.TabIndex = 0;
 			// 
-			// groupControl12
+			// groupControl4
 			// 
-			this.groupControl12.Controls.Add(this.dataGridViewX4);
-			this.groupControl12.Location = new System.Drawing.Point(297, 5);
-			this.groupControl12.Name = "groupControl12";
-			this.groupControl12.Size = new System.Drawing.Size(862, 423);
-			this.groupControl12.TabIndex = 1;
-			this.groupControl12.Text = "Report List";
+			this.groupControl4.Controls.Add(this.comboBoxEx4);
+			this.groupControl4.Controls.Add(this.comboBoxEx3);
+			this.groupControl4.Controls.Add(this.textBoxX5);
+			this.groupControl4.Controls.Add(this.textBoxX9);
+			this.groupControl4.Controls.Add(this.textBoxX10);
+			this.groupControl4.Controls.Add(this.textBoxX11);
+			this.groupControl4.Controls.Add(this.labelX11);
+			this.groupControl4.Controls.Add(this.labelX16);
+			this.groupControl4.Controls.Add(this.labelX12);
+			this.groupControl4.Controls.Add(this.labelX13);
+			this.groupControl4.Controls.Add(this.labelX14);
+			this.groupControl4.Controls.Add(this.labelX15);
+			this.groupControl4.Location = new System.Drawing.Point(273, 248);
+			this.groupControl4.Name = "groupControl4";
+			this.groupControl4.Size = new System.Drawing.Size(470, 179);
+			this.groupControl4.TabIndex = 2;
+			this.groupControl4.Text = "Student Information";
 			// 
-			// dataGridViewX4
+			// comboBoxEx4
 			// 
-			this.dataGridViewX4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 7.8F);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewX4.DefaultCellStyle = dataGridViewCellStyle4;
-			this.dataGridViewX4.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-			this.dataGridViewX4.Location = new System.Drawing.Point(6, 28);
-			this.dataGridViewX4.Name = "dataGridViewX4";
-			this.dataGridViewX4.RowTemplate.Height = 24;
-			this.dataGridViewX4.Size = new System.Drawing.Size(851, 390);
-			this.dataGridViewX4.TabIndex = 0;
+			this.comboBoxEx4.DisplayMember = "Text";
+			this.comboBoxEx4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.comboBoxEx4.FormattingEnabled = true;
+			this.comboBoxEx4.ItemHeight = 18;
+			this.comboBoxEx4.Location = new System.Drawing.Point(339, 126);
+			this.comboBoxEx4.Name = "comboBoxEx4";
+			this.comboBoxEx4.Size = new System.Drawing.Size(100, 24);
+			this.comboBoxEx4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+			this.comboBoxEx4.TabIndex = 12;
 			// 
-			// groupControl11
+			// comboBoxEx3
 			// 
-			this.groupControl11.Controls.Add(this.numericUpDown1);
-			this.groupControl11.Controls.Add(this.textBoxX25);
-			this.groupControl11.Controls.Add(this.textBoxX26);
-			this.groupControl11.Controls.Add(this.textBoxX27);
-			this.groupControl11.Controls.Add(this.textBoxX28);
-			this.groupControl11.Controls.Add(this.textBoxX29);
-			this.groupControl11.Controls.Add(this.labelX36);
-			this.groupControl11.Controls.Add(this.labelX37);
-			this.groupControl11.Controls.Add(this.labelX38);
-			this.groupControl11.Controls.Add(this.labelX39);
-			this.groupControl11.Controls.Add(this.labelX40);
-			this.groupControl11.Controls.Add(this.labelX41);
-			this.groupControl11.Location = new System.Drawing.Point(5, 5);
-			this.groupControl11.Name = "groupControl11";
-			this.groupControl11.Size = new System.Drawing.Size(285, 423);
-			this.groupControl11.TabIndex = 0;
-			this.groupControl11.Text = "Report Information";
+			this.comboBoxEx3.DisplayMember = "Text";
+			this.comboBoxEx3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.comboBoxEx3.FormattingEnabled = true;
+			this.comboBoxEx3.ItemHeight = 18;
+			this.comboBoxEx3.Location = new System.Drawing.Point(110, 126);
+			this.comboBoxEx3.Name = "comboBoxEx3";
+			this.comboBoxEx3.Size = new System.Drawing.Size(100, 24);
+			this.comboBoxEx3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+			this.comboBoxEx3.TabIndex = 12;
 			// 
-			// numericUpDown1
+			// textBoxX5
 			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(132, 235);
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(100, 23);
-			this.numericUpDown1.TabIndex = 22;
 			// 
-			// textBoxX25
 			// 
 			// 
+			this.textBoxX5.Border.Class = "TextBoxBorder";
+			this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX5.Location = new System.Drawing.Point(339, 89);
+			this.textBoxX5.Name = "textBoxX5";
+			this.textBoxX5.PreventEnterBeep = true;
+			this.textBoxX5.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX5.TabIndex = 8;
 			// 
+			// textBoxX9
 			// 
-			this.textBoxX25.Border.Class = "TextBoxBorder";
-			this.textBoxX25.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX25.Location = new System.Drawing.Point(132, 199);
-			this.textBoxX25.Name = "textBoxX25";
-			this.textBoxX25.PreventEnterBeep = true;
-			this.textBoxX25.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX25.TabIndex = 17;
 			// 
-			// textBoxX26
 			// 
 			// 
+			this.textBoxX9.Border.Class = "TextBoxBorder";
+			this.textBoxX9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX9.Location = new System.Drawing.Point(110, 89);
+			this.textBoxX9.Name = "textBoxX9";
+			this.textBoxX9.PreventEnterBeep = true;
+			this.textBoxX9.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX9.TabIndex = 9;
 			// 
+			// textBoxX10
 			// 
-			this.textBoxX26.Border.Class = "TextBoxBorder";
-			this.textBoxX26.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX26.Location = new System.Drawing.Point(132, 161);
-			this.textBoxX26.Name = "textBoxX26";
-			this.textBoxX26.PreventEnterBeep = true;
-			this.textBoxX26.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX26.TabIndex = 18;
 			// 
-			// textBoxX27
 			// 
 			// 
+			this.textBoxX10.Border.Class = "TextBoxBorder";
+			this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX10.Location = new System.Drawing.Point(339, 51);
+			this.textBoxX10.Name = "textBoxX10";
+			this.textBoxX10.PreventEnterBeep = true;
+			this.textBoxX10.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX10.TabIndex = 10;
 			// 
+			// textBoxX11
 			// 
-			this.textBoxX27.Border.Class = "TextBoxBorder";
-			this.textBoxX27.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX27.Location = new System.Drawing.Point(132, 85);
-			this.textBoxX27.Name = "textBoxX27";
-			this.textBoxX27.PreventEnterBeep = true;
-			this.textBoxX27.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX27.TabIndex = 19;
 			// 
-			// textBoxX28
 			// 
 			// 
+			this.textBoxX11.Border.Class = "TextBoxBorder";
+			this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX11.Location = new System.Drawing.Point(110, 51);
+			this.textBoxX11.Name = "textBoxX11";
+			this.textBoxX11.PreventEnterBeep = true;
+			this.textBoxX11.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX11.TabIndex = 11;
 			// 
+			// labelX11
 			// 
-			this.textBoxX28.Border.Class = "TextBoxBorder";
-			this.textBoxX28.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX28.Location = new System.Drawing.Point(132, 123);
-			this.textBoxX28.Name = "textBoxX28";
-			this.textBoxX28.PreventEnterBeep = true;
-			this.textBoxX28.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX28.TabIndex = 20;
 			// 
-			// textBoxX29
 			// 
 			// 
+			this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX11.Location = new System.Drawing.Point(251, 87);
+			this.labelX11.Name = "labelX11";
+			this.labelX11.Size = new System.Drawing.Size(75, 23);
+			this.labelX11.TabIndex = 3;
+			this.labelX11.Text = "Faculty ID";
 			// 
+			// labelX16
 			// 
-			this.textBoxX29.Border.Class = "TextBoxBorder";
-			this.textBoxX29.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX29.Location = new System.Drawing.Point(132, 47);
-			this.textBoxX29.Name = "textBoxX29";
-			this.textBoxX29.PreventEnterBeep = true;
-			this.textBoxX29.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX29.TabIndex = 21;
 			// 
-			// labelX36
 			// 
 			// 
+			this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX16.Location = new System.Drawing.Point(251, 125);
+			this.labelX16.Name = "labelX16";
+			this.labelX16.Size = new System.Drawing.Size(75, 23);
+			this.labelX16.TabIndex = 4;
+			this.labelX16.Text = "Role";
 			// 
+			// labelX12
 			// 
-			this.labelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX36.Location = new System.Drawing.Point(23, 235);
-			this.labelX36.Name = "labelX36";
-			this.labelX36.Size = new System.Drawing.Size(103, 23);
-			this.labelX36.TabIndex = 10;
-			this.labelX36.Text = "Number of Fault";
 			// 
-			// labelX37
 			// 
 			// 
+			this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX12.Location = new System.Drawing.Point(22, 125);
+			this.labelX12.Name = "labelX12";
+			this.labelX12.Size = new System.Drawing.Size(75, 23);
+			this.labelX12.TabIndex = 4;
+			this.labelX12.Text = "Sex";
 			// 
+			// labelX13
 			// 
-			this.labelX37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX37.Location = new System.Drawing.Point(23, 197);
-			this.labelX37.Name = "labelX37";
-			this.labelX37.Size = new System.Drawing.Size(75, 23);
-			this.labelX37.TabIndex = 11;
-			this.labelX37.Text = "Room ID";
 			// 
-			// labelX38
 			// 
 			// 
+			this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX13.Location = new System.Drawing.Point(22, 87);
+			this.labelX13.Name = "labelX13";
+			this.labelX13.Size = new System.Drawing.Size(75, 23);
+			this.labelX13.TabIndex = 5;
+			this.labelX13.Text = "Name";
 			// 
+			// labelX14
 			// 
-			this.labelX38.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX38.Location = new System.Drawing.Point(23, 159);
-			this.labelX38.Name = "labelX38";
-			this.labelX38.Size = new System.Drawing.Size(75, 23);
-			this.labelX38.TabIndex = 12;
-			this.labelX38.Text = "Faculty ID";
 			// 
-			// labelX39
 			// 
 			// 
+			this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX14.Location = new System.Drawing.Point(251, 49);
+			this.labelX14.Name = "labelX14";
+			this.labelX14.Size = new System.Drawing.Size(75, 23);
+			this.labelX14.TabIndex = 6;
+			this.labelX14.Text = "Class ID";
 			// 
+			// labelX15
 			// 
-			this.labelX39.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX39.Location = new System.Drawing.Point(23, 83);
-			this.labelX39.Name = "labelX39";
-			this.labelX39.Size = new System.Drawing.Size(75, 23);
-			this.labelX39.TabIndex = 13;
-			this.labelX39.Text = "Name";
 			// 
-			// labelX40
 			// 
 			// 
+			this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX15.Location = new System.Drawing.Point(22, 49);
+			this.labelX15.Name = "labelX15";
+			this.labelX15.Size = new System.Drawing.Size(75, 23);
+			this.labelX15.TabIndex = 7;
+			this.labelX15.Text = "Student ID";
 			// 
+			// groupControl3
 			// 
-			this.labelX40.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX40.Location = new System.Drawing.Point(23, 121);
-			this.labelX40.Name = "labelX40";
-			this.labelX40.Size = new System.Drawing.Size(75, 23);
-			this.labelX40.TabIndex = 14;
-			this.labelX40.Text = "Class ID";
+			this.groupControl3.Controls.Add(this.dataGridViewX2);
+			this.groupControl3.Location = new System.Drawing.Point(273, 5);
+			this.groupControl3.Name = "groupControl3";
+			this.groupControl3.Size = new System.Drawing.Size(886, 237);
+			this.groupControl3.TabIndex = 1;
+			this.groupControl3.Text = "Student List";
 			// 
-			// labelX41
+			// dataGridViewX2
 			// 
+			this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle2;
+			this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+			this.dataGridViewX2.Location = new System.Drawing.Point(6, 28);
+			this.dataGridViewX2.Name = "dataGridViewX2";
+			this.dataGridViewX2.RowTemplate.Height = 24;
+			this.dataGridViewX2.Size = new System.Drawing.Size(875, 204);
+			this.dataGridViewX2.TabIndex = 0;
 			// 
+			// tabItem2
 			// 
+			this.tabItem2.AttachedControl = this.tabControlPanel2;
+			this.tabItem2.Name = "tabItem2";
+			this.tabItem2.Text = "Room";
 			// 
-			this.labelX41.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX41.Location = new System.Drawing.Point(23, 45);
-			this.labelX41.Name = "labelX41";
-			this.labelX41.Size = new System.Drawing.Size(75, 23);
-			this.labelX41.TabIndex = 15;
-			this.labelX41.Text = "Student ID";
+			// tabControlPanel1
 			// 
-			// tabItem4
+			this.tabControlPanel1.Controls.Add(this.groupControl2);
+			this.tabControlPanel1.Controls.Add(this.groupControl1);
+			this.tabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
+			this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControlPanel1.Location = new System.Drawing.Point(0, 26);
+			this.tabControlPanel1.Name = "tabControlPanel1";
+			this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
+			this.tabControlPanel1.Size = new System.Drawing.Size(1163, 432);
+			this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+			this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+			this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+			this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+			this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+			this.tabControlPanel1.Style.GradientAngle = 90;
+			this.tabControlPanel1.TabIndex = 1;
+			this.tabControlPanel1.TabItem = this.tabItem1;
 			// 
-			this.tabItem4.AttachedControl = this.tabControlPanel4;
-			this.tabItem4.Name = "tabItem4";
-			this.tabItem4.Text = "Report";
+			// groupControl2
+			// 
+			this.groupControl2.Controls.Add(this.dataGridViewX1);
+			this.groupControl2.Location = new System.Drawing.Point(258, 5);
+			this.groupControl2.Name = "groupControl2";
+			this.groupControl2.Size = new System.Drawing.Size(901, 423);
+			this.groupControl2.TabIndex = 3;
+			this.groupControl2.Text = "Student List";
+			// 
+			// dataGridViewX1
+			// 
+			this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle3;
+			this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+			this.dataGridViewX1.Location = new System.Drawing.Point(6, 28);
+			this.dataGridViewX1.Name = "dataGridViewX1";
+			this.dataGridViewX1.RowTemplate.Height = 24;
+			this.dataGridViewX1.Size = new System.Drawing.Size(890, 390);
+			this.dataGridViewX1.TabIndex = 0;
+			// 
+			// groupControl1
+			// 
+			this.groupControl1.Controls.Add(this.dateTimePicker1);
+			this.groupControl1.Controls.Add(this.comboBoxEx2);
+			this.groupControl1.Controls.Add(this.comboBoxEx1);
+			this.groupControl1.Controls.Add(this.textBoxX4);
+			this.groupControl1.Controls.Add(this.textBoxX8);
+			this.groupControl1.Controls.Add(this.textBoxX7);
+			this.groupControl1.Controls.Add(this.textBoxX2);
+			this.groupControl1.Controls.Add(this.textBoxX6);
+			this.groupControl1.Controls.Add(this.textBoxX3);
+			this.groupControl1.Controls.Add(this.textBoxX1);
+			this.groupControl1.Controls.Add(this.labelX9);
+			this.groupControl1.Controls.Add(this.labelX10);
+			this.groupControl1.Controls.Add(this.labelX8);
+			this.groupControl1.Controls.Add(this.labelX7);
+			this.groupControl1.Controls.Add(this.labelX4);
+			this.groupControl1.Controls.Add(this.labelX2);
+			this.groupControl1.Controls.Add(this.labelX6);
+			this.groupControl1.Controls.Add(this.labelX3);
+			this.groupControl1.Controls.Add(this.labelX5);
+			this.groupControl1.Controls.Add(this.labelX1);
+			this.groupControl1.Location = new System.Drawing.Point(12, 4);
+			this.groupControl1.Name = "groupControl1";
+			this.groupControl1.Size = new System.Drawing.Size(239, 424);
+			this.groupControl1.TabIndex = 2;
+			this.groupControl1.Text = "Student Information";
+			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dateTimePicker1.Location = new System.Drawing.Point(122, 225);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(100, 23);
+			this.dateTimePicker1.TabIndex = 3;
+			this.dateTimePicker1.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+			// 
+			// comboBoxEx2
+			// 
+			this.comboBoxEx2.DisplayMember = "Text";
+			this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.comboBoxEx2.FormattingEnabled = true;
+			this.comboBoxEx2.ItemHeight = 18;
+			this.comboBoxEx2.Location = new System.Drawing.Point(122, 389);
+			this.comboBoxEx2.Name = "comboBoxEx2";
+			this.comboBoxEx2.Size = new System.Drawing.Size(100, 24);
+			this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+			this.comboBoxEx2.TabIndex = 2;
+			// 
+			// comboBoxEx1
+			// 
+			this.comboBoxEx1.DisplayMember = "Text";
+			this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.comboBoxEx1.FormattingEnabled = true;
+			this.comboBoxEx1.ItemHeight = 18;
+			this.comboBoxEx1.Location = new System.Drawing.Point(122, 187);
+			this.comboBoxEx1.Name = "comboBoxEx1";
+			this.comboBoxEx1.Size = new System.Drawing.Size(100, 24);
+			this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+			this.comboBoxEx1.TabIndex = 2;
+			// 
+			// textBoxX4
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX4.Border.Class = "TextBoxBorder";
+			this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX4.Location = new System.Drawing.Point(122, 150);
+			this.textBoxX4.Name = "textBoxX4";
+			this.textBoxX4.PreventEnterBeep = true;
+			this.textBoxX4.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX4.TabIndex = 1;
+			// 
+			// textBoxX8
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX8.Border.Class = "TextBoxBorder";
+			this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX8.Location = new System.Drawing.Point(122, 349);
+			this.textBoxX8.Name = "textBoxX8";
+			this.textBoxX8.PreventEnterBeep = true;
+			this.textBoxX8.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX8.TabIndex = 1;
+			// 
+			// textBoxX7
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX7.Border.Class = "TextBoxBorder";
+			this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX7.Location = new System.Drawing.Point(122, 267);
+			this.textBoxX7.Name = "textBoxX7";
+			this.textBoxX7.PreventEnterBeep = true;
+			this.textBoxX7.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX7.TabIndex = 1;
+			// 
+			// textBoxX2
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX2.Border.Class = "TextBoxBorder";
+			this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX2.Location = new System.Drawing.Point(122, 74);
+			this.textBoxX2.Name = "textBoxX2";
+			this.textBoxX2.PreventEnterBeep = true;
+			this.textBoxX2.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX2.TabIndex = 1;
+			// 
+			// textBoxX6
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX6.Border.Class = "TextBoxBorder";
+			this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX6.Location = new System.Drawing.Point(122, 308);
+			this.textBoxX6.Name = "textBoxX6";
+			this.textBoxX6.PreventEnterBeep = true;
+			this.textBoxX6.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX6.TabIndex = 1;
+			// 
+			// textBoxX3
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX3.Border.Class = "TextBoxBorder";
+			this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX3.Location = new System.Drawing.Point(122, 112);
+			this.textBoxX3.Name = "textBoxX3";
+			this.textBoxX3.PreventEnterBeep = true;
+			this.textBoxX3.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX3.TabIndex = 1;
+			// 
+			// textBoxX1
+			// 
+			// 
+			// 
+			// 
+			this.textBoxX1.Border.Class = "TextBoxBorder";
+			this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX1.Location = new System.Drawing.Point(122, 36);
+			this.textBoxX1.Name = "textBoxX1";
+			this.textBoxX1.PreventEnterBeep = true;
+			this.textBoxX1.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX1.TabIndex = 1;
+			// 
+			// labelX9
+			// 
+			// 
+			// 
+			// 
+			this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX9.Location = new System.Drawing.Point(13, 388);
+			this.labelX9.Name = "labelX9";
+			this.labelX9.Size = new System.Drawing.Size(103, 23);
+			this.labelX9.TabIndex = 0;
+			this.labelX9.Text = "University\'s Club";
+			// 
+			// labelX10
+			// 
+			// 
+			// 
+			// 
+			this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX10.Location = new System.Drawing.Point(13, 148);
+			this.labelX10.Name = "labelX10";
+			this.labelX10.Size = new System.Drawing.Size(75, 23);
+			this.labelX10.TabIndex = 0;
+			this.labelX10.Text = "Faculty ID";
+			// 
+			// labelX8
+			// 
+			// 
+			// 
+			// 
+			this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX8.Location = new System.Drawing.Point(13, 347);
+			this.labelX8.Name = "labelX8";
+			this.labelX8.Size = new System.Drawing.Size(75, 23);
+			this.labelX8.TabIndex = 0;
+			this.labelX8.Text = "Address";
+			// 
+			// labelX7
+			// 
+			// 
+			// 
+			// 
+			this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX7.Location = new System.Drawing.Point(13, 265);
+			this.labelX7.Name = "labelX7";
+			this.labelX7.Size = new System.Drawing.Size(75, 23);
+			this.labelX7.TabIndex = 0;
+			this.labelX7.Text = "Region";
+			// 
+			// labelX4
+			// 
+			// 
+			// 
+			// 
+			this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX4.Location = new System.Drawing.Point(13, 186);
+			this.labelX4.Name = "labelX4";
+			this.labelX4.Size = new System.Drawing.Size(75, 23);
+			this.labelX4.TabIndex = 0;
+			this.labelX4.Text = "Gender";
+			// 
+			// labelX2
+			// 
+			// 
+			// 
+			// 
+			this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX2.Location = new System.Drawing.Point(13, 72);
+			this.labelX2.Name = "labelX2";
+			this.labelX2.Size = new System.Drawing.Size(75, 23);
+			this.labelX2.TabIndex = 0;
+			this.labelX2.Text = "Name";
+			// 
+			// labelX6
+			// 
+			// 
+			// 
+			// 
+			this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX6.Location = new System.Drawing.Point(13, 306);
+			this.labelX6.Name = "labelX6";
+			this.labelX6.Size = new System.Drawing.Size(75, 23);
+			this.labelX6.TabIndex = 0;
+			this.labelX6.Text = "Social ID";
+			// 
+			// labelX3
+			// 
+			// 
+			// 
+			// 
+			this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX3.Location = new System.Drawing.Point(13, 110);
+			this.labelX3.Name = "labelX3";
+			this.labelX3.Size = new System.Drawing.Size(75, 23);
+			this.labelX3.TabIndex = 0;
+			this.labelX3.Text = "Class ID";
+			// 
+			// labelX5
+			// 
+			// 
+			// 
+			// 
+			this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX5.Location = new System.Drawing.Point(13, 224);
+			this.labelX5.Name = "labelX5";
+			this.labelX5.Size = new System.Drawing.Size(75, 23);
+			this.labelX5.TabIndex = 0;
+			this.labelX5.Text = "Day of Birth";
+			// 
+			// labelX1
+			// 
+			// 
+			// 
+			// 
+			this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX1.Location = new System.Drawing.Point(13, 34);
+			this.labelX1.Name = "labelX1";
+			this.labelX1.Size = new System.Drawing.Size(75, 23);
+			this.labelX1.TabIndex = 0;
+			this.labelX1.Text = "Student ID";
+			// 
+			// tabItem1
+			// 
+			this.tabItem1.AttachedControl = this.tabControlPanel1;
+			this.tabItem1.Name = "tabItem1";
+			this.tabItem1.Text = "Student";
 			// 
 			// tabControlPanel3
 			// 
@@ -1712,587 +2069,229 @@
 			this.tabItem3.Name = "tabItem3";
 			this.tabItem3.Text = "Form";
 			// 
-			// tabControlPanel2
+			// tabControlPanel4
 			// 
-			this.tabControlPanel2.Controls.Add(this.groupControl5);
-			this.tabControlPanel2.Controls.Add(this.groupControl4);
-			this.tabControlPanel2.Controls.Add(this.groupControl3);
-			this.tabControlPanel2.Controls.Add(this.treeList1);
-			this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-			this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
-			this.tabControlPanel2.Name = "tabControlPanel2";
-			this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-			this.tabControlPanel2.Size = new System.Drawing.Size(1163, 432);
-			this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-			this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-			this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-			this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-			this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+			this.tabControlPanel4.Controls.Add(this.groupControl12);
+			this.tabControlPanel4.Controls.Add(this.groupControl11);
+			this.tabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty;
+			this.tabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControlPanel4.Location = new System.Drawing.Point(0, 26);
+			this.tabControlPanel4.Name = "tabControlPanel4";
+			this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
+			this.tabControlPanel4.Size = new System.Drawing.Size(1163, 432);
+			this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+			this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+			this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+			this.tabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+			this.tabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
-			this.tabControlPanel2.Style.GradientAngle = 90;
-			this.tabControlPanel2.TabIndex = 5;
-			this.tabControlPanel2.TabItem = this.tabItem2;
-			// 
-			// groupControl5
-			// 
-			this.groupControl5.Controls.Add(this.dataGridViewX3);
-			this.groupControl5.Location = new System.Drawing.Point(750, 248);
-			this.groupControl5.Name = "groupControl5";
-			this.groupControl5.Size = new System.Drawing.Size(409, 179);
-			this.groupControl5.TabIndex = 3;
-			this.groupControl5.Text = "Move List";
-			// 
-			// dataGridViewX3
-			// 
-			this.dataGridViewX3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewX3.DefaultCellStyle = dataGridViewCellStyle2;
-			this.dataGridViewX3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-			this.dataGridViewX3.Location = new System.Drawing.Point(6, 28);
-			this.dataGridViewX3.Name = "dataGridViewX3";
-			this.dataGridViewX3.RowTemplate.Height = 24;
-			this.dataGridViewX3.Size = new System.Drawing.Size(398, 146);
-			this.dataGridViewX3.TabIndex = 0;
+			this.tabControlPanel4.Style.GradientAngle = 90;
+			this.tabControlPanel4.TabIndex = 19;
+			this.tabControlPanel4.TabItem = this.tabItem4;
 			// 
-			// groupControl4
+			// groupControl12
 			// 
-			this.groupControl4.Controls.Add(this.comboBoxEx4);
-			this.groupControl4.Controls.Add(this.comboBoxEx3);
-			this.groupControl4.Controls.Add(this.textBoxX5);
-			this.groupControl4.Controls.Add(this.textBoxX9);
-			this.groupControl4.Controls.Add(this.textBoxX10);
-			this.groupControl4.Controls.Add(this.textBoxX11);
-			this.groupControl4.Controls.Add(this.labelX11);
-			this.groupControl4.Controls.Add(this.labelX16);
-			this.groupControl4.Controls.Add(this.labelX12);
-			this.groupControl4.Controls.Add(this.labelX13);
-			this.groupControl4.Controls.Add(this.labelX14);
-			this.groupControl4.Controls.Add(this.labelX15);
-			this.groupControl4.Location = new System.Drawing.Point(273, 248);
-			this.groupControl4.Name = "groupControl4";
-			this.groupControl4.Size = new System.Drawing.Size(470, 179);
-			this.groupControl4.TabIndex = 2;
-			this.groupControl4.Text = "Student Information";
+			this.groupControl12.Controls.Add(this.dataGridViewX4);
+			this.groupControl12.Location = new System.Drawing.Point(297, 5);
+			this.groupControl12.Name = "groupControl12";
+			this.groupControl12.Size = new System.Drawing.Size(862, 423);
+			this.groupControl12.TabIndex = 1;
+			this.groupControl12.Text = "Report List";
 			// 
-			// comboBoxEx4
+			// dataGridViewX4
 			// 
-			this.comboBoxEx4.DisplayMember = "Text";
-			this.comboBoxEx4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.comboBoxEx4.FormattingEnabled = true;
-			this.comboBoxEx4.ItemHeight = 18;
-			this.comboBoxEx4.Location = new System.Drawing.Point(339, 126);
-			this.comboBoxEx4.Name = "comboBoxEx4";
-			this.comboBoxEx4.Size = new System.Drawing.Size(100, 24);
-			this.comboBoxEx4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-			this.comboBoxEx4.TabIndex = 12;
+			this.dataGridViewX4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 7.8F);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewX4.DefaultCellStyle = dataGridViewCellStyle4;
+			this.dataGridViewX4.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+			this.dataGridViewX4.Location = new System.Drawing.Point(6, 28);
+			this.dataGridViewX4.Name = "dataGridViewX4";
+			this.dataGridViewX4.RowTemplate.Height = 24;
+			this.dataGridViewX4.Size = new System.Drawing.Size(851, 390);
+			this.dataGridViewX4.TabIndex = 0;
 			// 
-			// comboBoxEx3
+			// groupControl11
 			// 
-			this.comboBoxEx3.DisplayMember = "Text";
-			this.comboBoxEx3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.comboBoxEx3.FormattingEnabled = true;
-			this.comboBoxEx3.ItemHeight = 18;
-			this.comboBoxEx3.Location = new System.Drawing.Point(110, 126);
-			this.comboBoxEx3.Name = "comboBoxEx3";
-			this.comboBoxEx3.Size = new System.Drawing.Size(100, 24);
-			this.comboBoxEx3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-			this.comboBoxEx3.TabIndex = 12;
+			this.groupControl11.Controls.Add(this.numericUpDown1);
+			this.groupControl11.Controls.Add(this.textBoxX25);
+			this.groupControl11.Controls.Add(this.textBoxX26);
+			this.groupControl11.Controls.Add(this.textBoxX27);
+			this.groupControl11.Controls.Add(this.textBoxX28);
+			this.groupControl11.Controls.Add(this.textBoxX29);
+			this.groupControl11.Controls.Add(this.labelX36);
+			this.groupControl11.Controls.Add(this.labelX37);
+			this.groupControl11.Controls.Add(this.labelX38);
+			this.groupControl11.Controls.Add(this.labelX39);
+			this.groupControl11.Controls.Add(this.labelX40);
+			this.groupControl11.Controls.Add(this.labelX41);
+			this.groupControl11.Location = new System.Drawing.Point(5, 5);
+			this.groupControl11.Name = "groupControl11";
+			this.groupControl11.Size = new System.Drawing.Size(285, 423);
+			this.groupControl11.TabIndex = 0;
+			this.groupControl11.Text = "Report Information";
 			// 
-			// textBoxX5
+			// numericUpDown1
 			// 
+			this.numericUpDown1.Location = new System.Drawing.Point(132, 235);
+			this.numericUpDown1.Name = "numericUpDown1";
+			this.numericUpDown1.Size = new System.Drawing.Size(100, 23);
+			this.numericUpDown1.TabIndex = 22;
 			// 
+			// textBoxX25
 			// 
 			// 
-			this.textBoxX5.Border.Class = "TextBoxBorder";
-			this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX5.Location = new System.Drawing.Point(339, 89);
-			this.textBoxX5.Name = "textBoxX5";
-			this.textBoxX5.PreventEnterBeep = true;
-			this.textBoxX5.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX5.TabIndex = 8;
 			// 
-			// textBoxX9
 			// 
+			this.textBoxX25.Border.Class = "TextBoxBorder";
+			this.textBoxX25.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX25.Location = new System.Drawing.Point(132, 199);
+			this.textBoxX25.Name = "textBoxX25";
+			this.textBoxX25.PreventEnterBeep = true;
+			this.textBoxX25.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX25.TabIndex = 17;
 			// 
+			// textBoxX26
 			// 
 			// 
-			this.textBoxX9.Border.Class = "TextBoxBorder";
-			this.textBoxX9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX9.Location = new System.Drawing.Point(110, 89);
-			this.textBoxX9.Name = "textBoxX9";
-			this.textBoxX9.PreventEnterBeep = true;
-			this.textBoxX9.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX9.TabIndex = 9;
 			// 
-			// textBoxX10
 			// 
+			this.textBoxX26.Border.Class = "TextBoxBorder";
+			this.textBoxX26.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX26.Location = new System.Drawing.Point(132, 161);
+			this.textBoxX26.Name = "textBoxX26";
+			this.textBoxX26.PreventEnterBeep = true;
+			this.textBoxX26.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX26.TabIndex = 18;
 			// 
+			// textBoxX27
 			// 
 			// 
-			this.textBoxX10.Border.Class = "TextBoxBorder";
-			this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX10.Location = new System.Drawing.Point(339, 51);
-			this.textBoxX10.Name = "textBoxX10";
-			this.textBoxX10.PreventEnterBeep = true;
-			this.textBoxX10.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX10.TabIndex = 10;
 			// 
-			// textBoxX11
 			// 
+			this.textBoxX27.Border.Class = "TextBoxBorder";
+			this.textBoxX27.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX27.Location = new System.Drawing.Point(132, 85);
+			this.textBoxX27.Name = "textBoxX27";
+			this.textBoxX27.PreventEnterBeep = true;
+			this.textBoxX27.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX27.TabIndex = 19;
 			// 
+			// textBoxX28
 			// 
 			// 
-			this.textBoxX11.Border.Class = "TextBoxBorder";
-			this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX11.Location = new System.Drawing.Point(110, 51);
-			this.textBoxX11.Name = "textBoxX11";
-			this.textBoxX11.PreventEnterBeep = true;
-			this.textBoxX11.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX11.TabIndex = 11;
 			// 
-			// labelX11
 			// 
+			this.textBoxX28.Border.Class = "TextBoxBorder";
+			this.textBoxX28.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX28.Location = new System.Drawing.Point(132, 123);
+			this.textBoxX28.Name = "textBoxX28";
+			this.textBoxX28.PreventEnterBeep = true;
+			this.textBoxX28.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX28.TabIndex = 20;
 			// 
+			// textBoxX29
 			// 
 			// 
-			this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX11.Location = new System.Drawing.Point(251, 87);
-			this.labelX11.Name = "labelX11";
-			this.labelX11.Size = new System.Drawing.Size(75, 23);
-			this.labelX11.TabIndex = 3;
-			this.labelX11.Text = "Faculty ID";
 			// 
-			// labelX16
 			// 
+			this.textBoxX29.Border.Class = "TextBoxBorder";
+			this.textBoxX29.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.textBoxX29.Location = new System.Drawing.Point(132, 47);
+			this.textBoxX29.Name = "textBoxX29";
+			this.textBoxX29.PreventEnterBeep = true;
+			this.textBoxX29.Size = new System.Drawing.Size(100, 23);
+			this.textBoxX29.TabIndex = 21;
 			// 
+			// labelX36
 			// 
 			// 
-			this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX16.Location = new System.Drawing.Point(251, 125);
-			this.labelX16.Name = "labelX16";
-			this.labelX16.Size = new System.Drawing.Size(75, 23);
-			this.labelX16.TabIndex = 4;
-			this.labelX16.Text = "Role";
 			// 
-			// labelX12
 			// 
+			this.labelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX36.Location = new System.Drawing.Point(23, 235);
+			this.labelX36.Name = "labelX36";
+			this.labelX36.Size = new System.Drawing.Size(103, 23);
+			this.labelX36.TabIndex = 10;
+			this.labelX36.Text = "Number of Fault";
 			// 
+			// labelX37
 			// 
 			// 
-			this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX12.Location = new System.Drawing.Point(22, 125);
-			this.labelX12.Name = "labelX12";
-			this.labelX12.Size = new System.Drawing.Size(75, 23);
-			this.labelX12.TabIndex = 4;
-			this.labelX12.Text = "Sex";
 			// 
-			// labelX13
 			// 
+			this.labelX37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX37.Location = new System.Drawing.Point(23, 197);
+			this.labelX37.Name = "labelX37";
+			this.labelX37.Size = new System.Drawing.Size(75, 23);
+			this.labelX37.TabIndex = 11;
+			this.labelX37.Text = "Room ID";
 			// 
+			// labelX38
 			// 
 			// 
-			this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX13.Location = new System.Drawing.Point(22, 87);
-			this.labelX13.Name = "labelX13";
-			this.labelX13.Size = new System.Drawing.Size(75, 23);
-			this.labelX13.TabIndex = 5;
-			this.labelX13.Text = "Name";
 			// 
-			// labelX14
 			// 
+			this.labelX38.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX38.Location = new System.Drawing.Point(23, 159);
+			this.labelX38.Name = "labelX38";
+			this.labelX38.Size = new System.Drawing.Size(75, 23);
+			this.labelX38.TabIndex = 12;
+			this.labelX38.Text = "Faculty ID";
 			// 
+			// labelX39
 			// 
 			// 
-			this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX14.Location = new System.Drawing.Point(251, 49);
-			this.labelX14.Name = "labelX14";
-			this.labelX14.Size = new System.Drawing.Size(75, 23);
-			this.labelX14.TabIndex = 6;
-			this.labelX14.Text = "Class ID";
 			// 
-			// labelX15
 			// 
+			this.labelX39.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX39.Location = new System.Drawing.Point(23, 83);
+			this.labelX39.Name = "labelX39";
+			this.labelX39.Size = new System.Drawing.Size(75, 23);
+			this.labelX39.TabIndex = 13;
+			this.labelX39.Text = "Name";
 			// 
+			// labelX40
 			// 
 			// 
-			this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX15.Location = new System.Drawing.Point(22, 49);
-			this.labelX15.Name = "labelX15";
-			this.labelX15.Size = new System.Drawing.Size(75, 23);
-			this.labelX15.TabIndex = 7;
-			this.labelX15.Text = "Student ID";
 			// 
-			// groupControl3
 			// 
-			this.groupControl3.Controls.Add(this.dataGridViewX2);
-			this.groupControl3.Location = new System.Drawing.Point(273, 5);
-			this.groupControl3.Name = "groupControl3";
-			this.groupControl3.Size = new System.Drawing.Size(886, 237);
-			this.groupControl3.TabIndex = 1;
-			this.groupControl3.Text = "Student List";
+			this.labelX40.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX40.Location = new System.Drawing.Point(23, 121);
+			this.labelX40.Name = "labelX40";
+			this.labelX40.Size = new System.Drawing.Size(75, 23);
+			this.labelX40.TabIndex = 14;
+			this.labelX40.Text = "Class ID";
 			// 
-			// dataGridViewX2
+			// labelX41
 			// 
-			this.dataGridViewX2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewX2.DefaultCellStyle = dataGridViewCellStyle3;
-			this.dataGridViewX2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-			this.dataGridViewX2.Location = new System.Drawing.Point(6, 28);
-			this.dataGridViewX2.Name = "dataGridViewX2";
-			this.dataGridViewX2.RowTemplate.Height = 24;
-			this.dataGridViewX2.Size = new System.Drawing.Size(875, 204);
-			this.dataGridViewX2.TabIndex = 0;
 			// 
-			// treeList1
 			// 
-			this.treeList1.Location = new System.Drawing.Point(13, 5);
-			this.treeList1.Name = "treeList1";
-			this.treeList1.Size = new System.Drawing.Size(254, 422);
-			this.treeList1.TabIndex = 0;
 			// 
-			// tabItem2
+			this.labelX41.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.labelX41.Location = new System.Drawing.Point(23, 45);
+			this.labelX41.Name = "labelX41";
+			this.labelX41.Size = new System.Drawing.Size(75, 23);
+			this.labelX41.TabIndex = 15;
+			this.labelX41.Text = "Student ID";
 			// 
-			this.tabItem2.AttachedControl = this.tabControlPanel2;
-			this.tabItem2.Name = "tabItem2";
-			this.tabItem2.Text = "Room";
+			// tabItem4
 			// 
-			// tabControlPanel1
+			this.tabItem4.AttachedControl = this.tabControlPanel4;
+			this.tabItem4.Name = "tabItem4";
+			this.tabItem4.Text = "Report";
 			// 
-			this.tabControlPanel1.Controls.Add(this.groupControl2);
-			this.tabControlPanel1.Controls.Add(this.groupControl1);
-			this.tabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-			this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabControlPanel1.Location = new System.Drawing.Point(0, 26);
-			this.tabControlPanel1.Name = "tabControlPanel1";
-			this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-			this.tabControlPanel1.Size = new System.Drawing.Size(1163, 432);
-			this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-			this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-			this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-			this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-			this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-			this.tabControlPanel1.Style.GradientAngle = 90;
-			this.tabControlPanel1.TabIndex = 1;
-			this.tabControlPanel1.TabItem = this.tabItem1;
+			// treeView1
 			// 
-			// groupControl2
-			// 
-			this.groupControl2.Controls.Add(this.dataGridViewX1);
-			this.groupControl2.Location = new System.Drawing.Point(258, 5);
-			this.groupControl2.Name = "groupControl2";
-			this.groupControl2.Size = new System.Drawing.Size(901, 423);
-			this.groupControl2.TabIndex = 3;
-			this.groupControl2.Text = "Student List";
-			// 
-			// dataGridViewX1
-			// 
-			this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
-			this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-			this.dataGridViewX1.Location = new System.Drawing.Point(6, 28);
-			this.dataGridViewX1.Name = "dataGridViewX1";
-			this.dataGridViewX1.RowTemplate.Height = 24;
-			this.dataGridViewX1.Size = new System.Drawing.Size(890, 390);
-			this.dataGridViewX1.TabIndex = 0;
-			// 
-			// groupControl1
-			// 
-			this.groupControl1.Controls.Add(this.dateTimePicker1);
-			this.groupControl1.Controls.Add(this.comboBoxEx2);
-			this.groupControl1.Controls.Add(this.comboBoxEx1);
-			this.groupControl1.Controls.Add(this.textBoxX4);
-			this.groupControl1.Controls.Add(this.textBoxX8);
-			this.groupControl1.Controls.Add(this.textBoxX7);
-			this.groupControl1.Controls.Add(this.textBoxX2);
-			this.groupControl1.Controls.Add(this.textBoxX6);
-			this.groupControl1.Controls.Add(this.textBoxX3);
-			this.groupControl1.Controls.Add(this.textBoxX1);
-			this.groupControl1.Controls.Add(this.labelX9);
-			this.groupControl1.Controls.Add(this.labelX10);
-			this.groupControl1.Controls.Add(this.labelX8);
-			this.groupControl1.Controls.Add(this.labelX7);
-			this.groupControl1.Controls.Add(this.labelX4);
-			this.groupControl1.Controls.Add(this.labelX2);
-			this.groupControl1.Controls.Add(this.labelX6);
-			this.groupControl1.Controls.Add(this.labelX3);
-			this.groupControl1.Controls.Add(this.labelX5);
-			this.groupControl1.Controls.Add(this.labelX1);
-			this.groupControl1.Location = new System.Drawing.Point(12, 4);
-			this.groupControl1.Name = "groupControl1";
-			this.groupControl1.Size = new System.Drawing.Size(239, 424);
-			this.groupControl1.TabIndex = 2;
-			this.groupControl1.Text = "Student Information";
-			// 
-			// dateTimePicker1
-			// 
-			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dateTimePicker1.Location = new System.Drawing.Point(122, 225);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(100, 23);
-			this.dateTimePicker1.TabIndex = 3;
-			this.dateTimePicker1.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
-			// 
-			// comboBoxEx2
-			// 
-			this.comboBoxEx2.DisplayMember = "Text";
-			this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.comboBoxEx2.FormattingEnabled = true;
-			this.comboBoxEx2.ItemHeight = 18;
-			this.comboBoxEx2.Location = new System.Drawing.Point(122, 389);
-			this.comboBoxEx2.Name = "comboBoxEx2";
-			this.comboBoxEx2.Size = new System.Drawing.Size(100, 24);
-			this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-			this.comboBoxEx2.TabIndex = 2;
-			// 
-			// comboBoxEx1
-			// 
-			this.comboBoxEx1.DisplayMember = "Text";
-			this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-			this.comboBoxEx1.FormattingEnabled = true;
-			this.comboBoxEx1.ItemHeight = 18;
-			this.comboBoxEx1.Location = new System.Drawing.Point(122, 187);
-			this.comboBoxEx1.Name = "comboBoxEx1";
-			this.comboBoxEx1.Size = new System.Drawing.Size(100, 24);
-			this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-			this.comboBoxEx1.TabIndex = 2;
-			// 
-			// textBoxX4
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX4.Border.Class = "TextBoxBorder";
-			this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX4.Location = new System.Drawing.Point(122, 150);
-			this.textBoxX4.Name = "textBoxX4";
-			this.textBoxX4.PreventEnterBeep = true;
-			this.textBoxX4.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX4.TabIndex = 1;
-			// 
-			// textBoxX8
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX8.Border.Class = "TextBoxBorder";
-			this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX8.Location = new System.Drawing.Point(122, 349);
-			this.textBoxX8.Name = "textBoxX8";
-			this.textBoxX8.PreventEnterBeep = true;
-			this.textBoxX8.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX8.TabIndex = 1;
-			// 
-			// textBoxX7
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX7.Border.Class = "TextBoxBorder";
-			this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX7.Location = new System.Drawing.Point(122, 267);
-			this.textBoxX7.Name = "textBoxX7";
-			this.textBoxX7.PreventEnterBeep = true;
-			this.textBoxX7.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX7.TabIndex = 1;
-			// 
-			// textBoxX2
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX2.Border.Class = "TextBoxBorder";
-			this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX2.Location = new System.Drawing.Point(122, 74);
-			this.textBoxX2.Name = "textBoxX2";
-			this.textBoxX2.PreventEnterBeep = true;
-			this.textBoxX2.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX2.TabIndex = 1;
-			// 
-			// textBoxX6
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX6.Border.Class = "TextBoxBorder";
-			this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX6.Location = new System.Drawing.Point(122, 308);
-			this.textBoxX6.Name = "textBoxX6";
-			this.textBoxX6.PreventEnterBeep = true;
-			this.textBoxX6.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX6.TabIndex = 1;
-			// 
-			// textBoxX3
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX3.Border.Class = "TextBoxBorder";
-			this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX3.Location = new System.Drawing.Point(122, 112);
-			this.textBoxX3.Name = "textBoxX3";
-			this.textBoxX3.PreventEnterBeep = true;
-			this.textBoxX3.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX3.TabIndex = 1;
-			// 
-			// textBoxX1
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX1.Border.Class = "TextBoxBorder";
-			this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX1.Location = new System.Drawing.Point(122, 36);
-			this.textBoxX1.Name = "textBoxX1";
-			this.textBoxX1.PreventEnterBeep = true;
-			this.textBoxX1.Size = new System.Drawing.Size(100, 23);
-			this.textBoxX1.TabIndex = 1;
-			// 
-			// labelX9
-			// 
-			// 
-			// 
-			// 
-			this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX9.Location = new System.Drawing.Point(13, 388);
-			this.labelX9.Name = "labelX9";
-			this.labelX9.Size = new System.Drawing.Size(103, 23);
-			this.labelX9.TabIndex = 0;
-			this.labelX9.Text = "University\'s Club";
-			// 
-			// labelX10
-			// 
-			// 
-			// 
-			// 
-			this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX10.Location = new System.Drawing.Point(13, 148);
-			this.labelX10.Name = "labelX10";
-			this.labelX10.Size = new System.Drawing.Size(75, 23);
-			this.labelX10.TabIndex = 0;
-			this.labelX10.Text = "Faculty ID";
-			// 
-			// labelX8
-			// 
-			// 
-			// 
-			// 
-			this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX8.Location = new System.Drawing.Point(13, 347);
-			this.labelX8.Name = "labelX8";
-			this.labelX8.Size = new System.Drawing.Size(75, 23);
-			this.labelX8.TabIndex = 0;
-			this.labelX8.Text = "Address";
-			// 
-			// labelX7
-			// 
-			// 
-			// 
-			// 
-			this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX7.Location = new System.Drawing.Point(13, 265);
-			this.labelX7.Name = "labelX7";
-			this.labelX7.Size = new System.Drawing.Size(75, 23);
-			this.labelX7.TabIndex = 0;
-			this.labelX7.Text = "Region";
-			// 
-			// labelX4
-			// 
-			// 
-			// 
-			// 
-			this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX4.Location = new System.Drawing.Point(13, 186);
-			this.labelX4.Name = "labelX4";
-			this.labelX4.Size = new System.Drawing.Size(75, 23);
-			this.labelX4.TabIndex = 0;
-			this.labelX4.Text = "Gender";
-			// 
-			// labelX2
-			// 
-			// 
-			// 
-			// 
-			this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX2.Location = new System.Drawing.Point(13, 72);
-			this.labelX2.Name = "labelX2";
-			this.labelX2.Size = new System.Drawing.Size(75, 23);
-			this.labelX2.TabIndex = 0;
-			this.labelX2.Text = "Name";
-			// 
-			// labelX6
-			// 
-			// 
-			// 
-			// 
-			this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX6.Location = new System.Drawing.Point(13, 306);
-			this.labelX6.Name = "labelX6";
-			this.labelX6.Size = new System.Drawing.Size(75, 23);
-			this.labelX6.TabIndex = 0;
-			this.labelX6.Text = "Social ID";
-			// 
-			// labelX3
-			// 
-			// 
-			// 
-			// 
-			this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX3.Location = new System.Drawing.Point(13, 110);
-			this.labelX3.Name = "labelX3";
-			this.labelX3.Size = new System.Drawing.Size(75, 23);
-			this.labelX3.TabIndex = 0;
-			this.labelX3.Text = "Class ID";
-			// 
-			// labelX5
-			// 
-			// 
-			// 
-			// 
-			this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX5.Location = new System.Drawing.Point(13, 224);
-			this.labelX5.Name = "labelX5";
-			this.labelX5.Size = new System.Drawing.Size(75, 23);
-			this.labelX5.TabIndex = 0;
-			this.labelX5.Text = "Day of Birth";
-			// 
-			// labelX1
-			// 
-			// 
-			// 
-			// 
-			this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.labelX1.Location = new System.Drawing.Point(13, 34);
-			this.labelX1.Name = "labelX1";
-			this.labelX1.Size = new System.Drawing.Size(75, 23);
-			this.labelX1.TabIndex = 0;
-			this.labelX1.Text = "Student ID";
-			// 
-			// tabItem1
-			// 
-			this.tabItem1.AttachedControl = this.tabControlPanel1;
-			this.tabItem1.Name = "tabItem1";
-			this.tabItem1.Text = "Student";
+			this.treeView1.Location = new System.Drawing.Point(10, 5);
+			this.treeView1.Name = "treeView1";
+			this.treeView1.Size = new System.Drawing.Size(242, 418);
+			this.treeView1.TabIndex = 4;
 			// 
 			// Form1
 			// 
@@ -2312,13 +2311,21 @@
 			this.ribbonPanel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
 			this.tabControl1.ResumeLayout(false);
-			this.tabControlPanel4.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.groupControl12)).EndInit();
-			this.groupControl12.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX4)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl11)).EndInit();
-			this.groupControl11.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			this.tabControlPanel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+			this.groupControl5.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+			this.groupControl4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+			this.groupControl3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
+			this.tabControlPanel1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+			this.groupControl2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+			this.groupControl1.ResumeLayout(false);
 			this.tabControlPanel3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
 			this.groupControl6.ResumeLayout(false);
@@ -2330,22 +2337,13 @@
 			this.groupControl9.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.groupControl8)).EndInit();
 			this.groupControl8.ResumeLayout(false);
-			this.tabControlPanel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
-			this.groupControl5.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-			this.groupControl4.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-			this.groupControl3.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
-			this.tabControlPanel1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-			this.groupControl2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-			this.groupControl1.ResumeLayout(false);
+			this.tabControlPanel4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.groupControl12)).EndInit();
+			this.groupControl12.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewX4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl11)).EndInit();
+			this.groupControl11.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -2419,7 +2417,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem23;
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem3;
         private DevComponents.DotNetBar.TabControlPanel tabControlPanel2;
-        private DevExpress.XtraTreeList.TreeList treeList1;
         private DevComponents.DotNetBar.TabItem tabItem2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevComponents.DotNetBar.TabControlPanel tabControlPanel3;
@@ -2517,5 +2514,6 @@
         private DevComponents.DotNetBar.LabelX labelX40;
         private DevComponents.DotNetBar.LabelX labelX41;
         private DevComponents.DotNetBar.TabItem tabItem4;
-    }
+		private System.Windows.Forms.TreeView treeView1;
+	}
 }

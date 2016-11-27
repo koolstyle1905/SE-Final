@@ -13,6 +13,6 @@
 	{
 		public int BuildingID { get; set; }
 
-		List<FloorDto> Floors { get; set; }
+		public List<FloorDto> Floors { get; set; }
 	}
 }
