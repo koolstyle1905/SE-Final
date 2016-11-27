@@ -3,7 +3,7 @@ namespace DataAccess.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class init : DbMigration
+    public partial class Init : DbMigration
     {
         public override void Up()
         {
@@ -316,7 +316,6 @@ namespace DataAccess.Migrations
                 .ForeignKey("dbo.Students", t => t.PersonID, cascadeDelete: true)
                 .Index(t => t.AttendanceId)
                 .Index(t => t.PersonID);
-            
         }
         
         public override void Down()

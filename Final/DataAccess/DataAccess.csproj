@@ -68,9 +68,10 @@
     <Compile Include="Domain\ParkingReceipt.cs" />
     <Compile Include="Domain\ParkingTicket.cs" />
     <Compile Include="Domain\Priority.cs" />
-    <Compile Include="Migrations\201611261608565_init.cs" />
-    <Compile Include="Migrations\201611261608565_init.Designer.cs">
-      <DependentUpon>201611261608565_init.cs</DependentUpon>
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Migrations\201611261608565_Init.cs" />
+    <Compile Include="Migrations\201611261608565_Init.Designer.cs">
+      <DependentUpon>201611261608565_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +79,14 @@
     <Compile Include="Domain\ServiceBill.cs" />
     <Compile Include="Domain\Student.cs" />
     <Compile Include="Domain\TemporaryAbsence.cs" />
+    <Compile Include="Repositories\BuildingRepository.cs" />
+    <Compile Include="Repositories\ClubRepository.cs" />
+    <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\FloorRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\RoomRepository.cs" />
+    <Compile Include="Repositories\StudentRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -90,10 +99,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611261608565_init.resx">
-      <DependentUpon>201611261608565_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611261608565_Init.resx">
+      <DependentUpon>201611261608565_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -16,10 +16,7 @@ namespace DataAccess.Migrations
 
         protected override void Seed(DataAccess.DormitoryContext context)
         {
-			if (System.Diagnostics.Debugger.IsAttached == false)
-			{
-				System.Diagnostics.Debugger.Launch();
-			}
+			//System.Diagnostics.Debugger.Launch();
 			var employee = new Employee()
 			{
 				EmployeeID = "1",
