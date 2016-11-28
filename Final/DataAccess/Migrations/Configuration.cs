@@ -22,6 +22,7 @@
 				DbClear.Exec(context.Rooms);
 				DbClear.Exec(context.Floors);
 				DbClear.Exec(context.Buildings);
+				DbClear.Exec(context.Priorities);
 				DbClear.Exec(context.Students);
 				DbClear.Exec(context.Classes);
 				DbClear.Exec(context.Faculties);
@@ -42,7 +43,7 @@
 
 		protected override void Seed(DataAccess.DormitoryContext context)
 		{
-			//DbClear.ClearAllData();
+			DbClear.ClearAllData();
 			//System.Diagnostics.Debugger.Launch();
 			#region Add Buildings, Floors, Rooms
 			var buildings = new List<Building>();
@@ -107,6 +108,36 @@
 			clubs.ForEach(c => context.Clubs.AddOrUpdate(x => x.ClubID, c));
 			#endregion
 
+			var priorities = new List<Priority>();
+			priorities.Add(new Priority()
+			{
+				PriorityID = "P1",
+				Content = "Bản thân là anh hùng lực lượng vũ trang, anh hùng lao động, thương binh, bệnh binh",
+			});
+			priorities.Add(new Priority()
+			{
+				PriorityID = "P2",
+				Content = "Là con của Anh hùng lực lượng vũ trang, Anh hùng lao động",
+			});
+			priorities.Add(new Priority()
+			{
+				PriorityID = "P3",
+				Content = "Con liệt sĩ, con thương binh, bệnh binh",
+			});
+			priorities.Add(new Priority()
+			{
+				PriorityID = "P4",
+				Content = "Con đẻ của những người hoạt động kháng chiến bị nhiễm chất độc hoá học"
+			});
+			priorities.Add(new Priority()
+			{
+				PriorityID = "P5",
+				Content = "Là người dân tộc thiểu số, có bố hoặc mẹ là người dân tộc thiểu số",
+			});
+			priorities.ForEach(p => context.Priorities.AddOrUpdate(p));
+			//priorities.ForEach(p => context.Priorities.Attach(p));
+
+			#region Add Faculties, Classes, Students
 			var students1 = new List<Student>();
 			students1.Add(new Student()
 			{
@@ -115,6 +146,7 @@
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
 				Address = "TDT",
+				Priorities = priorities
 			});
 			students1.Add(new Student()
 			{
@@ -122,13 +154,15 @@
 				ClubID = clubs[0].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
+				Priorities = priorities
 			});
 			students1.Add(new Student()
 			{
 				StudentID = "51403003",
 				ClubID = clubs[0].ClubID,
 				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
+				Gender = Gender.Female.ToString(),
+				Priorities = priorities
 			});
 			students1.Add(new Student()
 			{
@@ -136,6 +170,7 @@
 				ClubID = clubs[0].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
+				Priorities = priorities
 			});
 			////////////////////////////////////////////////////////////////////
 			var students2 = new List<Student>();
@@ -153,6 +188,7 @@
 				ClubID = clubs[1].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
+				Priorities = priorities
 			});
 			students2.Add(new Student()
 			{
@@ -184,6 +220,7 @@
 				ClubID = clubs[3].ClubID,
 				Name = "Neptune",
 				Gender = Gender.Male.ToString(),
+				Priorities = priorities
 			});
 			students3.Add(new Student()
 			{
@@ -230,6 +267,10 @@
 				Name = "Điện"
 			});
 			faculties.ForEach(f => context.Faculties.AddOrUpdate(x => x.FacultyID, f));
+			#endregion
+
+
+
 
 			var employee = new Employee()
 			{

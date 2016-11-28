@@ -20,7 +20,7 @@ namespace Final
 
 		private void FormStudent_Load(object sender, EventArgs e)
 		{
-			this.gridControl1.DataSource = StudentBusiness.GetAll();
+			studentDtoBindingSource.DataSource = StudentBusiness.GetAll();
 		}
 	}
 }
