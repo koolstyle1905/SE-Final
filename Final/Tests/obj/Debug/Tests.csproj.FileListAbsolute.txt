@@ -18,3 +18,7 @@ C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\nunit.framework.
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.dll
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.pdb
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Castle.Core.dll
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Moq.dll
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Castle.Core.xml
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Moq.xml

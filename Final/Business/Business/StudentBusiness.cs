@@ -20,5 +20,14 @@
 				return Mapper.Map< List<Student>, List<StudentDto>>(students);
 			}
 		}
+
+		public static void EditStudent(StudentDto student)
+		{
+			using (var unitOfWork = new UnitOfWork())
+			{
+				unitOfWork.Students.Edit(Mapper.Map<StudentDto, Student>(student));
+				unitOfWork.SaveChanges();
+			}
+		}
 	}
 }

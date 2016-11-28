@@ -31,7 +31,8 @@
 			this.components = new System.ComponentModel.Container();
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.colContent = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colPriorityID = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
 			this.studentDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -45,34 +46,43 @@
 			this.colClub = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colGender = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
 			this.colDateOfBirth = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colSSN = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
-			this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.studentDtoBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
 			this.gridSplitContainer1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// gridView2
 			// 
 			this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colContent});
+            this.colPriorityID});
 			this.gridView2.GridControl = this.gridControl1;
 			this.gridView2.Name = "gridView2";
 			// 
-			// colContent
+			// colPriorityID
 			// 
-			this.colContent.FieldName = "Content";
-			this.colContent.Name = "colContent";
-			this.colContent.Visible = true;
-			this.colContent.VisibleIndex = 0;
+			this.colPriorityID.ColumnEdit = this.repositoryItemComboBox2;
+			this.colPriorityID.FieldName = "Content";
+			this.colPriorityID.Name = "colPriorityID";
+			this.colPriorityID.Visible = true;
+			this.colPriorityID.VisibleIndex = 0;
+			// 
+			// repositoryItemComboBox2
+			// 
+			this.repositoryItemComboBox2.AutoHeight = false;
+			this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
 			// 
 			// gridControl1
 			// 
@@ -86,7 +96,8 @@
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";
 			this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemComboBox1});
+            this.repositoryItemComboBox1,
+            this.repositoryItemComboBox2});
 			this.gridControl1.ShowOnlyPredefinedDetails = true;
 			this.gridControl1.Size = new System.Drawing.Size(1177, 618);
 			this.gridControl1.TabIndex = 0;
@@ -119,6 +130,7 @@
 			this.gridView1.Name = "gridView1";
 			this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace;
 			this.gridView1.OptionsEditForm.EditFormColumnCount = 7;
+			this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
 			// 
 			// colStudentID
 			// 
@@ -192,6 +204,13 @@
 			this.colGender.Visible = true;
 			this.colGender.VisibleIndex = 4;
 			// 
+			// repositoryItemComboBox1
+			// 
+			this.repositoryItemComboBox1.AutoHeight = false;
+			this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+			// 
 			// colDateOfBirth
 			// 
 			this.colDateOfBirth.FieldName = "DateOfBirth";
@@ -229,13 +248,6 @@
 			this.gridSplitContainer1.Size = new System.Drawing.Size(779, 512);
 			this.gridSplitContainer1.TabIndex = 0;
 			// 
-			// repositoryItemComboBox1
-			// 
-			this.repositoryItemComboBox1.AutoHeight = false;
-			this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
-			// 
 			// FormStudent
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -246,12 +258,13 @@
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.FormStudent_Load);
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.studentDtoBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
 			this.gridSplitContainer1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -276,7 +289,8 @@
 		private DevExpress.XtraGrid.Columns.GridColumn colPhone;
 		private System.Windows.Forms.BindingSource studentDtoBindingSource;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-		private DevExpress.XtraGrid.Columns.GridColumn colContent;
 		private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
+		private DevExpress.XtraGrid.Columns.GridColumn colPriorityID;
+		private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
 	}
 }

@@ -17,12 +17,12 @@
 
 		public IEnumerable<Floor> GetFloorByBuildingID(string buildingID)
 		{
-			return this.Dbset.Where(x => x.BuildingID == buildingID).OrderBy(f => f.FloorID.Length).ThenBy(f => f.FloorID);
+			return this.DbSet.Where(x => x.BuildingID == buildingID).OrderBy(f => f.FloorID.Length).ThenBy(f => f.FloorID);
 		}
 
 		public IEnumerable<Floor> OrderById()
 		{
-			return this.Dbset.OrderBy(x => x.FloorID.Length).ThenBy(f => f.FloorID);
+			return this.DbSet.OrderBy(x => x.FloorID.Length).ThenBy(f => f.FloorID);
 		}
 	}
 }

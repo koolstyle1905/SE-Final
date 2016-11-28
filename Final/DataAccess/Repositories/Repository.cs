@@ -20,7 +20,7 @@
 			this.dbSet = this.context.Set<TEntity>();
 		}
 
-		public DbSet<TEntity> Dbset
+		protected DbSet<TEntity> DbSet
 		{
 			get
 			{
@@ -63,8 +63,9 @@
 			this.dbSet.RemoveRange(entities);
 		}
 
-		public virtual void Edit(TEntity entity)
+		public void Edit(TEntity entity)
 		{
+			//this.dbSet.Attach(entity);
 			this.context.Entry(entity).State = EntityState.Modified;
 		}
 

@@ -2,12 +2,18 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using System.ComponentModel;
 	using System.ComponentModel.DataAnnotations;
 
 	public class StudentDto : PersonDto
 	{
+		public StudentDto()
+		{
+		}
+
 		[Required]
 		[MinLength(8), MaxLength(8)]
+		[DisplayName("Mã học viên")]
 		public string StudentID { get; set; }
 
 		[Required]

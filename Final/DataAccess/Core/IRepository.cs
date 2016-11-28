@@ -12,7 +12,7 @@
 
 		int Count();
 
-		void Edit(TEntity entity);
+		//void Edit(TEntity entity);
 
 		IEnumerable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate);
 
