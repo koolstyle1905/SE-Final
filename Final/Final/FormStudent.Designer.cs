@@ -99,7 +99,7 @@
             this.repositoryItemComboBox1,
             this.repositoryItemComboBox2});
 			this.gridControl1.ShowOnlyPredefinedDetails = true;
-			this.gridControl1.Size = new System.Drawing.Size(1177, 618);
+			this.gridControl1.Size = new System.Drawing.Size(1030, 618);
 			this.gridControl1.TabIndex = 0;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -157,6 +157,7 @@
 			// 
 			this.colPlaceOfBirth.FieldName = "PlaceOfBirth";
 			this.colPlaceOfBirth.Name = "colPlaceOfBirth";
+			this.colPlaceOfBirth.OptionsEditForm.VisibleIndex = 3;
 			this.colPlaceOfBirth.Visible = true;
 			this.colPlaceOfBirth.VisibleIndex = 13;
 			// 
@@ -164,30 +165,34 @@
 			// 
 			this.colNation.FieldName = "Nation";
 			this.colNation.Name = "colNation";
+			this.colNation.OptionsEditForm.VisibleIndex = 2;
 			this.colNation.Visible = true;
-			this.colNation.VisibleIndex = 12;
+			this.colNation.VisibleIndex = 11;
 			// 
 			// colReligion
 			// 
 			this.colReligion.FieldName = "Religion";
 			this.colReligion.Name = "colReligion";
+			this.colReligion.OptionsEditForm.VisibleIndex = 2;
 			this.colReligion.Visible = true;
-			this.colReligion.VisibleIndex = 10;
+			this.colReligion.VisibleIndex = 12;
 			// 
 			// colCourse
 			// 
 			this.colCourse.FieldName = "Course";
 			this.colCourse.Name = "colCourse";
+			this.colCourse.OptionsEditForm.VisibleIndex = 1;
 			this.colCourse.Visible = true;
-			this.colCourse.VisibleIndex = 11;
+			this.colCourse.VisibleIndex = 9;
 			// 
 			// colClub
 			// 
-			this.colClub.Caption = "Club";
+			this.colClub.Caption = "Câu lạc bộ";
 			this.colClub.FieldName = "Club.Name";
 			this.colClub.Name = "colClub";
+			this.colClub.OptionsEditForm.VisibleIndex = 1;
 			this.colClub.Visible = true;
-			this.colClub.VisibleIndex = 8;
+			this.colClub.VisibleIndex = 10;
 			// 
 			// colName
 			// 
@@ -223,21 +228,21 @@
 			this.colSSN.FieldName = "SSN";
 			this.colSSN.Name = "colSSN";
 			this.colSSN.Visible = true;
-			this.colSSN.VisibleIndex = 9;
+			this.colSSN.VisibleIndex = 6;
 			// 
 			// colAddress
 			// 
 			this.colAddress.FieldName = "Address";
 			this.colAddress.Name = "colAddress";
 			this.colAddress.Visible = true;
-			this.colAddress.VisibleIndex = 6;
+			this.colAddress.VisibleIndex = 7;
 			// 
 			// colPhone
 			// 
 			this.colPhone.FieldName = "Phone";
 			this.colPhone.Name = "colPhone";
 			this.colPhone.Visible = true;
-			this.colPhone.VisibleIndex = 7;
+			this.colPhone.VisibleIndex = 8;
 			// 
 			// gridSplitContainer1
 			// 
@@ -250,9 +255,9 @@
 			// 
 			// FormStudent
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1177, 618);
+			this.ClientSize = new System.Drawing.Size(1030, 618);
 			this.Controls.Add(this.gridControl1);
 			this.Name = "FormStudent";
 			this.Text = "Form1";

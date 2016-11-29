@@ -13,7 +13,7 @@ using DevExpress.XtraGrid.Views.Base;
 
 namespace Final
 {
-	public partial class FormStudent : Form
+	public partial class FormStudent : DevExpress.XtraBars.Ribbon.RibbonForm
 	{
 		private List<StudentDto> students;
 		public FormStudent()
@@ -24,7 +24,7 @@ namespace Final
 
 		private void FormStudent_Load(object sender, EventArgs e)
 		{
-			students = StudentBusiness.GetAll();
+			this.students = StudentBusiness.GetAll();
 			this.studentDtoBindingSource.DataSource = students;
 		}
 
@@ -33,9 +33,7 @@ namespace Final
 			var index = gridView1.GetDataSourceRowIndex(e.RowHandle);
 			var student = students[index];
 			StudentBusiness.EditStudent(student);
-			FormStudent_Load(sender, e);
-			//students = StudentBusiness.GetAll();
-			//this.studentDtoBindingSource.DataSource = students;
+			this.FormStudent_Load(sender, e);
 		}
 	}
 }
