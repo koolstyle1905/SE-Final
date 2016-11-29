@@ -7,7 +7,6 @@
 	{
 		public string ClubID { get; set; }
 		
-		//[DisplayName("Câu lạc bộ")]
 		public string Name { get; set; }
 	}
 }

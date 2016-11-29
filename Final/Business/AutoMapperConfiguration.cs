@@ -25,8 +25,8 @@
 				c.CreateMap<CarerDto, Carer>();
 				c.CreateMap<ClubDto, Club>();
 				c.CreateMap<EmployeeDto, Employee>();
-				c.CreateMap<StudentDto, Student>()
-					.ForMember(dest => dest.ClubID, opt => opt.MapFrom(src => src.Club.ClubID));
+				c.CreateMap<StudentDto, Student>();
+					//.ForMember(dest => dest.ClubID, opt => opt.MapFrom(src => src.ClubID.ClubID));
 				c.CreateMap<PriorityDto, Priority>();
 			});
 		}
