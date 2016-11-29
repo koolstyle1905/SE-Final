@@ -32,7 +32,7 @@
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
 			this.studentDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.gridViewStudent = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.colStudentID = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colClubID = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colClassID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,9 +47,12 @@
 			this.colSSN = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.studentDtoBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridViewStudent)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+			this.panelControl1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// gridControl1
@@ -59,13 +62,13 @@
 			gridLevelNode1.RelationName = "Priorities";
 			this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-			this.gridControl1.Location = new System.Drawing.Point(0, 0);
-			this.gridControl1.MainView = this.gridView1;
+			this.gridControl1.Location = new System.Drawing.Point(2, 2);
+			this.gridControl1.MainView = this.gridViewStudent;
 			this.gridControl1.Name = "gridControl1";
-			this.gridControl1.Size = new System.Drawing.Size(1206, 709);
+			this.gridControl1.Size = new System.Drawing.Size(1202, 705);
 			this.gridControl1.TabIndex = 0;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewStudent});
 			// 
 			// studentDtoBindingSource
 			// 
@@ -73,7 +76,7 @@
 			// 
 			// gridView1
 			// 
-			this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+			this.gridViewStudent.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colStudentID,
             this.colClubID,
             this.colClassID,
@@ -88,10 +91,12 @@
             this.colSSN,
             this.colAddress,
             this.colPhone});
-			this.gridView1.GridControl = this.gridControl1;
-			this.gridView1.Name = "gridView1";
-			this.gridView1.OptionsEditForm.EditFormColumnCount = 7;
-			this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
+			this.gridViewStudent.GridControl = this.gridControl1;
+			this.gridViewStudent.Name = "gridView1";
+			this.gridViewStudent.OptionsEditForm.EditFormColumnCount = 7;
+			this.gridViewStudent.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+			this.gridViewStudent.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridViewStudent_InitNewRow);
+			this.gridViewStudent.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewStudent_RowUpdated);
 			// 
 			// colStudentID
 			// 
@@ -192,18 +197,29 @@
 			this.colPhone.Visible = true;
 			this.colPhone.VisibleIndex = 13;
 			// 
+			// panelControl1
+			// 
+			this.panelControl1.Controls.Add(this.gridControl1);
+			this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelControl1.Location = new System.Drawing.Point(0, 0);
+			this.panelControl1.Name = "panelControl1";
+			this.panelControl1.Size = new System.Drawing.Size(1206, 709);
+			this.panelControl1.TabIndex = 1;
+			// 
 			// FormStudent
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1206, 709);
-			this.Controls.Add(this.gridControl1);
+			this.Controls.Add(this.panelControl1);
 			this.Name = "FormStudent";
 			this.Text = "FormStudent";
 			this.Load += new System.EventHandler(this.FormStudent_Load);
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.studentDtoBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridViewStudent)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+			this.panelControl1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -212,7 +228,7 @@
 
 		private DevExpress.XtraGrid.GridControl gridControl1;
 		private System.Windows.Forms.BindingSource studentDtoBindingSource;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridViewStudent;
 		private DevExpress.XtraGrid.Columns.GridColumn colStudentID;
 		private DevExpress.XtraGrid.Columns.GridColumn colClubID;
 		private DevExpress.XtraGrid.Columns.GridColumn colClassID;
@@ -227,5 +243,6 @@
 		private DevExpress.XtraGrid.Columns.GridColumn colSSN;
 		private DevExpress.XtraGrid.Columns.GridColumn colAddress;
 		private DevExpress.XtraGrid.Columns.GridColumn colPhone;
+		private DevExpress.XtraEditors.PanelControl panelControl1;
 	}
 }

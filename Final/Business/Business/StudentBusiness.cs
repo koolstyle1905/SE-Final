@@ -21,6 +21,15 @@
 			}
 		}
 
+		public static void AddStudent(StudentDto student)
+		{
+			using (var unitOfWork = new UnitOfWork())
+			{
+				unitOfWork.Students.Add(Mapper.Map<StudentDto, Student>(student));
+				unitOfWork.SaveChanges();
+			}
+		}
+
 		public static void EditStudent(StudentDto student)
 		{
 			using (var unitOfWork = new UnitOfWork())

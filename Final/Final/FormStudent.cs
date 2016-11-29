@@ -13,6 +13,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraEditors;
 
 namespace Final
 {
@@ -22,14 +23,13 @@ namespace Final
 		public FormStudent()
 		{
 			this.InitializeComponent();
-			this.gridView1.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
-
+			this.students = StudentBusiness.GetAll();
+			this.studentDtoBindingSource.DataSource = students;
+			this.gridViewStudent.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
 		}
 
 		private void FormStudent_Load(object sender, EventArgs e)
 		{
-			this.students = StudentBusiness.GetAll();
-			this.studentDtoBindingSource.DataSource = students;
 			var clubs = ClubBusiness.GetAll();
 			RepositoryItemLookUpEdit riLookUpClub = new RepositoryItemLookUpEdit();
 			riLookUpClub.DataSource = clubs;
@@ -39,8 +39,8 @@ namespace Final
 			riLookUpClub.BestFitMode = BestFitMode.BestFit;
 			riLookUpClub.SearchMode = SearchMode.AutoComplete;
 			riLookUpClub.AutoSearchColumnIndex = 1;
-			gridView1.Columns["ClubID"].ColumnEdit = riLookUpClub;
-			gridView1.BestFitColumns();
+			gridViewStudent.Columns["ClubID"].ColumnEdit = riLookUpClub;
+			gridViewStudent.BestFitColumns();
 
 			RepositoryItemComboBox riComboBoxCourse = new RepositoryItemComboBox();
 			int currentYear = DateTime.Now.Year;
@@ -53,15 +53,37 @@ namespace Final
 			};
 			riComboBoxCourse.Items.AddRange(courses);
 			riComboBoxCourse.TextEditStyle = TextEditStyles.DisableTextEditor;
-			gridView1.Columns["Course"].ColumnEdit = riComboBoxCourse;
+			gridViewStudent.Columns["Course"].ColumnEdit = riComboBoxCourse;
+
+			RepositoryItemComboBox riComboBoxGender = new RepositoryItemComboBox();
+			riComboBoxGender.Items.AddRange(new string[] { "Male", "Female" });
+			riComboBoxGender.TextEditStyle = TextEditStyles.DisableTextEditor;
+			gridViewStudent.Columns["Gender"].ColumnEdit = riComboBoxGender;
 		}
 
-		private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)
+		private void gridViewStudent_RowUpdated(object sender, RowObjectEventArgs e)
 		{
-			var index = gridView1.GetDataSourceRowIndex(e.RowHandle);
-			var student = students[index];
-			StudentBusiness.EditStudent(student);
-			this.FormStudent_Load(sender, e);
+			var index = gridViewStudent.GetDataSourceRowIndex(e.RowHandle);
+			if (index < 0)
+			{
+				index = students.Count - 1;
+				var student = students[index];
+				StudentBusiness.AddStudent(student);
+			}
+			else
+			{
+				var student = students[index];
+				StudentBusiness.EditStudent(student);
+			}
+			this.gridControl1.RefreshDataSource();
+		}
+
+		private void gridViewStudent_InitNewRow(object sender, InitNewRowEventArgs e)
+		{
+			gridViewStudent.SetRowCellValue(e.RowHandle, "Gender", "Male");
+			gridViewStudent.SetRowCellValue(e.RowHandle, "ClubID", "01");
+			gridViewStudent.SetRowCellValue(e.RowHandle, "Course", 2016);
+			gridViewStudent.SetRowCellValue(e.RowHandle, "DateOfBirth", new DateTime(2000, 1, 1));
 		}
 	}
 }
