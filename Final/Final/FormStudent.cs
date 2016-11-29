@@ -23,6 +23,7 @@ namespace Final
 		{
 			this.InitializeComponent();
 			this.gridView1.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
+
 		}
 
 		private void FormStudent_Load(object sender, EventArgs e)
@@ -30,21 +31,29 @@ namespace Final
 			this.students = StudentBusiness.GetAll();
 			this.studentDtoBindingSource.DataSource = students;
 			var clubs = ClubBusiness.GetAll();
-			RepositoryItemLookUpEdit riLookUp = new RepositoryItemLookUpEdit();
-			riLookUp.BestFitMode = BestFitMode.BestFit;
-			riLookUp.DataSource = clubs;
-			riLookUp.ValueMember = "ClubID";
-			riLookUp.DisplayMember = "Name";
-			riLookUp.DropDownRows = clubs.Count;
-			riLookUp.SearchMode = SearchMode.AutoComplete;
-			riLookUp.AutoSearchColumnIndex = 1;
-			gridView1.Columns["ClubID"].ColumnEdit = riLookUp;
+			RepositoryItemLookUpEdit riLookUpClub = new RepositoryItemLookUpEdit();
+			riLookUpClub.DataSource = clubs;
+			riLookUpClub.ValueMember = "ClubID";
+			riLookUpClub.DisplayMember = "Name";
+			riLookUpClub.DropDownRows = clubs.Count;
+			riLookUpClub.BestFitMode = BestFitMode.BestFit;
+			riLookUpClub.SearchMode = SearchMode.AutoComplete;
+			riLookUpClub.AutoSearchColumnIndex = 1;
+			gridView1.Columns["ClubID"].ColumnEdit = riLookUpClub;
 			gridView1.BestFitColumns();
 
-			RepositoryItemLookUpEdit riLookUp2 = new RepositoryItemLookUpEdit();
-			riLookUp.DataSource = clubs;
-			riLookUp.ValueMember = "ClubID";
-			riLookUp.DisplayMember = "Name";
+			RepositoryItemComboBox riComboBoxCourse = new RepositoryItemComboBox();
+			int currentYear = DateTime.Now.Year;
+			List<int> courses = new List<int>()
+			{
+				currentYear--,
+				currentYear--,
+				currentYear--,
+				currentYear
+			};
+			riComboBoxCourse.Items.AddRange(courses);
+			riComboBoxCourse.TextEditStyle = TextEditStyles.DisableTextEditor;
+			gridView1.Columns["Course"].ColumnEdit = riComboBoxCourse;
 		}
 
 		private void gridView1_RowUpdated(object sender, RowObjectEventArgs e)

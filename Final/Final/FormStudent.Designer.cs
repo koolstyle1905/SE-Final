@@ -90,6 +90,8 @@
             this.colPhone});
 			this.gridView1.GridControl = this.gridControl1;
 			this.gridView1.Name = "gridView1";
+			this.gridView1.OptionsEditForm.EditFormColumnCount = 7;
+			this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
 			// 
 			// colStudentID
 			// 
@@ -100,6 +102,7 @@
 			// 
 			// colClubID
 			// 
+			this.colClubID.Caption = "Club";
 			this.colClubID.FieldName = "ClubID";
 			this.colClubID.Name = "colClubID";
 			this.colClubID.Visible = true;
