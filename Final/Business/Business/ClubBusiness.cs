@@ -16,8 +16,8 @@
 		{
 			using (var unitOfWork = new UnitOfWork())
 			{
-				var clubs = unitOfWork.Clubs.GetAll().ToList();
-				return Mapper.Map<List<Club>, List<ClubDto>>(clubs);
+				var clubList = unitOfWork.Clubs.GetAll().ToList();
+				return Mapper.Map<List<Club>, List<ClubDto>>(clubList);
 			}
 		}
 	}

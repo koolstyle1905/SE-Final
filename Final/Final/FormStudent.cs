@@ -19,16 +19,23 @@ namespace Final
 {
 	public partial class FormStudent : DevExpress.XtraBars.Ribbon.RibbonForm
 	{
-		private List<StudentDto> students;
+		private List<StudentDto> studentList;
 		public FormStudent()
 		{
 			this.InitializeComponent();
-			this.students = StudentBusiness.GetAll();
-			this.studentDtoBindingSource.DataSource = students;
+			this.studentList = StudentBusiness.GetAll();
+			this.studentDtoBindingSource.DataSource = studentList;
 			this.gridViewStudent.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
 		}
 
 		private void FormStudent_Load(object sender, EventArgs e)
+		{
+			this.InitLookUpClub();
+			this.InitComboBoxCourse();
+			this.InitComboBoxGender();
+		}
+
+		private void InitLookUpClub()
 		{
 			var clubs = ClubBusiness.GetAll();
 			RepositoryItemLookUpEdit riLookUpClub = new RepositoryItemLookUpEdit();
@@ -40,8 +47,18 @@ namespace Final
 			riLookUpClub.SearchMode = SearchMode.AutoComplete;
 			riLookUpClub.AutoSearchColumnIndex = 1;
 			gridViewStudent.Columns["ClubID"].ColumnEdit = riLookUpClub;
-			gridViewStudent.BestFitColumns();
+		}
 
+		private void InitComboBoxGender()
+		{
+			RepositoryItemComboBox riComboBoxGender = new RepositoryItemComboBox();
+			riComboBoxGender.Items.AddRange(new string[] { "Male", "Female" });
+			riComboBoxGender.TextEditStyle = TextEditStyles.DisableTextEditor;
+			gridViewStudent.Columns["Gender"].ColumnEdit = riComboBoxGender;
+		}
+
+		private void InitComboBoxCourse()
+		{
 			RepositoryItemComboBox riComboBoxCourse = new RepositoryItemComboBox();
 			int currentYear = DateTime.Now.Year;
 			List<int> courses = new List<int>()
@@ -54,25 +71,21 @@ namespace Final
 			riComboBoxCourse.Items.AddRange(courses);
 			riComboBoxCourse.TextEditStyle = TextEditStyles.DisableTextEditor;
 			gridViewStudent.Columns["Course"].ColumnEdit = riComboBoxCourse;
-
-			RepositoryItemComboBox riComboBoxGender = new RepositoryItemComboBox();
-			riComboBoxGender.Items.AddRange(new string[] { "Male", "Female" });
-			riComboBoxGender.TextEditStyle = TextEditStyles.DisableTextEditor;
-			gridViewStudent.Columns["Gender"].ColumnEdit = riComboBoxGender;
 		}
 
 		private void gridViewStudent_RowUpdated(object sender, RowObjectEventArgs e)
 		{
+			
 			var index = gridViewStudent.GetDataSourceRowIndex(e.RowHandle);
 			if (index < 0)
 			{
-				index = students.Count - 1;
-				var student = students[index];
+				index = studentList.Count - 1;
+				var student = studentList[index];
 				StudentBusiness.AddStudent(student);
 			}
 			else
 			{
-				var student = students[index];
+				var student = studentList[index];
 				StudentBusiness.EditStudent(student);
 			}
 			this.gridControl1.RefreshDataSource();

@@ -35,8 +35,8 @@
 		{
 			using (var unitOfWork = new UnitOfWork())
 			{
-				var rooms = unitOfWork.Rooms.FindBy(r => r.FloorID == floorID).ToList();
-				return Mapper.Map<List<Room>, List<RoomDto>>(rooms);
+				var roomList = unitOfWork.Rooms.FindBy(r => r.FloorID == floorID).ToList();
+				return Mapper.Map<List<Room>, List<RoomDto>>(roomList);
 			}
 		}
 	}

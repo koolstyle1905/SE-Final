@@ -14,11 +14,5 @@
 		public StudentRepository(DbContext context) : base(context)
 		{
 		}
-
-		//public void Edit(Student student)
-		//{
-		//	var s = this.DbSet.Find(student.StudentID);
-		//	s.StudentID = "1";
-		//} 
 	}
 }

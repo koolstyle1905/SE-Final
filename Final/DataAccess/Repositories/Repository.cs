@@ -65,7 +65,6 @@
 
 		public void Edit(TEntity entity)
 		{
-			//this.dbSet.Attach(entity);
 			this.context.Entry(entity).State = EntityState.Modified;
 		}
 

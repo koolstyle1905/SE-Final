@@ -16,8 +16,8 @@
 		{
 			using (var unitOfWork = new UnitOfWork())
 			{
-				var students = unitOfWork.Students.GetAll().ToList();
-				return Mapper.Map< List<Student>, List<StudentDto>>(students);
+				var studentList = unitOfWork.Students.GetAll().ToList();
+				return Mapper.Map< List<Student>, List<StudentDto>>(studentList);
 			}
 		}
 

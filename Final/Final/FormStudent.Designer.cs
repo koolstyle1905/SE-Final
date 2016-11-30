@@ -74,7 +74,7 @@
 			// 
 			this.studentDtoBindingSource.DataSource = typeof(DataTransfer.StudentDto);
 			// 
-			// gridView1
+			// gridViewStudent
 			// 
 			this.gridViewStudent.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colStudentID,
@@ -92,7 +92,7 @@
             this.colAddress,
             this.colPhone});
 			this.gridViewStudent.GridControl = this.gridControl1;
-			this.gridViewStudent.Name = "gridView1";
+			this.gridViewStudent.Name = "gridViewStudent";
 			this.gridViewStudent.OptionsEditForm.EditFormColumnCount = 7;
 			this.gridViewStudent.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
 			this.gridViewStudent.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridViewStudent_InitNewRow);
