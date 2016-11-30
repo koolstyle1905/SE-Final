@@ -16,26 +16,28 @@ namespace DataAccess.Domain
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Student()
-        {
-            this.Carers = new HashSet<Carer>();
-			this.DamageClaims = new HashSet<DamageClaim>();
-			this.Disciplines = new HashSet<Discipline>();
-			this.LateArrivalInfoes = new HashSet<LateArrivalInfo>();
-			this.LeaseContracts = new HashSet<LeaseContract>();
-			this.ParkingTickets = new HashSet<ParkingTicket>();
-			this.TemporaryAbsences = new HashSet<TemporaryAbsence>();
-			this.Attendances = new HashSet<Attendance>();
-			this.Priorities = new HashSet<Priority>();
-			this.DateOfBirth = new DateTime(2000, 1, 1);
+        {Carers = new HashSet<Carer>();
+            LateArrivalInfoes = new HashSet<LateArrivalInfo>();
+            LeaseContracts = new HashSet<LeaseContract>();
+            ParkingTickets = new HashSet<ParkingTicket>();
+            TemporaryAbsences = new HashSet<TemporaryAbsence>();
+            ViolationRecords = new HashSet<ViolationRecord>();
+            Attendances = new HashSet<Attendance>();
+            Priorities = new HashSet<Priority>();
+			DateOfBirth = new DateTime(2000, 1, 1);
         }
 
-        public string StudentID { get; set; }
+        [StringLength(10)]
+        public string StudentId { get; set; }
 
-        public string ClubID { get; set; }
+        [StringLength(10)]
+        public string ClubId { get; set; }
 
-        public string ClassID { get; set; }
+        [StringLength(10)]
+        public string ClassId { get; set; }
 
-        public string RoomID { get; set; }
+        [StringLength(10)]
+        public string RoomId { get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }
@@ -63,25 +65,17 @@ namespace DataAccess.Domain
         [StringLength(50)]
         public string Religion { get; set; }
 
-        [StringLength(20)]
-        public string Position { get; set; }
-
         public int Course { get; set; }
 
-        public virtual Class Class { get; set; }
-
-        public virtual Club Club { get; set; }
-
-        public virtual Room Room { get; set; }
+        [StringLength(20)]
+        public string Position { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Carer> Carers { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DamageClaim> DamageClaims { get; set; }
+        public virtual Class Class { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Discipline> Disciplines { get; set; }
+        public virtual Club Club { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LateArrivalInfo> LateArrivalInfoes { get; set; }
@@ -92,8 +86,13 @@ namespace DataAccess.Domain
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ParkingTicket> ParkingTickets { get; set; }
 
+        public virtual Room Room { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TemporaryAbsence> TemporaryAbsences { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ViolationRecord> ViolationRecords { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Attendance> Attendances { get; set; }

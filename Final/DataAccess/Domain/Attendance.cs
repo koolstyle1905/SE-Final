@@ -13,11 +13,14 @@ namespace DataAccess.Domain
         public Attendance()
         {
             Students = new HashSet<Student>();
-        }
+			CreatedDate = DateTime.Now;
+		}
 
+        [StringLength(10)]
         public string AttendanceId { get; set; }
 
-        public string StudentID { get; set; }
+        [StringLength(10)]
+        public string EmployeeId { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

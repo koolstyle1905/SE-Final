@@ -14,7 +14,8 @@ namespace DataAccess.Domain
             Students = new HashSet<Student>();
         }
 
-        public string PriorityID { get; set; }
+        [StringLength(10)]
+        public string PriorityId { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Content { get; set; }

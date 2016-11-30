@@ -12,30 +12,28 @@
 		/// <summary>
 		/// Find next ID
 		/// </summary>
-		/// <param name="lastID">Mã cuối cùng</param>
-		/// <param name="prefixID">Tiền tố mã</param>
+		/// <param name="lastId">Mã cuối cùng</param>
+		/// <param name="prefixId">Tiền tố mã</param>
 		/// <returns></returns>
-		public static string NextID(string lastID, string prefixID)
+		public static string NextId(string lastId, string prefixId)
 		{
-			if (lastID == string.Empty)
+			if (lastId == string.Empty)
 			{
-				return prefixID + "0001";  // fix width default
+				return prefixId + "0001";  // fix width default
 			}
-			int nextId = int.Parse(lastID.Remove(0, prefixID.Length)) + 1;
-			int lengthNumerID = lastID.Length - prefixID.Length;
-			string zeroNumber = string.Empty;
-			for (int i = 1; i <= lengthNumerID; i++)
+			var nextId = int.Parse(lastId.Remove(0, prefixId.Length)) + 1;
+			var lengthNumerId = lastId.Length - prefixId.Length;
+			var zeroNumber = string.Empty;
+			for (var i = 1; i <= lengthNumerId; i++)
 			{
-				if (nextId < Math.Pow(10, i))
+				if (!(nextId < Math.Pow(10, i))) continue;
+				for (var j = 1; j <= lengthNumerId - i; i++)
 				{
-					for (int j = 1; j <= lengthNumerID - i; i++)
-					{
-						zeroNumber += "0";
-					}
-					return prefixID + zeroNumber + nextId.ToString();
+					zeroNumber += "0";
 				}
+				return prefixId + zeroNumber + nextId;
 			}
-			return prefixID + nextId;
+			return prefixId + nextId;
 		}
 	}
 }

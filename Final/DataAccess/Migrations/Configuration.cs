@@ -4,7 +4,6 @@
 	using System.Collections.Generic;
 	using System.Data.Entity;
 	using System.Data.Entity.Migrations;
-	using System.Linq;
 	using DataTransfer;
 	using Domain;
 
@@ -19,59 +18,61 @@
 		{
 			using (var context = new DormitoryContext())
 			{
-				DbClear.Exec(context.Rooms);
-				DbClear.Exec(context.Floors);
-				DbClear.Exec(context.Buildings);
-				DbClear.Exec(context.Priorities);
-				DbClear.Exec(context.Students);
-				DbClear.Exec(context.Classes);
-				DbClear.Exec(context.Faculties);
-				DbClear.Exec(context.Clubs);
-				DbClear.Exec(context.Employees);
+				Exec(context.Rooms);
+				Exec(context.Floors);
+				Exec(context.Buildings);
+				Exec(context.Priorities);
+				Exec(context.Students);
+				Exec(context.Classes);
+				Exec(context.Faculties);
+				Exec(context.Clubs);
+				Exec(context.Employees);
 				context.SaveChanges();
 			}
 		}
 	}
 
-	internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.DormitoryContext>
+	internal sealed class Configuration : DbMigrationsConfiguration<DormitoryContext>
 	{
 		public Configuration()
 		{
-			this.AutomaticMigrationsEnabled = true;
-			this.AutomaticMigrationDataLossAllowed = true;
+			AutomaticMigrationsEnabled = true;
+			AutomaticMigrationDataLossAllowed = true;
 		}
 
-		protected override void Seed(DataAccess.DormitoryContext context)
+		protected override void Seed(DormitoryContext context)
 		{
 			DbClear.ClearAllData();
 			//System.Diagnostics.Debugger.Launch();
+
 			#region Add Buildings, Floors, Rooms
-			var buildingList = new List<Building>();
-			buildingList.Add(new Building() { BuildingID = BuildingName.H.ToString() });
-			buildingList.Add(new Building() { BuildingID = BuildingName.I.ToString() });
+
+			var buildingList = new List<Building>
+			{
+				new Building() {BuildingId = BuildingName.H.ToString()},
+				new Building() {BuildingId = BuildingName.I.ToString()}
+			};
 
 			var floorList = new List<Floor>();
 			var roomList = new List<Room>();
-			var roomId = string.Empty;
-			var temp = string.Empty;
 
-			for (int k = 0; k < 2; k++)
+			for (var k = 0; k < 2; k++)
 			{
-				for (int i = 1; i <= 10; i++)
+				for (var i = 1; i <= 10; i++)
 				{
 					floorList.Add(new Floor()
 					{
-						FloorID = buildingList[k].BuildingID + i.ToString(),
+						FloorId = buildingList[k].BuildingId + i.ToString(),
 					});
-					for (int j = 1; j <= 16; j++)
+					for (var j = 1; j <= 16; j++)
 					{
-						temp = j.ToString();
+						var temp = j.ToString();
 						if (j < 10)
 						{
 							temp = "0" + j.ToString();
 						}
-						roomId = floorList[i - 1].FloorID.ToString() + temp;
-						roomList.Add(new Room() { RoomID = roomId });
+						var roomId = floorList[i - 1].FloorId + temp;
+						roomList.Add(new Room() { RoomId = roomId });
 					}
 					floorList[i - 1].Rooms = roomList;
 					roomList = new List<Room>();
@@ -79,194 +80,210 @@
 				buildingList[k].Floors = floorList;
 				floorList = new List<Floor>();
 			}
-			context.Buildings.AddOrUpdate(x => x.BuildingID, buildingList[(int)BuildingName.H]);
-			context.Buildings.AddOrUpdate(x => x.BuildingID, buildingList[(int)BuildingName.I]);
+			context.Buildings.AddOrUpdate(x => x.BuildingId, buildingList[(int)BuildingName.H]);
+			context.Buildings.AddOrUpdate(x => x.BuildingId, buildingList[(int)BuildingName.I]);
 			#endregion
 
 			#region Clubs
-			var clubList = new List<Club>();
-			clubList.Add(new Club() { ClubID = "01", Name = "Bơi lội" });
-			clubList.Add(new Club() { ClubID = "02", Name = "Bóng rổ" });
-			clubList.Add(new Club() { ClubID = "03", Name = "Bóng đá" });
-			clubList.Add(new Club() { ClubID = "04", Name = "Bóng chuyền" });
-			clubList.Add(new Club() { ClubID = "05", Name = "Tennis" });
-			clubList.Add(new Club() { ClubID = "06", Name = "Cầu lông" });
-			clubList.Add(new Club() { ClubID = "07", Name = "Bóng bàn" });
-			clubList.Add(new Club() { ClubID = "08", Name = "Taekwondo" });
-			clubList.Add(new Club() { ClubID = "09", Name = "Karatedo" });
-			clubList.Add(new Club() { ClubID = "10", Name = "Judo" });
-			clubList.Add(new Club() { ClubID = "11", Name = "Muay Thái" });
-			clubList.Add(new Club() { ClubID = "12", Name = "Vovinam" });
-			clubList.Add(new Club() { ClubID = "13", Name = "Boxing" });
-			clubList.Add(new Club() { ClubID = "14", Name = "Võ cổ truyền" });
-			clubList.Add(new Club() { ClubID = "15", Name = "Bida" });
-			clubList.Add(new Club() { ClubID = "16", Name = "Chạy bộ" });
-			clubList.Add(new Club() { ClubID = "17", Name = "Yoga" });
-			clubList.Add(new Club() { ClubID = "18", Name = "Street workout" });
-			clubList.Add(new Club() { ClubID = "19", Name = "Cheerleading" });
-			clubList.Add(new Club() { ClubID = "20", Name = "GYM" });
-			clubList.ForEach(c => context.Clubs.AddOrUpdate(x => x.ClubID, c));
+
+			var clubList = new List<Club>
+			{
+				new Club() {ClubId = "01", Name = "Bơi lội"},
+				new Club() {ClubId = "02", Name = "Bóng rổ"},
+				new Club() {ClubId = "03", Name = "Bóng đá"},
+				new Club() {ClubId = "04", Name = "Bóng chuyền"},
+				new Club() {ClubId = "05", Name = "Tennis"},
+				new Club() {ClubId = "06", Name = "Cầu lông"},
+				new Club() {ClubId = "07", Name = "Bóng bàn"},
+				new Club() {ClubId = "08", Name = "Taekwondo"},
+				new Club() {ClubId = "09", Name = "Karatedo"},
+				new Club() {ClubId = "10", Name = "Judo"},
+				new Club() {ClubId = "11", Name = "Muay Thái"},
+				new Club() {ClubId = "12", Name = "Vovinam"},
+				new Club() {ClubId = "13", Name = "Boxing"},
+				new Club() {ClubId = "14", Name = "Võ cổ truyền"},
+				new Club() {ClubId = "15", Name = "Bida"},
+				new Club() {ClubId = "16", Name = "Chạy bộ"},
+				new Club() {ClubId = "17", Name = "Yoga"},
+				new Club() {ClubId = "18", Name = "Street workout"},
+				new Club() {ClubId = "19", Name = "Cheerleading"},
+				new Club() {ClubId = "20", Name = "GYM"}
+			};
+			clubList.ForEach(c => context.Clubs.AddOrUpdate(x => x.ClubId, c));
 			#endregion
 
-			var priorityList = new List<Priority>();
-			priorityList.Add(new Priority()
+			var priorityList = new List<Priority>
 			{
-				PriorityID = "P1",
-				Content = "Bản thân là anh hùng lực lượng vũ trang, anh hùng lao động, thương binh, bệnh binh",
-			});
-			priorityList.Add(new Priority()
-			{
-				PriorityID = "P2",
-				Content = "Là con của Anh hùng lực lượng vũ trang, Anh hùng lao động",
-			});
-			priorityList.Add(new Priority()
-			{
-				PriorityID = "P3",
-				Content = "Con liệt sĩ, con thương binh, bệnh binh",
-			});
-			priorityList.Add(new Priority()
-			{
-				PriorityID = "P4",
-				Content = "Con đẻ của những người hoạt động kháng chiến bị nhiễm chất độc hoá học"
-			});
-			priorityList.Add(new Priority()
-			{
-				PriorityID = "P5",
-				Content = "Là người dân tộc thiểu số, có bố hoặc mẹ là người dân tộc thiểu số",
-			});
+				new Priority()
+				{
+					PriorityId = "P1",
+					Content = "Bản thân là anh hùng lực lượng vũ trang, anh hùng lao động, thương binh, bệnh binh",
+				},
+				new Priority()
+				{
+					PriorityId = "P2",
+					Content = "Là con của Anh hùng lực lượng vũ trang, Anh hùng lao động",
+				},
+				new Priority()
+				{
+					PriorityId = "P3",
+					Content = "Con liệt sĩ, con thương binh, bệnh binh",
+				},
+				new Priority()
+				{
+					PriorityId = "P4",
+					Content = "Con đẻ của những người hoạt động kháng chiến bị nhiễm chất độc hoá học"
+				},
+				new Priority()
+				{
+					PriorityId = "P5",
+					Content = "Là người dân tộc thiểu số, có bố hoặc mẹ là người dân tộc thiểu số",
+				}
+			};
 			priorityList.ForEach(p => context.Priorities.AddOrUpdate(p));
 			//priorities.ForEach(p => context.Priorities.Attach(p));
 
 			#region Add Faculties, Classes, Students
-			var students1 = new List<Student>();
-			students1.Add(new Student()
+
+			var students1 = new List<Student>
 			{
-				StudentID = "51403001",
-				ClubID = clubList[0].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-				Address = "TDT",
-				Priorities = priorityList
-			});
-			students1.Add(new Student()
-			{
-				StudentID = "51403002",
-				ClubID = clubList[0].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-				Priorities = priorityList
-			});
-			students1.Add(new Student()
-			{
-				StudentID = "51403003",
-				ClubID = clubList[0].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Female.ToString(),
-				Priorities = priorityList
-			});
-			students1.Add(new Student()
-			{
-				StudentID = "51403004",
-				ClubID = clubList[0].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-				Priorities = priorityList
-			});
+				new Student()
+				{
+					StudentId = "51403001",
+					ClubId = clubList[0].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+					Address = "TDT",
+					Priorities = priorityList
+				},
+				new Student()
+				{
+					StudentId = "51403002",
+					ClubId = clubList[0].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+					Priorities = priorityList
+				},
+				new Student()
+				{
+					StudentId = "51403003",
+					ClubId = clubList[0].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Female.ToString(),
+					Priorities = priorityList
+				},
+				new Student()
+				{
+					StudentId = "51403004",
+					ClubId = clubList[0].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+					Priorities = priorityList
+				}
+			};
 			////////////////////////////////////////////////////////////////////
-			var students2 = new List<Student>();
-			students2.Add(new Student()
+			var students2 = new List<Student>
 			{
-				StudentID = "51403101",
-				ClubID = clubList[1].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-				Address = "TDT",
-			});
-			students2.Add(new Student()
-			{
-				StudentID = "51403102",
-				ClubID = clubList[1].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-				Priorities = priorityList
-			});
-			students2.Add(new Student()
-			{
-				StudentID = "51403103",
-				ClubID = clubList[1].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-			});
-			students2.Add(new Student()
-			{
-				StudentID = "51403104",
-				ClubID = clubList[2].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Female.ToString(),
-			});
+				new Student()
+				{
+					StudentId = "51403101",
+					ClubId = clubList[1].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+					Address = "TDT",
+				},
+				new Student()
+				{
+					StudentId = "51403102",
+					ClubId = clubList[1].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+					Priorities = priorityList
+				},
+				new Student()
+				{
+					StudentId = "51403103",
+					ClubId = clubList[1].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+				},
+				new Student()
+				{
+					StudentId = "51403104",
+					ClubId = clubList[2].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Female.ToString(),
+				}
+			};
 			////////////////////////////////
-			var students3 = new List<Student>();
-			students1.Add(new Student()
+			var students3 = new List<Student>
 			{
-				StudentID = "51403201",
-				ClubID = clubList[3].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-				Address = "TDT",
-			});
-			students3.Add(new Student()
-			{
-				StudentID = "51403202",
-				ClubID = clubList[3].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-				Priorities = priorityList
-			});
-			students3.Add(new Student()
-			{
-				StudentID = "51403203",
-				ClubID = clubList[3].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Male.ToString(),
-			});
-			students3.Add(new Student()
-			{
-				StudentID = "51403204",
-				ClubID = clubList[3].ClubID,
-				Name = "Neptune",
-				Gender = Gender.Female.ToString(),
-			});
+				new Student()
+				{
+					StudentId = "51403201",
+					ClubId = clubList[3].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+					Address = "TDT",
+				},
+				new Student()
+				{
+					StudentId = "51403202",
+					ClubId = clubList[3].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+					Priorities = priorityList
+				},
+				new Student()
+				{
+					StudentId = "51403203",
+					ClubId = clubList[3].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Male.ToString(),
+				},
+				new Student()
+				{
+					StudentId = "51403204",
+					ClubId = clubList[3].ClubId,
+					Name = "Neptune",
+					Gender = Gender.Female.ToString(),
+				}
+			};
 
-			var classes = new List<Class>();
-			classes.Add(new Class()
+			var classes = new List<Class>
 			{
-				ClassID = "14050301",
-				Students = students1
-			});
-			classes.Add(new Class()
-			{
-				ClassID = "14050302",
-				Students = students2
-			});
-			classes.Add(new Class()
-			{
-				ClassID = "14050303",
-				Students = students3
-			});
+				new Class()
+				{
+					ClassId = "14050301",
+					Students = students1
+				},
+				new Class()
+				{
+					ClassId = "14050302",
+					Students = students2
+				},
+				new Class()
+				{
+					ClassId = "14050303",
+					Students = students3
+				}
+			};
 
-			var facultyList = new List<Faculty>();
-			facultyList.Add(new Faculty()
+			var facultyList = new List<Faculty>
 			{
-				FacultyID = "5",
-				Name = "Công nghệ thông tin",
-				Classes = classes
-			});
-			facultyList.Add(new Faculty()
-			{
-				FacultyID = "4",
-				Name = "Điện"
-			});
-			facultyList.ForEach(f => context.Faculties.AddOrUpdate(x => x.FacultyID, f));
+				new Faculty()
+				{
+					FacultyId = "5",
+					Name = "Công nghệ thông tin",
+					Classes = classes
+				},
+				new Faculty()
+				{
+					FacultyId = "4",
+					Name = "Điện"
+				}
+			};
+			facultyList.ForEach(f => context.Faculties.AddOrUpdate(x => x.FacultyId, f));
 			#endregion
 
 
@@ -274,13 +291,13 @@
 
 			var employee = new Employee()
 			{
-				EmployeeID = "1",
+				EmployeeId = "1",
 				Username = "1",
 				Password = "1",
 				DateOfBirth = new DateTime(2016, 1, 1),
 				Phone = 123
 			};
-			context.Employees.AddOrUpdate(x => x.EmployeeID, employee);
+			context.Employees.AddOrUpdate(x => x.EmployeeId, employee);
 		}
 	}
 }

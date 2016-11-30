@@ -6,14 +6,18 @@ namespace DataAccess.Domain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Discipline")]
-    public partial class Discipline
+    [Table("ViolationRecord")]
+    public partial class ViolationRecord
     {
-        public string DisciplineId { get; set; }
+        [Key]
+        [StringLength(10)]
+        public string ViolationId { get; set; }
 
-        public string StudentID { get; set; }
+        [StringLength(10)]
+        public string EmployeeId { get; set; }
 
-        public string EmployeeID { get; set; }
+        [StringLength(10)]
+        public string StudentId { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Description { get; set; }

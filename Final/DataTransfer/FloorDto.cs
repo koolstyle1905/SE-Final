@@ -5,9 +5,9 @@
 
 	public class FloorDto
 	{
-		public string FloorID { get; set; }
+		public string FloorId { get; set; }
 
-		public string BuildingID { get; set; }
+		public string BuildingId { get; set; }
 
 		public List<RoomDto> Rooms { get; set; }
 	}

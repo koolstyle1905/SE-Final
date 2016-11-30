@@ -11,7 +11,7 @@
 
 	public class BuildingDto
 	{
-		public string BuildingID { get; set; }
+		public string BuildingId { get; set; }
 
 		public List<FloorDto> Floors { get; set; }
 	}

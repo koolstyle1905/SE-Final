@@ -15,14 +15,14 @@
 		{
 		}
 
-		public IEnumerable<Floor> GetFloorByBuildingID(string buildingID)
+		public IEnumerable<Floor> GetFloorByBuildingId(string buildingId)
 		{
-			return this.DbSet.Where(x => x.BuildingID == buildingID).OrderBy(f => f.FloorID.Length).ThenBy(f => f.FloorID);
+			return DbSet.Where(x => x.BuildingId == buildingId).OrderBy(f => f.FloorId.Length).ThenBy(f => f.FloorId);
 		}
 
 		public IEnumerable<Floor> OrderById()
 		{
-			return this.DbSet.OrderBy(x => x.FloorID.Length).ThenBy(f => f.FloorID);
+			return DbSet.OrderBy(x => x.FloorId.Length).ThenBy(f => f.FloorId);
 		}
 	}
 }

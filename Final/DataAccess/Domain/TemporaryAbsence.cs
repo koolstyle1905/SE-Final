@@ -9,11 +9,14 @@ namespace DataAccess.Domain
     public partial class TemporaryAbsence
     {
         [Key]
-        public string AbsenceID { get; set; }
+        [StringLength(10)]
+        public string AbsenceId { get; set; }
 
-        public string StudentID { get; set; }
+        [StringLength(10)]
+        public string EmployeeId { get; set; }
 
-        public string EmployeeID { get; set; }
+        [StringLength(10)]
+        public string StudentId { get; set; }
 
         public DateTime StartDate { get; set; }
 
@@ -21,6 +24,8 @@ namespace DataAccess.Domain
 
         [Column(TypeName = "ntext")]
         public string Reason { get; set; }
+
+        public DateTime CreatedDate { get; set; }
 
         public virtual Employee Employee { get; set; }
 

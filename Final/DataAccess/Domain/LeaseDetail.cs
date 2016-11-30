@@ -6,23 +6,27 @@ namespace DataAccess.Domain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class ParkingReceipt
+    public partial class LeaseDetail
     {
         [Key]
         [Column(Order = 0)]
-        public string TicketID { get; set; }
+        [StringLength(10)]
+        public string EmployeeId { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        public string EmployeeID { get; set; }
+        [StringLength(10)]
+        public string ContractId { get; set; }
 
-        [Column(TypeName = "money")]
-        public decimal TotalPrice { get; set; }
+        public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
 
+        [Column(TypeName = "money")]
+        public decimal? Amount { get; set; }
+
         public virtual Employee Employee { get; set; }
 
-        public virtual ParkingTicket ParkingTicket { get; set; }
+        public virtual LeaseContract LeaseContract { get; set; }
     }
 }

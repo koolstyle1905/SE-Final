@@ -1,10 +1,9 @@
-namespace DataAccess
+namespace DataAccess.Domain
 {
 	using System;
 	using System.Data.Entity;
 	using System.ComponentModel.DataAnnotations.Schema;
 	using System.Linq;
-	using Domain;
 
 	public partial class DormitoryContext : DbContext
 	{

@@ -9,7 +9,7 @@ namespace DataTransfer
 {
 	public class PriorityDto
 	{
-		public string PriorityID { get; set; }
+		public string PriorityId { get; set; }
 
 		//[DisplayName("Nội dung")]
 		public string Content { get; set; }

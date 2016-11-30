@@ -14,7 +14,8 @@ namespace DataAccess.Domain
             Classes = new HashSet<Class>();
         }
 
-        public string FacultyID { get; set; }
+        [StringLength(10)]
+        public string FacultyId { get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }

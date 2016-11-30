@@ -5,7 +5,7 @@
 
 	public class ClubDto
 	{
-		public string ClubID { get; set; }
+		public string ClubId { get; set; }
 		
 		public string Name { get; set; }
 	}

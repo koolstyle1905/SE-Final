@@ -19,49 +19,52 @@ namespace Final
 {
 	public partial class FormStudent : DevExpress.XtraBars.Ribbon.RibbonForm
 	{
-		private List<StudentDto> studentList;
+		private readonly List<StudentDto> studentList;
+
 		public FormStudent()
 		{
-			this.InitializeComponent();
-			this.studentList = StudentBusiness.GetAll();
-			this.studentDtoBindingSource.DataSource = studentList;
-			this.gridViewStudent.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
+			InitializeComponent();
+			studentList = StudentBusiness.GetAll();
+			studentDtoBindingSource.DataSource = studentList;
+			gridViewStudent.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
 		}
 
 		private void FormStudent_Load(object sender, EventArgs e)
 		{
-			this.InitLookUpClub();
-			this.InitComboBoxCourse();
-			this.InitComboBoxGender();
+			InitLookUpClub();
+			InitComboBoxCourse();
+			InitComboBoxGender();
 		}
 
 		private void InitLookUpClub()
 		{
 			var clubs = ClubBusiness.GetAll();
-			RepositoryItemLookUpEdit riLookUpClub = new RepositoryItemLookUpEdit();
-			riLookUpClub.DataSource = clubs;
-			riLookUpClub.ValueMember = "ClubID";
-			riLookUpClub.DisplayMember = "Name";
-			riLookUpClub.DropDownRows = clubs.Count;
-			riLookUpClub.BestFitMode = BestFitMode.BestFit;
-			riLookUpClub.SearchMode = SearchMode.AutoComplete;
-			riLookUpClub.AutoSearchColumnIndex = 1;
+			var riLookUpClub = new RepositoryItemLookUpEdit
+			{
+				DataSource = clubs,
+				ValueMember = "ClubID",
+				DisplayMember = "Name",
+				DropDownRows = clubs.Count,
+				BestFitMode = BestFitMode.BestFit,
+				SearchMode = SearchMode.AutoComplete,
+				AutoSearchColumnIndex = 1
+			};
 			gridViewStudent.Columns["ClubID"].ColumnEdit = riLookUpClub;
 		}
 
 		private void InitComboBoxGender()
 		{
-			RepositoryItemComboBox riComboBoxGender = new RepositoryItemComboBox();
-			riComboBoxGender.Items.AddRange(new string[] { "Male", "Female" });
+			var riComboBoxGender = new RepositoryItemComboBox();
+			riComboBoxGender.Items.AddRange(new object[] { "Male", "Female" });
 			riComboBoxGender.TextEditStyle = TextEditStyles.DisableTextEditor;
 			gridViewStudent.Columns["Gender"].ColumnEdit = riComboBoxGender;
 		}
 
 		private void InitComboBoxCourse()
 		{
-			RepositoryItemComboBox riComboBoxCourse = new RepositoryItemComboBox();
-			int currentYear = DateTime.Now.Year;
-			List<int> courses = new List<int>()
+			var riComboBoxCourse = new RepositoryItemComboBox();
+			var currentYear = DateTime.Now.Year;
+			var courses = new List<int>()
 			{
 				currentYear--,
 				currentYear--,
@@ -88,7 +91,7 @@ namespace Final
 				var student = studentList[index];
 				StudentBusiness.EditStudent(student);
 			}
-			this.gridControl1.RefreshDataSource();
+			gridControl1.RefreshDataSource();
 		}
 
 		private void gridViewStudent_InitNewRow(object sender, InitNewRowEventArgs e)

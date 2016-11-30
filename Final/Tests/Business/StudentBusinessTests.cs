@@ -8,7 +8,7 @@
 	using Business;
 	using NUnit.Framework;
 
-	[TestFixture]
+	[TestFixture()]
 	public class StudentBusinessTests
 	{
 		public StudentBusinessTests()
@@ -16,11 +16,11 @@
 			AutoMapperConfiguration.Configure();
 		}
 
-		[Test]
+		[Test()]
 		public void GetAllTest()
 		{
 			var actual = StudentBusiness.GetAll();
-			var expected = 12;
+			const int expected = 12;
 			Assert.AreEqual(expected, actual.Count);
 		}
 	}

@@ -26,7 +26,7 @@ namespace DataAccess.Repositories.Tests
 			mockContext.Setup(m => m.Students).Returns(mockSet.Object);
 
 			var repo = new StudentRepository(mockContext.Object);
-			repo.Add(new Student { StudentID = "1", Name = "Sample Student" });
+			repo.Add(new Student { StudentId = "1", Name = "Sample Student" });
 		
 			// Assert fails, nothing is added to the mocked DbSet.
 			mockSet.Verify(m => m.Add(It.IsAny<Student>()), Times.Once());

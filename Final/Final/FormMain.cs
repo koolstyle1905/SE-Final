@@ -18,13 +18,13 @@ namespace Final
 	{
 		public FormMain()
 		{
-			this.InitializeComponent();
+			InitializeComponent();
 			
 		}
 
 		private Form CheckExist(Type formType)
 		{
-			foreach (var item in this.MdiChildren)
+			foreach (var item in MdiChildren)
 			{
 				if (item.GetType() == formType)
 				{
@@ -41,15 +41,14 @@ namespace Final
 
 		private void barBtnStudentList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
 		{
-			Form form = this.CheckExist(typeof(FormStudent));
+			var form = CheckExist(typeof(FormStudent));
 			if (form != null)
 			{
 				form.Activate();
 			}
 			else
 			{
-				FormStudent formStudent = new FormStudent();
-				formStudent.MdiParent = this;
+				var formStudent = new FormStudent {MdiParent = this};
 				formStudent.Show();
 			}
 		}

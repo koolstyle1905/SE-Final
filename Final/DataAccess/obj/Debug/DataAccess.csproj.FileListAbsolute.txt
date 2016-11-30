@@ -1,8 +1,8 @@
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\DataAccess.dll.config
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\DataAccess.dll
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\DataAccess.pdb
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\DataAccess\obj\Debug\DataAccess.Migrations.Init.resources
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\DataAccess\obj\Debug\DataAccess.Migrations.Init.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache

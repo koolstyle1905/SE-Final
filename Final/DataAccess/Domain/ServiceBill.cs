@@ -9,16 +9,19 @@ namespace DataAccess.Domain
     public partial class ServiceBill
     {
         [Key]
-        public string BillID { get; set; }
+        [StringLength(10)]
+        public string BillId { get; set; }
 
-        public string RoomID { get; set; }
+        [StringLength(10)]
+        public string RoomId { get; set; }
 
-        public string StudentID { get; set; }
+        [StringLength(10)]
+        public string EmployeeId { get; set; }
 
         public DateTime CreatedDate { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal TotalPrice { get; set; }
+        public decimal Amount { get; set; }
 
         public virtual Employee Employee { get; set; }
 

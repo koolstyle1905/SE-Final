@@ -12,85 +12,78 @@
 	public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : class
 	{
 		private readonly DbContext context;
-		private DbSet<TEntity> dbSet;
 
-		public Repository(DbContext context)
+		protected Repository(DbContext context)
 		{
 			this.context = context;
-			this.dbSet = this.context.Set<TEntity>();
+			DbSet = this.context.Set<TEntity>();
 		}
 
-		protected DbSet<TEntity> DbSet
-		{
-			get
-			{
-				return this.dbSet;
-			}
-		}
+		protected DbSet<TEntity> DbSet { get; }
 
-		public TEntity FindByID(string id)
+		public TEntity FindById(string id)
 		{
-			return this.dbSet.Find(id);
+			return DbSet.Find(id);
 		}
 
 		public IEnumerable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate)
 		{
-			return this.dbSet.Where(predicate);
+			return DbSet.Where(predicate);
 		}
 
 		public TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate)
 		{
-			return this.dbSet.SingleOrDefault(predicate);
+			return DbSet.SingleOrDefault(predicate);
 		}
 
 		public void Add(TEntity entity)
 		{
-			this.dbSet.Add(entity);
+			DbSet.Add(entity);
 		}
 
 		public void AddRange(IEnumerable<TEntity> entities)
 		{
-			this.dbSet.AddRange(entities);
+			DbSet.AddRange(entities);
 		}
 
 		public void Remove(TEntity entity)
 		{
-			this.dbSet.Remove(entity);
+			DbSet.Remove(entity);
 		}
 
 		public void RemoveRange(IEnumerable<TEntity> entities)
 		{
-			this.dbSet.RemoveRange(entities);
+			DbSet.RemoveRange(entities);
 		}
 
 		public void Edit(TEntity entity)
 		{
-			this.context.Entry(entity).State = EntityState.Modified;
+			context.Entry(entity).State = EntityState.Modified;
 		}
 
 		public IEnumerable<TEntity> OrderBy<TKey>(Expression<Func<TEntity, TKey>> keySelector)
 		{
-			return this.dbSet.OrderBy(keySelector);
+			return DbSet.OrderBy(keySelector);
 		}
 
 		public IEnumerable<TEntity> OrderByDescending<TKey>(Expression<Func<TEntity, TKey>> keySelector)
 		{
-			return this.dbSet.OrderByDescending(keySelector);
+			return DbSet.OrderByDescending(keySelector);
 		}
 
 		public int Count()
 		{
-			return this.dbSet.Count();
+			return DbSet.Count();
 		}
 
 		public IEnumerable<TEntity> GetAll()
 		{
-			return this.dbSet.AsEnumerable();
+			return DbSet.AsEnumerable();
 		}
 
 		public List<TEntity> ToList()
 		{
-			return this.dbSet.ToList();
+			return DbSet.ToList();
 		}
 	}
 }

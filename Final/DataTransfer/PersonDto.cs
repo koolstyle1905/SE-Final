@@ -12,7 +12,7 @@
 
 		public DateTime DateOfBirth { get; set; }
 
-		public string SSN { get; set; }
+		public string Ssn { get; set; }
 
 		public string Address { get; set; }
 

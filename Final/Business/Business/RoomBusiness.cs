@@ -17,25 +17,24 @@
 		{
 			using (var unitOfWork = new UnitOfWork())
 			{
-				TreeNode parent;
 				var buildings = unitOfWork.Buildings.GetAll();
 				foreach (var building in buildings)
 				{
-					parent = new TreeNode(building.BuildingID);
-					foreach (var floor in building.Floors.OrderBy(f => f.FloorID.Length).ThenBy(f => f.FloorID))
+					var parent = new TreeNode(building.BuildingId);
+					foreach (var floor in building.Floors.OrderBy(f => f.FloorId.Length).ThenBy(f => f.FloorId))
 					{
-						parent.Nodes.Add(floor.FloorID);
+						parent.Nodes.Add(floor.FloorId);
 					}
 					treeView.Nodes.Add(parent);
 				}
 			}
 		}
 
-		public static List<RoomDto> GetRoomsByFloorID(string floorID)
+		public static List<RoomDto> GetRoomsByFloorId(string floorId)
 		{
 			using (var unitOfWork = new UnitOfWork())
 			{
-				var roomList = unitOfWork.Rooms.FindBy(r => r.FloorID == floorID).ToList();
+				var roomList = unitOfWork.Rooms.FindBy(r => r.FloorId == floorId).ToList();
 				return Mapper.Map<List<Room>, List<RoomDto>>(roomList);
 			}
 		}

@@ -9,12 +9,6 @@
 
 	public class Connection
 	{
-		public static string ConnectionString
-		{
-			get
-			{
-				return ConfigurationManager.ConnectionStrings["DormitoryContext"].ConnectionString;
-			}
-		}
+		public static string ConnectionString => ConfigurationManager.ConnectionStrings["DormitoryContext"].ConnectionString;
 	}
 }

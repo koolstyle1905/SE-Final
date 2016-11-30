@@ -26,9 +26,9 @@ namespace Business.Tests
 		[TestCase("I3")]
 		[TestCase("I4")]
 		[TestCase("I5")]
-		public void GetRoomsByFloorIDTest(string floorID)
+		public void GetRoomsByFloorIdTest(string floorId)
 		{
-			var actual = RoomBusiness.GetRoomsByFloorID(floorID);
+			var actual = RoomBusiness.GetRoomsByFloorId(floorId);
 			Assert.AreEqual(16, actual.Count);
 		}
 	}

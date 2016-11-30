@@ -9,13 +9,11 @@ namespace DataAccess.Domain
     [Table("Carer")]
     public partial class Carer
     {
-        [Key]
-        public string CareID { get; set; }
+        [StringLength(10)]
+        public string CarerId { get; set; }
 
-        public string StudentID { get; set; }
-
-        [StringLength(50)]
-        public string Job { get; set; }
+        [StringLength(10)]
+        public string StudentId { get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }
@@ -33,6 +31,9 @@ namespace DataAccess.Domain
 
         [Column(TypeName = "numeric")]
         public decimal Phone { get; set; }
+
+        [StringLength(50)]
+        public string Job { get; set; }
 
         public virtual Student Student { get; set; }
     }

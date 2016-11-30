@@ -16,7 +16,7 @@
 
 		IEnumerable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate);
 
-		TEntity FindByID(string id);
+		TEntity FindById(string id);
 
 		IEnumerable<TEntity> GetAll();
 

@@ -14,9 +14,11 @@ namespace DataAccess.Domain
             Students = new HashSet<Student>();
         }
 
-        public string ClassID { get; set; }
+        [StringLength(10)]
+        public string ClassId { get; set; }
 
-        public string FacultyID { get; set; }
+        [StringLength(10)]
+        public string FacultyId { get; set; }
 
         public virtual Faculty Faculty { get; set; }
 

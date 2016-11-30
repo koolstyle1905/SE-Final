@@ -14,7 +14,8 @@ namespace DataAccess.Domain
             Students = new HashSet<Student>();
         }
 
-        public string ClubID { get; set; }
+        [StringLength(10)]
+        public string ClubId { get; set; }
 
         [StringLength(50)]
         public string Name { get; set; }

@@ -14,9 +14,11 @@ namespace DataAccess.Domain
             Rooms = new HashSet<Room>();
         }
 
-        public string FloorID { get; set; }
+        [StringLength(10)]
+        public string FloorId { get; set; }
 
-        public string BuildingID { get; set; }
+        [StringLength(10)]
+        public string BuildingId { get; set; }
 
         public virtual Building Building { get; set; }
 

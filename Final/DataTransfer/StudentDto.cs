@@ -12,17 +12,15 @@
 		}
 
 		[Required]
-		[MinLength(8), MaxLength(8)]
-		public string StudentID { get; set; }
+		public string StudentId { get; set; }
 
 		[Required]
-		public string ClubID { get; set; }
+		public string ClubId { get; set; }
 
 		[Required]
-		[MinLength(8), MaxLength(8)]
-		public string ClassID { get; set; }
+		public string ClassId { get; set; }
 
-		public string RoomID { get; set; }
+		public string RoomId { get; set; }
 
 		public string PlaceOfBirth { get; set; }
 

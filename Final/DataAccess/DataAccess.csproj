@@ -62,29 +62,29 @@
     <Compile Include="Domain\Carer.cs" />
     <Compile Include="Domain\Class.cs" />
     <Compile Include="Domain\Club.cs" />
-    <Compile Include="Domain\DamageClaim.cs" />
-    <Compile Include="Domain\Discipline.cs" />
-    <Compile Include="DormitoryContext.cs" />
+    <Compile Include="Domain\DormitoryContext.cs" />
     <Compile Include="Domain\Employee.cs" />
     <Compile Include="Domain\Faculty.cs" />
     <Compile Include="Domain\Floor.cs" />
     <Compile Include="Domain\LateArrivalInfo.cs" />
     <Compile Include="Domain\LeaseContract.cs" />
-    <Compile Include="Domain\LeaseReceipt.cs" />
-    <Compile Include="Domain\ParkingReceipt.cs" />
+    <Compile Include="Domain\LeaseDetail.cs" />
+    <Compile Include="Domain\ParkingDetail.cs" />
     <Compile Include="Domain\ParkingTicket.cs" />
     <Compile Include="Domain\Priority.cs" />
-    <Compile Include="Core\IUnitOfWork.cs" />
-    <Compile Include="Migrations\201611261608565_Init.cs" />
-    <Compile Include="Migrations\201611261608565_Init.Designer.cs">
-      <DependentUpon>201611261608565_Init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Room.cs" />
     <Compile Include="Domain\ServiceBill.cs" />
     <Compile Include="Domain\Student.cs" />
     <Compile Include="Domain\TemporaryAbsence.cs" />
+    <Compile Include="Domain\ViolationRecord.cs" />
+    <Compile Include="DormitoryContext.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Migrations\201611301554293_Init.cs" />
+    <Compile Include="Migrations\201611301554293_Init.Designer.cs">
+      <DependentUpon>201611301554293_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BuildingRepository.cs" />
     <Compile Include="Repositories\ClassRepository.cs" />
     <Compile Include="Repositories\ClubRepository.cs" />
@@ -109,11 +109,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611261608565_Init.resx">
-      <DependentUpon>201611261608565_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611301554293_Init.resx">
+      <DependentUpon>201611301554293_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

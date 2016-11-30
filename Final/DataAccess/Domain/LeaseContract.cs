@@ -11,19 +11,22 @@ namespace DataAccess.Domain
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LeaseContract()
         {
-            LeaseReceipts = new HashSet<LeaseReceipt>();
+            LeaseDetails = new HashSet<LeaseDetail>();
+			CreatedDate = DateTime.Now;
         }
 
         [Key]
-        public string ContractID { get; set; }
+        [StringLength(10)]
+        public string ContractId { get; set; }
 
-        public string StudentID { get; set; }
+        [StringLength(10)]
+        public string StudentId { get; set; }
 
         public DateTime CreatedDate { get; set; }
 
         public virtual Student Student { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LeaseReceipt> LeaseReceipts { get; set; }
+        public virtual ICollection<LeaseDetail> LeaseDetails { get; set; }
     }
 }

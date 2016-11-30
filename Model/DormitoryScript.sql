@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2012                    */
-/* Created on:     11/26/2016 10:38:23 PM                       */
+/* Created on:     11/30/2016 10:45:52 PM                       */
 /*==============================================================*/
 
 
@@ -41,34 +41,6 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('DamageClaim') and o.name = 'FK_DAMAGECL_RELATIONS_STUDENTS')
-alter table DamageClaim
-   drop constraint FK_DAMAGECL_RELATIONS_STUDENTS
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('DamageClaim') and o.name = 'FK_DAMAGECL_RELATIONS_EMPLOYEE')
-alter table DamageClaim
-   drop constraint FK_DAMAGECL_RELATIONS_EMPLOYEE
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('Discipline') and o.name = 'FK_DISCIPLI_RELATIONS_STUDENTS')
-alter table Discipline
-   drop constraint FK_DISCIPLI_RELATIONS_STUDENTS
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('Discipline') and o.name = 'FK_DISCIPLI_RELATIONS_EMPLOYEE')
-alter table Discipline
-   drop constraint FK_DISCIPLI_RELATIONS_EMPLOYEE
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
    where r.fkeyid = object_id('Floors') and o.name = 'FK_FLOORS_RELATIONS_BUILDING')
 alter table Floors
    drop constraint FK_FLOORS_RELATIONS_BUILDING
@@ -90,30 +62,30 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('LeaseReceipts') and o.name = 'FK_LEASEREC_LEASERECE_EMPLOYEE')
-alter table LeaseReceipts
-   drop constraint FK_LEASEREC_LEASERECE_EMPLOYEE
+   where r.fkeyid = object_id('LeaseDetails') and o.name = 'FK_LEASEDET_LEASEDETA_EMPLOYEE')
+alter table LeaseDetails
+   drop constraint FK_LEASEDET_LEASEDETA_EMPLOYEE
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('LeaseReceipts') and o.name = 'FK_LEASEREC_LEASERECE_LEASECON')
-alter table LeaseReceipts
-   drop constraint FK_LEASEREC_LEASERECE_LEASECON
+   where r.fkeyid = object_id('LeaseDetails') and o.name = 'FK_LEASEDET_LEASEDETA_LEASECON')
+alter table LeaseDetails
+   drop constraint FK_LEASEDET_LEASEDETA_LEASECON
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('ParkingReceipts') and o.name = 'FK_PARKINGR_PARKINGRE_EMPLOYEE')
-alter table ParkingReceipts
-   drop constraint FK_PARKINGR_PARKINGRE_EMPLOYEE
+   where r.fkeyid = object_id('ParkingDetails') and o.name = 'FK_PARKINGD_PARKINGDE_EMPLOYEE')
+alter table ParkingDetails
+   drop constraint FK_PARKINGD_PARKINGDE_EMPLOYEE
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('ParkingReceipts') and o.name = 'FK_PARKINGR_PARKINGRE_PARKINGT')
-alter table ParkingReceipts
-   drop constraint FK_PARKINGR_PARKINGRE_PARKINGT
+   where r.fkeyid = object_id('ParkingDetails') and o.name = 'FK_PARKINGD_PARKINGDE_PARKINGT')
+alter table ParkingDetails
+   drop constraint FK_PARKINGD_PARKINGDE_PARKINGT
 go
 
 if exists (select 1
@@ -191,6 +163,20 @@ if exists (select 1
    where r.fkeyid = object_id('TemporaryAbsences') and o.name = 'FK_TEMPORAR_RELATIONS_EMPLOYEE')
 alter table TemporaryAbsences
    drop constraint FK_TEMPORAR_RELATIONS_EMPLOYEE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('ViolationRecord') and o.name = 'FK_VIOLATIO_RELATIONS_STUDENTS')
+alter table ViolationRecord
+   drop constraint FK_VIOLATIO_RELATIONS_STUDENTS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('ViolationRecord') and o.name = 'FK_VIOLATIO_RELATIONS_EMPLOYEE')
+alter table ViolationRecord
+   drop constraint FK_VIOLATIO_RELATIONS_EMPLOYEE
 go
 
 if exists (select 1
@@ -281,56 +267,6 @@ if exists (select 1
 go
 
 if exists (select 1
-            from  sysindexes
-           where  id    = object_id('DamageClaim')
-            and   name  = 'RELATIONSHIP_23_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index DamageClaim.RELATIONSHIP_23_FK
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('DamageClaim')
-            and   name  = 'RELATIONSHIP_22_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index DamageClaim.RELATIONSHIP_22_FK
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('DamageClaim')
-            and   type = 'U')
-   drop table DamageClaim
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('Discipline')
-            and   name  = 'RELATIONSHIP_18_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index Discipline.RELATIONSHIP_18_FK
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('Discipline')
-            and   name  = 'RELATIONSHIP_17_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index Discipline.RELATIONSHIP_17_FK
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('Discipline')
-            and   type = 'U')
-   drop table Discipline
-go
-
-if exists (select 1
             from  sysobjects
            where  id = object_id('Employees')
             and   type = 'U')
@@ -394,52 +330,52 @@ go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('LeaseReceipts')
-            and   name  = 'LEASERECEIPTS_FK2'
+           where  id    = object_id('LeaseDetails')
+            and   name  = 'LEASEDETAILS_FK2'
             and   indid > 0
             and   indid < 255)
-   drop index LeaseReceipts.LEASERECEIPTS_FK2
+   drop index LeaseDetails.LEASEDETAILS_FK2
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('LeaseReceipts')
-            and   name  = 'LEASERECEIPTS_FK'
+           where  id    = object_id('LeaseDetails')
+            and   name  = 'LEASEDETAILS_FK'
             and   indid > 0
             and   indid < 255)
-   drop index LeaseReceipts.LEASERECEIPTS_FK
+   drop index LeaseDetails.LEASEDETAILS_FK
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('LeaseReceipts')
+           where  id = object_id('LeaseDetails')
             and   type = 'U')
-   drop table LeaseReceipts
+   drop table LeaseDetails
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('ParkingReceipts')
-            and   name  = 'PARKINGRECEIPTS_FK2'
+           where  id    = object_id('ParkingDetails')
+            and   name  = 'PARKINGDETAILS_FK2'
             and   indid > 0
             and   indid < 255)
-   drop index ParkingReceipts.PARKINGRECEIPTS_FK2
+   drop index ParkingDetails.PARKINGDETAILS_FK2
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('ParkingReceipts')
-            and   name  = 'PARKINGRECEIPTS_FK'
+           where  id    = object_id('ParkingDetails')
+            and   name  = 'PARKINGDETAILS_FK'
             and   indid > 0
             and   indid < 255)
-   drop index ParkingReceipts.PARKINGRECEIPTS_FK
+   drop index ParkingDetails.PARKINGDETAILS_FK
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('ParkingReceipts')
+           where  id = object_id('ParkingDetails')
             and   type = 'U')
-   drop table ParkingReceipts
+   drop table ParkingDetails
 go
 
 if exists (select 1
@@ -590,6 +526,31 @@ if exists (select 1
    drop table TemporaryAbsences
 go
 
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('ViolationRecord')
+            and   name  = 'RELATIONSHIP_18_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index ViolationRecord.RELATIONSHIP_18_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('ViolationRecord')
+            and   name  = 'RELATIONSHIP_17_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index ViolationRecord.RELATIONSHIP_17_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('ViolationRecord')
+            and   type = 'U')
+   drop table ViolationRecord
+go
+
 if exists(select 1 from systypes where name='ID_10')
    drop type ID_10
 go
@@ -672,7 +633,7 @@ go
 /*==============================================================*/
 create table Attendance (
    AttendanceId         ID_10                not null,
-   StudentID            ID_10                null,
+   EmployeeId           ID_10                null,
    CreatedDate          NDATE                not null,
    constraint PK_ATTENDANCE primary key nonclustered (AttendanceId)
 )
@@ -682,7 +643,7 @@ go
 /* Index: RELATIONSHIP_16_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_16_FK on Attendance (
-StudentID ASC
+EmployeeId ASC
 )
 go
 
@@ -691,8 +652,8 @@ go
 /*==============================================================*/
 create table AttendanceDetail (
    AttendanceId         ID_10                not null,
-   PersonID             ID_10                not null,
-   constraint PK_ATTENDANCEDETAIL primary key (AttendanceId, PersonID)
+   StudentId            ID_10                not null,
+   constraint PK_ATTENDANCEDETAIL primary key (AttendanceId, StudentId)
 )
 go
 
@@ -708,7 +669,7 @@ go
 /* Index: ATTENDANCEDETAIL_FK2                                  */
 /*==============================================================*/
 create index ATTENDANCEDETAIL_FK2 on AttendanceDetail (
-PersonID ASC
+StudentId ASC
 )
 go
 
@@ -716,8 +677,8 @@ go
 /* Table: Buildings                                             */
 /*==============================================================*/
 create table Buildings (
-   BuildingID           ID_10                not null,
-   constraint PK_BUILDINGS primary key nonclustered (BuildingID)
+   BuildingId           ID_10                not null,
+   constraint PK_BUILDINGS primary key nonclustered (BuildingId)
 )
 go
 
@@ -725,16 +686,16 @@ go
 /* Table: Carer                                                 */
 /*==============================================================*/
 create table Carer (
-   CareID               ID_10                not null,
-   StudentID            ID_10                null,
-   Job                  NVARCHAR50           null,
+   CarerId              ID_10                not null,
+   StudentId            ID_10                null,
    Name                 NVARCHAR50           null,
    Gender               NVARCHAR20           null,
    DateOfBirth          NDATE                not null,
    SSN                  NVARCHAR20           null,
    Address              NTEXT1               null,
    Phone                NUMBER12             not null,
-   constraint PK_CARER primary key (CareID)
+   Job                  NVARCHAR50           null,
+   constraint PK_CARER primary key nonclustered (CarerId)
 )
 go
 
@@ -742,7 +703,7 @@ go
 /* Index: RELATIONSHIP_13_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_13_FK on Carer (
-StudentID ASC
+StudentId ASC
 )
 go
 
@@ -750,9 +711,9 @@ go
 /* Table: Classes                                               */
 /*==============================================================*/
 create table Classes (
-   ClassID              ID_10                not null,
-   FacultyID            ID_10                null,
-   constraint PK_CLASSES primary key nonclustered (ClassID)
+   ClassId              ID_10                not null,
+   FacultyId            ID_10                null,
+   constraint PK_CLASSES primary key nonclustered (ClassId)
 )
 go
 
@@ -760,7 +721,7 @@ go
 /* Index: RELATIONSHIP_11_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_11_FK on Classes (
-FacultyID ASC
+FacultyId ASC
 )
 go
 
@@ -768,67 +729,9 @@ go
 /* Table: Clubs                                                 */
 /*==============================================================*/
 create table Clubs (
-   ClubID               ID_10                not null,
+   ClubId               ID_10                not null,
    Name                 NVARCHAR50           null,
-   constraint PK_CLUBS primary key nonclustered (ClubID)
-)
-go
-
-/*==============================================================*/
-/* Table: DamageClaim                                           */
-/*==============================================================*/
-create table DamageClaim (
-   ClaimID              ID_10                not null,
-   StudentID            ID_10                null,
-   EmployeeID           ID_10                null,
-   CreatedDate          NDATE                not null,
-   TotalPrice           money                not null,
-   constraint PK_DAMAGECLAIM primary key nonclustered (ClaimID)
-)
-go
-
-/*==============================================================*/
-/* Index: RELATIONSHIP_22_FK                                    */
-/*==============================================================*/
-create index RELATIONSHIP_22_FK on DamageClaim (
-StudentID ASC
-)
-go
-
-/*==============================================================*/
-/* Index: RELATIONSHIP_23_FK                                    */
-/*==============================================================*/
-create index RELATIONSHIP_23_FK on DamageClaim (
-EmployeeID ASC
-)
-go
-
-/*==============================================================*/
-/* Table: Discipline                                            */
-/*==============================================================*/
-create table Discipline (
-   DisciplineId         ID_10                not null,
-   StudentID            ID_10                null,
-   EmployeeID           ID_10                null,
-   Description          NTEXT1               null,
-   CreatedDate          NDATE                not null,
-   constraint PK_DISCIPLINE primary key nonclustered (DisciplineId)
-)
-go
-
-/*==============================================================*/
-/* Index: RELATIONSHIP_17_FK                                    */
-/*==============================================================*/
-create index RELATIONSHIP_17_FK on Discipline (
-StudentID ASC
-)
-go
-
-/*==============================================================*/
-/* Index: RELATIONSHIP_18_FK                                    */
-/*==============================================================*/
-create index RELATIONSHIP_18_FK on Discipline (
-EmployeeID ASC
+   constraint PK_CLUBS primary key nonclustered (ClubId)
 )
 go
 
@@ -836,17 +739,17 @@ go
 /* Table: Employees                                             */
 /*==============================================================*/
 create table Employees (
-   EmployeeID           ID_10                not null,
-   Username             NVARCHAR20           null,
-   Password             NVARCHAR20           null,
-   Position             NVARCHAR20           null,
+   EmployeeId           ID_10                not null,
    Name                 NVARCHAR50           null,
    Gender               NVARCHAR20           null,
    DateOfBirth          NDATE                not null,
    SSN                  NVARCHAR20           null,
    Address              NTEXT1               null,
    Phone                NUMBER12             not null,
-   constraint PK_EMPLOYEES primary key (EmployeeID)
+   Username             NVARCHAR20           null,
+   Password             NVARCHAR20           null,
+   Position             NVARCHAR20           null,
+   constraint PK_EMPLOYEES primary key nonclustered (EmployeeId)
 )
 go
 
@@ -854,9 +757,9 @@ go
 /* Table: Faculties                                             */
 /*==============================================================*/
 create table Faculties (
-   FacultyID            ID_10                not null,
+   FacultyId            ID_10                not null,
    Name                 NVARCHAR50           null,
-   constraint PK_FACULTIES primary key nonclustered (FacultyID)
+   constraint PK_FACULTIES primary key nonclustered (FacultyId)
 )
 go
 
@@ -864,9 +767,9 @@ go
 /* Table: Floors                                                */
 /*==============================================================*/
 create table Floors (
-   FloorID              ID_10                not null,
-   BuildingID           ID_10                null,
-   constraint PK_FLOORS primary key nonclustered (FloorID)
+   FloorId              ID_10                not null,
+   BuildingId           ID_10                null,
+   constraint PK_FLOORS primary key nonclustered (FloorId)
 )
 go
 
@@ -874,7 +777,7 @@ go
 /* Index: RELATIONSHIP_25_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_25_FK on Floors (
-BuildingID ASC
+BuildingId ASC
 )
 go
 
@@ -882,13 +785,13 @@ go
 /* Table: LateArrivalInfo                                       */
 /*==============================================================*/
 create table LateArrivalInfo (
-   LateID               ID_10                not null,
-   StudentID            ID_10                null,
+   LateId               ID_10                not null,
+   StudentId            ID_10                null,
    WorkingAddress       NTEXT1               null,
    ArrivalTime          NDATE                not null,
    CreatedDate          NDATE                not null,
    Reason               NTEXT1               null,
-   constraint PK_LATEARRIVALINFO primary key nonclustered (LateID)
+   constraint PK_LATEARRIVALINFO primary key nonclustered (LateId)
 )
 go
 
@@ -896,7 +799,7 @@ go
 /* Index: RELATIONSHIP_1_FK                                     */
 /*==============================================================*/
 create index RELATIONSHIP_1_FK on LateArrivalInfo (
-StudentID ASC
+StudentId ASC
 )
 go
 
@@ -904,10 +807,10 @@ go
 /* Table: LeaseContracts                                        */
 /*==============================================================*/
 create table LeaseContracts (
-   ContractID           ID_10                not null,
-   StudentID            ID_10                null,
+   ContractId           ID_10                not null,
+   StudentId            ID_10                null,
    CreatedDate          NDATE                not null,
-   constraint PK_LEASECONTRACTS primary key nonclustered (ContractID)
+   constraint PK_LEASECONTRACTS primary key nonclustered (ContractId)
 )
 go
 
@@ -915,63 +818,65 @@ go
 /* Index: RELATIONSHIP_9_FK                                     */
 /*==============================================================*/
 create index RELATIONSHIP_9_FK on LeaseContracts (
-StudentID ASC
+StudentId ASC
 )
 go
 
 /*==============================================================*/
-/* Table: LeaseReceipts                                         */
+/* Table: LeaseDetails                                          */
 /*==============================================================*/
-create table LeaseReceipts (
-   StudentID            ID_10                not null,
-   ContractID           ID_10                not null,
+create table LeaseDetails (
+   EmployeeId           ID_10                not null,
+   ContractId           ID_10                not null,
+   StartDate            NDATE                not null,
    EndDate              NDATE                not null,
-   TotalPrice           money                null,
-   constraint PK_LEASERECEIPTS primary key (StudentID, ContractID)
+   Amount               money                null,
+   constraint PK_LEASEDETAILS primary key (EmployeeId, ContractId)
 )
 go
 
 /*==============================================================*/
-/* Index: LEASERECEIPTS_FK                                      */
+/* Index: LEASEDETAILS_FK                                       */
 /*==============================================================*/
-create index LEASERECEIPTS_FK on LeaseReceipts (
-StudentID ASC
+create index LEASEDETAILS_FK on LeaseDetails (
+EmployeeId ASC
 )
 go
 
 /*==============================================================*/
-/* Index: LEASERECEIPTS_FK2                                     */
+/* Index: LEASEDETAILS_FK2                                      */
 /*==============================================================*/
-create index LEASERECEIPTS_FK2 on LeaseReceipts (
-ContractID ASC
+create index LEASEDETAILS_FK2 on LeaseDetails (
+ContractId ASC
 )
 go
 
 /*==============================================================*/
-/* Table: ParkingReceipts                                       */
+/* Table: ParkingDetails                                        */
 /*==============================================================*/
-create table ParkingReceipts (
-   TicketID             ID_10                not null,
-   EmployeeID           ID_10                not null,
-   TotalPrice           money                not null,
+create table ParkingDetails (
+   TicketId             ID_10                not null,
+   EmployeeId           ID_10                not null,
+   StartDate            NDATE                not null,
    EndDate              NDATE                not null,
-   constraint PK_PARKINGRECEIPTS primary key (TicketID, EmployeeID)
+   Amount               money                not null,
+   constraint PK_PARKINGDETAILS primary key (TicketId, EmployeeId)
 )
 go
 
 /*==============================================================*/
-/* Index: PARKINGRECEIPTS_FK                                    */
+/* Index: PARKINGDETAILS_FK                                     */
 /*==============================================================*/
-create index PARKINGRECEIPTS_FK on ParkingReceipts (
-TicketID ASC
+create index PARKINGDETAILS_FK on ParkingDetails (
+TicketId ASC
 )
 go
 
 /*==============================================================*/
-/* Index: PARKINGRECEIPTS_FK2                                   */
+/* Index: PARKINGDETAILS_FK2                                    */
 /*==============================================================*/
-create index PARKINGRECEIPTS_FK2 on ParkingReceipts (
-EmployeeID ASC
+create index PARKINGDETAILS_FK2 on ParkingDetails (
+EmployeeId ASC
 )
 go
 
@@ -979,8 +884,8 @@ go
 /* Table: ParkingTickets                                        */
 /*==============================================================*/
 create table ParkingTickets (
-   TicketID             ID_10                not null,
-   StudentID            ID_10                null,
+   TicketId             ID_10                not null,
+   StudentId            ID_10                null,
    OwnerName            NVARCHAR50           null,
    OwnerAddress         NTEXT1               null,
    VehicleType          NVARCHAR50           null,
@@ -988,7 +893,7 @@ create table ParkingTickets (
    LicensePlates        NVARCHAR20           null,
    EngineModel          NVARCHAR20           null,
    VINNumber            NVARCHAR20           null,
-   constraint PK_PARKINGTICKETS primary key nonclustered (TicketID)
+   constraint PK_PARKINGTICKETS primary key nonclustered (TicketId)
 )
 go
 
@@ -996,7 +901,7 @@ go
 /* Index: RELATIONSHIP_7_FK                                     */
 /*==============================================================*/
 create index RELATIONSHIP_7_FK on ParkingTickets (
-StudentID ASC
+StudentId ASC
 )
 go
 
@@ -1004,9 +909,9 @@ go
 /* Table: Priorities                                            */
 /*==============================================================*/
 create table Priorities (
-   PriorityID           ID_10                not null,
+   PriorityId           ID_10                not null,
    Content              NTEXT1               null,
-   constraint PK_PRIORITIES primary key nonclustered (PriorityID)
+   constraint PK_PRIORITIES primary key nonclustered (PriorityId)
 )
 go
 
@@ -1014,9 +919,9 @@ go
 /* Table: PriorityTarget                                        */
 /*==============================================================*/
 create table PriorityTarget (
-   StudentID            ID_10                not null,
-   PriorityID           ID_10                not null,
-   constraint PK_PRIORITYTARGET primary key (StudentID, PriorityID)
+   StudentId            ID_10                not null,
+   PriorityId           ID_10                not null,
+   constraint PK_PRIORITYTARGET primary key (StudentId, PriorityId)
 )
 go
 
@@ -1024,7 +929,7 @@ go
 /* Index: PRIORITYTARGET_FK                                     */
 /*==============================================================*/
 create index PRIORITYTARGET_FK on PriorityTarget (
-StudentID ASC
+StudentId ASC
 )
 go
 
@@ -1032,7 +937,7 @@ go
 /* Index: PRIORITYTARGET_FK2                                    */
 /*==============================================================*/
 create index PRIORITYTARGET_FK2 on PriorityTarget (
-PriorityID ASC
+PriorityId ASC
 )
 go
 
@@ -1040,11 +945,9 @@ go
 /* Table: Rooms                                                 */
 /*==============================================================*/
 create table Rooms (
-   RoomID               ID_10                not null,
-   FloorID              ID_10                null,
-   NumOfStudent         int                  not null default 0
-      constraint CKC_NUMOFSTUDENT_ROOMS check (NumOfStudent between 0 and 8),
-   constraint PK_ROOMS primary key nonclustered (RoomID)
+   RoomId               ID_10                not null,
+   FloorId              ID_10                null,
+   constraint PK_ROOMS primary key nonclustered (RoomId)
 )
 go
 
@@ -1052,7 +955,7 @@ go
 /* Index: RELATIONSHIP_21_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_21_FK on Rooms (
-FloorID ASC
+FloorId ASC
 )
 go
 
@@ -1060,12 +963,12 @@ go
 /* Table: ServiceBills                                          */
 /*==============================================================*/
 create table ServiceBills (
-   BillID               ID_10                not null,
-   RoomID               ID_10                null,
-   StudentID            ID_10                null,
+   BillId               ID_10                not null,
+   RoomId               ID_10                null,
+   EmployeeId           ID_10                null,
    CreatedDate          NDATE                not null,
-   TotalPrice           money                not null,
-   constraint PK_SERVICEBILLS primary key nonclustered (BillID)
+   Amount               money                not null,
+   constraint PK_SERVICEBILLS primary key nonclustered (BillId)
 )
 go
 
@@ -1073,7 +976,7 @@ go
 /* Index: RELATIONSHIP_24_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_24_FK on ServiceBills (
-StudentID ASC
+EmployeeId ASC
 )
 go
 
@@ -1081,7 +984,7 @@ go
 /* Index: RELATIONSHIP_20_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_20_FK on ServiceBills (
-RoomID ASC
+RoomId ASC
 )
 go
 
@@ -1089,10 +992,10 @@ go
 /* Table: Students                                              */
 /*==============================================================*/
 create table Students (
-   StudentID            ID_10                not null,
-   ClubID               ID_10                null,
-   ClassID              ID_10                null,
-   RoomID               ID_10                null,
+   StudentId            ID_10                not null,
+   ClubId               ID_10                null,
+   ClassId              ID_10                null,
+   RoomId               ID_10                null,
    Name                 NVARCHAR50           null,
    Gender               NVARCHAR20           null,
    DateOfBirth          NDATE                not null,
@@ -1105,7 +1008,7 @@ create table Students (
    Course               int                  not null default 0
       constraint CKC_COURSE_STUDENTS check (Course >= 0),
    Position             NVARCHAR20           null,
-   constraint PK_STUDENTS primary key (StudentID)
+   constraint PK_STUDENTS primary key nonclustered (StudentId)
 )
 go
 
@@ -1113,7 +1016,7 @@ go
 /* Index: RELATIONSHIP_8_FK                                     */
 /*==============================================================*/
 create index RELATIONSHIP_8_FK on Students (
-RoomID ASC
+RoomId ASC
 )
 go
 
@@ -1121,7 +1024,7 @@ go
 /* Index: RELATIONSHIP_12_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_12_FK on Students (
-ClassID ASC
+ClassId ASC
 )
 go
 
@@ -1129,7 +1032,7 @@ go
 /* Index: RELATIONSHIP_19_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_19_FK on Students (
-ClubID ASC
+ClubId ASC
 )
 go
 
@@ -1137,13 +1040,14 @@ go
 /* Table: TemporaryAbsences                                     */
 /*==============================================================*/
 create table TemporaryAbsences (
-   AbsenceID            ID_10                not null,
-   StudentID            ID_10                null,
-   EmployeeID           ID_10                null,
+   AbsenceId            ID_10                not null,
+   EmployeeId           ID_10                null,
+   StudentId            ID_10                null,
    StartDate            NDATE                not null,
    NumOfAbsence         int                  not null,
    Reason               NTEXT1               null,
-   constraint PK_TEMPORARYABSENCES primary key nonclustered (AbsenceID)
+   CreatedDate          NDATE                not null,
+   constraint PK_TEMPORARYABSENCES primary key nonclustered (AbsenceId)
 )
 go
 
@@ -1151,7 +1055,7 @@ go
 /* Index: RELATIONSHIP_14_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_14_FK on TemporaryAbsences (
-StudentID ASC
+StudentId ASC
 )
 go
 
@@ -1159,13 +1063,42 @@ go
 /* Index: RELATIONSHIP_15_FK                                    */
 /*==============================================================*/
 create index RELATIONSHIP_15_FK on TemporaryAbsences (
-EmployeeID ASC
+EmployeeId ASC
+)
+go
+
+/*==============================================================*/
+/* Table: ViolationRecord                                       */
+/*==============================================================*/
+create table ViolationRecord (
+   ViolationId          ID_10                not null,
+   EmployeeId           ID_10                null,
+   StudentId            ID_10                null,
+   Description          NTEXT1               null,
+   CreatedDate          NDATE                not null,
+   constraint PK_VIOLATIONRECORD primary key nonclustered (ViolationId)
+)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_17_FK                                    */
+/*==============================================================*/
+create index RELATIONSHIP_17_FK on ViolationRecord (
+StudentId ASC
+)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_18_FK                                    */
+/*==============================================================*/
+create index RELATIONSHIP_18_FK on ViolationRecord (
+EmployeeId ASC
 )
 go
 
 alter table Attendance
-   add constraint FK_ATTENDAN_RELATIONS_EMPLOYEE foreign key (StudentID)
-      references Employees (EmployeeID)
+   add constraint FK_ATTENDAN_RELATIONS_EMPLOYEE foreign key (EmployeeId)
+      references Employees (EmployeeId)
 go
 
 alter table AttendanceDetail
@@ -1174,127 +1107,117 @@ alter table AttendanceDetail
 go
 
 alter table AttendanceDetail
-   add constraint FK_ATTENDAN_ATTENDANC_STUDENTS foreign key (PersonID)
-      references Students (StudentID)
+   add constraint FK_ATTENDAN_ATTENDANC_STUDENTS foreign key (StudentId)
+      references Students (StudentId)
 go
 
 alter table Carer
-   add constraint FK_CARER_RELATIONS_STUDENTS foreign key (StudentID)
-      references Students (StudentID)
+   add constraint FK_CARER_RELATIONS_STUDENTS foreign key (StudentId)
+      references Students (StudentId)
 go
 
 alter table Classes
-   add constraint FK_CLASSES_RELATIONS_FACULTIE foreign key (FacultyID)
-      references Faculties (FacultyID)
-go
-
-alter table DamageClaim
-   add constraint FK_DAMAGECL_RELATIONS_STUDENTS foreign key (StudentID)
-      references Students (StudentID)
-go
-
-alter table DamageClaim
-   add constraint FK_DAMAGECL_RELATIONS_EMPLOYEE foreign key (EmployeeID)
-      references Employees (EmployeeID)
-go
-
-alter table Discipline
-   add constraint FK_DISCIPLI_RELATIONS_STUDENTS foreign key (StudentID)
-      references Students (StudentID)
-go
-
-alter table Discipline
-   add constraint FK_DISCIPLI_RELATIONS_EMPLOYEE foreign key (EmployeeID)
-      references Employees (EmployeeID)
+   add constraint FK_CLASSES_RELATIONS_FACULTIE foreign key (FacultyId)
+      references Faculties (FacultyId)
 go
 
 alter table Floors
-   add constraint FK_FLOORS_RELATIONS_BUILDING foreign key (BuildingID)
-      references Buildings (BuildingID)
+   add constraint FK_FLOORS_RELATIONS_BUILDING foreign key (BuildingId)
+      references Buildings (BuildingId)
 go
 
 alter table LateArrivalInfo
-   add constraint FK_LATEARRI_RELATIONS_STUDENTS foreign key (StudentID)
-      references Students (StudentID)
+   add constraint FK_LATEARRI_RELATIONS_STUDENTS foreign key (StudentId)
+      references Students (StudentId)
 go
 
 alter table LeaseContracts
-   add constraint FK_LEASECON_RELATIONS_STUDENTS foreign key (StudentID)
-      references Students (StudentID)
+   add constraint FK_LEASECON_RELATIONS_STUDENTS foreign key (StudentId)
+      references Students (StudentId)
 go
 
-alter table LeaseReceipts
-   add constraint FK_LEASEREC_LEASERECE_EMPLOYEE foreign key (StudentID)
-      references Employees (EmployeeID)
+alter table LeaseDetails
+   add constraint FK_LEASEDET_LEASEDETA_EMPLOYEE foreign key (EmployeeId)
+      references Employees (EmployeeId)
 go
 
-alter table LeaseReceipts
-   add constraint FK_LEASEREC_LEASERECE_LEASECON foreign key (ContractID)
-      references LeaseContracts (ContractID)
+alter table LeaseDetails
+   add constraint FK_LEASEDET_LEASEDETA_LEASECON foreign key (ContractId)
+      references LeaseContracts (ContractId)
 go
 
-alter table ParkingReceipts
-   add constraint FK_PARKINGR_PARKINGRE_EMPLOYEE foreign key (EmployeeID)
-      references Employees (EmployeeID)
+alter table ParkingDetails
+   add constraint FK_PARKINGD_PARKINGDE_EMPLOYEE foreign key (EmployeeId)
+      references Employees (EmployeeId)
 go
 
-alter table ParkingReceipts
-   add constraint FK_PARKINGR_PARKINGRE_PARKINGT foreign key (TicketID)
-      references ParkingTickets (TicketID)
+alter table ParkingDetails
+   add constraint FK_PARKINGD_PARKINGDE_PARKINGT foreign key (TicketId)
+      references ParkingTickets (TicketId)
 go
 
 alter table ParkingTickets
-   add constraint FK_PARKINGT_RELATIONS_STUDENTS foreign key (StudentID)
-      references Students (StudentID)
+   add constraint FK_PARKINGT_RELATIONS_STUDENTS foreign key (StudentId)
+      references Students (StudentId)
 go
 
 alter table PriorityTarget
-   add constraint FK_PRIORITY_PRIORITYT_PRIORITI foreign key (PriorityID)
-      references Priorities (PriorityID)
+   add constraint FK_PRIORITY_PRIORITYT_PRIORITI foreign key (PriorityId)
+      references Priorities (PriorityId)
 go
 
 alter table PriorityTarget
-   add constraint FK_PRIORITY_PRIORITYT_STUDENTS foreign key (StudentID)
-      references Students (StudentID)
+   add constraint FK_PRIORITY_PRIORITYT_STUDENTS foreign key (StudentId)
+      references Students (StudentId)
 go
 
 alter table Rooms
-   add constraint FK_ROOMS_RELATIONS_FLOORS foreign key (FloorID)
-      references Floors (FloorID)
+   add constraint FK_ROOMS_RELATIONS_FLOORS foreign key (FloorId)
+      references Floors (FloorId)
 go
 
 alter table ServiceBills
-   add constraint FK_SERVICEB_RELATIONS_ROOMS foreign key (RoomID)
-      references Rooms (RoomID)
+   add constraint FK_SERVICEB_RELATIONS_ROOMS foreign key (RoomId)
+      references Rooms (RoomId)
 go
 
 alter table ServiceBills
-   add constraint FK_SERVICEB_RELATIONS_EMPLOYEE foreign key (StudentID)
-      references Employees (EmployeeID)
+   add constraint FK_SERVICEB_RELATIONS_EMPLOYEE foreign key (EmployeeId)
+      references Employees (EmployeeId)
 go
 
 alter table Students
-   add constraint FK_STUDENTS_RELATIONS_CLASSES foreign key (ClassID)
-      references Classes (ClassID)
+   add constraint FK_STUDENTS_RELATIONS_CLASSES foreign key (ClassId)
+      references Classes (ClassId)
 go
 
 alter table Students
-   add constraint FK_STUDENTS_RELATIONS_CLUBS foreign key (ClubID)
-      references Clubs (ClubID)
+   add constraint FK_STUDENTS_RELATIONS_CLUBS foreign key (ClubId)
+      references Clubs (ClubId)
 go
 
 alter table Students
-   add constraint FK_STUDENTS_RELATIONS_ROOMS foreign key (RoomID)
-      references Rooms (RoomID)
+   add constraint FK_STUDENTS_RELATIONS_ROOMS foreign key (RoomId)
+      references Rooms (RoomId)
 go
 
 alter table TemporaryAbsences
-   add constraint FK_TEMPORAR_RELATIONS_STUDENTS foreign key (StudentID)
-      references Students (StudentID)
+   add constraint FK_TEMPORAR_RELATIONS_STUDENTS foreign key (StudentId)
+      references Students (StudentId)
 go
 
 alter table TemporaryAbsences
-   add constraint FK_TEMPORAR_RELATIONS_EMPLOYEE foreign key (EmployeeID)
-      references Employees (EmployeeID)
+   add constraint FK_TEMPORAR_RELATIONS_EMPLOYEE foreign key (EmployeeId)
+      references Employees (EmployeeId)
+go
+
+alter table ViolationRecord
+   add constraint FK_VIOLATIO_RELATIONS_STUDENTS foreign key (StudentId)
+      references Students (StudentId)
+go
+
+alter table ViolationRecord
+   add constraint FK_VIOLATIO_RELATIONS_EMPLOYEE foreign key (EmployeeId)
+      references Employees (EmployeeId)
 go
 
