@@ -9,12 +9,13 @@ namespace Business
 {
 	public class ClubBusiness
 	{
-		private readonly IDormitoryContext dormitoryContext;
+		private readonly DormitoryContext dormitoryContext;
 
 		public ClubBusiness() : this(new DormitoryContext())
 		{
 		}
-		public ClubBusiness(IDormitoryContext dormitoryContext)
+
+		public ClubBusiness(DormitoryContext dormitoryContext)
 		{
 			this.dormitoryContext = dormitoryContext;
 		}

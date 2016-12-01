@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2012                    */
-/* Created on:     11/30/2016 10:45:52 PM                       */
+/* Created on:     12/1/2016 5:10:11 PM                         */
 /*==============================================================*/
 
 
@@ -114,20 +114,6 @@ if exists (select 1
    where r.fkeyid = object_id('Rooms') and o.name = 'FK_ROOMS_RELATIONS_FLOORS')
 alter table Rooms
    drop constraint FK_ROOMS_RELATIONS_FLOORS
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('ServiceBills') and o.name = 'FK_SERVICEB_RELATIONS_ROOMS')
-alter table ServiceBills
-   drop constraint FK_SERVICEB_RELATIONS_ROOMS
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('ServiceBills') and o.name = 'FK_SERVICEB_RELATIONS_EMPLOYEE')
-alter table ServiceBills
-   drop constraint FK_SERVICEB_RELATIONS_EMPLOYEE
 go
 
 if exists (select 1
@@ -440,31 +426,6 @@ if exists (select 1
            where  id = object_id('Rooms')
             and   type = 'U')
    drop table Rooms
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('ServiceBills')
-            and   name  = 'RELATIONSHIP_20_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index ServiceBills.RELATIONSHIP_20_FK
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('ServiceBills')
-            and   name  = 'RELATIONSHIP_24_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index ServiceBills.RELATIONSHIP_24_FK
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('ServiceBills')
-            and   type = 'U')
-   drop table ServiceBills
 go
 
 if exists (select 1
@@ -790,7 +751,7 @@ create table LateArrivalInfo (
    WorkingAddress       NTEXT1               null,
    ArrivalTime          NDATE                not null,
    CreatedDate          NDATE                not null,
-   Reason               NTEXT1               null,
+   Description          NTEXT1               null,
    constraint PK_LATEARRIVALINFO primary key nonclustered (LateId)
 )
 go
@@ -960,35 +921,6 @@ FloorId ASC
 go
 
 /*==============================================================*/
-/* Table: ServiceBills                                          */
-/*==============================================================*/
-create table ServiceBills (
-   BillId               ID_10                not null,
-   RoomId               ID_10                null,
-   EmployeeId           ID_10                null,
-   CreatedDate          NDATE                not null,
-   Amount               money                not null,
-   constraint PK_SERVICEBILLS primary key nonclustered (BillId)
-)
-go
-
-/*==============================================================*/
-/* Index: RELATIONSHIP_24_FK                                    */
-/*==============================================================*/
-create index RELATIONSHIP_24_FK on ServiceBills (
-EmployeeId ASC
-)
-go
-
-/*==============================================================*/
-/* Index: RELATIONSHIP_20_FK                                    */
-/*==============================================================*/
-create index RELATIONSHIP_20_FK on ServiceBills (
-RoomId ASC
-)
-go
-
-/*==============================================================*/
 /* Table: Students                                              */
 /*==============================================================*/
 create table Students (
@@ -1045,8 +977,8 @@ create table TemporaryAbsences (
    StudentId            ID_10                null,
    StartDate            NDATE                not null,
    NumOfAbsence         int                  not null,
-   Reason               NTEXT1               null,
    CreatedDate          NDATE                not null,
+   Description          NTEXT1               null,
    constraint PK_TEMPORARYABSENCES primary key nonclustered (AbsenceId)
 )
 go
@@ -1174,16 +1106,6 @@ go
 alter table Rooms
    add constraint FK_ROOMS_RELATIONS_FLOORS foreign key (FloorId)
       references Floors (FloorId)
-go
-
-alter table ServiceBills
-   add constraint FK_SERVICEB_RELATIONS_ROOMS foreign key (RoomId)
-      references Rooms (RoomId)
-go
-
-alter table ServiceBills
-   add constraint FK_SERVICEB_RELATIONS_EMPLOYEE foreign key (EmployeeId)
-      references Employees (EmployeeId)
 go
 
 alter table Students

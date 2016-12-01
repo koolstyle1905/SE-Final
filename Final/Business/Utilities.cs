@@ -1,16 +1,11 @@
-﻿namespace Business
-{
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-	using System.Threading.Tasks;
+﻿using System;
 
+namespace Business
+{
 	public class Utilities
 	{
-
 		/// <summary>
-		/// Find next ID
+		///     Find next ID
 		/// </summary>
 		/// <param name="lastId">Mã cuối cùng</param>
 		/// <param name="prefixId">Tiền tố mã</param>
@@ -19,14 +14,17 @@
 		{
 			if (lastId == string.Empty)
 			{
-				return prefixId + "0001";  // fix width default
+				return prefixId + "0001"; // fix width default
 			}
 			var nextId = int.Parse(lastId.Remove(0, prefixId.Length)) + 1;
 			var lengthNumerId = lastId.Length - prefixId.Length;
 			var zeroNumber = string.Empty;
 			for (var i = 1; i <= lengthNumerId; i++)
 			{
-				if (!(nextId < Math.Pow(10, i))) continue;
+				if (!(nextId < Math.Pow(10, i)))
+				{
+					continue;
+				}
 				for (var j = 1; j <= lengthNumerId - i; i++)
 				{
 					zeroNumber += "0";

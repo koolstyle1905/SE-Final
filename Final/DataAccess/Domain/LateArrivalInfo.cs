@@ -1,27 +1,17 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DataAccess.Domain
 {
-	using System;
-	using System.ComponentModel.DataAnnotations;
-	using System.ComponentModel.DataAnnotations.Schema;
-
-	public interface ILateArrivalInfo
-	{
-		string LateId { get; set; }
-		string StudentId { get; set; }
-		string WorkingAddress { get; set; }
-		DateTime ArrivalTime { get; set; }
-		DateTime CreatedDate { get; set; }
-		string Description { get; set; }
-		Student Student { get; set; }
-	}
-
 	[Table("LateArrivalInfo")]
-	public partial class LateArrivalInfo : ILateArrivalInfo
+	public class LateArrivalInfo
 	{
 		public LateArrivalInfo()
 		{
 			CreatedDate = DateTime.Now;
 		}
+
 		[Key]
 		[StringLength(10)]
 		public string LateId { get; set; }

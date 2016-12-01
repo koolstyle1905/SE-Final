@@ -1,54 +1,51 @@
-﻿using Business;
+﻿using System.Collections.Generic;
+using Business;
 using DataAccess;
 using DataAccess.Domain;
 using Moq;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Linq.Expressions;
 
 namespace Tests.Business
 {
-	[TestFixture()]
+	[TestFixture]
 	public class RoomBusinessTests
 	{
-		private Mock<IDormitoryContext> mockContext;
+		[SetUp]
+		public void SetUp()
+		{
+			mockContext = new Mock<DormitoryContext>();
+		}
+
+		private Mock<DormitoryContext> mockContext;
 
 		public RoomBusinessTests()
 		{
-			AutoMapperConfiguration.Configure();	
-		}
-		
-		[SetUp()]
-		public void SetUp()
-		{
-			mockContext = new Mock<IDormitoryContext>();
+			AutoMapperConfiguration.Configure();
 		}
 
-		[Test()]
+		[Test]
 		public void GetRoomsByFloorIdTest_ShouldReturnTwoRooms()
 		{
-			var data = new List<Room>()
+			var data = new List<Room>
 			{
-				new Room()
+				new Room
 				{
 					RoomId = "H101",
 					FloorId = "H1"
 				},
-				new Room()
+				new Room
 				{
 					RoomId = "H102",
 					FloorId = "H1"
 				},
-				new Room()
+				new Room
 				{
 					RoomId = "H201",
 					FloorId = "H2"
 				}
 			};
-			mockContext.SetupProperty(m => m.Rooms, new FakeDbSet<Room>(data));
+
+			mockContext.Setup(m => m.Rooms).Returns(new FakeDbSet<Room>(data));
 
 			var roomBusiness = new RoomBusiness(mockContext.Object);
 			var actual = roomBusiness.GetRoomsByFloorId("H1");

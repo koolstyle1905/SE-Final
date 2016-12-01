@@ -1,53 +1,71 @@
-﻿using Business;
-using Castle.Components.DictionaryAdapter;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
+using Business;
 using DataAccess;
 using DataAccess.Domain;
 using DataTransfer;
 using Moq;
 using NUnit.Framework;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 
 namespace Tests.Business
 {
-	[TestFixture()]
+	[TestFixture]
 	public class StudentBusinessTests
 	{
-		private Mock<IDormitoryContext> mockContext;
+		[SetUp]
+		public void SetUp()
+		{
+			mockContext = new Mock<DormitoryContext>();
+		}
+
+		private Mock<DormitoryContext> mockContext;
 
 		public StudentBusinessTests()
 		{
 			AutoMapperConfiguration.Configure();
 		}
 
-		[SetUp()]
-		public void SetUp()
+		[Test]
+		public void AddStudentTest_ShouldNotThrowExeption()
 		{
-			mockContext = new Mock<IDormitoryContext>();
+			var mockDbset = new Mock<DbSet<Student>>();
+			mockContext.Setup(m => m.Students).Returns(mockDbset.Object);
+
+			var studentBusiness = new StudentBusiness(mockContext.Object);
+			studentBusiness.AddStudent(new StudentDto {StudentId = "1"});
+
+			mockDbset.Verify(m => m.Add(It.IsAny<Student>()), Times.Once);
+			mockContext.Verify(m => m.SaveChanges(), Times.Once());
 		}
 
-		[Test()]
+		[Test]
+		public void EditStudentTest_ShouldNotThrowExeption()
+		{
+			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>());
+
+			var studentBusiness = new StudentBusiness(mockContext.Object);
+			studentBusiness.EditStudent(new StudentDto {StudentId = "1"});
+
+			mockContext.Verify(m => m.SetModified(It.IsAny<Student>()), Times.Once());
+			mockContext.Verify(m => m.SaveChanges(), Times.Once());
+		}
+
+		[Test]
 		public void GetAllStudentTest_ShouldReturnTwoStudents()
 		{
-			var data = new List<Student>()
+			var data = new List<Student>
 			{
-				new Student()
+				new Student
 				{
-					StudentId = "1",
+					StudentId = "1"
 				},
-				new Student()
+				new Student
 				{
-					StudentId = "2",
-					Club = new Club()
-					{
-						ClubId = "1",
-						Name = "Gosu"
-					}
+					StudentId = "2"
 				}
 			};
-			
-			mockContext.SetupProperty(m => m.Students, new FakeDbSet<Student>(data));
+
+			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>(data));
 
 			var studentBusiness = new StudentBusiness(mockContext.Object);
 			var actual = studentBusiness.GetAll();
@@ -55,31 +73,6 @@ namespace Tests.Business
 			Assert.AreEqual("1", actual[0].StudentId);
 			Assert.AreEqual("2", actual[1].StudentId);
 			Assert.AreEqual(2, actual.Count);
-		}
-
-		[Test()]
-		public void AddStudentTest_ShouldNotThrowExeption()
-		{
-			var mockDbset = new Mock<DbSet<Student>>();
-			mockContext.Setup(m => m.Students).Returns(mockDbset.Object);
-
-			var studentBusiness = new StudentBusiness(mockContext.Object);
-			studentBusiness.AddStudent(new StudentDto() { StudentId = "1" });
-
-			mockDbset.Verify(m => m.Add(It.IsAny<Student>()), Times.Once);
-			mockContext.Verify(m => m.SaveChanges(), Times.Once());
-		}
-
-		[Test()]
-		public void EditStudentTest_ShouldNotThrowExeption()
-		{
-			mockContext.SetupProperty(m => m.Students, new FakeDbSet<Student>());
-
-			var studentBusiness = new StudentBusiness(mockContext.Object);
-			studentBusiness.EditStudent(new StudentDto() { StudentId = "1" });
-
-			mockContext.Verify(m => m.SetModified(It.IsAny<Student>()), Times.Once());
-			mockContext.Verify(m => m.SaveChanges(), Times.Once());
 		}
 	}
 }

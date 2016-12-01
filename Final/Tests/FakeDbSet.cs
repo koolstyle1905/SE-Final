@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
 namespace Tests
 {
-	public class FakeDbSet<T> : IDbSet<T> where T : class
+	public class FakeDbSet<T> : DbSet<T>, IDbSet<T> where T : class
 	{
 		private readonly List<T> data;
 
@@ -17,82 +16,78 @@ namespace Tests
 			data = new List<T>();
 		}
 
-		public FakeDbSet(IEnumerable<T> data)
+		public FakeDbSet(List<T> data)
 		{
-			this.data = data.ToList();
+			this.data = data;
 		}
 
-		#region IDbSet<T> Members
-
-		public T Add(T entity)
+		public override T Find(params object[] keyValues)
 		{
-			data.Add(entity);
-			return entity;
+			throw new NotImplementedException("Derive from FakeDbSet<T> and override Find");
 		}
 
-		public T Attach(T entity)
+		public override T Add(T item)
 		{
-			data.Add(entity);
-			return entity;
+			data.Add(item);
+			return item;
 		}
 
-		public TDerivedEntity Create<TDerivedEntity>() where TDerivedEntity : class, T
+		public override T Remove(T item)
 		{
-			throw new NotImplementedException();
+			data.Remove(item);
+			return item;
 		}
 
-		public T Create()
+		public override T Attach(T item)
 		{
-			throw new NotImplementedException();
+			return null;
 		}
 
-		public T Find(params object[] keyValues)
+		public override T Create()
 		{
-			throw new NotImplementedException();
+			return Activator.CreateInstance<T>();
 		}
 
-		public ObservableCollection<T> Local
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-		}
+		Type IQueryable.ElementType => data.AsQueryable().ElementType;
 
-		public T Remove(T entity)
-		{
-			data.Remove(entity);
-			return entity;
-		}
+		Expression IQueryable.Expression => data.AsQueryable().Expression;
 
-		#endregion
-
-		#region IEnumerable<T> Members
-
-		public IEnumerator<T> GetEnumerator()
-		{
-			return data.GetEnumerator();
-		}
-
-		#endregion
-
-		#region IEnumerable Members
+		IQueryProvider IQueryable.Provider => data.AsQueryable().Provider;
 
 		IEnumerator IEnumerable.GetEnumerator()
 		{
 			return data.GetEnumerator();
 		}
 
-		#endregion
+		IEnumerator<T> IEnumerable<T>.GetEnumerator()
+		{
+			return data.GetEnumerator();
+		}
 
-		#region IQueryable Members
+		public T Detach(T item)
+		{
+			data.Remove(item);
+			return item;
+		}
 
-		public Type ElementType => data.AsQueryable().ElementType;
+		public override IEnumerable<T> AddRange(IEnumerable<T> entities)
+		{
+			data.AddRange(entities);
+			return data;
+		}
 
-		public Expression Expression => data.AsQueryable().Expression;
-
-		public IQueryProvider Provider => data.AsQueryable().Provider;
-
-		#endregion
+		public override IEnumerable<T> RemoveRange(IEnumerable<T> entities)
+		{
+			var enumerable = entities as IList<T> ?? entities.ToList();
+			for (var i = enumerable.Count() - 1; i >= 0; i--)
+			{
+				var entity = enumerable.ElementAt(i);
+				if (data.Contains(entity))
+				{
+					Remove(entity);
+				}
+			}
+			return this;
+		}
 	}
 }

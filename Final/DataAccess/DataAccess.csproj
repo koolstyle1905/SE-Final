@@ -73,14 +73,13 @@
     <Compile Include="Domain\ParkingTicket.cs" />
     <Compile Include="Domain\Priority.cs" />
     <Compile Include="Domain\Room.cs" />
-    <Compile Include="Domain\ServiceBill.cs" />
     <Compile Include="Domain\Student.cs" />
     <Compile Include="Domain\TemporaryAbsence.cs" />
     <Compile Include="Domain\ViolationRecord.cs" />
     <Compile Include="DormitoryContext.cs" />
-    <Compile Include="Migrations\201611301554293_Init.cs" />
-    <Compile Include="Migrations\201611301554293_Init.Designer.cs">
-      <DependentUpon>201611301554293_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201612011022518_Init.cs" />
+    <Compile Include="Migrations\201612011022518_Init.Designer.cs">
+      <DependentUpon>201612011022518_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,8 +95,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611301554293_Init.resx">
-      <DependentUpon>201611301554293_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612011022518_Init.resx">
+      <DependentUpon>201612011022518_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
