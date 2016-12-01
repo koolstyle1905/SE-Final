@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Data.Entity;
 using Business;
 using DataAccess;
@@ -25,8 +26,24 @@ namespace Tests.Business
 			AutoMapperConfiguration.Configure();
 		}
 
+		private static IEnumerable TestData()
+		{
+			var testData = new TestCaseData(new List<Student>
+			{
+				new Student
+				{
+					StudentId = "1"
+				},
+				new Student
+				{
+					StudentId = "2"
+				}
+			});
+			yield return testData;
+		}
+
 		[Test]
-		public void AddStudentTest_ShouldNotThrowExeption()
+		public void AddStudentTest()
 		{
 			var mockDbset = new Mock<DbSet<Student>>();
 			mockContext.Setup(m => m.Students).Returns(mockDbset.Object);
@@ -39,7 +56,7 @@ namespace Tests.Business
 		}
 
 		[Test]
-		public void EditStudentTest_ShouldNotThrowExeption()
+		public void EditStudentTest()
 		{
 			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>());
 
@@ -51,28 +68,31 @@ namespace Tests.Business
 		}
 
 		[Test]
-		public void GetAllStudentTest_ShouldReturnTwoStudents()
+		[TestCaseSource(nameof(TestData))]
+		public void GetAllStudentTest_ShouldReturnTwoStudents(List<Student> testData)
 		{
-			var data = new List<Student>
+			var expected = new List<StudentDto>
 			{
-				new Student
+				new StudentDto
 				{
 					StudentId = "1"
 				},
-				new Student
+				new StudentDto
 				{
 					StudentId = "2"
 				}
 			};
 
-			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>(data));
+			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>(testData));
 
 			var studentBusiness = new StudentBusiness(mockContext.Object);
 			var actual = studentBusiness.GetAll();
 
-			Assert.AreEqual("1", actual[0].StudentId);
-			Assert.AreEqual("2", actual[1].StudentId);
-			Assert.AreEqual(2, actual.Count);
+			for (var i = 0; i < expected.Count; i++)
+			{
+				Assert.AreEqual(expected[i].StudentId, actual[i].StudentId);
+			}
+			Assert.AreEqual(expected.Count, actual.Count);
 		}
 	}
 }

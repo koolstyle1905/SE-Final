@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using AutoMapper;
 using DataAccess;
 using DataAccess.Domain;
+using DataTransfer;
 
 namespace Business
 {
@@ -18,15 +20,21 @@ namespace Business
 			this.dormitoryContext = dormitoryContext;
 		}
 
-		public IEnumerable<Floor> GetFloorByBuildingId(string buildingId)
+		public List<FloorDto> GetFloorByBuildingIdOrderByFloorId(string buildingId)
 		{
-			return
-				dormitoryContext.Floors.Where(x => x.BuildingId == buildingId).OrderBy(f => f.FloorId.Length).ThenBy(f => f.FloorId);
+			var floorList = dormitoryContext.Floors
+				.Where(x => x.BuildingId == buildingId)
+				.OrderBy(f => f.FloorId.Length)
+				.ThenBy(f => f.FloorId).ToList();
+			return Mapper.Map<List<Floor>, List<FloorDto>>(floorList);
 		}
 
-		public IEnumerable<Floor> OrderById()
+		public List<FloorDto> GetAllOrderByFloorId()
 		{
-			return dormitoryContext.Floors.OrderBy(x => x.FloorId.Length).ThenBy(f => f.FloorId);
+			var floorList = dormitoryContext.Floors
+				.OrderBy(x => x.FloorId.Length)
+				.ThenBy(f => f.FloorId).ToList();
+			return Mapper.Map<List<Floor>, List<FloorDto>>(floorList);
 		}
 	}
 }

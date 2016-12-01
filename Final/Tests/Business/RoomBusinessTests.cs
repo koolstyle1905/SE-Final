@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Business;
 using DataAccess;
 using DataAccess.Domain;
+using DataTransfer;
 using Moq;
 using NUnit.Framework;
 
@@ -23,10 +25,9 @@ namespace Tests.Business
 			AutoMapperConfiguration.Configure();
 		}
 
-		[Test]
-		public void GetRoomsByFloorIdTest_ShouldReturnTwoRooms()
+		private static IEnumerable TestData()
 		{
-			var data = new List<Room>
+			var testData = new TestCaseData(new List<Room>
 			{
 				new Room
 				{
@@ -43,16 +44,38 @@ namespace Tests.Business
 					RoomId = "H201",
 					FloorId = "H2"
 				}
+			});
+			yield return testData;
+		}
+
+		[Test]
+		[TestCaseSource(nameof(TestData))]
+		public void GetRoomsByFloorIdTest_ShouldReturnTwoRooms(List<Room> testData)
+		{
+			var expected = new List<RoomDto>
+			{
+				new RoomDto
+				{
+					RoomId = "H101",
+					FloorId = "H1"
+				},
+				new RoomDto
+				{
+					RoomId = "H102",
+					FloorId = "H1"
+				}
 			};
 
-			mockContext.Setup(m => m.Rooms).Returns(new FakeDbSet<Room>(data));
+			mockContext.Setup(m => m.Rooms).Returns(new FakeDbSet<Room>(testData));
 
 			var roomBusiness = new RoomBusiness(mockContext.Object);
 			var actual = roomBusiness.GetRoomsByFloorId("H1");
 
-			Assert.AreEqual("H101", actual[0].RoomId);
-			Assert.AreEqual("H102", actual[1].RoomId);
-			Assert.AreEqual(2, actual.Count);
+			for (var i = 0; i < expected.Count; i++)
+			{
+				Assert.AreEqual(expected[i].RoomId, actual[i].RoomId);
+			}
+			Assert.AreEqual(expected.Count, actual.Count);
 		}
 	}
 }
