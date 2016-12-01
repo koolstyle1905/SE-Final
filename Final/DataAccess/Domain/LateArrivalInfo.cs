@@ -1,13 +1,22 @@
 namespace DataAccess.Domain
 {
 	using System;
-	using System.Collections.Generic;
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
-	using System.Data.Entity.Spatial;
+
+	public interface ILateArrivalInfo
+	{
+		string LateId { get; set; }
+		string StudentId { get; set; }
+		string WorkingAddress { get; set; }
+		DateTime ArrivalTime { get; set; }
+		DateTime CreatedDate { get; set; }
+		string Reason { get; set; }
+		Student Student { get; set; }
+	}
 
 	[Table("LateArrivalInfo")]
-	public partial class LateArrivalInfo
+	public partial class LateArrivalInfo : ILateArrivalInfo
 	{
 		public LateArrivalInfo()
 		{

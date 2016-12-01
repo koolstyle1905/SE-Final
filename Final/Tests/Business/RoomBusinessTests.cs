@@ -1,35 +1,63 @@
-﻿using NUnit.Framework;
-using Business;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
+using Business;
+using Business.Business;
+using DataAccess;
+using DataAccess.Domain;
+using Moq;
+using NUnit.Framework;
 
-namespace Business.Tests
+namespace Tests.Business
 {
 	[TestFixture()]
 	public class RoomBusinessTests
 	{
+		private readonly Mock<IDormitoryContext> mockContext;
+
 		public RoomBusinessTests()
 		{
 			AutoMapperConfiguration.Configure();
+			mockContext = new Mock<IDormitoryContext>();
+		}
+		
+		[SetUp()]
+		public void SetUp()
+		{
+			
 		}
 
-		[TestCase("H1")]
-		[TestCase("H2")]
-		[TestCase("H3")]
-		[TestCase("H4")]
-		[TestCase("H5")]
-		[TestCase("I1")]
-		[TestCase("I2")]
-		[TestCase("I3")]
-		[TestCase("I4")]
-		[TestCase("I5")]
-		public void GetRoomsByFloorIdTest(string floorId)
+		[Test()]
+		public void GetRoomsByFloorIdTest_ShouldReturnTwoRooms()
 		{
-			var actual = RoomBusiness.GetRoomsByFloorId(floorId);
-			Assert.AreEqual(16, actual.Count);
+			var data = new List<Room>()
+			{
+				new Room()
+				{
+					RoomId = "H101",
+					FloorId = "H1"
+				},
+				new Room()
+				{
+					RoomId = "H102",
+					FloorId = "H1"
+				},
+				new Room()
+				{
+					RoomId = "H201",
+					FloorId = "H2"
+				}
+			};
+			mockContext.SetupProperty(m => m.Rooms, new FakeDbSet<Room>(data));
+
+			var roomBusiness = new RoomBusiness(mockContext.Object);
+			var actual = roomBusiness.GetRoomsByFloorId("H1");
+
+			Assert.AreEqual("H101", actual[0].RoomId);
+			Assert.AreEqual("H102", actual[1].RoomId);
+			Assert.AreEqual(2, actual.Count);
 		}
 	}
 }

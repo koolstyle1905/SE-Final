@@ -1,14 +1,22 @@
 namespace DataAccess.Domain
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+	using System;
+	using System.Collections.Generic;
+	using System.ComponentModel.DataAnnotations;
+	using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("Attendance")]
-    public partial class Attendance
-    {
+	public interface IAttendance
+	{
+		string AttendanceId { get; set; }
+		string EmployeeId { get; set; }
+		DateTime CreatedDate { get; set; }
+		Employee Employee { get; set; }
+		ICollection<Student> Students { get; set; }
+	}
+
+	[Table("Attendance")]
+    public partial class Attendance : IAttendance
+	{
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Attendance()
         {

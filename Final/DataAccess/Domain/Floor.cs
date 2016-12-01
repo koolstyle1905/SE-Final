@@ -1,13 +1,18 @@
 namespace DataAccess.Domain
 {
-    using System;
-    using System.Collections.Generic;
+	using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class Floor
-    {
+	public interface IFloor
+	{
+		string FloorId { get; set; }
+		string BuildingId { get; set; }
+		Building Building { get; set; }
+		ICollection<Room> Rooms { get; set; }
+	}
+
+	public partial class Floor : IFloor
+	{
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Floor()
         {

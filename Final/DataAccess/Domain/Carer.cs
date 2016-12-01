@@ -1,14 +1,26 @@
 namespace DataAccess.Domain
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    [Table("Carer")]
-    public partial class Carer
-    {
+	public interface ICarer
+	{
+		string CarerId { get; set; }
+		string StudentId { get; set; }
+		string Name { get; set; }
+		string Gender { get; set; }
+		DateTime DateOfBirth { get; set; }
+		string Ssn { get; set; }
+		string Address { get; set; }
+		decimal Phone { get; set; }
+		string Job { get; set; }
+		Student Student { get; set; }
+	}
+
+	[Table("Carer")]
+    public partial class Carer : ICarer
+	{
         [StringLength(10)]
         public string CarerId { get; set; }
 
@@ -24,7 +36,7 @@ namespace DataAccess.Domain
         public DateTime DateOfBirth { get; set; }
 
         [StringLength(20)]
-        public string SSN { get; set; }
+        public string Ssn { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Address { get; set; }

@@ -1,13 +1,22 @@
 namespace DataAccess.Domain
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class ServiceBill
-    {
+	public interface IServiceBill
+	{
+		string BillId { get; set; }
+		string RoomId { get; set; }
+		string EmployeeId { get; set; }
+		DateTime CreatedDate { get; set; }
+		decimal Amount { get; set; }
+		Employee Employee { get; set; }
+		Room Room { get; set; }
+	}
+
+	public partial class ServiceBill : IServiceBill
+	{
         [Key]
         [StringLength(10)]
         public string BillId { get; set; }

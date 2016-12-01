@@ -4,9 +4,28 @@ namespace DataAccess.Domain
 	using System.Collections.Generic;
 	using System.ComponentModel.DataAnnotations;
 	using System.ComponentModel.DataAnnotations.Schema;
-	using System.Data.Entity.Spatial;
 
-	public partial class Employee
+	public interface IEmployee
+	{
+		string EmployeeId { get; set; }
+		string Name { get; set; }
+		string Gender { get; set; }
+		DateTime DateOfBirth { get; set; }
+		string Ssn { get; set; }
+		string Address { get; set; }
+		decimal Phone { get; set; }
+		string Username { get; set; }
+		string Password { get; set; }
+		string Position { get; set; }
+		ICollection<Attendance> Attendances { get; set; }
+		ICollection<LeaseDetail> LeaseDetails { get; set; }
+		ICollection<ParkingDetail> ParkingDetails { get; set; }
+		ICollection<ServiceBill> ServiceBills { get; set; }
+		ICollection<TemporaryAbsence> TemporaryAbsences { get; set; }
+		ICollection<ViolationRecord> ViolationRecords { get; set; }
+	}
+
+	public partial class Employee : IEmployee
 	{
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
 		public Employee()
@@ -32,7 +51,7 @@ namespace DataAccess.Domain
 		public DateTime DateOfBirth { get; set; }
 
 		[StringLength(20)]
-		public string SSN { get; set; }
+		public string Ssn { get; set; }
 
 		[Column(TypeName = "ntext")]
 		public string Address { get; set; }

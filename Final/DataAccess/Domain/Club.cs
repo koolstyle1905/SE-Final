@@ -1,13 +1,17 @@
 namespace DataAccess.Domain
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+	using System.Collections.Generic;
+	using System.ComponentModel.DataAnnotations;
 
-    public partial class Club
-    {
+	public interface IClub
+	{
+		string ClubId { get; set; }
+		string Name { get; set; }
+		ICollection<Student> Students { get; set; }
+	}
+
+	public partial class Club : IClub
+	{
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Club()
         {

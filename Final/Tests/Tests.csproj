@@ -72,10 +72,11 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Business\ClubBusinessTests.cs" />
     <Compile Include="Business\RoomBusinessTests.cs" />
     <Compile Include="Business\StudentBusinessTests.cs" />
+    <Compile Include="FakeDbSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\StudentRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">

@@ -1,13 +1,26 @@
 namespace DataAccess.Domain
 {
-    using System;
-    using System.Collections.Generic;
+	using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class ParkingTicket
-    {
+	public interface IParkingTicket
+	{
+		string TicketId { get; set; }
+		string StudentId { get; set; }
+		string OwnerName { get; set; }
+		string OwnerAddress { get; set; }
+		string VehicleType { get; set; }
+		string Color { get; set; }
+		string LicensePlates { get; set; }
+		string EngineModel { get; set; }
+		string VINNumber { get; set; }
+		ICollection<ParkingDetail> ParkingDetails { get; set; }
+		Student Student { get; set; }
+	}
+
+	public partial class ParkingTicket : IParkingTicket
+	{
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ParkingTicket()
         {

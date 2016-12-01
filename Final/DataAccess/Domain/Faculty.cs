@@ -1,13 +1,17 @@
 namespace DataAccess.Domain
 {
-    using System;
-    using System.Collections.Generic;
+	using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class Faculty
-    {
+	public interface IFaculty
+	{
+		string FacultyId { get; set; }
+		string Name { get; set; }
+		ICollection<Class> Classes { get; set; }
+	}
+
+	public partial class Faculty : IFaculty
+	{
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Faculty()
         {

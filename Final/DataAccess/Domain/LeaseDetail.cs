@@ -1,13 +1,22 @@
 namespace DataAccess.Domain
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class LeaseDetail
-    {
+	public interface ILeaseDetail
+	{
+		string EmployeeId { get; set; }
+		string ContractId { get; set; }
+		DateTime StartDate { get; set; }
+		DateTime EndDate { get; set; }
+		decimal? Amount { get; set; }
+		Employee Employee { get; set; }
+		LeaseContract LeaseContract { get; set; }
+	}
+
+	public partial class LeaseDetail : ILeaseDetail
+	{
         [Key]
         [Column(Order = 0)]
         [StringLength(10)]

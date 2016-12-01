@@ -1,13 +1,22 @@
 namespace DataAccess.Domain
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class ParkingDetail
-    {
+	public interface IParkingDetail
+	{
+		string TicketId { get; set; }
+		string EmployeeId { get; set; }
+		DateTime StartDate { get; set; }
+		DateTime EndDate { get; set; }
+		decimal Amount { get; set; }
+		Employee Employee { get; set; }
+		ParkingTicket ParkingTicket { get; set; }
+	}
+
+	public partial class ParkingDetail : IParkingDetail
+	{
         [Key]
         [Column(Order = 0)]
         [StringLength(10)]

@@ -18,16 +18,16 @@
 		{
 			using (var context = new DormitoryContext())
 			{
-				Exec(context.Rooms);
-				Exec(context.Floors);
-				Exec(context.Buildings);
-				Exec(context.Priorities);
-				Exec(context.Students);
-				Exec(context.Classes);
-				Exec(context.Faculties);
-				Exec(context.Clubs);
-				Exec(context.Employees);
-				context.SaveChanges();
+				//Exec(context.Rooms);
+				//Exec(context.Floors);
+				//Exec(context.Buildings);
+				//Exec(context.Priorities);
+				//Exec(context.Students);
+				//Exec(context.Classes);
+				//Exec(context.Faculties);
+				//Exec(context.Clubs);
+				//Exec(context.Employees);
+				//context.SaveChanges();
 			}
 		}
 	}

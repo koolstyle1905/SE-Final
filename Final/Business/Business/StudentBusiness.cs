@@ -1,4 +1,6 @@
-﻿namespace Business
+﻿using System.Data.Entity;
+
+namespace Business.Business
 {
 	using System;
 	using System.Collections.Generic;
@@ -10,33 +12,35 @@
 	using DataAccess.Domain;
 	using DataTransfer;
 
-	public static class StudentBusiness
+	public class StudentBusiness
 	{
-		public static List<StudentDto> GetAll()
+		private readonly IDormitoryContext dormitoryContext;
+
+		public StudentBusiness() : this(new DormitoryContext())
 		{
-			using (var unitOfWork = new UnitOfWork())
-			{
-				var studentList = unitOfWork.Students.GetAll().ToList();
-				return Mapper.Map< List<Student>, List<StudentDto>>(studentList);
-			}
 		}
 
-		public static void AddStudent(StudentDto student)
+		public StudentBusiness(IDormitoryContext dormitoryContext)
 		{
-			using (var unitOfWork = new UnitOfWork())
-			{
-				unitOfWork.Students.Add(Mapper.Map<StudentDto, Student>(student));
-				unitOfWork.SaveChanges();
-			}
+			this.dormitoryContext = dormitoryContext;
 		}
 
-		public static void EditStudent(StudentDto student)
+		public List<StudentDto> GetAll()
 		{
-			using (var unitOfWork = new UnitOfWork())
-			{
-				unitOfWork.Students.Edit(Mapper.Map<StudentDto, Student>(student));
-				unitOfWork.SaveChanges();
-			}
+			var studentList = dormitoryContext.Students.ToList();
+			return Mapper.Map<List<Student>, List<StudentDto>>(studentList);
+		}
+
+		public void AddStudent(StudentDto student)
+		{
+			dormitoryContext.Students.Add(Mapper.Map<StudentDto, Student>(student));
+			dormitoryContext.SaveChanges();
+		}
+
+		public void EditStudent(StudentDto student)
+		{
+			dormitoryContext.SetModified(Mapper.Map<StudentDto, Student>(student));
+			dormitoryContext.SaveChanges();
 		}
 	}
 }

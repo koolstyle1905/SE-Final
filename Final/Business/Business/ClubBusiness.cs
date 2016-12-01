@@ -1,4 +1,4 @@
-﻿namespace Business
+﻿namespace Business.Business
 {
 	using System;
 	using System.Collections.Generic;
@@ -10,15 +10,22 @@
 	using DataAccess.Domain;
 	using DataTransfer;
 
-	public static class ClubBusiness
+	public class ClubBusiness
 	{
-		public static List<ClubDto> GetAll()
+		private readonly IDormitoryContext dormitoryContext;
+
+		public ClubBusiness()
 		{
-			using (var unitOfWork = new UnitOfWork())
-			{
-				var clubList = unitOfWork.Clubs.GetAll().ToList();
-				return Mapper.Map<List<Club>, List<ClubDto>>(clubList);
-			}
+		}
+		public ClubBusiness(IDormitoryContext dormitoryContext)
+		{
+			this.dormitoryContext = dormitoryContext;
+		}
+
+		public List<ClubDto> GetAll()
+		{
+			var clubList = dormitoryContext.Clubs.ToList();
+			return Mapper.Map<List<Club>, List<ClubDto>>(clubList);
 		}
 	}
 }

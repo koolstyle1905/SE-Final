@@ -3,11 +3,18 @@ namespace DataAccess.Domain
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class LeaseContract
-    {
+	public interface ILeaseContract
+	{
+		string ContractId { get; set; }
+		string StudentId { get; set; }
+		DateTime CreatedDate { get; set; }
+		Student Student { get; set; }
+		ICollection<LeaseDetail> LeaseDetails { get; set; }
+	}
+
+	public partial class LeaseContract : ILeaseContract
+	{
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LeaseContract()
         {

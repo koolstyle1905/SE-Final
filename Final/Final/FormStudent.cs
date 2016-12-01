@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business;
+using Business.Business;
 using DataTransfer;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraEditors.Repository;
@@ -24,7 +25,7 @@ namespace Final
 		public FormStudent()
 		{
 			InitializeComponent();
-			studentList = StudentBusiness.GetAll();
+			studentList = new StudentBusiness().GetAll();
 			studentDtoBindingSource.DataSource = studentList;
 			gridViewStudent.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
 		}
@@ -38,13 +39,13 @@ namespace Final
 
 		private void InitLookUpClub()
 		{
-			var clubs = ClubBusiness.GetAll();
+			var clubList = new ClubBusiness().GetAll();
 			var riLookUpClub = new RepositoryItemLookUpEdit
 			{
-				DataSource = clubs,
+				DataSource = clubList,
 				ValueMember = "ClubID",
 				DisplayMember = "Name",
-				DropDownRows = clubs.Count,
+				DropDownRows = clubList.Count,
 				BestFitMode = BestFitMode.BestFit,
 				SearchMode = SearchMode.AutoComplete,
 				AutoSearchColumnIndex = 1
@@ -84,12 +85,12 @@ namespace Final
 			{
 				index = studentList.Count - 1;
 				var student = studentList[index];
-				StudentBusiness.AddStudent(student);
+				new StudentBusiness().AddStudent(student);
 			}
 			else
 			{
 				var student = studentList[index];
-				StudentBusiness.EditStudent(student);
+				new StudentBusiness().EditStudent(student);
 			}
 			gridControl1.RefreshDataSource();
 		}

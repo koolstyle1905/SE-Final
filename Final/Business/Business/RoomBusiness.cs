@@ -1,4 +1,4 @@
-﻿namespace Business
+﻿namespace Business.Business
 {
 	using System;
 	using System.Collections.Generic;
@@ -11,32 +11,36 @@
 	using DataAccess.Domain;
 	using DataTransfer;
 
-	public static class RoomBusiness
+	public class RoomBusiness
 	{
-		public static void CreateTreeRoom(TreeView treeView)
+		private readonly IDormitoryContext dormitoryContext;
+
+		public RoomBusiness()
 		{
-			using (var unitOfWork = new UnitOfWork())
+		}
+		public RoomBusiness(IDormitoryContext dormitoryContext)
+		{
+			this.dormitoryContext = dormitoryContext;
+		}
+
+		public void CreateTreeRoom(TreeView treeView)
+		{
+			var buildingList = dormitoryContext.Buildings.ToList();
+			foreach (var building in buildingList)
 			{
-				var buildings = unitOfWork.Buildings.GetAll();
-				foreach (var building in buildings)
+				var parent = new TreeNode(building.BuildingId);
+				foreach (var floor in building.Floors.OrderBy(f => f.FloorId.Length).ThenBy(f => f.FloorId))
 				{
-					var parent = new TreeNode(building.BuildingId);
-					foreach (var floor in building.Floors.OrderBy(f => f.FloorId.Length).ThenBy(f => f.FloorId))
-					{
-						parent.Nodes.Add(floor.FloorId);
-					}
-					treeView.Nodes.Add(parent);
+					parent.Nodes.Add(floor.FloorId);
 				}
+				treeView.Nodes.Add(parent);
 			}
 		}
 
-		public static List<RoomDto> GetRoomsByFloorId(string floorId)
+		public List<RoomDto> GetRoomsByFloorId(string floorId)
 		{
-			using (var unitOfWork = new UnitOfWork())
-			{
-				var roomList = unitOfWork.Rooms.FindBy(r => r.FloorId == floorId).ToList();
-				return Mapper.Map<List<Room>, List<RoomDto>>(roomList);
-			}
+			var roomList = dormitoryContext.Rooms.Where(r => r.FloorId == floorId).ToList();
+			return Mapper.Map<List<Room>, List<RoomDto>>(roomList);
 		}
 	}
 }
