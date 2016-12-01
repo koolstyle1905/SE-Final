@@ -39,7 +39,8 @@ namespace DataAccess.Domain
 	{
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Student()
-        {Carers = new HashSet<Carer>();
+        {
+			Carers = new HashSet<Carer>();
             LateArrivalInfoes = new HashSet<LateArrivalInfo>();
             LeaseContracts = new HashSet<LeaseContract>();
             ParkingTickets = new HashSet<ParkingTicket>();
@@ -48,6 +49,7 @@ namespace DataAccess.Domain
             Attendances = new HashSet<Attendance>();
             Priorities = new HashSet<Priority>();
 			DateOfBirth = new DateTime(2000, 1, 1);
+	        Course = DateTime.Now.Year;
         }
 
         [StringLength(10)]

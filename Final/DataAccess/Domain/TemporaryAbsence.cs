@@ -21,7 +21,7 @@ namespace DataAccess.Domain
         public int NumOfAbsence { get; set; }
 
         [Column(TypeName = "ntext")]
-        public string Reason { get; set; }
+        public string Description { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

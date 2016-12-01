@@ -1,17 +1,12 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AutoMapper;
+using DataAccess;
+using DataAccess.Domain;
+using DataTransfer;
 
-namespace Business.Business
+namespace Business
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-	using System.Threading.Tasks;
-	using AutoMapper;
-	using DataAccess;
-	using DataAccess.Domain;
-	using DataTransfer;
-
 	public class StudentBusiness
 	{
 		private readonly IDormitoryContext dormitoryContext;

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DataAccess.Domain;
 using DataAccess;
+using DataAccess.Domain;
 
-namespace Business.Business
+namespace Business
 {
 	public class FloorBusiness
 	{
 		private readonly IDormitoryContext dormitoryContext;
 
-		public FloorBusiness()
+		public FloorBusiness() : this(new DormitoryContext())
 		{
 		}
 		public FloorBusiness(IDormitoryContext dormitoryContext)

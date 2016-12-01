@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildingDto.cs" />
+    <Compile Include="BuildingName.cs" />
     <Compile Include="CarerDto.cs" />
     <Compile Include="ClubDto.cs" />
     <Compile Include="EmployeeDto.cs" />
     <Compile Include="FloorDto.cs" />
+    <Compile Include="LeaseContractDto.cs" />
     <Compile Include="PersonDto.cs" />
     <Compile Include="PriorityDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

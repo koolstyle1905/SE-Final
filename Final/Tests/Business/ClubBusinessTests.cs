@@ -1,46 +1,48 @@
-﻿using DataAccess.Domain;
+﻿using Business;
+using DataAccess;
+using DataAccess.Domain;
+using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using Business;
-using Business.Business;
-using DataAccess;
-using Moq;
 
-namespace Tests.Business
-{
+namespace Tests.Business{
 	[TestFixture()]
 	public class ClubBusinessTests
 	{
-		private readonly Mock<IDormitoryContext> mockContext;
+		private Mock<IDormitoryContext> mockContext;
 
 		public ClubBusinessTests()
 		{
 			AutoMapperConfiguration.Configure();
-			mockContext = new Mock<IDormitoryContext>();
 		}
 
 		[SetUp()]
 		public void SetUp()
 		{
-			
+			mockContext = new Mock<IDormitoryContext>();
 		}
 
 		[Test()]
-		public void GetAllTest_ShouldReturnTwoClubs()
+		public void GetAllClubTest_ShouldReturnTwoClubs()
 		{
 			var data = new List<Club>()
 			{
 				new Club()
 				{
 					ClubId = "1",
-					Name = "Neptune"
+					Name = "Pro"
 				},
 				new Club()
 				{
 					ClubId = "2",
-					Name = "Oil"
+					Name = "Gosu"
+				},
+				new Club()
+				{
+					ClubId = "2",
+					Name = "Noob"
 				}
 			};
 
@@ -49,11 +51,11 @@ namespace Tests.Business
 			var clubBusiness = new ClubBusiness(mockContext.Object);
 			var actual = clubBusiness.GetAll();
 
-			Assert.AreEqual("1", actual[0].ClubId);
-			Assert.AreEqual("Neptune", actual[0].Name);
-			Assert.AreEqual("2", actual[1].ClubId);
-			Assert.AreEqual("Oil", actual[1].Name);
-			Assert.AreEqual(2, actual.Count);
+			for (var i = 0; i < data.Count; i++)
+			{
+				Assert.AreEqual(data[i].ClubId, actual[i].ClubId);
+				Assert.AreEqual(data[i].Name, actual[i].Name);
+			}
 		}
 	}
 }

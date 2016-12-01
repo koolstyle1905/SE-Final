@@ -1,32 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Linq.Expressions;
-using Business;
-using Business.Business;
+﻿using Business;
 using DataAccess;
 using DataAccess.Domain;
 using Moq;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace Tests.Business
 {
 	[TestFixture()]
 	public class RoomBusinessTests
 	{
-		private readonly Mock<IDormitoryContext> mockContext;
+		private Mock<IDormitoryContext> mockContext;
 
 		public RoomBusinessTests()
 		{
-			AutoMapperConfiguration.Configure();
-			mockContext = new Mock<IDormitoryContext>();
+			AutoMapperConfiguration.Configure();	
 		}
 		
 		[SetUp()]
 		public void SetUp()
 		{
-			
+			mockContext = new Mock<IDormitoryContext>();
 		}
 
 		[Test()]

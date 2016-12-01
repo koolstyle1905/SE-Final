@@ -55,11 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoMapperConfiguration.cs" />
-    <Compile Include="Business\ClubBusiness.cs" />
-    <Compile Include="Business\FloorBusiness.cs" />
+    <Compile Include="ClubBusiness.cs" />
+    <Compile Include="FloorBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Business\RoomBusiness.cs" />
-    <Compile Include="Business\StudentBusiness.cs" />
+    <Compile Include="RoomBusiness.cs" />
+    <Compile Include="StudentBusiness.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>

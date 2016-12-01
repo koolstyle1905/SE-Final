@@ -71,7 +71,7 @@ namespace Tests
 
 		public IEnumerator<T> GetEnumerator()
 		{
-			return this.data.GetEnumerator();
+			return data.GetEnumerator();
 		}
 
 		#endregion

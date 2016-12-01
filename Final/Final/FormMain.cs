@@ -1,4 +1,8 @@
-﻿using System;
+﻿using AutoMapper;
+using Business;
+using DataTransfer;
+using DevExpress.XtraTreeList.Nodes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,10 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AutoMapper;
-using Business;
-using DataTransfer;
-using DevExpress.XtraTreeList.Nodes;
 
 namespace Final
 {
@@ -19,19 +19,11 @@ namespace Final
 		public FormMain()
 		{
 			InitializeComponent();
-			
 		}
 
 		private Form CheckExist(Type formType)
 		{
-			foreach (var item in MdiChildren)
-			{
-				if (item.GetType() == formType)
-				{
-					return item;
-				}
-			}
-			return null;
+			return MdiChildren.FirstOrDefault(item => item.GetType() == formType);
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -52,5 +44,6 @@ namespace Final
 				formStudent.Show();
 			}
 		}
+
 	}
 }

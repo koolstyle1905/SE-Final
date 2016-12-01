@@ -42,7 +42,8 @@
 
 		protected override void Seed(DormitoryContext context)
 		{
-			DbClear.ClearAllData();
+			//new Init().Down();
+			//DbClear.ClearAllData();
 			//System.Diagnostics.Debugger.Launch();
 
 			#region Add Buildings, Floors, Rooms
@@ -140,8 +141,8 @@
 					Content = "Là người dân tộc thiểu số, có bố hoặc mẹ là người dân tộc thiểu số",
 				}
 			};
-			priorityList.ForEach(p => context.Priorities.AddOrUpdate(p));
-			//priorities.ForEach(p => context.Priorities.Attach(p));
+			//priorityList.ForEach(p => context.Priorities.AddOrUpdate(p));
+			priorityList.ForEach(p => context.Priorities.Attach(p));
 
 			#region Add Faculties, Classes, Students
 

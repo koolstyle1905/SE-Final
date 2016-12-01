@@ -1,10 +1,10 @@
 ﻿namespace Business
 {
-	using System;
-	using System.Collections.Generic;
 	using AutoMapper;
 	using DataAccess.Domain;
 	using DataTransfer;
+	using System;
+	using System.Collections.Generic;
 
 	public class AutoMapperConfiguration
 	{

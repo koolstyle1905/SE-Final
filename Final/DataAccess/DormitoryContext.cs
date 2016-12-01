@@ -1,10 +1,10 @@
 namespace DataAccess
 {
-	using System;
-	using System.Data.Entity;
-	using System.ComponentModel.DataAnnotations.Schema;
-	using System.Linq;
 	using Domain;
+	using System;
+	using System.ComponentModel.DataAnnotations.Schema;
+	using System.Data.Entity;
+	using System.Linq;
 
 	public interface IDormitoryContext
 	{

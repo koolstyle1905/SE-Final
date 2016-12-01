@@ -9,18 +9,13 @@
 	{
 		public StudentDto()
 		{
+			DateOfBirth = new DateTime(2000, 1, 1);
 		}
 
 		[Required]
 		public string StudentId { get; set; }
 
-		[Required]
 		public string ClubId { get; set; }
-
-		[Required]
-		public string ClassId { get; set; }
-
-		public string RoomId { get; set; }
 
 		public string PlaceOfBirth { get; set; }
 
@@ -31,5 +26,7 @@
 		public int Course { get; set; }
 
 		public List<PriorityDto> Priorities { get; set; }
+
+		public List<CarerDto> Carers { get; set; }
 	}
 }

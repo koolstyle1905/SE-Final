@@ -11,7 +11,7 @@ namespace DataAccess.Domain
 		string WorkingAddress { get; set; }
 		DateTime ArrivalTime { get; set; }
 		DateTime CreatedDate { get; set; }
-		string Reason { get; set; }
+		string Description { get; set; }
 		Student Student { get; set; }
 	}
 
@@ -37,7 +37,7 @@ namespace DataAccess.Domain
 		public DateTime CreatedDate { get; set; }
 
 		[Column(TypeName = "ntext")]
-		public string Reason { get; set; }
+		public string Description { get; set; }
 
 		public virtual Student Student { get; set; }
 	}

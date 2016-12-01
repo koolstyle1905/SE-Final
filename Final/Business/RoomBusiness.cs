@@ -1,21 +1,18 @@
-﻿namespace Business.Business
-{
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-	using System.Threading.Tasks;
-	using System.Windows.Forms;
-	using AutoMapper;
-	using DataAccess;
-	using DataAccess.Domain;
-	using DataTransfer;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+using AutoMapper;
+using DataAccess;
+using DataAccess.Domain;
+using DataTransfer;
 
+namespace Business
+{
 	public class RoomBusiness
 	{
 		private readonly IDormitoryContext dormitoryContext;
 
-		public RoomBusiness()
+		public RoomBusiness() : this(new DormitoryContext())
 		{
 		}
 		public RoomBusiness(IDormitoryContext dormitoryContext)

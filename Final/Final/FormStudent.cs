@@ -1,4 +1,11 @@
-﻿using System;
+﻿using Business;
+using DataTransfer;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +14,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business;
-using Business.Business;
-using DataTransfer;
-using DevExpress.XtraGrid.Views.Base;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraEditors.Controls;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraEditors;
 
 namespace Final
 {
@@ -28,6 +27,7 @@ namespace Final
 			studentList = new StudentBusiness().GetAll();
 			studentDtoBindingSource.DataSource = studentList;
 			gridViewStudent.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
+			gridViewPriorities.Columns["Content"].BestFit();
 		}
 
 		private void FormStudent_Load(object sender, EventArgs e)
@@ -43,14 +43,13 @@ namespace Final
 			var riLookUpClub = new RepositoryItemLookUpEdit
 			{
 				DataSource = clubList,
-				ValueMember = "ClubID",
-				DisplayMember = "Name",
-				DropDownRows = clubList.Count,
+				ValueMember = "ClubId",
+				DisplayMember = "Name",DropDownRows = clubList.Count,
 				BestFitMode = BestFitMode.BestFit,
 				SearchMode = SearchMode.AutoComplete,
 				AutoSearchColumnIndex = 1
 			};
-			gridViewStudent.Columns["ClubID"].ColumnEdit = riLookUpClub;
+			gridViewStudent.Columns["ClubId"].ColumnEdit = riLookUpClub;
 		}
 
 		private void InitComboBoxGender()
@@ -98,7 +97,7 @@ namespace Final
 		private void gridViewStudent_InitNewRow(object sender, InitNewRowEventArgs e)
 		{
 			gridViewStudent.SetRowCellValue(e.RowHandle, "Gender", "Male");
-			gridViewStudent.SetRowCellValue(e.RowHandle, "ClubID", "01");
+			//gridViewStudent.SetRowCellValue(e.RowHandle, "ClubId", "01");
 			gridViewStudent.SetRowCellValue(e.RowHandle, "Course", 2016);
 			gridViewStudent.SetRowCellValue(e.RowHandle, "DateOfBirth", new DateTime(2000, 1, 1));
 		}
