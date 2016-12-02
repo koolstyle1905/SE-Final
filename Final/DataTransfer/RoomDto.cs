@@ -1,8 +1,7 @@
-﻿namespace DataTransfer
-{
-	using System;
-	using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace DataTransfer
+{
 	public class RoomDto
 	{
 		public string RoomId { get; set; }
@@ -11,6 +10,6 @@
 
 		public int NumOfStudent => Students.Count;
 
-		public List<StudentDto> Students { get; set;}
+		public List<StudentDto> Students { get; set; }
 	}
 }

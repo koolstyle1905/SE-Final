@@ -1,13 +1,12 @@
-﻿using DataAccess.Domain;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Collections.Generic;
 using System.Linq;
+using DataAccess.Domain;
 
 namespace DataAccess.Repositories
 {
 	public class FloorRepository : Repository<Floor>
 	{
-		public FloorRepository(DbContext context) : base(context)
+		public FloorRepository(DormitoryContext context) : base(context)
 		{
 		}
 

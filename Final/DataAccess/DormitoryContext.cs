@@ -3,13 +3,7 @@ using DataAccess.Domain;
 
 namespace DataAccess
 {
-	public interface IDormitoryContext
-	{
-		DbSet<Student> Students { get; set; }
-		int SaveChanges();
-	}
-
-	public class DormitoryContext : DbContext, IDormitoryContext
+	public class DormitoryContext : DbContext
 	{
 		public DormitoryContext() : base(Connection.ConnectionString)
 		{
@@ -54,11 +48,6 @@ namespace DataAccess
 		public virtual DbSet<TemporaryAbsence> TemporaryAbsences { get; set; }
 
 		public virtual DbSet<ViolationRecord> ViolationRecords { get; set; }
-
-		public virtual void SetModified(object entity)
-		{
-			Entry(entity).State = EntityState.Modified;
-		}
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{

@@ -1,8 +1,7 @@
-﻿namespace DataTransfer
-{
-	using System;
-	using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace DataTransfer
+{
 	public class BuildingDto
 	{
 		public string BuildingId { get; set; }

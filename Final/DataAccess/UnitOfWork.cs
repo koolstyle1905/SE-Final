@@ -1,20 +1,15 @@
-﻿using System.Data.Entity;
-using DataAccess.Core;
+﻿using System;
 using DataAccess.Repositories;
 
 namespace DataAccess
 {
-	public class UnitOfWork : IUnitOfWork
+	public class UnitOfWork : IDisposable
 	{
 		private readonly DormitoryContext dormitoryContext;
 
-		public UnitOfWork() : this(new DormitoryContext())
+		public UnitOfWork()
 		{
-		}
-
-		public UnitOfWork(DbContext dormitoryContext)
-		{
-			this.dormitoryContext = new DormitoryContext();
+			dormitoryContext = new DormitoryContext();
 			Buildings = new BuildingRepository(dormitoryContext);
 			Classes = new ClassRepository(dormitoryContext);
 			Clubs = new ClubRepository(dormitoryContext);
@@ -29,17 +24,17 @@ namespace DataAccess
 
 		public ClassRepository Classes { get; set; }
 
-		public IClubRepository Clubs { get; set; }
+		public ClubRepository Clubs { get; set; }
 
-		public IEmployeeRepository Employees { get; set; }
+		public EmployeeRepository Employees { get; set; }
 
 		public FacultyRepository Faculties { get; set; }
 
 		public FloorRepository Floors { get; set; }
 
-		public IStudentRepository Students { get; set; }
+		public StudentRepository Students { get; set; }
 
-		public IRoomRepository Rooms { get; set; }
+		public RoomRepository Rooms { get; set; }
 
 		/// <summary>
 		///     Clean up any resources being used.

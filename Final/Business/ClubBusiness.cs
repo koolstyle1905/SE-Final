@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using AutoMapper;
 using DataAccess;
-using DataAccess.Core;
 using DataAccess.Domain;
 using DataTransfer;
 
@@ -10,13 +8,13 @@ namespace Business
 {
 	public class ClubBusiness
 	{
-		private readonly IUnitOfWork unitOfWork;
+		private readonly UnitOfWork unitOfWork;
 
 		public ClubBusiness() : this(new UnitOfWork())
 		{
 		}
 
-		public ClubBusiness(IUnitOfWork unitOfWork)
+		public ClubBusiness(UnitOfWork unitOfWork)
 		{
 			this.unitOfWork = unitOfWork;
 		}

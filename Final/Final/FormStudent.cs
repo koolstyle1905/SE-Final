@@ -1,30 +1,23 @@
-﻿using Business;
+﻿using System;
+using System.Collections.Generic;
+using Business;
 using DataTransfer;
-using DevExpress.XtraEditors;
+using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Final
 {
-	public partial class FormStudent : DevExpress.XtraBars.Ribbon.RibbonForm
+	public partial class FormStudent : RibbonForm
 	{
 		private readonly List<StudentDto> studentList;
 
 		public FormStudent()
 		{
 			InitializeComponent();
-			studentList = new StudentBusiness().GetAll();
+			studentList = StudentBusiness.GetAll();
 			studentDtoBindingSource.DataSource = studentList;
 			gridViewStudent.OptionsBehavior.EditingMode = GridEditingMode.EditFormInplace;
 			gridViewPriorities.Columns["Content"].BestFit();
@@ -44,7 +37,8 @@ namespace Final
 			{
 				DataSource = clubList,
 				ValueMember = "ClubId",
-				DisplayMember = "Name",DropDownRows = clubList.Count,
+				DisplayMember = "Name",
+				DropDownRows = clubList.Count,
 				BestFitMode = BestFitMode.BestFit,
 				SearchMode = SearchMode.AutoComplete,
 				AutoSearchColumnIndex = 1
@@ -55,7 +49,7 @@ namespace Final
 		private void InitComboBoxGender()
 		{
 			var riComboBoxGender = new RepositoryItemComboBox();
-			riComboBoxGender.Items.AddRange(new object[] { "Male", "Female" });
+			riComboBoxGender.Items.AddRange(new object[] {"Male", "Female"});
 			riComboBoxGender.TextEditStyle = TextEditStyles.DisableTextEditor;
 			gridViewStudent.Columns["Gender"].ColumnEdit = riComboBoxGender;
 		}
@@ -64,7 +58,7 @@ namespace Final
 		{
 			var riComboBoxCourse = new RepositoryItemComboBox();
 			var currentYear = DateTime.Now.Year;
-			var courses = new List<int>()
+			var courses = new List<int>
 			{
 				currentYear--,
 				currentYear--,
@@ -78,18 +72,17 @@ namespace Final
 
 		private void gridViewStudent_RowUpdated(object sender, RowObjectEventArgs e)
 		{
-			
 			var index = gridViewStudent.GetDataSourceRowIndex(e.RowHandle);
 			if (index < 0)
 			{
 				index = studentList.Count - 1;
 				var student = studentList[index];
-				new StudentBusiness().AddStudent(student);
+				StudentBusiness.AddStudent(student);
 			}
 			else
 			{
 				var student = studentList[index];
-				new StudentBusiness().EditStudent(student);
+				StudentBusiness.EditStudent(student);
 			}
 			gridControl1.RefreshDataSource();
 		}

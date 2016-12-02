@@ -42,7 +42,7 @@ namespace DataAccess.Migrations
 
 		protected override void Seed(DormitoryContext context)
 		{
-			DbClear.ClearAllData();
+			//DbClear.ClearAllData();
 			//System.Diagnostics.Debugger.Launch();
 
 			#region Add Buildings, Floors, Rooms

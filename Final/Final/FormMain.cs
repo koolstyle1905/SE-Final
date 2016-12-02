@@ -1,23 +1,19 @@
-﻿using AutoMapper;
-using Business;
-using DataTransfer;
-using DevExpress.XtraTreeList.Nodes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataTransfer;
+using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 
 namespace Final
 {
-	public partial class FormMain : DevExpress.XtraBars.Ribbon.RibbonForm
+	public partial class FormMain : RibbonForm
 	{
-		public FormMain()
+		private EmployeeDto employee;
+
+		public FormMain(EmployeeDto employee)
 		{
+			this.employee = employee;
 			InitializeComponent();
 		}
 
@@ -28,10 +24,9 @@ namespace Final
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			
 		}
 
-		private void barBtnStudentList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		private void barBtnStudentList_ItemClick(object sender, ItemClickEventArgs e)
 		{
 			var form = CheckExist(typeof(FormStudent));
 			if (form != null)
@@ -45,5 +40,18 @@ namespace Final
 			}
 		}
 
+		private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			var form = CheckExist(typeof(FormRoom));
+			if (form != null)
+			{
+				form.Activate();
+			}
+			else
+			{
+				var formRoom = new FormRoom {MdiParent = this};
+				formRoom.Show();
+			}
+		}
 	}
 }

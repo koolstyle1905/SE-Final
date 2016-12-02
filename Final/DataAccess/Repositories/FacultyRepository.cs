@@ -1,11 +1,10 @@
-﻿using System.Data.Entity;
-using DataAccess.Domain;
+﻿using DataAccess.Domain;
 
 namespace DataAccess.Repositories
 {
 	public class FacultyRepository : Repository<Faculty>
 	{
-		public FacultyRepository(DbContext context) : base(context)
+		public FacultyRepository(DormitoryContext context) : base(context)
 		{
 		}
 	}

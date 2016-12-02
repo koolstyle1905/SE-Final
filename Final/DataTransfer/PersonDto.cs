@@ -1,9 +1,7 @@
-﻿namespace DataTransfer
-{
-	using System;
-	using System.ComponentModel;
-	using System.ComponentModel.DataAnnotations;
+﻿using System;
 
+namespace DataTransfer
+{
 	public class PersonDto
 	{
 		public string Name { get; set; }

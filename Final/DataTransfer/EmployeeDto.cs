@@ -1,8 +1,5 @@
 ﻿namespace DataTransfer
 {
-	using System;
-	using System.Collections.Generic;
-
 	public class EmployeeDto : PersonDto
 	{
 		public string EmployeeId { get; set; }

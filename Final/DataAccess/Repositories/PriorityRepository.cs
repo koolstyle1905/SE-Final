@@ -1,11 +1,10 @@
-﻿using System.Data.Entity;
-using DataAccess.Domain;
+﻿using DataAccess.Domain;
 
 namespace DataAccess.Repositories
 {
 	public class PriorityRepository : Repository<Priority>
 	{
-		public PriorityRepository(DbContext context) : base(context)
+		public PriorityRepository(DormitoryContext context) : base(context)
 		{
 		}
 	}

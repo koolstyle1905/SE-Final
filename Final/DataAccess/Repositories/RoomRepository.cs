@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Linq;
 using DataAccess.Core;
 using DataAccess.Domain;
 
@@ -10,8 +11,13 @@ namespace DataAccess.Repositories
 
 	public class RoomRepository : Repository<Room>, IRoomRepository
 	{
-		public RoomRepository(DbContext context) : base(context)
+		public RoomRepository(DormitoryContext context) : base(context)
 		{
+		}
+
+		public IEnumerable<Room> GetRoomsByFloorId(string floorId)
+		{
+			return DbSet.Where(x => x.FloorId == floorId).OrderBy(x => x.FloorId.Length).ThenBy(x => x.FloorId);
 		}
 	}
 }

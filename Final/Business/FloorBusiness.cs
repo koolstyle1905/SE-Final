@@ -1,22 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
-using DataAccess;
-using DataAccess.Core;
-using DataAccess.Domain;
-using DataTransfer;
+﻿using DataAccess;
 
 namespace Business
 {
 	public class FloorBusiness
 	{
-		private readonly IUnitOfWork unitOfWork;
+		private readonly UnitOfWork unitOfWork;
 
 		public FloorBusiness() : this(new UnitOfWork())
 		{
 		}
 
-		public FloorBusiness(IUnitOfWork unitOfWork)
+		public FloorBusiness(UnitOfWork unitOfWork)
 		{
 			this.unitOfWork = unitOfWork;
 		}

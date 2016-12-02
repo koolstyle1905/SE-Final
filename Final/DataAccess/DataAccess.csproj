@@ -64,7 +64,6 @@
     <Compile Include="Repositories\FacultyRepository.cs" />
     <Compile Include="Repositories\FloorRepository.cs" />
     <Compile Include="Core\IRepository.cs" />
-    <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Repositories\PriorityRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\RoomRepository.cs" />
@@ -90,10 +89,6 @@
     <Compile Include="Domain\TemporaryAbsence.cs" />
     <Compile Include="Domain\ViolationRecord.cs" />
     <Compile Include="DormitoryContext.cs" />
-    <Compile Include="Migrations\201612011022518_Init.cs" />
-    <Compile Include="Migrations\201612011022518_Init.Designer.cs">
-      <DependentUpon>201612011022518_Init.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -106,11 +101,6 @@
       <Project>{09d94957-6d12-4e93-88cf-db67ccc211b2}</Project>
       <Name>DataTransfer</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612011022518_Init.resx">
-      <DependentUpon>201612011022518_Init.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

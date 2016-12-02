@@ -9,9 +9,9 @@ namespace DataAccess.Repositories
 {
 	public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : class
 	{
-		private readonly DbContext context;
+		private readonly DormitoryContext context;
 
-		protected Repository(DbContext context)
+		protected Repository(DormitoryContext context)
 		{
 			this.context = context;
 			DbSet = this.context.Set<TEntity>();
