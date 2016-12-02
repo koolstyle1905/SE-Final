@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using Business;
 using DataAccess;
+using DataAccess.Core;
 using DataAccess.Domain;
+using DataAccess.Repositories;
 using DataTransfer;
 using Moq;
 using NUnit.Framework;
@@ -17,9 +19,16 @@ namespace Tests.Business
 		public void SetUp()
 		{
 			mockContext = new Mock<DormitoryContext>();
+			mockUnitOfWork = new Mock<IUnitOfWork>();
+			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>());
+			//mockUnitOfWork.Setup(m => m.Students).Returns(new StudentRepository(mockContext.Object));
+			mockRepo = new Mock<IStudentRepository>();
+			mockUnitOfWork.Setup(m => m.Students).Returns(mockRepo.Object);
 		}
 
 		private Mock<DormitoryContext> mockContext;
+		private Mock<IUnitOfWork> mockUnitOfWork;
+		private Mock<IStudentRepository> mockRepo;
 
 		public StudentBusinessTests()
 		{
@@ -45,26 +54,21 @@ namespace Tests.Business
 		[Test]
 		public void AddStudentTest()
 		{
-			var mockDbset = new Mock<DbSet<Student>>();
-			mockContext.Setup(m => m.Students).Returns(mockDbset.Object);
+			var studentBusiness = new StudentBusiness(mockUnitOfWork.Object);
+			studentBusiness.AddStudent(new StudentDto { StudentId = "1" });
 
-			var studentBusiness = new StudentBusiness(mockContext.Object);
-			studentBusiness.AddStudent(new StudentDto {StudentId = "1"});
-
-			mockDbset.Verify(m => m.Add(It.IsAny<Student>()), Times.Once);
-			mockContext.Verify(m => m.SaveChanges(), Times.Once());
+			mockRepo.Verify(m => m.Add(It.IsAny<Student>()), Times.Once);
+			mockUnitOfWork.Verify(m => m.SaveChanges(), Times.Once());
 		}
 
 		[Test]
 		public void EditStudentTest()
 		{
-			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>());
-
-			var studentBusiness = new StudentBusiness(mockContext.Object);
+			var studentBusiness = new StudentBusiness(mockUnitOfWork.Object);
 			studentBusiness.EditStudent(new StudentDto {StudentId = "1"});
 
-			mockContext.Verify(m => m.SetModified(It.IsAny<Student>()), Times.Once());
-			mockContext.Verify(m => m.SaveChanges(), Times.Once());
+			mockRepo.Verify(m => m.Edit(It.IsAny<Student>()), Times.Once());
+			mockUnitOfWork.Verify(m => m.SaveChanges(), Times.Once());
 		}
 
 		[Test]
@@ -83,9 +87,7 @@ namespace Tests.Business
 				}
 			};
 
-			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>(testData));
-
-			var studentBusiness = new StudentBusiness(mockContext.Object);
+			var studentBusiness = new StudentBusiness(mockUnitOfWork.Object);
 			var actual = studentBusiness.GetAll();
 
 			for (var i = 0; i < expected.Count; i++)

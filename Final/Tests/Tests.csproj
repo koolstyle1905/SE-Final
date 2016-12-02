@@ -78,6 +78,7 @@
     <Compile Include="Business\EmployeeBusinessTests.cs" />
     <Compile Include="FakeDbSet.cs" />
     <Compile Include="Business\FloorBusinessTests.cs" />
+    <Compile Include="FakeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
