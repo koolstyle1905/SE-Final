@@ -2,6 +2,7 @@
 using System.Linq;
 using AutoMapper;
 using DataAccess;
+using DataAccess.Core;
 using DataAccess.Domain;
 using DataTransfer;
 
@@ -9,20 +10,20 @@ namespace Business
 {
 	public class ClubBusiness
 	{
-		private readonly DormitoryContext dormitoryContext;
+		private readonly IUnitOfWork unitOfWork;
 
-		public ClubBusiness() : this(new DormitoryContext())
+		public ClubBusiness() : this(new UnitOfWork())
 		{
 		}
 
-		public ClubBusiness(DormitoryContext dormitoryContext)
+		public ClubBusiness(IUnitOfWork unitOfWork)
 		{
-			this.dormitoryContext = dormitoryContext;
+			this.unitOfWork = unitOfWork;
 		}
 
 		public List<ClubDto> GetAll()
 		{
-			var clubList = dormitoryContext.Clubs.ToList();
+			var clubList = unitOfWork.Clubs.ToList();
 			return Mapper.Map<List<Club>, List<ClubDto>>(clubList);
 		}
 	}

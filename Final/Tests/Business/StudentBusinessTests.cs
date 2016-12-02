@@ -18,26 +18,7 @@ namespace Tests.Business
 		[SetUp]
 		public void SetUp()
 		{
-			mockContext = new Mock<DormitoryContext>();
-			mockUnitOfWork = new Mock<IUnitOfWork>();
-			mockContext.Setup(m => m.Students).Returns(new FakeDbSet<Student>());
-			//mockUnitOfWork.Setup(m => m.Students).Returns(new StudentRepository(mockContext.Object));
-			mockRepo = new Mock<IStudentRepository>();
-			mockUnitOfWork.Setup(m => m.Students).Returns(mockRepo.Object);
-		}
-
-		private Mock<DormitoryContext> mockContext;
-		private Mock<IUnitOfWork> mockUnitOfWork;
-		private Mock<IStudentRepository> mockRepo;
-
-		public StudentBusinessTests()
-		{
-			AutoMapperConfiguration.Configure();
-		}
-
-		private static IEnumerable TestData()
-		{
-			var testData = new TestCaseData(new List<Student>
+			testDataStudents = new List<Student>
 			{
 				new Student
 				{
@@ -47,8 +28,17 @@ namespace Tests.Business
 				{
 					StudentId = "2"
 				}
-			});
-			yield return testData;
+			};
+			mockUnitOfWork = new Mock<IUnitOfWork>();
+			mockUnitOfWork.Setup(m => m.Students).Returns(new FakeStudentRepository(testDataStudents));
+		}
+
+		private Mock<IUnitOfWork> mockUnitOfWork;
+		private List<Student> testDataStudents;
+
+		public StudentBusinessTests()
+		{
+			AutoMapperConfiguration.Configure();
 		}
 
 		[Test]
@@ -57,7 +47,6 @@ namespace Tests.Business
 			var studentBusiness = new StudentBusiness(mockUnitOfWork.Object);
 			studentBusiness.AddStudent(new StudentDto { StudentId = "1" });
 
-			mockRepo.Verify(m => m.Add(It.IsAny<Student>()), Times.Once);
 			mockUnitOfWork.Verify(m => m.SaveChanges(), Times.Once());
 		}
 
@@ -67,13 +56,11 @@ namespace Tests.Business
 			var studentBusiness = new StudentBusiness(mockUnitOfWork.Object);
 			studentBusiness.EditStudent(new StudentDto {StudentId = "1"});
 
-			mockRepo.Verify(m => m.Edit(It.IsAny<Student>()), Times.Once());
 			mockUnitOfWork.Verify(m => m.SaveChanges(), Times.Once());
 		}
 
 		[Test]
-		[TestCaseSource(nameof(TestData))]
-		public void GetAllStudentTest_ShouldReturnTwoStudents(List<Student> testData)
+		public void GetAllStudentTest_ShouldReturnTwoStudents()
 		{
 			var expected = new List<StudentDto>
 			{

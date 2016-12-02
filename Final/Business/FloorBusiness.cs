@@ -2,6 +2,7 @@
 using System.Linq;
 using AutoMapper;
 using DataAccess;
+using DataAccess.Core;
 using DataAccess.Domain;
 using DataTransfer;
 
@@ -9,32 +10,15 @@ namespace Business
 {
 	public class FloorBusiness
 	{
-		private readonly DormitoryContext dormitoryContext;
+		private readonly IUnitOfWork unitOfWork;
 
-		public FloorBusiness() : this(new DormitoryContext())
+		public FloorBusiness() : this(new UnitOfWork())
 		{
 		}
 
-		public FloorBusiness(DormitoryContext dormitoryContext)
+		public FloorBusiness(IUnitOfWork unitOfWork)
 		{
-			this.dormitoryContext = dormitoryContext;
-		}
-
-		public List<FloorDto> GetFloorByBuildingIdOrderByFloorId(string buildingId)
-		{
-			var floorList = dormitoryContext.Floors
-				.Where(x => x.BuildingId == buildingId)
-				.OrderBy(f => f.FloorId.Length)
-				.ThenBy(f => f.FloorId).ToList();
-			return Mapper.Map<List<Floor>, List<FloorDto>>(floorList);
-		}
-
-		public List<FloorDto> GetAllOrderByFloorId()
-		{
-			var floorList = dormitoryContext.Floors
-				.OrderBy(x => x.FloorId.Length)
-				.ThenBy(f => f.FloorId).ToList();
-			return Mapper.Map<List<Floor>, List<FloorDto>>(floorList);
+			this.unitOfWork = unitOfWork;
 		}
 	}
 }

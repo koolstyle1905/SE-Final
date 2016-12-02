@@ -29,9 +29,9 @@ namespace DataAccess
 
 		public ClassRepository Classes { get; set; }
 
-		public ClubRepository Clubs { get; set; }
+		public IClubRepository Clubs { get; set; }
 
-		public EmployeeRepository Employees { get; set; }
+		public IEmployeeRepository Employees { get; set; }
 
 		public FacultyRepository Faculties { get; set; }
 
@@ -39,7 +39,7 @@ namespace DataAccess
 
 		public IStudentRepository Students { get; set; }
 
-		public RoomRepository Rooms { get; set; }
+		public IRoomRepository Rooms { get; set; }
 
 		/// <summary>
 		///     Clean up any resources being used.

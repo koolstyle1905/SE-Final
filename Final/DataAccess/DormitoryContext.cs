@@ -3,7 +3,13 @@ using DataAccess.Domain;
 
 namespace DataAccess
 {
-	public class DormitoryContext : DbContext
+	public interface IDormitoryContext
+	{
+		DbSet<Student> Students { get; set; }
+		int SaveChanges();
+	}
+
+	public class DormitoryContext : DbContext, IDormitoryContext
 	{
 		public DormitoryContext() : base(Connection.ConnectionString)
 		{

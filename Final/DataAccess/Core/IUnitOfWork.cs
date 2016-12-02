@@ -9,9 +9,9 @@ namespace DataAccess.Core
 
 		ClassRepository Classes { get; set; }
 
-		ClubRepository Clubs { get; set; }
+		IClubRepository Clubs { get; set; }
 
-		EmployeeRepository Employees { get; set; }
+		IEmployeeRepository Employees { get; set; }
 
 		FacultyRepository Faculties { get; set; }
 
@@ -19,7 +19,7 @@ namespace DataAccess.Core
 
 		IStudentRepository Students { get; set; }
 
-		RoomRepository Rooms { get; set; }
+		IRoomRepository Rooms { get; set; }
 
 		int SaveChanges();
 	}

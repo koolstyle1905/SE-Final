@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using AutoMapper;
 using DataAccess;
+using DataAccess.Core;
 using DataAccess.Domain;
 using DataTransfer;
 
@@ -10,20 +11,20 @@ namespace Business
 {
 	public class RoomBusiness
 	{
-		private readonly DormitoryContext dormitoryContext;
+		private readonly IUnitOfWork unitOfWork;
 
-		public RoomBusiness() : this(new DormitoryContext())
+		public RoomBusiness() : this(new UnitOfWork())
 		{
 		}
 
-		public RoomBusiness(DormitoryContext dormitoryContext)
+		public RoomBusiness(IUnitOfWork unitOfWork)
 		{
-			this.dormitoryContext = dormitoryContext;
+			this.unitOfWork = unitOfWork;
 		}
 
 		public void CreateTreeRoom(TreeView treeView)
 		{
-			var buildingList = dormitoryContext.Buildings.ToList();
+			var buildingList = unitOfWork.Buildings.ToList();
 			foreach (var building in buildingList)
 			{
 				var parent = new TreeNode(building.BuildingId);
@@ -37,7 +38,7 @@ namespace Business
 
 		public List<RoomDto> GetRoomsByFloorId(string floorId)
 		{
-			var roomList = dormitoryContext.Rooms.Where(r => r.FloorId == floorId).ToList();
+			var roomList = unitOfWork.Rooms.FindBy(r => r.FloorId == floorId).ToList();
 			return Mapper.Map<List<Room>, List<RoomDto>>(roomList);
 		}
 	}

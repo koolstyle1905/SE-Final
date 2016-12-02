@@ -2,30 +2,32 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq.Expressions;
+using DataAccess;
 using DataAccess.Core;
 using DataAccess.Domain;
 using DataAccess.Repositories;
 using NUnit.Framework.Internal;
+using Tests;
 
 namespace Tests
 {
 	public class FakeRepository<T> : IRepository<T> where T : class
 	{
-		private readonly List<T> data;
+		public List<T> Data { get; }
 
 		public FakeRepository()
 		{
-			data = new List<T>();
+			Data = new List<T>();
 		}
 
 		public FakeRepository(List<T> data)
 		{
-			this.data = data;
+			this.Data = data;
 		}
 
 		public void Add(T entity)
 		{
-			data.Add(entity);
+			Data.Add(entity);
 		}
 
 		public void AddRange(IEnumerable<T> entities)
@@ -35,7 +37,7 @@ namespace Tests
 
 		public int Count()
 		{
-			return data.Count;
+			return Data.Count;
 		}
 
 		public void Edit(T entity)
@@ -55,7 +57,7 @@ namespace Tests
 
 		public IEnumerable<T> GetAll()
 		{
-			return data;
+			return Data;
 		}
 
 		public IEnumerable<T> OrderBy<TKey>(Expression<Func<T, TKey>> keySelector)
@@ -85,14 +87,35 @@ namespace Tests
 
 		public List<T> ToList()
 		{
-			return data;
+			return Data;
 		}
 	}
 }
 
-public class FakeStudentRepository : Repository<Student>, IStudentRepository
+public class FakeStudentRepository : FakeRepository<Student>, IStudentRepository
 {
-	public FakeStudentRepository(DbContext context) : base(context)
+	public FakeStudentRepository(List<Student> data) : base(data)
+	{
+	}
+}
+
+public class FakeRoomRepository : FakeRepository<Room>, IRoomRepository
+{
+	public FakeRoomRepository(List<Room> data) : base(data)
+	{
+	}
+}
+
+public class FakeClubRepository : FakeRepository<Club>, IClubRepository
+{
+	public FakeClubRepository(List<Club> data) : base(data)
+	{
+	}
+}
+
+public class FakeEmployeeRepository : FakeRepository<Employee>
+{
+	public FakeEmployeeRepository(List<Employee> data) : base(data)
 	{
 	}
 }
