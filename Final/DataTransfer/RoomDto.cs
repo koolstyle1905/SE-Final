@@ -8,6 +8,7 @@ namespace DataTransfer
 
 		public string FloorId { get; set; }
 
+
 		public int NumOfStudent => Students.Count;
 
 		public List<StudentDto> Students { get; set; }

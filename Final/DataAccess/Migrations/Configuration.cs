@@ -42,7 +42,7 @@ namespace DataAccess.Migrations
 
 		protected override void Seed(DormitoryContext context)
 		{
-			//DbClear.ClearAllData();
+			DbClear.ClearAllData();
 			//System.Diagnostics.Debugger.Launch();
 
 			#region Add Buildings, Floors, Rooms
@@ -142,8 +142,8 @@ namespace DataAccess.Migrations
 					Content = "Là người dân tộc thiểu số, có bố hoặc mẹ là người dân tộc thiểu số"
 				}
 			};
-			//priorityList.ForEach(p => context.Priorities.AddOrUpdate(p));
-			priorityList.ForEach(p => context.Priorities.Attach(p));
+			priorityList.ForEach(p => context.Priorities.AddOrUpdate(p));
+			//priorityList.ForEach(p => context.Priorities.Attach(p));
 
 			#region Add Faculties, Classes, Students
 
@@ -153,6 +153,7 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403001",
 					ClubId = clubList[0].ClubId,
+					RoomId = "H101",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString(),
 					Address = "TDT",
@@ -162,6 +163,7 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403002",
 					ClubId = clubList[0].ClubId,
+					RoomId = "H101",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString(),
 					Priorities = priorityList
@@ -170,6 +172,7 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403003",
 					ClubId = clubList[0].ClubId,
+					RoomId = "H101",
 					Name = "Neptune",
 					Gender = Gender.Female.ToString(),
 					Priorities = priorityList
@@ -178,18 +181,20 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403004",
 					ClubId = clubList[0].ClubId,
+					RoomId = "H101",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString(),
 					Priorities = priorityList
 				}
 			};
-			////////////////////////////////////////////////////////////////////
+			//////////////////////////////////////////////////////////////////
 			var students2 = new List<Student>
 			{
 				new Student
 				{
 					StudentId = "51403101",
 					ClubId = clubList[1].ClubId,
+					RoomId = "H102",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString(),
 					Address = "TDT"
@@ -198,6 +203,7 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403102",
 					ClubId = clubList[1].ClubId,
+					RoomId = "H102",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString(),
 					Priorities = priorityList
@@ -206,6 +212,7 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403103",
 					ClubId = clubList[1].ClubId,
+					RoomId = "H102",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString()
 				},
@@ -213,17 +220,19 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403104",
 					ClubId = clubList[2].ClubId,
+					RoomId = "H102",
 					Name = "Neptune",
 					Gender = Gender.Female.ToString()
 				}
 			};
-			////////////////////////////////
+			//////////////////////////////
 			var students3 = new List<Student>
 			{
 				new Student
 				{
 					StudentId = "51403201",
 					ClubId = clubList[3].ClubId,
+					RoomId = "H103",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString(),
 					Address = "TDT"
@@ -232,6 +241,7 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403202",
 					ClubId = clubList[3].ClubId,
+					RoomId = "H103",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString(),
 					Priorities = priorityList
@@ -240,6 +250,7 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403203",
 					ClubId = clubList[3].ClubId,
+					RoomId = "H103",
 					Name = "Neptune",
 					Gender = Gender.Male.ToString()
 				},
@@ -247,6 +258,7 @@ namespace DataAccess.Migrations
 				{
 					StudentId = "51403204",
 					ClubId = clubList[3].ClubId,
+					RoomId = "H103",
 					Name = "Neptune",
 					Gender = Gender.Female.ToString()
 				}

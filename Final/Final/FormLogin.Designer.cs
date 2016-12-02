@@ -33,7 +33,6 @@
 			this.txtId = new System.Windows.Forms.TextBox();
 			this.txtPassword = new System.Windows.Forms.TextBox();
 			this.btnLogin = new System.Windows.Forms.Button();
-			this.btnConfig = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lblID
@@ -73,7 +72,7 @@
 			// 
 			// btnLogin
 			// 
-			this.btnLogin.Location = new System.Drawing.Point(143, 89);
+			this.btnLogin.Location = new System.Drawing.Point(257, 89);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(108, 30);
 			this.btnLogin.TabIndex = 4;
@@ -81,22 +80,11 @@
 			this.btnLogin.UseVisualStyleBackColor = true;
 			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
 			// 
-			// btnConfig
-			// 
-			this.btnConfig.Location = new System.Drawing.Point(257, 89);
-			this.btnConfig.Name = "btnConfig";
-			this.btnConfig.Size = new System.Drawing.Size(108, 30);
-			this.btnConfig.TabIndex = 5;
-			this.btnConfig.Text = "Cấu hình";
-			this.btnConfig.UseVisualStyleBackColor = true;
-			this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
-			// 
-			// LoginForm
+			// FormLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(385, 131);
-			this.Controls.Add(this.btnConfig);
 			this.Controls.Add(this.btnLogin);
 			this.Controls.Add(this.txtPassword);
 			this.Controls.Add(this.txtId);
@@ -104,7 +92,7 @@
 			this.Controls.Add(this.lblID);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
-			this.Name = "LoginForm";
+			this.Name = "FormLogin";
 			this.Text = "LoginForm";
 			this.Load += new System.EventHandler(this.FormLogin_Load);
 			this.ResumeLayout(false);
@@ -119,6 +107,5 @@
 		private System.Windows.Forms.TextBox txtId;
 		private System.Windows.Forms.TextBox txtPassword;
 		private System.Windows.Forms.Button btnLogin;
-		private System.Windows.Forms.Button btnConfig;
 	}
 }

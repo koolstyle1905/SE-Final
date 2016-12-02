@@ -6,23 +6,15 @@ using DataTransfer;
 
 namespace Business
 {
-	public class ClubBusiness
+	public static class ClubBusiness
 	{
-		private readonly UnitOfWork unitOfWork;
-
-		public ClubBusiness() : this(new UnitOfWork())
+		public static List<ClubDto> GetAll()
 		{
-		}
-
-		public ClubBusiness(UnitOfWork unitOfWork)
-		{
-			this.unitOfWork = unitOfWork;
-		}
-
-		public List<ClubDto> GetAll()
-		{
-			var clubList = unitOfWork.Clubs.ToList();
-			return Mapper.Map<List<Club>, List<ClubDto>>(clubList);
+			using (var unitOfWork = new UnitOfWork())
+			{
+				var clubList = unitOfWork.Clubs.ToList();
+				return Mapper.Map<List<Club>, List<ClubDto>>(clubList);
+			}
 		}
 	}
 }

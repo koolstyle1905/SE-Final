@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
 			this.roomDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -57,6 +58,9 @@
 			// 
 			this.gridControl1.DataSource = this.roomDtoBindingSource;
 			this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			gridLevelNode1.RelationName = "Students";
+			this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
 			this.gridControl1.Location = new System.Drawing.Point(123, 2);
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";

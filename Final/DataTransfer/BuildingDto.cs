@@ -1,11 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace DataTransfer
+﻿namespace DataTransfer
 {
 	public class BuildingDto
 	{
 		public string BuildingId { get; set; }
-
-		public List<FloorDto> Floors { get; set; }
 	}
 }

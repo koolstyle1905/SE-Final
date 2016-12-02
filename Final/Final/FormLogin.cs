@@ -37,19 +37,18 @@ namespace Final
 			{
 				if (!EmployeeBusiness.IsValid(employee.Username, employee.Password))
 				{
-					MessageBox.Show("Thông tin đăng nhập hoặc mật khẩu không hợp lệ.", "Lỗi", MessageBoxButtons.OK,
+					MessageBox.Show(@"Thông tin đăng nhập hoặc mật khẩu không hợp lệ.", @"Lỗi", MessageBoxButtons.OK,
 						MessageBoxIcon.Error);
 					return;
 				}
 			}
 			catch (Exception)
 			{
-				MessageBox.Show("Không thể kết nối cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(@"Không thể kết nối cơ sở dữ liệu.", @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Dispose();
 				return;
 			}
-			new FormMain(employee).Show();
-			//this.Hide();
+			Close();
 		}
 
 		private void Enter_KeyDown(object sender, KeyEventArgs e)
@@ -60,14 +59,6 @@ namespace Final
 			}
 		}
 
-		private void Form_FormClosed(object sender, FormClosedEventArgs e)
-		{
-			Application.Exit();
-		}
-
-		private void btnConfig_Click(object sender, EventArgs e)
-		{
-			//new ConfigForm().Show();
-		}
+		private void Form_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 	}
 }

@@ -11,6 +11,7 @@ C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\EntityFramework.
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Moq.dll
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\nunit.framework.dll
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Business.pdb
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\DataAccess.pdb
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\DataTransfer.pdb
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\AutoMapper.xml
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Castle.Core.xml
@@ -21,4 +22,3 @@ C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\nunit.framework.
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.dll
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.pdb
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\DataAccess.pdb

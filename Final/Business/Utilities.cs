@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Linq;
 
 namespace Business
 {
 	public class Utilities
 	{
+		public static bool StringIsNullOrEmpty(params string[] paramStrings)
+		{
+			return paramStrings.Any(string.IsNullOrEmpty);
+		}
+
 		/// <summary>
 		///     Find next ID
 		/// </summary>

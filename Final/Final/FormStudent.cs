@@ -32,7 +32,7 @@ namespace Final
 
 		private void InitLookUpClub()
 		{
-			var clubList = new ClubBusiness().GetAll();
+			var clubList = ClubBusiness.GetAll();
 			var riLookUpClub = new RepositoryItemLookUpEdit
 			{
 				DataSource = clubList,

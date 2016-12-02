@@ -11,10 +11,11 @@ namespace Final
 	{
 		private EmployeeDto employee;
 
-		public FormMain(EmployeeDto employee)
+		public FormMain()
 		{
-			this.employee = employee;
+			//this.employee = employee;
 			InitializeComponent();
+			barBtnAddStudent.Enabled = false;
 		}
 
 		private Form CheckExist(Type formType)
@@ -22,8 +23,9 @@ namespace Final
 			return MdiChildren.FirstOrDefault(item => item.GetType() == formType);
 		}
 
-		private void Form1_Load(object sender, EventArgs e)
+		private void Form_Load(object sender, EventArgs e)
 		{
+			barBtnAddStudent.Enabled = false;
 		}
 
 		private void barBtnStudentList_ItemClick(object sender, ItemClickEventArgs e)
@@ -52,6 +54,17 @@ namespace Final
 				var formRoom = new FormRoom {MdiParent = this};
 				formRoom.Show();
 			}
+		}
+
+		private void barButtonAddStudent_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			var formAddStudent = new FormAddStudent();
+			formAddStudent.ShowDialog();
+		}
+
+		private void barBtnLogin_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			new FormLogin().ShowDialog();
 		}
 	}
 }

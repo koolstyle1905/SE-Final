@@ -36,7 +36,7 @@ namespace Tests.Business
 		}
 
 		[Test]
-		public void GetAllTest()
+		public void GetAllTest_ShouldEqualTwelve()
 		{
 			var actual = StudentBusiness.GetAll().Count;
 

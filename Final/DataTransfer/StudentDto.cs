@@ -16,10 +16,11 @@ namespace DataTransfer
 
 		public string ClubId { get; set; }
 
+		public string RoomId { get; set; }
+
 		public string PlaceOfBirth { get; set; }
 
 		public string Nation { get; set; }
-
 		public string Religion { get; set; }
 
 		public int Course { get; set; }

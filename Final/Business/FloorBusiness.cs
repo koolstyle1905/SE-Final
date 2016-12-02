@@ -1,18 +1,21 @@
-﻿using DataAccess;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AutoMapper;
+using DataAccess;
+using DataAccess.Domain;
+using DataTransfer;
 
 namespace Business
 {
-	public class FloorBusiness
+	public static class FloorBusiness
 	{
-		private readonly UnitOfWork unitOfWork;
-
-		public FloorBusiness() : this(new UnitOfWork())
+		public static List<FloorDto> GetFloorByBuildingId(string buildingId)
 		{
-		}
-
-		public FloorBusiness(UnitOfWork unitOfWork)
-		{
-			this.unitOfWork = unitOfWork;
+			using (var unitOfWork = new UnitOfWork())
+			{
+				var floorList = unitOfWork.Floors.GetFloorByBuildingId(buildingId).ToList();
+				return Mapper.Map<List<Floor>, List<FloorDto>>(floorList);
+			}
 		}
 	}
 }

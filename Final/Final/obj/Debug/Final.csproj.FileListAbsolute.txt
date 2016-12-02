@@ -7,8 +7,8 @@ C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.Properties.Resou
 C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.csproj.GenerateResource.Cache
 C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.exe
 C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.pdb
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.exe
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.exe.config
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.exe
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.pdb
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.csprojResolveAssemblyReference.cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormAddStudent.resources
@@ -20,3 +20,4 @@ C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.csproj.Gen
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.exe.licenses
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.exe
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.pdb
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormLogin.resources

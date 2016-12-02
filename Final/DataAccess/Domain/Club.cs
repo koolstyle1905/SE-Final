@@ -4,14 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DataAccess.Domain
 {
-	public interface IClub
-	{
-		string ClubId { get; set; }
-		string Name { get; set; }
-		ICollection<Student> Students { get; set; }
-	}
-
-	public class Club : IClub
+	public class Club
 	{
 		[SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
 		public Club()
