@@ -19,7 +19,7 @@ namespace Final
 		{
 		}
 
-		private void buttonComfirm_Click(object sender, EventArgs e)
+		private void btnComfirm_Click(object sender, EventArgs e)
 		{
 			if (Utilities.StringIsNullOrEmpty(txtStudentId.Text))
 			{

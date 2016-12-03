@@ -13,8 +13,8 @@ namespace Final
 
 		public FormMain(EmployeeDto employee)
 		{
-			this.employee = employee;InitializeComponent();
-			barBtnAddStudent.Enabled = false;
+			this.employee = employee;
+			InitializeComponent();
 		}
 
 		private Form CheckExist(Type formType)
@@ -24,7 +24,6 @@ namespace Final
 
 		private void Form_Load(object sender, EventArgs e)
 		{
-			barBtnAddStudent.Enabled = false;
 		}
 
 		private void barBtnStudentList_ItemClick(object sender, ItemClickEventArgs e)

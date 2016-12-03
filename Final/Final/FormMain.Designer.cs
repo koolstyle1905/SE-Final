@@ -250,7 +250,6 @@
 			// 
 			// ribbonPageGroup3
 			// 
-			this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem5);
 			this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem13);
 			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
 			this.ribbonPageGroup3.Text = "System";

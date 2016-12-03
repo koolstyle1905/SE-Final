@@ -25,12 +25,12 @@ namespace Final
 
 		private void FormStudent_Load(object sender, EventArgs e)
 		{
-			InitLookUpClub();
-			InitComboBoxCourse();
-			InitComboBoxGender();
+			InitLookUpEditClub();
+			InitComboBoxEditCourse();
+			InitComboBoxEditGender();
 		}
 
-		private void InitLookUpClub()
+		private void InitLookUpEditClub()
 		{
 			var clubList = ClubBusiness.GetAll();
 			var riLookUpClub = new RepositoryItemLookUpEdit
@@ -46,15 +46,15 @@ namespace Final
 			gridViewStudent.Columns["ClubId"].ColumnEdit = riLookUpClub;
 		}
 
-		private void InitComboBoxGender()
+		private void InitComboBoxEditGender()
 		{
 			var riComboBoxGender = new RepositoryItemComboBox();
-			riComboBoxGender.Items.AddRange(new object[] {"Male", "Female"});
+			riComboBoxGender.Items.AddRange(new object[] { "Male", "Female" });
 			riComboBoxGender.TextEditStyle = TextEditStyles.DisableTextEditor;
 			gridViewStudent.Columns["Gender"].ColumnEdit = riComboBoxGender;
 		}
 
-		private void InitComboBoxCourse()
+		private void InitComboBoxEditCourse()
 		{
 			var riComboBoxCourse = new RepositoryItemComboBox();
 			var currentYear = DateTime.Now.Year;
@@ -73,26 +73,9 @@ namespace Final
 		private void gridViewStudent_RowUpdated(object sender, RowObjectEventArgs e)
 		{
 			var index = gridViewStudent.GetDataSourceRowIndex(e.RowHandle);
-			if (index < 0)
-			{
-				index = studentList.Count - 1;
-				var student = studentList[index];
-				StudentBusiness.AddStudent(student);
-			}
-			else
-			{
-				var student = studentList[index];
-				StudentBusiness.EditStudent(student);
-			}
+			var student = studentList[index];
+			StudentBusiness.EditStudent(student);
 			gridControl1.RefreshDataSource();
-		}
-
-		private void gridViewStudent_InitNewRow(object sender, InitNewRowEventArgs e)
-		{
-			gridViewStudent.SetRowCellValue(e.RowHandle, "Gender", "Male");
-			//gridViewStudent.SetRowCellValue(e.RowHandle, "ClubId", "01");
-			gridViewStudent.SetRowCellValue(e.RowHandle, "Course", 2016);
-			gridViewStudent.SetRowCellValue(e.RowHandle, "DateOfBirth", new DateTime(2000, 1, 1));
 		}
 	}
 }

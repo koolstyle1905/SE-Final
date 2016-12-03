@@ -34,7 +34,7 @@
 			this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
 			this.lookUpEditFloor = new DevExpress.XtraEditors.LookUpEdit();
 			this.lookUpEditBuilding = new DevExpress.XtraEditors.LookUpEdit();
-			this.buttonComfirm = new DevExpress.XtraEditors.SimpleButton();
+			this.btnComfirm = new DevExpress.XtraEditors.SimpleButton();
 			this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.txtReligion = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -95,7 +95,7 @@
 			this.panelControl2.Controls.Add(this.labelControl13);
 			this.panelControl2.Controls.Add(this.lookUpEditFloor);
 			this.panelControl2.Controls.Add(this.lookUpEditBuilding);
-			this.panelControl2.Controls.Add(this.buttonComfirm);
+			this.panelControl2.Controls.Add(this.btnComfirm);
 			this.panelControl2.Controls.Add(this.labelControl12);
 			this.panelControl2.Controls.Add(this.dateTimePicker1);
 			this.panelControl2.Controls.Add(this.txtReligion);
@@ -167,14 +167,14 @@
 			this.lookUpEditBuilding.TabIndex = 28;
 			this.lookUpEditBuilding.EditValueChanged += new System.EventHandler(this.lookUpEditBuilding_EditValueChanged);
 			// 
-			// buttonComfirm
+			// btnComfirm
 			// 
-			this.buttonComfirm.Location = new System.Drawing.Point(266, 282);
-			this.buttonComfirm.Name = "buttonComfirm";
-			this.buttonComfirm.Size = new System.Drawing.Size(75, 23);
-			this.buttonComfirm.TabIndex = 26;
-			this.buttonComfirm.Text = "Confirm";
-			this.buttonComfirm.Click += new System.EventHandler(this.buttonComfirm_Click);
+			this.btnComfirm.Location = new System.Drawing.Point(266, 282);
+			this.btnComfirm.Name = "btnComfirm";
+			this.btnComfirm.Size = new System.Drawing.Size(75, 23);
+			this.btnComfirm.TabIndex = 26;
+			this.btnComfirm.Text = "Confirm";
+			this.btnComfirm.Click += new System.EventHandler(this.btnComfirm_Click);
 			// 
 			// labelControl12
 			// 
@@ -507,7 +507,7 @@
 		private DevExpress.XtraEditors.LabelControl labelControl9;
 		private DevExpress.XtraEditors.LabelControl labelControl12;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
-		private DevExpress.XtraEditors.SimpleButton buttonComfirm;
+		private DevExpress.XtraEditors.SimpleButton btnComfirm;
 		private DevExpress.XtraEditors.LookUpEdit lockUpEditRoom;
 		private DevExpress.XtraEditors.LookUpEdit lookUpEditClub;
 		private DevExpress.XtraEditors.LabelControl labelControl13;
