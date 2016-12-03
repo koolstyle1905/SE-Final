@@ -48,6 +48,7 @@
 			this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnRoomList = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnLogin = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,7 +58,6 @@
 			this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
 			this.SuspendLayout();
@@ -216,7 +216,7 @@
 			this.barBtnRoomList.Id = 17;
 			this.barBtnRoomList.ImageUri.Uri = "Home";
 			this.barBtnRoomList.Name = "barBtnRoomList";
-			this.barBtnRoomList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
+			this.barBtnRoomList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnRoom_ItemClick);
 			// 
 			// barBtnLogin
 			// 
@@ -225,6 +225,13 @@
 			this.barBtnLogin.ImageUri.Uri = "AlignVerticalLeft";
 			this.barBtnLogin.Name = "barBtnLogin";
 			this.barBtnLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnLogin_ItemClick);
+			// 
+			// barButtonItem5
+			// 
+			this.barButtonItem5.Caption = "Configure";
+			this.barButtonItem5.Id = 19;
+			this.barButtonItem5.ImageUri.Uri = "ClearFormatting";
+			this.barButtonItem5.Name = "barButtonItem5";
 			// 
 			// ribbonPage2
 			// 
@@ -236,7 +243,6 @@
 			// 
 			// ribbonPageGroup2
 			// 
-			this.ribbonPageGroup2.ItemLinks.Add(this.barBtnLogin);
 			this.ribbonPageGroup2.ItemLinks.Add(this.barBtnLogout);
 			this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem11);
 			this.ribbonPageGroup2.Name = "ribbonPageGroup2";
@@ -294,13 +300,6 @@
 			// xtraTabbedMdiManager1
 			// 
 			this.xtraTabbedMdiManager1.MdiParent = this;
-			// 
-			// barButtonItem5
-			// 
-			this.barButtonItem5.Caption = "Configure";
-			this.barButtonItem5.Id = 19;
-			this.barButtonItem5.ImageUri.Uri = "ClearFormatting";
-			this.barButtonItem5.Name = "barButtonItem5";
 			// 
 			// FormMain
 			// 

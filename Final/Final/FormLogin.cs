@@ -48,7 +48,8 @@ namespace Final
 				Dispose();
 				return;
 			}
-			Close();
+			new FormMain(employee).Show();
+			//this.Hide();
 		}
 
 		private void Enter_KeyDown(object sender, KeyEventArgs e)

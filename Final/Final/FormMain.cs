@@ -11,10 +11,9 @@ namespace Final
 	{
 		private EmployeeDto employee;
 
-		public FormMain()
+		public FormMain(EmployeeDto employee)
 		{
-			//this.employee = employee;
-			InitializeComponent();
+			this.employee = employee;InitializeComponent();
 			barBtnAddStudent.Enabled = false;
 		}
 
@@ -42,7 +41,7 @@ namespace Final
 			}
 		}
 
-		private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
+		private void barBtnRoom_ItemClick(object sender, ItemClickEventArgs e)
 		{
 			var form = CheckExist(typeof(FormRoom));
 			if (form != null)
