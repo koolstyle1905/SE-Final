@@ -27,6 +27,11 @@ namespace Business
 			}
 		}
 
+        /// <summary>
+        /// Lấy thông tin phòng thông qua mã tầng
+        /// </summary>
+        /// <param name="floorId"></param>
+        /// <returns></returns>
 		public static List<RoomDto> GetRoomsByFloorId(string floorId)
 		{
 			using (var unitOfWork = new UnitOfWork())

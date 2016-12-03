@@ -21,3 +21,6 @@ C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.exe.licens
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.exe
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.pdb
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormLogin.resources
+D:\FINAL\SE-Final new\trunk\Final\bin\Final.exe.config
+D:\FINAL\SE-Final new\trunk\Final\Final\obj\Debug\Final.exe
+D:\FINAL\SE-Final new\trunk\Final\Final\obj\Debug\Final.pdb
