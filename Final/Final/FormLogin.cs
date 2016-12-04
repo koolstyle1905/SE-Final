@@ -10,7 +10,7 @@ namespace Final
 		public FormLogin()
 		{
 			InitializeComponent();
-			FormClosed += Form_FormClosed;
+			FormClosed += FormLogin_FormClosed;
 		}
 
 		private void FormLogin_Load(object sender, EventArgs e)
@@ -24,7 +24,7 @@ namespace Final
 		{
 			if (string.IsNullOrEmpty(txtId.Text.Trim()) || string.IsNullOrEmpty(txtPassword.Text.Trim()))
 			{
-				MessageBox.Show("Vui lòng kiểm tra lại thông tin đăng nhập và mật khẩu.", "Lỗi", MessageBoxButtons.OK,
+				MessageBox.Show(@"Vui lòng kiểm tra lại thông tin đăng nhập và mật khẩu.", @"Lỗi", MessageBoxButtons.OK,
 					MessageBoxIcon.Error);
 				return;
 			}
@@ -60,6 +60,6 @@ namespace Final
 			}
 		}
 
-		private void Form_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
+		private void FormLogin_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 	}
 }

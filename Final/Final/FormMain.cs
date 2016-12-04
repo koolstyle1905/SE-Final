@@ -40,7 +40,13 @@ namespace Final
 			}
 		}
 
-		private void barBtnRoom_ItemClick(object sender, ItemClickEventArgs e)
+		private void barButtonAddStudent_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			var formAddStudent = new FormAddStudent();
+			formAddStudent.ShowDialog();
+		}
+
+		private void barBtnRoomList_ItemClick(object sender, ItemClickEventArgs e)
 		{
 			var form = CheckExist(typeof(FormRoom));
 			if (form != null)
@@ -49,20 +55,11 @@ namespace Final
 			}
 			else
 			{
-				var formRoom = new FormRoom {MdiParent = this};
+				var formRoom = new FormRoom { MdiParent = this };
 				formRoom.Show();
 			}
 		}
 
-		private void barButtonAddStudent_ItemClick(object sender, ItemClickEventArgs e)
-		{
-			var formAddStudent = new FormAddStudent();
-			formAddStudent.ShowDialog();
-		}
-
-		private void barBtnLogin_ItemClick(object sender, ItemClickEventArgs e)
-		{
-			new FormLogin().ShowDialog();
-		}
+		private void FormMain_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 	}
 }

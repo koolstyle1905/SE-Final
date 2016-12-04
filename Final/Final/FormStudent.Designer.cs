@@ -120,6 +120,7 @@
             this.colClubId});
 			this.gridViewStudent.GridControl = this.gridControl1;
 			this.gridViewStudent.Name = "gridViewStudent";
+			this.gridViewStudent.OptionsEditForm.EditFormColumnCount = 6;
 			this.gridViewStudent.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewStudent_RowUpdated);
 			// 
 			// colStudentId
@@ -133,77 +134,88 @@
 			// 
 			this.colPlaceOfBirth.FieldName = "PlaceOfBirth";
 			this.colPlaceOfBirth.Name = "colPlaceOfBirth";
+			this.colPlaceOfBirth.OptionsEditForm.VisibleIndex = 10;
 			this.colPlaceOfBirth.Visible = true;
-			this.colPlaceOfBirth.VisibleIndex = 2;
+			this.colPlaceOfBirth.VisibleIndex = 10;
 			// 
 			// colNation
 			// 
 			this.colNation.FieldName = "Nation";
 			this.colNation.Name = "colNation";
+			this.colNation.OptionsEditForm.VisibleIndex = 9;
 			this.colNation.Visible = true;
-			this.colNation.VisibleIndex = 3;
+			this.colNation.VisibleIndex = 9;
 			// 
 			// colReligion
 			// 
 			this.colReligion.FieldName = "Religion";
 			this.colReligion.Name = "colReligion";
+			this.colReligion.OptionsEditForm.VisibleIndex = 11;
 			this.colReligion.Visible = true;
-			this.colReligion.VisibleIndex = 4;
+			this.colReligion.VisibleIndex = 11;
 			// 
 			// colCourse
 			// 
 			this.colCourse.FieldName = "Course";
 			this.colCourse.Name = "colCourse";
+			this.colCourse.OptionsEditForm.VisibleIndex = 3;
 			this.colCourse.Visible = true;
-			this.colCourse.VisibleIndex = 5;
+			this.colCourse.VisibleIndex = 4;
 			// 
 			// colName
 			// 
 			this.colName.FieldName = "Name";
 			this.colName.Name = "colName";
+			this.colName.OptionsEditForm.VisibleIndex = 2;
 			this.colName.Visible = true;
-			this.colName.VisibleIndex = 6;
+			this.colName.VisibleIndex = 2;
 			// 
 			// colGender
 			// 
 			this.colGender.FieldName = "Gender";
 			this.colGender.Name = "colGender";
+			this.colGender.OptionsEditForm.VisibleIndex = 2;
 			this.colGender.Visible = true;
-			this.colGender.VisibleIndex = 7;
+			this.colGender.VisibleIndex = 3;
 			// 
 			// colDateOfBirth
 			// 
 			this.colDateOfBirth.FieldName = "DateOfBirth";
 			this.colDateOfBirth.Name = "colDateOfBirth";
+			this.colDateOfBirth.OptionsEditForm.VisibleIndex = 4;
 			this.colDateOfBirth.Visible = true;
-			this.colDateOfBirth.VisibleIndex = 8;
+			this.colDateOfBirth.VisibleIndex = 5;
 			// 
 			// colSsn
 			// 
 			this.colSsn.FieldName = "Ssn";
 			this.colSsn.Name = "colSsn";
+			this.colSsn.OptionsEditForm.VisibleIndex = 8;
 			this.colSsn.Visible = true;
-			this.colSsn.VisibleIndex = 9;
+			this.colSsn.VisibleIndex = 7;
 			// 
 			// colAddress
 			// 
 			this.colAddress.FieldName = "Address";
 			this.colAddress.Name = "colAddress";
+			this.colAddress.OptionsEditForm.VisibleIndex = 7;
 			this.colAddress.Visible = true;
-			this.colAddress.VisibleIndex = 10;
+			this.colAddress.VisibleIndex = 6;
 			// 
 			// colPhone
 			// 
 			this.colPhone.FieldName = "Phone";
 			this.colPhone.Name = "colPhone";
+			this.colPhone.OptionsEditForm.VisibleIndex = 8;
 			this.colPhone.Visible = true;
-			this.colPhone.VisibleIndex = 11;
+			this.colPhone.VisibleIndex = 8;
 			// 
 			// colClubId
 			// 
 			this.colClubId.Caption = "Club Id";
 			this.colClubId.FieldName = "ClubId";
 			this.colClubId.Name = "colClubId";
+			this.colClubId.OptionsEditForm.VisibleIndex = 1;
 			this.colClubId.Visible = true;
 			this.colClubId.VisibleIndex = 1;
 			// 
