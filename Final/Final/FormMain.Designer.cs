@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
 			this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.barBtnAddStudent = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnRefesh = new DevExpress.XtraBars.BarButtonItem();
@@ -46,6 +47,12 @@
 			this.barBtnLogin = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnRoomList = new DevExpress.XtraBars.BarButtonItem();
+			this.barBtnStudentList = new DevExpress.XtraBars.BarButtonItem();
+			this.barBtnLogout = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -55,8 +62,6 @@
 			this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-			this.barBtnStudentList = new DevExpress.XtraBars.BarButtonItem();
-			this.barBtnLogout = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
 			this.SuspendLayout();
@@ -83,15 +88,19 @@
             this.barButtonItem5,
             this.barBtnRoomList,
             this.barBtnStudentList,
-            this.barBtnLogout});
+            this.barBtnLogout,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem4});
 			this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl1.MaxItemId = 25;
+			this.ribbonControl1.MaxItemId = 29;
 			this.ribbonControl1.Name = "ribbonControl1";
 			this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
             this.ribbonPage1,
             this.ribbonPage3});
-			this.ribbonControl1.Size = new System.Drawing.Size(1244, 168);
+			this.ribbonControl1.Size = new System.Drawing.Size(1244, 184);
 			// 
 			// barBtnAddStudent
 			// 
@@ -203,22 +212,67 @@
 			this.barBtnRoomList.Name = "barBtnRoomList";
 			this.barBtnRoomList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnRoomList_ItemClick);
 			// 
+			// barBtnStudentList
+			// 
+			this.barBtnStudentList.Caption = "Student List";
+			this.barBtnStudentList.Id = 23;
+			this.barBtnStudentList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnStudentList.LargeGlyph")));
+			this.barBtnStudentList.Name = "barBtnStudentList";
+			this.barBtnStudentList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnStudentList_ItemClick);
+			// 
+			// barBtnLogout
+			// 
+			this.barBtnLogout.Caption = "Logout";
+			this.barBtnLogout.Id = 24;
+			this.barBtnLogout.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnLogout.LargeGlyph")));
+			this.barBtnLogout.Name = "barBtnLogout";
+			// 
+			// barButtonItem1
+			// 
+			this.barButtonItem1.Caption = "Setting";
+			this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+			this.barButtonItem1.Id = 25;
+			this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+			this.barButtonItem1.Name = "barButtonItem1";
+			// 
+			// barButtonItem2
+			// 
+			this.barButtonItem2.Caption = "barButtonItem2";
+			this.barButtonItem2.Id = 26;
+			this.barButtonItem2.Name = "barButtonItem2";
+			// 
+			// barButtonItem3
+			// 
+			this.barButtonItem3.Caption = "barButtonItem3";
+			this.barButtonItem3.Id = 27;
+			this.barButtonItem3.Name = "barButtonItem3";
+			// 
+			// barButtonItem4
+			// 
+			this.barButtonItem4.Caption = "Profile";
+			this.barButtonItem4.Id = 28;
+			this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
+			this.barButtonItem4.Name = "barButtonItem4";
+			// 
 			// ribbonPage2
 			// 
 			this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2,
             this.ribbonPageGroup3});
+			this.ribbonPage2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage2.Image")));
 			this.ribbonPage2.Name = "ribbonPage2";
 			this.ribbonPage2.Text = "Home";
 			// 
 			// ribbonPageGroup2
 			// 
 			this.ribbonPageGroup2.ItemLinks.Add(this.barBtnLogout);
+			this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
 			this.ribbonPageGroup2.Name = "ribbonPageGroup2";
 			this.ribbonPageGroup2.Text = "Account";
 			// 
 			// ribbonPageGroup3
 			// 
+			this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
 			this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem13);
 			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
 			this.ribbonPageGroup3.Text = "System";
@@ -262,25 +316,14 @@
 			// ribbonPageGroup5
 			// 
 			this.ribbonPageGroup5.ItemLinks.Add(this.barBtnRoomList);
+			this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem2);
+			this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem3);
 			this.ribbonPageGroup5.Name = "ribbonPageGroup5";
 			this.ribbonPageGroup5.Text = "Management";
 			// 
 			// xtraTabbedMdiManager1
 			// 
 			this.xtraTabbedMdiManager1.MdiParent = this;
-			// 
-			// barBtnStudentList
-			// 
-			this.barBtnStudentList.Caption = "Student List";
-			this.barBtnStudentList.Id = 23;
-			this.barBtnStudentList.Name = "barBtnStudentList";
-			this.barBtnStudentList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnStudentList_ItemClick);
-			// 
-			// barBtnLogout
-			// 
-			this.barBtnLogout.Caption = "logout";
-			this.barBtnLogout.Id = 24;
-			this.barBtnLogout.Name = "barBtnLogout";
 			// 
 			// FormMain
 			// 
@@ -331,5 +374,9 @@
 		private DevExpress.XtraBars.BarButtonItem barBtnRoomList;
 		private DevExpress.XtraBars.BarButtonItem barBtnStudentList;
 		private DevExpress.XtraBars.BarButtonItem barBtnLogout;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem4;
 	}
 }
