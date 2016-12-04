@@ -42,7 +42,7 @@ namespace DataAccess.Migrations
 
 		protected override void Seed(DormitoryContext context)
 		{
-			DbClear.ClearAllData();
+			//DbClear.ClearAllData();
 			//System.Diagnostics.Debugger.Launch();
 
 			#region Add Buildings, Floors, Rooms
@@ -142,8 +142,8 @@ namespace DataAccess.Migrations
 					Content = "Là người dân tộc thiểu số, có bố hoặc mẹ là người dân tộc thiểu số"
 				}
 			};
-			priorityList.ForEach(p => context.Priorities.AddOrUpdate(p));
-			//priorityList.ForEach(p => context.Priorities.Attach(p));
+			//priorityList.ForEach(p => context.Priorities.AddOrUpdate(p));
+			priorityList.ForEach(p => context.Priorities.Attach(p));
 
 			#region Add Faculties, Classes, Students
 
@@ -151,7 +151,7 @@ namespace DataAccess.Migrations
 			{
 				new Student
 				{
-					StudentId = "51403001",
+					StudentId = "S00001",
 					ClubId = clubList[0].ClubId,
 					RoomId = "H101",
 					Name = "Neptune",
@@ -161,7 +161,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403002",
+					StudentId = "S00002",
 					ClubId = clubList[0].ClubId,
 					RoomId = "H101",
 					Name = "Neptune",
@@ -170,7 +170,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403003",
+					StudentId = "S00003",
 					ClubId = clubList[0].ClubId,
 					RoomId = "H101",
 					Name = "Neptune",
@@ -179,7 +179,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403004",
+					StudentId = "S00004",
 					ClubId = clubList[0].ClubId,
 					RoomId = "H101",
 					Name = "Neptune",
@@ -192,7 +192,7 @@ namespace DataAccess.Migrations
 			{
 				new Student
 				{
-					StudentId = "51403101",
+					StudentId = "S00005",
 					ClubId = clubList[1].ClubId,
 					RoomId = "H102",
 					Name = "Neptune",
@@ -201,7 +201,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403102",
+					StudentId = "S00006",
 					ClubId = clubList[1].ClubId,
 					RoomId = "H102",
 					Name = "Neptune",
@@ -210,7 +210,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403103",
+					StudentId = "S00007",
 					ClubId = clubList[1].ClubId,
 					RoomId = "H102",
 					Name = "Neptune",
@@ -218,7 +218,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403104",
+					StudentId = "S00008",
 					ClubId = clubList[2].ClubId,
 					RoomId = "H102",
 					Name = "Neptune",
@@ -230,7 +230,7 @@ namespace DataAccess.Migrations
 			{
 				new Student
 				{
-					StudentId = "51403201",
+					StudentId = "S00009",
 					ClubId = clubList[3].ClubId,
 					RoomId = "H103",
 					Name = "Neptune",
@@ -239,7 +239,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403202",
+					StudentId = "S00010",
 					ClubId = clubList[3].ClubId,
 					RoomId = "H103",
 					Name = "Neptune",
@@ -248,7 +248,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403203",
+					StudentId = "S00011",
 					ClubId = clubList[3].ClubId,
 					RoomId = "H103",
 					Name = "Neptune",
@@ -256,7 +256,7 @@ namespace DataAccess.Migrations
 				},
 				new Student
 				{
-					StudentId = "51403204",
+					StudentId = "S00012",
 					ClubId = clubList[3].ClubId,
 					RoomId = "H103",
 					Name = "Neptune",
@@ -264,34 +264,34 @@ namespace DataAccess.Migrations
 				}
 			};
 
-			var classes = new List<Domain.Class>
+			var classes = new List<Class>
 			{
-				new Domain.Class
+				new Class
 				{
 					ClassId = "14050301",
 					Students = students1
 				},
-				new Domain.Class
+				new Class
 				{
 					ClassId = "14050302",
 					Students = students2
 				},
-				new Domain.Class
+				new Class
 				{
 					ClassId = "14050303",
 					Students = students3
 				}
 			};
 
-			var facultyList = new List<Domain.Faculty>
+			var facultyList = new List<Faculty>
 			{
-				new Domain.Faculty
+				new Faculty
 				{
 					FacultyId = "5",
 					Name = "Công nghệ thông tin",
 					Classes = classes
 				},
-				new Domain.Faculty
+				new Faculty
 				{
 					FacultyId = "4",
 					Name = "Điện"

@@ -15,37 +15,42 @@ namespace Final
 			InitializeComponent();
 		}
 
-		private void textBoxX5_TextChanged(object sender, EventArgs e)
-		{
-		}
-
 		private void btnComfirm_Click(object sender, EventArgs e)
 		{
-			if (Utilities.StringIsNullOrEmpty
-				(
-				txtStudentId.Text,
-				txtName.Text,
-				txtAddress.Text,
-				txtNation.Text,
-				txtReligion.Text,
-				txtPhone.Text,
-				txtSsn.Text
-				))
+			StudentDto newStudentDto;
+			if (Utilities.StringIsNullOrEmpty(txtStudentId.Text, txtName.Text, txtAddress.Text, txtNation.Text, txtReligion.Text,
+				txtPhone.Text, txtSsn.Text))
 			{
-				MessageBox.Show(@"Please fill in all fields", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				XtraMessageBox.Show(@"Please fill in all fields", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
-			StudentBusiness.AddStudent(CreateStudent());
+			try
+			{
+				newStudentDto = CreateStudent();
+			}
+			catch (Exception)
+			{
+				XtraMessageBox.Show(@"Thông tin không hợp lệ", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			try
+			{
+				StudentBusiness.AddStudent(newStudentDto);
+			}
+			catch (Exception)
+			{
+				XtraMessageBox.Show(@"Sinh viên đã có trong kí túc xá", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
 			Close();
 		}
-
 
 		private StudentDto CreateStudent()
 		{
 			return new StudentDto
 			{
 				StudentId = txtStudentId.Text,
-				ClubId = ((ClubDto)lookUpEditClub.GetSelectedDataRow()).ClubId,
+				ClubId = ((ClubDto) lookUpEditClub.GetSelectedDataRow()).ClubId,
 				Name = txtName.Text,
 				RoomId = lockUpEditRoom.Text,
 				DateOfBirth = dateTimePicker1.Value,
@@ -66,10 +71,10 @@ namespace Final
 			InitLookUpEdit(lookUpEditBuilding, BuildingBusiness.GetAll(), "BuildingId", "BuildingId");
 			InitLookUpEdit(lookUpEditFaculty, FacultyBusiness.GetAll(), "FacultyId", "Name");
 
-			cbbGender.Properties.Items.AddRange(new object[] { "Male", "Female" });
+			cbbGender.Properties.Items.AddRange(new object[] {"Male", "Female"});
 			cbbGender.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
 			cbbGender.SelectedIndex = 0;
-			cbbCourse.Properties.Items.AddRange(new object[] { 2016, 2015, 2013, 2014 });
+			cbbCourse.Properties.Items.AddRange(new object[] {2016, 2015, 2013, 2014});
 			cbbCourse.Properties.TextEditStyle = TextEditStyles.DisableTextEditor;
 			cbbCourse.SelectedIndex = 0;
 		}
@@ -101,7 +106,9 @@ namespace Final
 
 		private void lookUpEditFaculty_EditValueChanged(object sender, EventArgs e)
 		{
-			InitLookUpEdit(lookUpEditClass, ClassBusiness.GetClassByFacultyId(lookUpEditFaculty.Properties.GetKeyValueByDisplayText(lookUpEditFaculty.Text).ToString()), "ClassId", "ClassId");
+			InitLookUpEdit(lookUpEditClass,
+				ClassBusiness.GetClassByFacultyId(((FacultyDto) lookUpEditFaculty.GetSelectedDataRow()).FacultyId), "ClassId",
+				"ClassId");
 			lookUpEditClass.Properties.Columns["FacultyId"].Visible = false;
 			lookUpEditClass.Properties.Columns["Faculty"].Visible = false;
 		}

@@ -8,10 +8,10 @@ namespace Business
 {
 	public static class StudentBusiness
 	{
-        /// <summary>
-        /// Lấy ra danh sách tất cả thông tin sinh viên
-        /// </summary>
-        /// <returns></returns>
+		/// <summary>
+		///     Lấy ra danh sách tất cả thông tin sinh viên
+		/// </summary>
+		/// <returns></returns>
 		public static List<StudentDto> GetAll()
 		{
 			using (var unitOfWork = new UnitOfWork())
@@ -21,10 +21,10 @@ namespace Business
 			}
 		}
 
-        /// <summary>
-        /// Thêm thông tin sinh viên
-        /// </summary>
-        /// <param name="studentDto"></param>
+		/// <summary>
+		///     Thêm thông tin sinh viên
+		/// </summary>
+		/// <param name="studentDto"></param>
 		public static void AddStudent(StudentDto studentDto)
 		{
 			using (var unitOfWork = new UnitOfWork())
@@ -34,10 +34,10 @@ namespace Business
 			}
 		}
 
-        /// <summary>
-        /// Chỉnh sửa thông tin sinh viên
-        /// </summary>
-        /// <param name="studentDto"></param>
+		/// <summary>
+		///     Chỉnh sửa thông tin sinh viên
+		/// </summary>
+		/// <param name="studentDto"></param>
 		public static void EditStudent(StudentDto studentDto)
 		{
 			using (var unitOfWork = new UnitOfWork())

@@ -1,5 +1,4 @@
 ﻿using System;
-using DataAccess.Domain;
 using DataAccess.Repositories;
 
 namespace DataAccess
@@ -13,8 +12,8 @@ namespace DataAccess
 		private EmployeeRepository employees;
 		private FacultyRepository faculties;
 		private FloorRepository floors;
-		private StudentRepository students;
 		private RoomRepository rooms;
+		private StudentRepository students;
 
 		public UnitOfWork()
 		{
@@ -60,7 +59,8 @@ namespace DataAccess
 			}
 		}
 
-		public EmployeeRepository Employees {
+		public EmployeeRepository Employees
+		{
 			get
 			{
 				if (employees != null)
@@ -72,7 +72,8 @@ namespace DataAccess
 			}
 		}
 
-		public FacultyRepository Faculties {
+		public FacultyRepository Faculties
+		{
 			get
 			{
 				if (faculties != null)
@@ -84,7 +85,8 @@ namespace DataAccess
 			}
 		}
 
-		public FloorRepository Floors {
+		public FloorRepository Floors
+		{
 			get
 			{
 				if (floors != null)
@@ -96,7 +98,8 @@ namespace DataAccess
 			}
 		}
 
-		public StudentRepository Students {
+		public StudentRepository Students
+		{
 			get
 			{
 				if (students != null)
@@ -108,7 +111,8 @@ namespace DataAccess
 			}
 		}
 
-		public RoomRepository Rooms {
+		public RoomRepository Rooms
+		{
 			get
 			{
 				if (rooms != null)

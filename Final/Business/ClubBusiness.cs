@@ -8,10 +8,10 @@ namespace Business
 {
 	public static class ClubBusiness
 	{
-        /// <summary>
-        /// Lấy ra danh sách tất cả thông tin câu lạc bộ
-        /// </summary>
-        /// <returns></returns>
+		/// <summary>
+		///     Lấy ra danh sách tất cả thông tin câu lạc bộ
+		/// </summary>
+		/// <returns></returns>
 		public static List<ClubDto> GetAll()
 		{
 			using (var unitOfWork = new UnitOfWork())

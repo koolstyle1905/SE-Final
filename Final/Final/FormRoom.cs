@@ -13,10 +13,10 @@ namespace Final
 
 		private void FormRoom_Load(object sender, EventArgs e)
 		{
-			RoomBusiness.CreateTreeRoom(treeView1);
+			RoomBusiness.CreateTreeRoom(treeViewFloor);
 		}
 
-		private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+		private void treeViewFloor_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
 		{
 			gridControl1.DataSource = RoomBusiness.GetRoomsByFloorId(e.Node.Text);
 		}

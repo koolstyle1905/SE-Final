@@ -81,6 +81,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormReportAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportAbsence.Designer.cs">
+      <DependentUpon>FormReportAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViolationRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViolationRecord.Designer.cs">
+      <DependentUpon>FormViolationRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPermission.Designer.cs">
+      <DependentUpon>FormPermission.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRoom.cs">
       <SubType>Form</SubType>
@@ -122,11 +140,20 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPermission.resx">
+      <DependentUpon>FormPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportAbsence.resx">
+      <DependentUpon>FormReportAbsence.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRoom.resx">
       <DependentUpon>FormRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViolationRecord.resx">
+      <DependentUpon>FormViolationRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -140,6 +167,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataTransfer.Attendance.datasource" />
     <None Include="Properties\DataSources\DataTransfer.RoomDto.datasource" />
     <None Include="Properties\DataSources\DataTransfer.StudentDto.datasource" />
     <None Include="Properties\Settings.settings">

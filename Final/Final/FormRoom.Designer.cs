@@ -36,7 +36,7 @@
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.colRoomId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colNumOfStudent = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.treeView1 = new System.Windows.Forms.TreeView();
+			this.treeViewFloor = new System.Windows.Forms.TreeView();
 			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.colStudentId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colClass = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,7 +63,7 @@
 			// panelControl1
 			// 
 			this.panelControl1.Controls.Add(this.gridControl1);
-			this.panelControl1.Controls.Add(this.treeView1);
+			this.panelControl1.Controls.Add(this.treeViewFloor);
 			this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelControl1.Location = new System.Drawing.Point(0, 0);
 			this.panelControl1.Name = "panelControl1";
@@ -114,14 +114,14 @@
 			this.colNumOfStudent.Visible = true;
 			this.colNumOfStudent.VisibleIndex = 1;
 			// 
-			// treeView1
+			// treeViewFloor
 			// 
-			this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.treeView1.Location = new System.Drawing.Point(2, 2);
-			this.treeView1.Name = "treeView1";
-			this.treeView1.Size = new System.Drawing.Size(121, 512);
-			this.treeView1.TabIndex = 0;
-			this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+			this.treeViewFloor.Dock = System.Windows.Forms.DockStyle.Left;
+			this.treeViewFloor.Location = new System.Drawing.Point(2, 2);
+			this.treeViewFloor.Name = "treeViewFloor";
+			this.treeViewFloor.Size = new System.Drawing.Size(121, 512);
+			this.treeViewFloor.TabIndex = 0;
+			this.treeViewFloor.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewFloor_NodeMouseClick);
 			// 
 			// gridView2
 			// 
@@ -268,7 +268,7 @@
 		private DevExpress.XtraEditors.PanelControl panelControl1;
 		private DevExpress.XtraGrid.GridControl gridControl1;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-		private System.Windows.Forms.TreeView treeView1;
+		private System.Windows.Forms.TreeView treeViewFloor;
 		private System.Windows.Forms.BindingSource roomDtoBindingSource;
 		private DevExpress.XtraGrid.Columns.GridColumn colRoomId;
 		private DevExpress.XtraGrid.Columns.GridColumn colNumOfStudent;

@@ -49,7 +49,7 @@ namespace Final
 		private void InitComboBoxEditGender()
 		{
 			var riComboBoxGender = new RepositoryItemComboBox();
-			riComboBoxGender.Items.AddRange(new object[] { "Male", "Female" });
+			riComboBoxGender.Items.AddRange(new object[] {"Male", "Female"});
 			riComboBoxGender.TextEditStyle = TextEditStyles.DisableTextEditor;
 			gridViewStudent.Columns["Gender"].ColumnEdit = riComboBoxGender;
 		}

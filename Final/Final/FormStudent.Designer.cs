@@ -29,6 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
 			this.gridViewPriorities = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.colPriorityId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colContent = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,14 +51,16 @@
 			this.colSsn = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			this.colFaculty = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+			this.gridViewCarer = new DevExpress.XtraGrid.Views.Grid.GridView();
 			((System.ComponentModel.ISupportInitialize)(this.gridViewPriorities)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.studentDtoBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridViewStudent)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
 			this.panelControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.gridViewCarer)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// gridViewPriorities
@@ -85,6 +89,13 @@
 			// 
 			this.gridControl1.DataSource = this.studentDtoBindingSource;
 			this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			gridLevelNode1.LevelTemplate = this.gridViewPriorities;
+			gridLevelNode1.RelationName = "Priorities";
+			gridLevelNode2.LevelTemplate = this.gridViewCarer;
+			gridLevelNode2.RelationName = "Carers";
+			this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1,
+            gridLevelNode2});
 			this.gridControl1.Location = new System.Drawing.Point(2, 2);
 			this.gridControl1.MainView = this.gridViewStudent;
 			this.gridControl1.Name = "gridControl1";
@@ -92,7 +103,8 @@
 			this.gridControl1.TabIndex = 0;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewStudent,
-            this.gridViewPriorities});
+            this.gridViewPriorities,
+            this.gridViewCarer});
 			// 
 			// studentDtoBindingSource
 			// 
@@ -101,24 +113,24 @@
 			// gridViewStudent
 			// 
 			this.gridViewStudent.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colClassId,
             this.colStudentId,
             this.colClubId,
             this.colRoomId,
-            this.colPlaceOfBirth,
-            this.colNation,
-            this.colReligion,
-            this.colCourse,
+            this.colClassId,
+            this.colFaculty,
             this.colName,
             this.colGender,
             this.colDateOfBirth,
             this.colSsn,
             this.colAddress,
             this.colPhone,
-            this.colFaculty});
+            this.colNation,
+            this.colReligion,
+            this.colPlaceOfBirth,
+            this.colCourse});
 			this.gridViewStudent.GridControl = this.gridControl1;
 			this.gridViewStudent.Name = "gridViewStudent";
-			this.gridViewStudent.OptionsEditForm.EditFormColumnCount = 6;
+			this.gridViewStudent.OptionsEditForm.EditFormColumnCount = 7;
 			this.gridViewStudent.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewStudent_RowUpdated);
 			// 
 			// colClassId
@@ -127,21 +139,21 @@
 			this.colClassId.FieldName = "Class.ClassId";
 			this.colClassId.Name = "colClassId";
 			this.colClassId.Visible = true;
-			this.colClassId.VisibleIndex = 0;
+			this.colClassId.VisibleIndex = 3;
 			// 
 			// colStudentId
 			// 
 			this.colStudentId.FieldName = "StudentId";
 			this.colStudentId.Name = "colStudentId";
 			this.colStudentId.Visible = true;
-			this.colStudentId.VisibleIndex = 1;
+			this.colStudentId.VisibleIndex = 0;
 			// 
 			// colClubId
 			// 
 			this.colClubId.FieldName = "ClubId";
 			this.colClubId.Name = "colClubId";
 			this.colClubId.Visible = true;
-			this.colClubId.VisibleIndex = 2;
+			this.colClubId.VisibleIndex = 1;
 			// 
 			// colRoomId
 			// 
@@ -149,77 +161,85 @@
 			this.colRoomId.Name = "colRoomId";
 			this.colRoomId.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.False;
 			this.colRoomId.Visible = true;
-			this.colRoomId.VisibleIndex = 3;
+			this.colRoomId.VisibleIndex = 2;
 			// 
 			// colPlaceOfBirth
 			// 
 			this.colPlaceOfBirth.FieldName = "PlaceOfBirth";
 			this.colPlaceOfBirth.Name = "colPlaceOfBirth";
 			this.colPlaceOfBirth.Visible = true;
-			this.colPlaceOfBirth.VisibleIndex = 7;
+			this.colPlaceOfBirth.VisibleIndex = 11;
 			// 
 			// colNation
 			// 
 			this.colNation.FieldName = "Nation";
 			this.colNation.Name = "colNation";
 			this.colNation.Visible = true;
-			this.colNation.VisibleIndex = 8;
+			this.colNation.VisibleIndex = 12;
 			// 
 			// colReligion
 			// 
 			this.colReligion.FieldName = "Religion";
 			this.colReligion.Name = "colReligion";
 			this.colReligion.Visible = true;
-			this.colReligion.VisibleIndex = 9;
+			this.colReligion.VisibleIndex = 13;
 			// 
 			// colCourse
 			// 
 			this.colCourse.FieldName = "Course";
 			this.colCourse.Name = "colCourse";
 			this.colCourse.Visible = true;
-			this.colCourse.VisibleIndex = 10;
+			this.colCourse.VisibleIndex = 14;
 			// 
 			// colName
 			// 
 			this.colName.FieldName = "Name";
 			this.colName.Name = "colName";
 			this.colName.Visible = true;
-			this.colName.VisibleIndex = 4;
+			this.colName.VisibleIndex = 5;
 			// 
 			// colGender
 			// 
 			this.colGender.FieldName = "Gender";
 			this.colGender.Name = "colGender";
 			this.colGender.Visible = true;
-			this.colGender.VisibleIndex = 5;
+			this.colGender.VisibleIndex = 6;
 			// 
 			// colDateOfBirth
 			// 
 			this.colDateOfBirth.FieldName = "DateOfBirth";
 			this.colDateOfBirth.Name = "colDateOfBirth";
 			this.colDateOfBirth.Visible = true;
-			this.colDateOfBirth.VisibleIndex = 6;
+			this.colDateOfBirth.VisibleIndex = 7;
 			// 
 			// colSsn
 			// 
 			this.colSsn.FieldName = "Ssn";
 			this.colSsn.Name = "colSsn";
 			this.colSsn.Visible = true;
-			this.colSsn.VisibleIndex = 11;
+			this.colSsn.VisibleIndex = 8;
 			// 
 			// colAddress
 			// 
 			this.colAddress.FieldName = "Address";
 			this.colAddress.Name = "colAddress";
 			this.colAddress.Visible = true;
-			this.colAddress.VisibleIndex = 12;
+			this.colAddress.VisibleIndex = 9;
 			// 
 			// colPhone
 			// 
 			this.colPhone.FieldName = "Phone";
 			this.colPhone.Name = "colPhone";
 			this.colPhone.Visible = true;
-			this.colPhone.VisibleIndex = 13;
+			this.colPhone.VisibleIndex = 10;
+			// 
+			// colFaculty
+			// 
+			this.colFaculty.Caption = "Faculty";
+			this.colFaculty.FieldName = "Class.Faculty.Name";
+			this.colFaculty.Name = "colFaculty";
+			this.colFaculty.Visible = true;
+			this.colFaculty.VisibleIndex = 4;
 			// 
 			// panelControl1
 			// 
@@ -230,13 +250,10 @@
 			this.panelControl1.Size = new System.Drawing.Size(1206, 709);
 			this.panelControl1.TabIndex = 1;
 			// 
-			// colFaculty
+			// gridViewCarer
 			// 
-			this.colFaculty.Caption = "Faculty";
-			this.colFaculty.FieldName = "Class.Faculty.Name";
-			this.colFaculty.Name = "colFaculty";
-			this.colFaculty.Visible = true;
-			this.colFaculty.VisibleIndex = 14;
+			this.gridViewCarer.GridControl = this.gridControl1;
+			this.gridViewCarer.Name = "gridViewCarer";
 			// 
 			// FormStudent
 			// 
@@ -253,6 +270,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridViewStudent)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
 			this.panelControl1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.gridViewCarer)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -280,5 +298,6 @@
 		private System.Windows.Forms.BindingSource studentDtoBindingSource;
 		private DevExpress.XtraGrid.Columns.GridColumn colClassId;
 		private DevExpress.XtraGrid.Columns.GridColumn colFaculty;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridViewCarer;
 	}
 }

@@ -30,6 +30,8 @@
 		{
 			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+			this.lookUpEditFaculty = new DevExpress.XtraEditors.LookUpEdit();
+			this.lookUpEditClass = new DevExpress.XtraEditors.LookUpEdit();
 			this.cbbCourse = new DevExpress.XtraEditors.ComboBoxEdit();
 			this.cbbGender = new DevExpress.XtraEditors.ComboBoxEdit();
 			this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
@@ -62,20 +64,18 @@
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.lockUpEditRoom = new DevExpress.XtraEditors.LookUpEdit();
 			this.lookUpEditClub = new DevExpress.XtraEditors.LookUpEdit();
-			this.lookUpEditClass = new DevExpress.XtraEditors.LookUpEdit();
-			this.lookUpEditFaculty = new DevExpress.XtraEditors.LookUpEdit();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
 			this.panelControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
 			this.panelControl2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFaculty.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClass.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbbCourse.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbbGender.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFloor.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditBuilding.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lockUpEditRoom.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClub.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClass.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFaculty.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panelControl1
@@ -128,6 +128,31 @@
 			this.panelControl2.Name = "panelControl2";
 			this.panelControl2.Size = new System.Drawing.Size(479, 404);
 			this.panelControl2.TabIndex = 0;
+			// 
+			// lookUpEditFaculty
+			// 
+			this.lookUpEditFaculty.Location = new System.Drawing.Point(320, 235);
+			this.lookUpEditFaculty.Name = "lookUpEditFaculty";
+			this.lookUpEditFaculty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lookUpEditFaculty.Properties.NullText = "";
+			this.lookUpEditFaculty.Properties.PopupSizeable = false;
+			this.lookUpEditFaculty.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+			this.lookUpEditFaculty.Size = new System.Drawing.Size(100, 22);
+			this.lookUpEditFaculty.TabIndex = 37;
+			this.lookUpEditFaculty.EditValueChanged += new System.EventHandler(this.lookUpEditFaculty_EditValueChanged);
+			// 
+			// lookUpEditClass
+			// 
+			this.lookUpEditClass.Location = new System.Drawing.Point(115, 69);
+			this.lookUpEditClass.Name = "lookUpEditClass";
+			this.lookUpEditClass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lookUpEditClass.Properties.NullText = "";
+			this.lookUpEditClass.Properties.PopupSizeable = false;
+			this.lookUpEditClass.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+			this.lookUpEditClass.Size = new System.Drawing.Size(100, 22);
+			this.lookUpEditClass.TabIndex = 36;
 			// 
 			// cbbCourse
 			// 
@@ -309,7 +334,6 @@
 			this.txtSsn.PreventEnterBeep = true;
 			this.txtSsn.Size = new System.Drawing.Size(100, 23);
 			this.txtSsn.TabIndex = 15;
-			this.txtSsn.TextChanged += new System.EventHandler(this.textBoxX5_TextChanged);
 			// 
 			// txtAddress
 			// 
@@ -449,31 +473,6 @@
 			this.lookUpEditClub.Size = new System.Drawing.Size(100, 22);
 			this.lookUpEditClub.TabIndex = 24;
 			// 
-			// lookUpEditClass
-			// 
-			this.lookUpEditClass.Location = new System.Drawing.Point(115, 69);
-			this.lookUpEditClass.Name = "lookUpEditClass";
-			this.lookUpEditClass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.lookUpEditClass.Properties.NullText = "";
-			this.lookUpEditClass.Properties.PopupSizeable = false;
-			this.lookUpEditClass.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-			this.lookUpEditClass.Size = new System.Drawing.Size(100, 22);
-			this.lookUpEditClass.TabIndex = 36;
-			// 
-			// lookUpEditFaculty
-			// 
-			this.lookUpEditFaculty.Location = new System.Drawing.Point(320, 235);
-			this.lookUpEditFaculty.Name = "lookUpEditFaculty";
-			this.lookUpEditFaculty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.lookUpEditFaculty.Properties.NullText = "";
-			this.lookUpEditFaculty.Properties.PopupSizeable = false;
-			this.lookUpEditFaculty.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-			this.lookUpEditFaculty.Size = new System.Drawing.Size(100, 22);
-			this.lookUpEditFaculty.TabIndex = 37;
-			this.lookUpEditFaculty.EditValueChanged += new System.EventHandler(this.lookUpEditFaculty_EditValueChanged);
-			// 
 			// FormAddStudent
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,14 +487,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
 			this.panelControl2.ResumeLayout(false);
 			this.panelControl2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFaculty.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClass.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbbCourse.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbbGender.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFloor.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditBuilding.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lockUpEditRoom.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClub.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClass.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFaculty.Properties)).EndInit();
 			this.ResumeLayout(false);
 
 		}

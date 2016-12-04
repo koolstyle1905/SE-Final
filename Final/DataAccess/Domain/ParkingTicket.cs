@@ -39,7 +39,7 @@ namespace DataAccess.Domain
 		public string EngineModel { get; set; }
 
 		[StringLength(20)]
-		public string VINNumber { get; set; }
+		public string ViNumber { get; set; }
 
 		[SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 		public virtual ICollection<ParkingDetail> ParkingDetails { get; set; }

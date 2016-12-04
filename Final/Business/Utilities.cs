@@ -20,7 +20,7 @@ namespace Business
 		{
 			if (lastId == string.Empty)
 			{
-				return prefixId + "0001"; // fix width default
+				return prefixId + "00001"; // fix width default
 			}
 			var nextId = int.Parse(lastId.Remove(0, prefixId.Length)) + 1;
 			var lengthNumerId = lastId.Length - prefixId.Length;
