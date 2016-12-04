@@ -62,9 +62,9 @@ namespace Final
 
 		private void FormMain_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 
-		private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+		private void barBtnExit_ItemClick(object sender, ItemClickEventArgs e)
 		{
-
+			FormMain_FormClosed(sender,new FormClosedEventArgs(CloseReason.ApplicationExitCall));
 		}
 	}
 }

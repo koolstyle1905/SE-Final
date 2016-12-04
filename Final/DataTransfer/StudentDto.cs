@@ -14,6 +14,8 @@ namespace DataTransfer
 		[Required]
 		public string StudentId { get; set; }
 
+		public ClassDto Class { get; set; }
+
 		public string ClubId { get; set; }
 
 		public string RoomId { get; set; }

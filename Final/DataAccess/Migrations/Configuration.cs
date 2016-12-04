@@ -264,34 +264,34 @@ namespace DataAccess.Migrations
 				}
 			};
 
-			var classes = new List<Class>
+			var classes = new List<Domain.Class>
 			{
-				new Class
+				new Domain.Class
 				{
 					ClassId = "14050301",
 					Students = students1
 				},
-				new Class
+				new Domain.Class
 				{
 					ClassId = "14050302",
 					Students = students2
 				},
-				new Class
+				new Domain.Class
 				{
 					ClassId = "14050303",
 					Students = students3
 				}
 			};
 
-			var facultyList = new List<Faculty>
+			var facultyList = new List<Domain.Faculty>
 			{
-				new Faculty
+				new Domain.Faculty
 				{
 					FacultyId = "5",
 					Name = "Công nghệ thông tin",
 					Classes = classes
 				},
-				new Faculty
+				new Domain.Faculty
 				{
 					FacultyId = "4",
 					Name = "Điện"

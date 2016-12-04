@@ -44,8 +44,10 @@
     <Compile Include="BuildingDto.cs" />
     <Compile Include="BuildingName.cs" />
     <Compile Include="CarerDto.cs" />
+    <Compile Include="ClassDto.cs" />
     <Compile Include="ClubDto.cs" />
     <Compile Include="EmployeeDto.cs" />
+    <Compile Include="FacultyDto.cs" />
     <Compile Include="FloorDto.cs" />
     <Compile Include="LeaseContractDto.cs" />
     <Compile Include="PersonDto.cs" />

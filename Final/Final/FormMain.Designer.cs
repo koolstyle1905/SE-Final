@@ -42,7 +42,7 @@
 			this.barBtnExcel = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
-			this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+			this.barBtnExit = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnPDF = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnLogin = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
@@ -58,9 +58,8 @@
 			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-			this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
@@ -82,7 +81,7 @@
             this.barBtnExcel,
             this.barButtonItem9,
             this.barBtnSearch,
-            this.barButtonItem13,
+            this.barBtnExit,
             this.barBtnPDF,
             this.barBtnLogin,
             this.barButtonItem5,
@@ -98,8 +97,7 @@
 			this.ribbonControl1.Name = "ribbonControl1";
 			this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
-            this.ribbonPage1,
-            this.ribbonPage3});
+            this.ribbonPage1});
 			this.ribbonControl1.Size = new System.Drawing.Size(1244, 184);
 			// 
 			// barBtnAddStudent
@@ -181,12 +179,13 @@
 			this.barBtnSearch.ImageUri.Uri = "Zoom";
 			this.barBtnSearch.Name = "barBtnSearch";
 			// 
-			// barButtonItem13
+			// barBtnExit
 			// 
-			this.barButtonItem13.Caption = "Exit";
-			this.barButtonItem13.Id = 15;
-			this.barButtonItem13.ImageUri.Uri = "Close";
-			this.barButtonItem13.Name = "barButtonItem13";
+			this.barBtnExit.Caption = "Exit";
+			this.barBtnExit.Id = 15;
+			this.barBtnExit.ImageUri.Uri = "Close";
+			this.barBtnExit.Name = "barBtnExit";
+			this.barBtnExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnExit_ItemClick);
 			// 
 			// barBtnPDF
 			// 
@@ -209,6 +208,7 @@
 			// 
 			this.barBtnRoomList.Caption = "Room List";
 			this.barBtnRoomList.Id = 22;
+			this.barBtnRoomList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnRoomList.LargeGlyph")));
 			this.barBtnRoomList.Name = "barBtnRoomList";
 			this.barBtnRoomList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnRoomList_ItemClick);
 			// 
@@ -265,15 +265,15 @@
 			// 
 			// ribbonPageGroup2
 			// 
-			this.ribbonPageGroup2.ItemLinks.Add(this.barBtnLogout);
 			this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
+			this.ribbonPageGroup2.ItemLinks.Add(this.barBtnLogout);
 			this.ribbonPageGroup2.Name = "ribbonPageGroup2";
 			this.ribbonPageGroup2.Text = "Account";
 			// 
 			// ribbonPageGroup3
 			// 
 			this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
-			this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem13);
+			this.ribbonPageGroup3.ItemLinks.Add(this.barBtnExit);
 			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
 			this.ribbonPageGroup3.Text = "System";
 			// 
@@ -281,22 +281,29 @@
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
+            this.ribbonPageGroup6,
             this.ribbonPageGroup4});
 			this.ribbonPage1.Name = "ribbonPage1";
-			this.ribbonPage1.Text = "Student";
+			this.ribbonPage1.Text = "Management";
 			// 
 			// ribbonPageGroup1
 			// 
 			this.ribbonPageGroup1.ItemLinks.Add(this.barBtnStudentList);
-			this.ribbonPageGroup1.ItemLinks.Add(this.barBtnRefesh);
-			this.ribbonPageGroup1.ItemLinks.Add(this.barButtonAddStudent);
-			this.ribbonPageGroup1.ItemLinks.Add(this.barBtnRemoveStudent);
-			this.ribbonPageGroup1.ItemLinks.Add(this.barBtnSearch);
-			this.ribbonPageGroup1.ItemLinks.Add(this.barBtnSave);
-			this.ribbonPageGroup1.ItemLinks.Add(this.barBtnUndo);
-			this.ribbonPageGroup1.ItemLinks.Add(this.barBtnRedo);
+			this.ribbonPageGroup1.ItemLinks.Add(this.barBtnRoomList);
 			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
 			this.ribbonPageGroup1.Text = "Management";
+			// 
+			// ribbonPageGroup6
+			// 
+			this.ribbonPageGroup6.ItemLinks.Add(this.barBtnRefesh);
+			this.ribbonPageGroup6.ItemLinks.Add(this.barButtonAddStudent);
+			this.ribbonPageGroup6.ItemLinks.Add(this.barBtnRemoveStudent);
+			this.ribbonPageGroup6.ItemLinks.Add(this.barBtnSearch);
+			this.ribbonPageGroup6.ItemLinks.Add(this.barBtnSave);
+			this.ribbonPageGroup6.ItemLinks.Add(this.barBtnUndo);
+			this.ribbonPageGroup6.ItemLinks.Add(this.barBtnRedo);
+			this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+			this.ribbonPageGroup6.Text = "Task";
 			// 
 			// ribbonPageGroup4
 			// 
@@ -305,21 +312,6 @@
 			this.ribbonPageGroup4.ItemLinks.Add(this.barBtnPrint);
 			this.ribbonPageGroup4.Name = "ribbonPageGroup4";
 			this.ribbonPageGroup4.Text = "Export";
-			// 
-			// ribbonPage3
-			// 
-			this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
-			this.ribbonPage3.Name = "ribbonPage3";
-			this.ribbonPage3.Text = "Room";
-			// 
-			// ribbonPageGroup5
-			// 
-			this.ribbonPageGroup5.ItemLinks.Add(this.barBtnRoomList);
-			this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem2);
-			this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem3);
-			this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-			this.ribbonPageGroup5.Text = "Management";
 			// 
 			// xtraTabbedMdiManager1
 			// 
@@ -361,14 +353,12 @@
 		private DevExpress.XtraBars.BarButtonItem barBtnExcel;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem9;
 		private DevExpress.XtraBars.BarButtonItem barBtnSearch;
-		private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+		private DevExpress.XtraBars.BarButtonItem barBtnExit;
 		private DevExpress.XtraBars.BarButtonItem barBtnPDF;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
 		private DevExpress.XtraBars.BarButtonItem barBtnLogin;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem5;
 		private DevExpress.XtraBars.BarButtonItem barBtnRoomList;
@@ -378,5 +368,6 @@
 		private DevExpress.XtraBars.BarButtonItem barButtonItem2;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem3;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
 	}
 }

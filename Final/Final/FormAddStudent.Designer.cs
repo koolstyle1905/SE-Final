@@ -30,6 +30,11 @@
 		{
 			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+			this.cbbCourse = new DevExpress.XtraEditors.ComboBoxEdit();
+			this.cbbGender = new DevExpress.XtraEditors.ComboBoxEdit();
+			this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+			this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
 			this.lookUpEditFloor = new DevExpress.XtraEditors.LookUpEdit();
@@ -43,7 +48,6 @@
 			this.txtNation = new DevComponents.DotNetBar.Controls.TextBoxX();
 			this.txtSsn = new DevComponents.DotNetBar.Controls.TextBoxX();
 			this.txtAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.txtClassId = new DevComponents.DotNetBar.Controls.TextBoxX();
 			this.txtStudentId = new DevComponents.DotNetBar.Controls.TextBoxX();
 			this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -58,21 +62,20 @@
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.lockUpEditRoom = new DevExpress.XtraEditors.LookUpEdit();
 			this.lookUpEditClub = new DevExpress.XtraEditors.LookUpEdit();
-			this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-			this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-			this.cbbGender = new DevExpress.XtraEditors.ComboBoxEdit();
-			this.cbbCourse = new DevExpress.XtraEditors.ComboBoxEdit();
+			this.lookUpEditClass = new DevExpress.XtraEditors.LookUpEdit();
+			this.lookUpEditFaculty = new DevExpress.XtraEditors.LookUpEdit();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
 			this.panelControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
 			this.panelControl2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.cbbCourse.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.cbbGender.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFloor.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditBuilding.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lockUpEditRoom.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClub.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cbbGender.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.cbbCourse.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClass.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFaculty.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panelControl1
@@ -86,6 +89,8 @@
 			// 
 			// panelControl2
 			// 
+			this.panelControl2.Controls.Add(this.lookUpEditFaculty);
+			this.panelControl2.Controls.Add(this.lookUpEditClass);
 			this.panelControl2.Controls.Add(this.cbbCourse);
 			this.panelControl2.Controls.Add(this.cbbGender);
 			this.panelControl2.Controls.Add(this.labelControl16);
@@ -104,7 +109,6 @@
 			this.panelControl2.Controls.Add(this.txtNation);
 			this.panelControl2.Controls.Add(this.txtSsn);
 			this.panelControl2.Controls.Add(this.txtAddress);
-			this.panelControl2.Controls.Add(this.txtClassId);
 			this.panelControl2.Controls.Add(this.txtStudentId);
 			this.panelControl2.Controls.Add(this.labelControl11);
 			this.panelControl2.Controls.Add(this.labelControl10);
@@ -124,6 +128,53 @@
 			this.panelControl2.Name = "panelControl2";
 			this.panelControl2.Size = new System.Drawing.Size(479, 404);
 			this.panelControl2.TabIndex = 0;
+			// 
+			// cbbCourse
+			// 
+			this.cbbCourse.Location = new System.Drawing.Point(320, 69);
+			this.cbbCourse.Name = "cbbCourse";
+			this.cbbCourse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.cbbCourse.Size = new System.Drawing.Size(100, 22);
+			this.cbbCourse.TabIndex = 35;
+			// 
+			// cbbGender
+			// 
+			this.cbbGender.Location = new System.Drawing.Point(115, 216);
+			this.cbbGender.Name = "cbbGender";
+			this.cbbGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.cbbGender.Size = new System.Drawing.Size(100, 22);
+			this.cbbGender.TabIndex = 34;
+			// 
+			// labelControl16
+			// 
+			this.labelControl16.Location = new System.Drawing.Point(30, 221);
+			this.labelControl16.Name = "labelControl16";
+			this.labelControl16.Size = new System.Drawing.Size(46, 16);
+			this.labelControl16.TabIndex = 33;
+			this.labelControl16.Text = "Gender:";
+			// 
+			// txtName
+			// 
+			// 
+			// 
+			// 
+			this.txtName.Border.Class = "TextBoxBorder";
+			this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtName.Location = new System.Drawing.Point(115, 97);
+			this.txtName.Name = "txtName";
+			this.txtName.PreventEnterBeep = true;
+			this.txtName.Size = new System.Drawing.Size(100, 23);
+			this.txtName.TabIndex = 32;
+			// 
+			// labelControl15
+			// 
+			this.labelControl15.Location = new System.Drawing.Point(31, 99);
+			this.labelControl15.Name = "labelControl15";
+			this.labelControl15.Size = new System.Drawing.Size(38, 16);
+			this.labelControl15.TabIndex = 31;
+			this.labelControl15.Text = "Name:";
 			// 
 			// labelControl14
 			// 
@@ -273,19 +324,6 @@
 			this.txtAddress.Size = new System.Drawing.Size(100, 23);
 			this.txtAddress.TabIndex = 14;
 			// 
-			// txtClassId
-			// 
-			// 
-			// 
-			// 
-			this.txtClassId.Border.Class = "TextBoxBorder";
-			this.txtClassId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.txtClassId.Location = new System.Drawing.Point(115, 68);
-			this.txtClassId.Name = "txtClassId";
-			this.txtClassId.PreventEnterBeep = true;
-			this.txtClassId.Size = new System.Drawing.Size(100, 23);
-			this.txtClassId.TabIndex = 12;
-			// 
 			// txtStudentId
 			// 
 			// 
@@ -411,52 +449,30 @@
 			this.lookUpEditClub.Size = new System.Drawing.Size(100, 22);
 			this.lookUpEditClub.TabIndex = 24;
 			// 
-			// txtName
+			// lookUpEditClass
 			// 
-			// 
-			// 
-			// 
-			this.txtName.Border.Class = "TextBoxBorder";
-			this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.txtName.Location = new System.Drawing.Point(115, 97);
-			this.txtName.Name = "txtName";
-			this.txtName.PreventEnterBeep = true;
-			this.txtName.Size = new System.Drawing.Size(100, 23);
-			this.txtName.TabIndex = 32;
-			// 
-			// labelControl15
-			// 
-			this.labelControl15.Location = new System.Drawing.Point(31, 99);
-			this.labelControl15.Name = "labelControl15";
-			this.labelControl15.Size = new System.Drawing.Size(38, 16);
-			this.labelControl15.TabIndex = 31;
-			this.labelControl15.Text = "Name:";
-			// 
-			// labelControl16
-			// 
-			this.labelControl16.Location = new System.Drawing.Point(30, 221);
-			this.labelControl16.Name = "labelControl16";
-			this.labelControl16.Size = new System.Drawing.Size(46, 16);
-			this.labelControl16.TabIndex = 33;
-			this.labelControl16.Text = "Gender:";
-			// 
-			// cbbGender
-			// 
-			this.cbbGender.Location = new System.Drawing.Point(115, 216);
-			this.cbbGender.Name = "cbbGender";
-			this.cbbGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.lookUpEditClass.Location = new System.Drawing.Point(115, 69);
+			this.lookUpEditClass.Name = "lookUpEditClass";
+			this.lookUpEditClass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbbGender.Size = new System.Drawing.Size(100, 22);
-			this.cbbGender.TabIndex = 34;
+			this.lookUpEditClass.Properties.NullText = "";
+			this.lookUpEditClass.Properties.PopupSizeable = false;
+			this.lookUpEditClass.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+			this.lookUpEditClass.Size = new System.Drawing.Size(100, 22);
+			this.lookUpEditClass.TabIndex = 36;
 			// 
-			// cbbCourse
+			// lookUpEditFaculty
 			// 
-			this.cbbCourse.Location = new System.Drawing.Point(320, 69);
-			this.cbbCourse.Name = "cbbCourse";
-			this.cbbCourse.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.lookUpEditFaculty.Location = new System.Drawing.Point(320, 235);
+			this.lookUpEditFaculty.Name = "lookUpEditFaculty";
+			this.lookUpEditFaculty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbbCourse.Size = new System.Drawing.Size(100, 22);
-			this.cbbCourse.TabIndex = 35;
+			this.lookUpEditFaculty.Properties.NullText = "";
+			this.lookUpEditFaculty.Properties.PopupSizeable = false;
+			this.lookUpEditFaculty.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+			this.lookUpEditFaculty.Size = new System.Drawing.Size(100, 22);
+			this.lookUpEditFaculty.TabIndex = 37;
+			this.lookUpEditFaculty.EditValueChanged += new System.EventHandler(this.lookUpEditFaculty_EditValueChanged);
 			// 
 			// FormAddStudent
 			// 
@@ -472,12 +488,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
 			this.panelControl2.ResumeLayout(false);
 			this.panelControl2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.cbbCourse.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.cbbGender.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFloor.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditBuilding.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lockUpEditRoom.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClub.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cbbGender.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.cbbCourse.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEditClass.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEditFaculty.Properties)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -500,7 +518,6 @@
 		private DevComponents.DotNetBar.Controls.TextBoxX txtNation;
 		private DevComponents.DotNetBar.Controls.TextBoxX txtSsn;
 		private DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
-		private DevComponents.DotNetBar.Controls.TextBoxX txtClassId;
 		private DevComponents.DotNetBar.Controls.TextBoxX txtStudentId;
 		private DevExpress.XtraEditors.LabelControl labelControl11;
 		private DevExpress.XtraEditors.LabelControl labelControl10;
@@ -519,5 +536,7 @@
 		private DevExpress.XtraEditors.ComboBoxEdit cbbGender;
 		private DevExpress.XtraEditors.LabelControl labelControl16;
 		private DevExpress.XtraEditors.ComboBoxEdit cbbCourse;
+		private DevExpress.XtraEditors.LookUpEdit lookUpEditClass;
+		private DevExpress.XtraEditors.LookUpEdit lookUpEditFaculty;
 	}
 }

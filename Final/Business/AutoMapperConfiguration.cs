@@ -18,6 +18,8 @@ namespace Business
 				c.CreateMap<Room, RoomDto>();
 				c.CreateMap<Student, StudentDto>();
 				c.CreateMap<Priority, PriorityDto>();
+				c.CreateMap<Class, ClassDto>();
+				c.CreateMap<Faculty, FacultyDto>();
 
 				c.CreateMap<BuildingDto, Building>();
 				c.CreateMap<CarerDto, Carer>();
@@ -25,6 +27,8 @@ namespace Business
 				c.CreateMap<EmployeeDto, Employee>();
 				c.CreateMap<StudentDto, Student>();
 				c.CreateMap<PriorityDto, Priority>();
+				c.CreateMap<ClassDto, Class>();
+				c.CreateMap<FacultyDto, Faculty>();
 			});
 		}
 	}
