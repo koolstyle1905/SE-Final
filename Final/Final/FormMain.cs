@@ -10,10 +10,12 @@ namespace Final
 	public partial class FormMain : RibbonForm
 	{
 		private EmployeeDto employee;
+		private readonly FormLogin formLogin;
 
-		public FormMain(EmployeeDto employee)
+		public FormMain(EmployeeDto employee, FormLogin formLogin)
 		{
 			this.employee = employee;
+			this.formLogin = formLogin;
 			InitializeComponent();
 		}
 
@@ -62,7 +64,7 @@ namespace Final
 			}
 		}
 
-		private void FormMain_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
+		private void FormMain_FormClosed(object sender, FormClosedEventArgs e) => formLogin.Dispose();
 
 		private void barBtnExit_ItemClick(object sender, ItemClickEventArgs e)
 		{
@@ -116,6 +118,17 @@ namespace Final
 				var formReportAbsence = new FormReportAbsence {MdiParent = this};
 				formReportAbsence.Show();
 			}
+		}
+
+		private void barBtnLogout_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			Hide();
+			formLogin.Show();
+		}
+
+		private void barBtnSetting_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			new FormConfig().ShowDialog();
 		}
 	}
 }

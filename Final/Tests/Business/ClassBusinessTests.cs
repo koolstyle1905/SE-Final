@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Tests.Business
 {
-	[TestFixture()]
+	[TestFixture]
 	public class ClassBusinessTests
 	{
 		public ClassBusinessTests()
@@ -11,7 +11,7 @@ namespace Tests.Business
 			AutoMapperConfiguration.Configure();
 		}
 
-		[Test()]
+		[Test]
 		public void GetClassByFacultyIdTest()
 		{
 			var actual = ClassBusiness.GetClassByFacultyId("5");

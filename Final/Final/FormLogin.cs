@@ -48,8 +48,8 @@ namespace Final
 				Dispose();
 				return;
 			}
-			new FormMain(employee).Show();
-			//this.Hide();
+			new FormMain(employee, this).Show();
+			Hide();
 		}
 
 		private void Enter_KeyDown(object sender, KeyEventArgs e)
@@ -61,5 +61,10 @@ namespace Final
 		}
 
 		private void FormLogin_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
+
+		private void btnConfig_Click(object sender, EventArgs e)
+		{
+			new FormConfig().ShowDialog();
+		}
 	}
 }

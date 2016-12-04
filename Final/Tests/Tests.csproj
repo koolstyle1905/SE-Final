@@ -81,6 +81,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Business\StudentBusinessTests.cs" />
     <Compile Include="Business\RoomBusinessTests.cs" />
+    <Compile Include="Business\UtilitiesTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">

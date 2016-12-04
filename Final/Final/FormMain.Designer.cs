@@ -49,7 +49,7 @@
 			this.barBtnRoomList = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnStudentList = new DevExpress.XtraBars.BarButtonItem();
 			this.barBtnLogout = new DevExpress.XtraBars.BarButtonItem();
-			this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+			this.barBtnSetting = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -94,7 +94,7 @@
             this.barBtnRoomList,
             this.barBtnStudentList,
             this.barBtnLogout,
-            this.barButtonItem1,
+            this.barBtnSetting,
             this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem4,
@@ -239,14 +239,16 @@
 			this.barBtnLogout.Id = 24;
 			this.barBtnLogout.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnLogout.LargeGlyph")));
 			this.barBtnLogout.Name = "barBtnLogout";
+			this.barBtnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnLogout_ItemClick);
 			// 
-			// barButtonItem1
+			// barBtnSetting
 			// 
-			this.barButtonItem1.Caption = "Setting";
-			this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-			this.barButtonItem1.Id = 25;
-			this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
-			this.barButtonItem1.Name = "barButtonItem1";
+			this.barBtnSetting.Caption = "Setting";
+			this.barBtnSetting.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnSetting.Glyph")));
+			this.barBtnSetting.Id = 25;
+			this.barBtnSetting.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnSetting.LargeGlyph")));
+			this.barBtnSetting.Name = "barBtnSetting";
+			this.barBtnSetting.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnSetting_ItemClick);
 			// 
 			// barButtonItem2
 			// 
@@ -364,7 +366,7 @@
 			// 
 			// ribbonPageGroup3
 			// 
-			this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
+			this.ribbonPageGroup3.ItemLinks.Add(this.barBtnSetting);
 			this.ribbonPageGroup3.ItemLinks.Add(this.barBtnExit);
 			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
 			this.ribbonPageGroup3.Text = "System";
@@ -420,7 +422,7 @@
 		private DevExpress.XtraBars.BarButtonItem barBtnRoomList;
 		private DevExpress.XtraBars.BarButtonItem barBtnStudentList;
 		private DevExpress.XtraBars.BarButtonItem barBtnLogout;
-		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+		private DevExpress.XtraBars.BarButtonItem barBtnSetting;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem2;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem3;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem4;

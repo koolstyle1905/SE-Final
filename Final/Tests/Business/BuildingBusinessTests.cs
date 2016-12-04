@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Tests.Business
 {
-	[TestFixture()]
+	[TestFixture]
 	public class BuildingBusinessTests
 	{
 		public BuildingBusinessTests()
@@ -11,7 +11,7 @@ namespace Tests.Business
 			AutoMapperConfiguration.Configure();
 		}
 
-		[Test()]
+		[Test]
 		public void GetAllTest()
 		{
 			var actual = BuildingBusiness.GetAll().Count;

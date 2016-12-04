@@ -3,14 +3,15 @@ using NUnit.Framework;
 
 namespace Tests.Business
 {
-	[TestFixture()]
+	[TestFixture]
 	public class FacultyBusinessTests
 	{
 		public FacultyBusinessTests()
 		{
 			AutoMapperConfiguration.Configure();
 		}
-		[Test()]
+
+		[Test]
 		public void GetAllTest()
 		{
 			var actual = FacultyBusiness.GetAll();

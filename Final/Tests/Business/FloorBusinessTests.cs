@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Tests.Business
 {
-	[TestFixture()]
+	[TestFixture]
 	public class FloorBusinessTests
 	{
 		public FloorBusinessTests()
@@ -11,7 +11,7 @@ namespace Tests.Business
 			AutoMapperConfiguration.Configure();
 		}
 
-		[Test()]
+		[Test]
 		[TestCase("H")]
 		[TestCase("I")]
 		public void GetFloorByBuildingIdTest(string buildingId)

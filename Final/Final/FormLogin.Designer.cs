@@ -33,6 +33,7 @@
 			this.txtId = new System.Windows.Forms.TextBox();
 			this.txtPassword = new System.Windows.Forms.TextBox();
 			this.btnLogin = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lblID
@@ -40,18 +41,18 @@
 			this.lblID.AutoSize = true;
 			this.lblID.Location = new System.Drawing.Point(12, 15);
 			this.lblID.Name = "lblID";
-			this.lblID.Size = new System.Drawing.Size(75, 17);
+			this.lblID.Size = new System.Drawing.Size(77, 17);
 			this.lblID.TabIndex = 0;
-			this.lblID.Text = "Tài khoản:";
+			this.lblID.Text = "Username:";
 			// 
 			// lblPassword
 			// 
 			this.lblPassword.AutoSize = true;
 			this.lblPassword.Location = new System.Drawing.Point(12, 48);
 			this.lblPassword.Name = "lblPassword";
-			this.lblPassword.Size = new System.Drawing.Size(70, 17);
+			this.lblPassword.Size = new System.Drawing.Size(73, 17);
 			this.lblPassword.TabIndex = 1;
-			this.lblPassword.Text = "Mật khẩu:";
+			this.lblPassword.Text = "Password:";
 			// 
 			// txtId
 			// 
@@ -72,19 +73,30 @@
 			// 
 			// btnLogin
 			// 
-			this.btnLogin.Location = new System.Drawing.Point(257, 89);
+			this.btnLogin.Location = new System.Drawing.Point(143, 89);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(108, 30);
 			this.btnLogin.TabIndex = 4;
-			this.btnLogin.Text = "Đăng nhập";
+			this.btnLogin.Text = "Login";
 			this.btnLogin.UseVisualStyleBackColor = true;
 			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(257, 89);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(108, 30);
+			this.button1.TabIndex = 5;
+			this.button1.Text = "Configure";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.btnConfig_Click);
 			// 
 			// FormLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(385, 131);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.btnLogin);
 			this.Controls.Add(this.txtPassword);
 			this.Controls.Add(this.txtId);
@@ -107,5 +119,6 @@
 		private System.Windows.Forms.TextBox txtId;
 		private System.Windows.Forms.TextBox txtPassword;
 		private System.Windows.Forms.Button btnLogin;
+		private System.Windows.Forms.Button button1;
 	}
 }

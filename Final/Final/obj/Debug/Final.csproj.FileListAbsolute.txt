@@ -15,6 +15,7 @@ C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.exe
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.pdb
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.csprojResolveAssemblyReference.cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormAddStudent.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormConfig.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormLogin.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormMain.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormPermission.resources
