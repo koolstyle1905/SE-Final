@@ -11,7 +11,7 @@ namespace DataAccess.Domain
 		[SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
 		public Employee()
 		{
-			Attendances = new HashSet<Attendance>();
+			ReportAbsences = new HashSet<ReportAbsence>();
 			LeaseDetails = new HashSet<LeaseDetail>();
 			ParkingDetails = new HashSet<ParkingDetail>();
 			TemporaryAbsences = new HashSet<TemporaryAbsence>();
@@ -48,7 +48,7 @@ namespace DataAccess.Domain
 		public string Position { get; set; }
 
 		[SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-		public virtual ICollection<Attendance> Attendances { get; set; }
+		public virtual ICollection<ReportAbsence> ReportAbsences { get; set; }
 
 		[SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 		public virtual ICollection<LeaseDetail> LeaseDetails { get; set; }

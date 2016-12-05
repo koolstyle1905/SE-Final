@@ -29,39 +29,36 @@
 		private void InitializeComponent()
 		{
 			this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-			this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-			this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+			this.txtFaculty = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.groupArrivalLate = new DevExpress.XtraEditors.GroupControl();
+			this.dateTimePickerArrival = new System.Windows.Forms.DateTimePicker();
 			this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-			this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.txtWorkingAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.groupTemporaryAbsence = new DevExpress.XtraEditors.GroupControl();
+			this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
 			this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-			this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-			this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+			this.groupParkingOvernight = new DevExpress.XtraEditors.GroupControl();
 			this.btnComfirm = new DevExpress.XtraEditors.SimpleButton();
 			this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-			this.textBoxX11 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtOwnerAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtOwnerName = new DevComponents.DotNetBar.Controls.TextBoxX();
 			this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-			this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX12 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtViNumber = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtLicensePlate = new DevComponents.DotNetBar.Controls.TextBoxX();
 			this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-			this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtPaintColor = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtEngineNumber = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtVehicleType = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.cbbReason = new System.Windows.Forms.ComboBox();
 			this.txtClassId = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.txtStudentId = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.txtRoomId = new DevComponents.DotNetBar.Controls.TextBoxX();
 			this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -69,28 +66,36 @@
 			this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+			this.gridLookUpEditStudent = new DevExpress.XtraEditors.GridLookUpEdit();
+			this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.txtDescription = new DevComponents.DotNetBar.Controls.TextBoxX();
+			this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
 			this.groupControl1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-			this.groupControl4.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-			this.groupControl3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-			this.groupControl2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupArrivalLate)).BeginInit();
+			this.groupArrivalLate.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupTemporaryAbsence)).BeginInit();
+			this.groupTemporaryAbsence.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupParkingOvernight)).BeginInit();
+			this.groupParkingOvernight.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.gridLookUpEditStudent.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupControl1
 			// 
-			this.groupControl1.Controls.Add(this.groupControl4);
-			this.groupControl1.Controls.Add(this.groupControl3);
-			this.groupControl1.Controls.Add(this.groupControl2);
-			this.groupControl1.Controls.Add(this.comboBox1);
-			this.groupControl1.Controls.Add(this.textBoxX4);
-			this.groupControl1.Controls.Add(this.textBoxX6);
+			this.groupControl1.Controls.Add(this.txtFaculty);
+			this.groupControl1.Controls.Add(this.groupArrivalLate);
+			this.groupControl1.Controls.Add(this.groupTemporaryAbsence);
+			this.groupControl1.Controls.Add(this.groupParkingOvernight);
+			this.groupControl1.Controls.Add(this.cbbReason);
 			this.groupControl1.Controls.Add(this.txtClassId);
-			this.groupControl1.Controls.Add(this.textBoxX3);
-			this.groupControl1.Controls.Add(this.textBoxX5);
-			this.groupControl1.Controls.Add(this.txtStudentId);
+			this.groupControl1.Controls.Add(this.txtPhone);
+			this.groupControl1.Controls.Add(this.txtName);
+			this.groupControl1.Controls.Add(this.txtRoomId);
 			this.groupControl1.Controls.Add(this.labelControl6);
 			this.groupControl1.Controls.Add(this.labelControl8);
 			this.groupControl1.Controls.Add(this.labelControl9);
@@ -98,6 +103,7 @@
 			this.groupControl1.Controls.Add(this.labelControl5);
 			this.groupControl1.Controls.Add(this.labelControl7);
 			this.groupControl1.Controls.Add(this.labelControl1);
+			this.groupControl1.Controls.Add(this.gridLookUpEditStudent);
 			this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupControl1.Location = new System.Drawing.Point(0, 0);
 			this.groupControl1.Name = "groupControl1";
@@ -105,29 +111,43 @@
 			this.groupControl1.TabIndex = 0;
 			this.groupControl1.Text = "Student Information";
 			// 
-			// groupControl4
+			// txtFaculty
 			// 
-			this.groupControl4.Controls.Add(this.dateTimePicker4);
-			this.groupControl4.Controls.Add(this.labelControl15);
-			this.groupControl4.Controls.Add(this.labelControl14);
-			this.groupControl4.Controls.Add(this.textBoxX7);
-			this.groupControl4.Location = new System.Drawing.Point(475, 31);
-			this.groupControl4.Name = "groupControl4";
-			this.groupControl4.Size = new System.Drawing.Size(184, 207);
-			this.groupControl4.TabIndex = 20;
-			this.groupControl4.Text = "Arrival Late";
 			// 
-			// dateTimePicker4
 			// 
-			this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-			this.dateTimePicker4.Location = new System.Drawing.Point(16, 166);
-			this.dateTimePicker4.Name = "dateTimePicker4";
-			this.dateTimePicker4.Size = new System.Drawing.Size(150, 23);
-			this.dateTimePicker4.TabIndex = 15;
+			// 
+			this.txtFaculty.Border.Class = "TextBoxBorder";
+			this.txtFaculty.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtFaculty.Location = new System.Drawing.Point(124, 125);
+			this.txtFaculty.Name = "txtFaculty";
+			this.txtFaculty.PreventEnterBeep = true;
+			this.txtFaculty.Size = new System.Drawing.Size(155, 23);
+			this.txtFaculty.TabIndex = 22;
+			// 
+			// groupArrivalLate
+			// 
+			this.groupArrivalLate.Controls.Add(this.dateTimePickerArrival);
+			this.groupArrivalLate.Controls.Add(this.labelControl15);
+			this.groupArrivalLate.Controls.Add(this.labelControl14);
+			this.groupArrivalLate.Controls.Add(this.txtWorkingAddress);
+			this.groupArrivalLate.Location = new System.Drawing.Point(475, 31);
+			this.groupArrivalLate.Name = "groupArrivalLate";
+			this.groupArrivalLate.Size = new System.Drawing.Size(184, 207);
+			this.groupArrivalLate.TabIndex = 20;
+			this.groupArrivalLate.Text = "Arrival Late";
+			// 
+			// dateTimePickerArrival
+			// 
+			this.dateTimePickerArrival.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+			this.dateTimePickerArrival.Location = new System.Drawing.Point(16, 176);
+			this.dateTimePickerArrival.Name = "dateTimePickerArrival";
+			this.dateTimePickerArrival.Size = new System.Drawing.Size(150, 23);
+			this.dateTimePickerArrival.TabIndex = 15;
+			this.dateTimePickerArrival.Value = new System.DateTime(2016, 12, 5, 0, 0, 0, 0);
 			// 
 			// labelControl15
 			// 
-			this.labelControl15.Location = new System.Drawing.Point(16, 41);
+			this.labelControl15.Location = new System.Drawing.Point(16, 38);
 			this.labelControl15.Name = "labelControl15";
 			this.labelControl15.Size = new System.Drawing.Size(102, 16);
 			this.labelControl15.TabIndex = 13;
@@ -135,100 +155,89 @@
 			// 
 			// labelControl14
 			// 
-			this.labelControl14.Location = new System.Drawing.Point(16, 128);
+			this.labelControl14.Location = new System.Drawing.Point(16, 154);
 			this.labelControl14.Name = "labelControl14";
 			this.labelControl14.Size = new System.Drawing.Size(75, 16);
 			this.labelControl14.TabIndex = 14;
 			this.labelControl14.Text = "Arrival Time:";
 			// 
-			// textBoxX7
+			// txtWorkingAddress
 			// 
 			// 
 			// 
 			// 
-			this.textBoxX7.Border.Class = "TextBoxBorder";
-			this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX7.Location = new System.Drawing.Point(16, 74);
-			this.textBoxX7.Multiline = true;
-			this.textBoxX7.Name = "textBoxX7";
-			this.textBoxX7.PreventEnterBeep = true;
-			this.textBoxX7.Size = new System.Drawing.Size(150, 43);
-			this.textBoxX7.TabIndex = 15;
+			this.txtWorkingAddress.Border.Class = "TextBoxBorder";
+			this.txtWorkingAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtWorkingAddress.Location = new System.Drawing.Point(16, 60);
+			this.txtWorkingAddress.Multiline = true;
+			this.txtWorkingAddress.Name = "txtWorkingAddress";
+			this.txtWorkingAddress.PreventEnterBeep = true;
+			this.txtWorkingAddress.Size = new System.Drawing.Size(150, 88);
+			this.txtWorkingAddress.TabIndex = 15;
 			// 
-			// groupControl3
+			// groupTemporaryAbsence
 			// 
-			this.groupControl3.Controls.Add(this.dateTimePicker2);
-			this.groupControl3.Controls.Add(this.dateTimePicker1);
-			this.groupControl3.Controls.Add(this.labelControl11);
-			this.groupControl3.Controls.Add(this.labelControl10);
-			this.groupControl3.Location = new System.Drawing.Point(285, 31);
-			this.groupControl3.Name = "groupControl3";
-			this.groupControl3.Size = new System.Drawing.Size(184, 207);
-			this.groupControl3.TabIndex = 19;
-			this.groupControl3.Text = "Temporary Absence";
+			this.groupTemporaryAbsence.Controls.Add(this.txtDescription);
+			this.groupTemporaryAbsence.Controls.Add(this.labelControl19);
+			this.groupTemporaryAbsence.Controls.Add(this.numericUpDown1);
+			this.groupTemporaryAbsence.Controls.Add(this.labelControl10);
+			this.groupTemporaryAbsence.Controls.Add(this.dateTimePickerStart);
+			this.groupTemporaryAbsence.Controls.Add(this.labelControl11);
+			this.groupTemporaryAbsence.Location = new System.Drawing.Point(285, 31);
+			this.groupTemporaryAbsence.Name = "groupTemporaryAbsence";
+			this.groupTemporaryAbsence.Size = new System.Drawing.Size(184, 207);
+			this.groupTemporaryAbsence.TabIndex = 19;
+			this.groupTemporaryAbsence.Text = "Temporary Absence";
 			// 
-			// dateTimePicker2
+			// dateTimePickerStart
 			// 
-			this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dateTimePicker2.Location = new System.Drawing.Point(14, 166);
-			this.dateTimePicker2.Name = "dateTimePicker2";
-			this.dateTimePicker2.Size = new System.Drawing.Size(150, 23);
-			this.dateTimePicker2.TabIndex = 15;
-			// 
-			// dateTimePicker1
-			// 
-			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dateTimePicker1.Location = new System.Drawing.Point(14, 79);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(150, 23);
-			this.dateTimePicker1.TabIndex = 15;
+			this.dateTimePickerStart.CustomFormat = "MM/dd/yyyy";
+			this.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dateTimePickerStart.Location = new System.Drawing.Point(83, 33);
+			this.dateTimePickerStart.Name = "dateTimePickerStart";
+			this.dateTimePickerStart.Size = new System.Drawing.Size(96, 23);
+			this.dateTimePickerStart.TabIndex = 15;
+			this.dateTimePickerStart.Value = new System.DateTime(2016, 12, 5, 0, 0, 0, 0);
 			// 
 			// labelControl11
 			// 
-			this.labelControl11.Location = new System.Drawing.Point(14, 41);
+			this.labelControl11.Location = new System.Drawing.Point(14, 36);
 			this.labelControl11.Name = "labelControl11";
 			this.labelControl11.Size = new System.Drawing.Size(63, 16);
 			this.labelControl11.TabIndex = 13;
 			this.labelControl11.Text = "Start Date:";
 			// 
-			// labelControl10
+			// groupParkingOvernight
 			// 
-			this.labelControl10.Location = new System.Drawing.Point(14, 128);
-			this.labelControl10.Name = "labelControl10";
-			this.labelControl10.Size = new System.Drawing.Size(56, 16);
-			this.labelControl10.TabIndex = 14;
-			this.labelControl10.Text = "End Date:";
-			// 
-			// groupControl2
-			// 
-			this.groupControl2.Controls.Add(this.btnComfirm);
-			this.groupControl2.Controls.Add(this.labelControl17);
-			this.groupControl2.Controls.Add(this.labelControl16);
-			this.groupControl2.Controls.Add(this.textBoxX11);
-			this.groupControl2.Controls.Add(this.textBoxX8);
-			this.groupControl2.Controls.Add(this.labelControl18);
-			this.groupControl2.Controls.Add(this.labelControl13);
-			this.groupControl2.Controls.Add(this.labelControl12);
-			this.groupControl2.Controls.Add(this.labelControl3);
-			this.groupControl2.Controls.Add(this.textBoxX10);
-			this.groupControl2.Controls.Add(this.textBoxX12);
-			this.groupControl2.Controls.Add(this.labelControl4);
-			this.groupControl2.Controls.Add(this.textBoxX9);
-			this.groupControl2.Controls.Add(this.textBoxX2);
-			this.groupControl2.Controls.Add(this.textBoxX1);
-			this.groupControl2.Location = new System.Drawing.Point(21, 244);
-			this.groupControl2.Name = "groupControl2";
-			this.groupControl2.Size = new System.Drawing.Size(638, 151);
-			this.groupControl2.TabIndex = 18;
-			this.groupControl2.Text = "Parking Overnight";
+			this.groupParkingOvernight.Controls.Add(this.btnComfirm);
+			this.groupParkingOvernight.Controls.Add(this.labelControl17);
+			this.groupParkingOvernight.Controls.Add(this.labelControl16);
+			this.groupParkingOvernight.Controls.Add(this.txtOwnerAddress);
+			this.groupParkingOvernight.Controls.Add(this.txtOwnerName);
+			this.groupParkingOvernight.Controls.Add(this.labelControl18);
+			this.groupParkingOvernight.Controls.Add(this.labelControl13);
+			this.groupParkingOvernight.Controls.Add(this.labelControl12);
+			this.groupParkingOvernight.Controls.Add(this.labelControl3);
+			this.groupParkingOvernight.Controls.Add(this.txtViNumber);
+			this.groupParkingOvernight.Controls.Add(this.txtLicensePlate);
+			this.groupParkingOvernight.Controls.Add(this.labelControl4);
+			this.groupParkingOvernight.Controls.Add(this.txtPaintColor);
+			this.groupParkingOvernight.Controls.Add(this.txtEngineNumber);
+			this.groupParkingOvernight.Controls.Add(this.txtVehicleType);
+			this.groupParkingOvernight.Location = new System.Drawing.Point(21, 244);
+			this.groupParkingOvernight.Name = "groupParkingOvernight";
+			this.groupParkingOvernight.Size = new System.Drawing.Size(638, 151);
+			this.groupParkingOvernight.TabIndex = 18;
+			this.groupParkingOvernight.Text = "Parking Overnight";
 			// 
 			// btnComfirm
 			// 
-			this.btnComfirm.Location = new System.Drawing.Point(492, 91);
+			this.btnComfirm.Location = new System.Drawing.Point(440, 75);
 			this.btnComfirm.Name = "btnComfirm";
-			this.btnComfirm.Size = new System.Drawing.Size(96, 36);
+			this.btnComfirm.Size = new System.Drawing.Size(180, 59);
 			this.btnComfirm.TabIndex = 27;
 			this.btnComfirm.Text = "Confirm";
+			this.btnComfirm.Click += new System.EventHandler(this.btnComfirm_Click);
 			// 
 			// labelControl17
 			// 
@@ -246,31 +255,31 @@
 			this.labelControl16.TabIndex = 14;
 			this.labelControl16.Text = "Owner Name:";
 			// 
-			// textBoxX11
+			// txtOwnerAddress
 			// 
 			// 
 			// 
 			// 
-			this.textBoxX11.Border.Class = "TextBoxBorder";
-			this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX11.Location = new System.Drawing.Point(336, 109);
-			this.textBoxX11.Name = "textBoxX11";
-			this.textBoxX11.PreventEnterBeep = true;
-			this.textBoxX11.Size = new System.Drawing.Size(84, 23);
-			this.textBoxX11.TabIndex = 16;
+			this.txtOwnerAddress.Border.Class = "TextBoxBorder";
+			this.txtOwnerAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtOwnerAddress.Location = new System.Drawing.Point(336, 109);
+			this.txtOwnerAddress.Name = "txtOwnerAddress";
+			this.txtOwnerAddress.PreventEnterBeep = true;
+			this.txtOwnerAddress.Size = new System.Drawing.Size(84, 23);
+			this.txtOwnerAddress.TabIndex = 16;
 			// 
-			// textBoxX8
-			// 
-			// 
+			// txtOwnerName
 			// 
 			// 
-			this.textBoxX8.Border.Class = "TextBoxBorder";
-			this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX8.Location = new System.Drawing.Point(118, 109);
-			this.textBoxX8.Name = "textBoxX8";
-			this.textBoxX8.PreventEnterBeep = true;
-			this.textBoxX8.Size = new System.Drawing.Size(84, 23);
-			this.textBoxX8.TabIndex = 16;
+			// 
+			// 
+			this.txtOwnerName.Border.Class = "TextBoxBorder";
+			this.txtOwnerName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtOwnerName.Location = new System.Drawing.Point(118, 109);
+			this.txtOwnerName.Name = "txtOwnerName";
+			this.txtOwnerName.PreventEnterBeep = true;
+			this.txtOwnerName.Size = new System.Drawing.Size(84, 23);
+			this.txtOwnerName.TabIndex = 16;
 			// 
 			// labelControl18
 			// 
@@ -304,31 +313,31 @@
 			this.labelControl3.TabIndex = 13;
 			this.labelControl3.Text = "Vehicle Type:";
 			// 
-			// textBoxX10
+			// txtViNumber
 			// 
 			// 
 			// 
 			// 
-			this.textBoxX10.Border.Class = "TextBoxBorder";
-			this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX10.Location = new System.Drawing.Point(336, 75);
-			this.textBoxX10.Name = "textBoxX10";
-			this.textBoxX10.PreventEnterBeep = true;
-			this.textBoxX10.Size = new System.Drawing.Size(84, 23);
-			this.textBoxX10.TabIndex = 16;
+			this.txtViNumber.Border.Class = "TextBoxBorder";
+			this.txtViNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtViNumber.Location = new System.Drawing.Point(336, 75);
+			this.txtViNumber.Name = "txtViNumber";
+			this.txtViNumber.PreventEnterBeep = true;
+			this.txtViNumber.Size = new System.Drawing.Size(84, 23);
+			this.txtViNumber.TabIndex = 16;
 			// 
-			// textBoxX12
-			// 
-			// 
+			// txtLicensePlate
 			// 
 			// 
-			this.textBoxX12.Border.Class = "TextBoxBorder";
-			this.textBoxX12.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX12.Location = new System.Drawing.Point(533, 39);
-			this.textBoxX12.Name = "textBoxX12";
-			this.textBoxX12.PreventEnterBeep = true;
-			this.textBoxX12.Size = new System.Drawing.Size(84, 23);
-			this.textBoxX12.TabIndex = 15;
+			// 
+			// 
+			this.txtLicensePlate.Border.Class = "TextBoxBorder";
+			this.txtLicensePlate.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtLicensePlate.Location = new System.Drawing.Point(533, 39);
+			this.txtLicensePlate.Name = "txtLicensePlate";
+			this.txtLicensePlate.PreventEnterBeep = true;
+			this.txtLicensePlate.Size = new System.Drawing.Size(84, 23);
+			this.txtLicensePlate.TabIndex = 15;
 			// 
 			// labelControl4
 			// 
@@ -338,78 +347,58 @@
 			this.labelControl4.TabIndex = 14;
 			this.labelControl4.Text = "Engine Number:";
 			// 
-			// textBoxX9
+			// txtPaintColor
 			// 
 			// 
 			// 
 			// 
-			this.textBoxX9.Border.Class = "TextBoxBorder";
-			this.textBoxX9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX9.Location = new System.Drawing.Point(336, 41);
-			this.textBoxX9.Name = "textBoxX9";
-			this.textBoxX9.PreventEnterBeep = true;
-			this.textBoxX9.Size = new System.Drawing.Size(84, 23);
-			this.textBoxX9.TabIndex = 15;
+			this.txtPaintColor.Border.Class = "TextBoxBorder";
+			this.txtPaintColor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtPaintColor.Location = new System.Drawing.Point(336, 41);
+			this.txtPaintColor.Name = "txtPaintColor";
+			this.txtPaintColor.PreventEnterBeep = true;
+			this.txtPaintColor.Size = new System.Drawing.Size(84, 23);
+			this.txtPaintColor.TabIndex = 15;
 			// 
-			// textBoxX2
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX2.Border.Class = "TextBoxBorder";
-			this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX2.Location = new System.Drawing.Point(118, 75);
-			this.textBoxX2.Name = "textBoxX2";
-			this.textBoxX2.PreventEnterBeep = true;
-			this.textBoxX2.Size = new System.Drawing.Size(84, 23);
-			this.textBoxX2.TabIndex = 16;
-			// 
-			// textBoxX1
+			// txtEngineNumber
 			// 
 			// 
 			// 
 			// 
-			this.textBoxX1.Border.Class = "TextBoxBorder";
-			this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX1.Location = new System.Drawing.Point(118, 41);
-			this.textBoxX1.Name = "textBoxX1";
-			this.textBoxX1.PreventEnterBeep = true;
-			this.textBoxX1.Size = new System.Drawing.Size(84, 23);
-			this.textBoxX1.TabIndex = 15;
+			this.txtEngineNumber.Border.Class = "TextBoxBorder";
+			this.txtEngineNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtEngineNumber.Location = new System.Drawing.Point(118, 75);
+			this.txtEngineNumber.Name = "txtEngineNumber";
+			this.txtEngineNumber.PreventEnterBeep = true;
+			this.txtEngineNumber.Size = new System.Drawing.Size(84, 23);
+			this.txtEngineNumber.TabIndex = 16;
 			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(123, 211);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(129, 24);
-			this.comboBox1.TabIndex = 17;
-			// 
-			// textBoxX4
+			// txtVehicleType
 			// 
 			// 
 			// 
 			// 
-			this.textBoxX4.Border.Class = "TextBoxBorder";
-			this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX4.Location = new System.Drawing.Point(123, 96);
-			this.textBoxX4.Name = "textBoxX4";
-			this.textBoxX4.PreventEnterBeep = true;
-			this.textBoxX4.Size = new System.Drawing.Size(129, 23);
-			this.textBoxX4.TabIndex = 16;
+			this.txtVehicleType.Border.Class = "TextBoxBorder";
+			this.txtVehicleType.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtVehicleType.Location = new System.Drawing.Point(118, 41);
+			this.txtVehicleType.Name = "txtVehicleType";
+			this.txtVehicleType.PreventEnterBeep = true;
+			this.txtVehicleType.Size = new System.Drawing.Size(84, 23);
+			this.txtVehicleType.TabIndex = 15;
 			// 
-			// textBoxX6
+			// cbbReason
 			// 
-			// 
-			// 
-			// 
-			this.textBoxX6.Border.Class = "TextBoxBorder";
-			this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX6.Location = new System.Drawing.Point(123, 183);
-			this.textBoxX6.Name = "textBoxX6";
-			this.textBoxX6.PreventEnterBeep = true;
-			this.textBoxX6.Size = new System.Drawing.Size(129, 23);
-			this.textBoxX6.TabIndex = 16;
+			this.cbbReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbbReason.FormattingEnabled = true;
+			this.cbbReason.Items.AddRange(new object[] {
+            "Temporary Absence",
+            "Arrival Late",
+            "Parking Overnight"});
+			this.cbbReason.Location = new System.Drawing.Point(124, 211);
+			this.cbbReason.Name = "cbbReason";
+			this.cbbReason.Size = new System.Drawing.Size(155, 24);
+			this.cbbReason.TabIndex = 17;
+			this.cbbReason.SelectedIndexChanged += new System.EventHandler(this.cbbReason_SelectedIndexChanged);
 			// 
 			// txtClassId
 			// 
@@ -418,50 +407,50 @@
 			// 
 			this.txtClassId.Border.Class = "TextBoxBorder";
 			this.txtClassId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.txtClassId.Location = new System.Drawing.Point(123, 125);
+			this.txtClassId.Location = new System.Drawing.Point(124, 96);
 			this.txtClassId.Name = "txtClassId";
 			this.txtClassId.PreventEnterBeep = true;
-			this.txtClassId.Size = new System.Drawing.Size(129, 23);
+			this.txtClassId.Size = new System.Drawing.Size(155, 23);
 			this.txtClassId.TabIndex = 16;
 			// 
-			// textBoxX3
+			// txtPhone
 			// 
 			// 
 			// 
 			// 
-			this.textBoxX3.Border.Class = "TextBoxBorder";
-			this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX3.Location = new System.Drawing.Point(123, 67);
-			this.textBoxX3.Name = "textBoxX3";
-			this.textBoxX3.PreventEnterBeep = true;
-			this.textBoxX3.Size = new System.Drawing.Size(129, 23);
-			this.textBoxX3.TabIndex = 15;
+			this.txtPhone.Border.Class = "TextBoxBorder";
+			this.txtPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtPhone.Location = new System.Drawing.Point(124, 183);
+			this.txtPhone.Name = "txtPhone";
+			this.txtPhone.PreventEnterBeep = true;
+			this.txtPhone.Size = new System.Drawing.Size(155, 23);
+			this.txtPhone.TabIndex = 16;
 			// 
-			// textBoxX5
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX5.Border.Class = "TextBoxBorder";
-			this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX5.Location = new System.Drawing.Point(123, 154);
-			this.textBoxX5.Name = "textBoxX5";
-			this.textBoxX5.PreventEnterBeep = true;
-			this.textBoxX5.Size = new System.Drawing.Size(129, 23);
-			this.textBoxX5.TabIndex = 15;
-			// 
-			// txtStudentId
+			// txtName
 			// 
 			// 
 			// 
 			// 
-			this.txtStudentId.Border.Class = "TextBoxBorder";
-			this.txtStudentId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.txtStudentId.Location = new System.Drawing.Point(123, 38);
-			this.txtStudentId.Name = "txtStudentId";
-			this.txtStudentId.PreventEnterBeep = true;
-			this.txtStudentId.Size = new System.Drawing.Size(129, 23);
-			this.txtStudentId.TabIndex = 15;
+			this.txtName.Border.Class = "TextBoxBorder";
+			this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtName.Location = new System.Drawing.Point(124, 67);
+			this.txtName.Name = "txtName";
+			this.txtName.PreventEnterBeep = true;
+			this.txtName.Size = new System.Drawing.Size(155, 23);
+			this.txtName.TabIndex = 15;
+			// 
+			// txtRoomId
+			// 
+			// 
+			// 
+			// 
+			this.txtRoomId.Border.Class = "TextBoxBorder";
+			this.txtRoomId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtRoomId.Location = new System.Drawing.Point(124, 154);
+			this.txtRoomId.Name = "txtRoomId";
+			this.txtRoomId.PreventEnterBeep = true;
+			this.txtRoomId.Size = new System.Drawing.Size(155, 23);
+			this.txtRoomId.TabIndex = 15;
 			// 
 			// labelControl6
 			// 
@@ -473,7 +462,7 @@
 			// 
 			// labelControl8
 			// 
-			this.labelControl8.Location = new System.Drawing.Point(28, 185);
+			this.labelControl8.Location = new System.Drawing.Point(28, 156);
 			this.labelControl8.Name = "labelControl8";
 			this.labelControl8.Size = new System.Drawing.Size(54, 16);
 			this.labelControl8.TabIndex = 14;
@@ -491,25 +480,25 @@
 			// 
 			this.labelControl2.Location = new System.Drawing.Point(28, 127);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(61, 16);
+			this.labelControl2.Size = new System.Drawing.Size(45, 16);
 			this.labelControl2.TabIndex = 14;
-			this.labelControl2.Text = "Falcuty ID:";
+			this.labelControl2.Text = "Falcuty:";
 			// 
 			// labelControl5
 			// 
 			this.labelControl5.Location = new System.Drawing.Point(28, 69);
 			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(86, 16);
+			this.labelControl5.Size = new System.Drawing.Size(38, 16);
 			this.labelControl5.TabIndex = 13;
-			this.labelControl5.Text = "Student Name:";
+			this.labelControl5.Text = "Name:";
 			// 
 			// labelControl7
 			// 
-			this.labelControl7.Location = new System.Drawing.Point(28, 156);
+			this.labelControl7.Location = new System.Drawing.Point(28, 185);
 			this.labelControl7.Name = "labelControl7";
-			this.labelControl7.Size = new System.Drawing.Size(89, 16);
+			this.labelControl7.Size = new System.Drawing.Size(40, 16);
 			this.labelControl7.TabIndex = 13;
-			this.labelControl7.Text = "Phone Number:";
+			this.labelControl7.Text = "Phone:";
 			// 
 			// labelControl1
 			// 
@@ -518,6 +507,62 @@
 			this.labelControl1.Size = new System.Drawing.Size(65, 16);
 			this.labelControl1.TabIndex = 13;
 			this.labelControl1.Text = "Student ID:";
+			// 
+			// gridLookUpEditStudent
+			// 
+			this.gridLookUpEditStudent.Location = new System.Drawing.Point(124, 39);
+			this.gridLookUpEditStudent.Name = "gridLookUpEditStudent";
+			this.gridLookUpEditStudent.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.gridLookUpEditStudent.Properties.NullText = "";
+			this.gridLookUpEditStudent.Properties.View = this.gridLookUpEdit1View;
+			this.gridLookUpEditStudent.Size = new System.Drawing.Size(155, 22);
+			this.gridLookUpEditStudent.TabIndex = 21;
+			this.gridLookUpEditStudent.EditValueChanged += new System.EventHandler(this.gridLookUpEditStudent_EditValueChanged);
+			// 
+			// gridLookUpEdit1View
+			// 
+			this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+			this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+			// 
+			// labelControl10
+			// 
+			this.labelControl10.Location = new System.Drawing.Point(14, 80);
+			this.labelControl10.Name = "labelControl10";
+			this.labelControl10.Size = new System.Drawing.Size(32, 16);
+			this.labelControl10.TabIndex = 16;
+			this.labelControl10.Text = "Days:";
+			// 
+			// numericUpDown1
+			// 
+			this.numericUpDown1.Location = new System.Drawing.Point(83, 78);
+			this.numericUpDown1.Name = "numericUpDown1";
+			this.numericUpDown1.Size = new System.Drawing.Size(96, 23);
+			this.numericUpDown1.TabIndex = 17;
+			// 
+			// txtDescription
+			// 
+			// 
+			// 
+			// 
+			this.txtDescription.Border.Class = "TextBoxBorder";
+			this.txtDescription.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+			this.txtDescription.Location = new System.Drawing.Point(14, 148);
+			this.txtDescription.Multiline = true;
+			this.txtDescription.Name = "txtDescription";
+			this.txtDescription.PreventEnterBeep = true;
+			this.txtDescription.Size = new System.Drawing.Size(161, 51);
+			this.txtDescription.TabIndex = 16;
+			// 
+			// labelControl19
+			// 
+			this.labelControl19.Location = new System.Drawing.Point(14, 123);
+			this.labelControl19.Name = "labelControl19";
+			this.labelControl19.Size = new System.Drawing.Size(68, 16);
+			this.labelControl19.TabIndex = 16;
+			this.labelControl19.Text = "Description:";
 			// 
 			// FormPermission
 			// 
@@ -528,18 +573,22 @@
 			this.MaximizeBox = false;
 			this.Name = "FormPermission";
 			this.Text = "FormPermission";
+			this.Load += new System.EventHandler(this.FormPermission_Load);
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
 			this.groupControl1.ResumeLayout(false);
 			this.groupControl1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-			this.groupControl4.ResumeLayout(false);
-			this.groupControl4.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-			this.groupControl3.ResumeLayout(false);
-			this.groupControl3.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-			this.groupControl2.ResumeLayout(false);
-			this.groupControl2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupArrivalLate)).EndInit();
+			this.groupArrivalLate.ResumeLayout(false);
+			this.groupArrivalLate.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupTemporaryAbsence)).EndInit();
+			this.groupTemporaryAbsence.ResumeLayout(false);
+			this.groupTemporaryAbsence.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupParkingOvernight)).EndInit();
+			this.groupParkingOvernight.ResumeLayout(false);
+			this.groupParkingOvernight.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.gridLookUpEditStudent.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -547,45 +596,48 @@
 		#endregion
 
 		private DevExpress.XtraEditors.GroupControl groupControl1;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
 		private DevComponents.DotNetBar.Controls.TextBoxX txtClassId;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-		private DevComponents.DotNetBar.Controls.TextBoxX txtStudentId;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtEngineNumber;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtName;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtVehicleType;
 		private DevExpress.XtraEditors.LabelControl labelControl6;
 		private DevExpress.XtraEditors.LabelControl labelControl4;
 		private DevExpress.XtraEditors.LabelControl labelControl2;
 		private DevExpress.XtraEditors.LabelControl labelControl5;
 		private DevExpress.XtraEditors.LabelControl labelControl3;
 		private DevExpress.XtraEditors.LabelControl labelControl1;
-		private DevExpress.XtraEditors.GroupControl groupControl2;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
+		private DevExpress.XtraEditors.GroupControl groupParkingOvernight;
+		private System.Windows.Forms.ComboBox cbbReason;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtPhone;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtRoomId;
 		private DevExpress.XtraEditors.LabelControl labelControl8;
 		private DevExpress.XtraEditors.LabelControl labelControl9;
 		private DevExpress.XtraEditors.LabelControl labelControl7;
-		private DevExpress.XtraEditors.GroupControl groupControl4;
-		private System.Windows.Forms.DateTimePicker dateTimePicker4;
+		private DevExpress.XtraEditors.GroupControl groupArrivalLate;
+		private System.Windows.Forms.DateTimePicker dateTimePickerArrival;
 		private DevExpress.XtraEditors.LabelControl labelControl15;
 		private DevExpress.XtraEditors.LabelControl labelControl14;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX7;
-		private DevExpress.XtraEditors.GroupControl groupControl3;
-		private System.Windows.Forms.DateTimePicker dateTimePicker2;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtWorkingAddress;
+		private DevExpress.XtraEditors.GroupControl groupTemporaryAbsence;
+		private System.Windows.Forms.DateTimePicker dateTimePickerStart;
 		private DevExpress.XtraEditors.LabelControl labelControl11;
-		private DevExpress.XtraEditors.LabelControl labelControl10;
 		private DevExpress.XtraEditors.LabelControl labelControl17;
 		private DevExpress.XtraEditors.LabelControl labelControl16;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX11;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX8;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtOwnerAddress;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtOwnerName;
 		private DevExpress.XtraEditors.LabelControl labelControl18;
 		private DevExpress.XtraEditors.LabelControl labelControl13;
 		private DevExpress.XtraEditors.LabelControl labelControl12;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX10;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX12;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX9;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtViNumber;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtLicensePlate;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtPaintColor;
 		private DevExpress.XtraEditors.SimpleButton btnComfirm;
+		private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEditStudent;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtFaculty;
+		private DevComponents.DotNetBar.Controls.TextBoxX txtDescription;
+		private DevExpress.XtraEditors.LabelControl labelControl19;
+		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private DevExpress.XtraEditors.LabelControl labelControl10;
 	}
 }

@@ -67,6 +67,7 @@
 			this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+			this.barBtnChangePassword = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
 			this.SuspendLayout();
@@ -102,9 +103,10 @@
             this.barButtonItem8,
             this.barBtnFormViolationRecord,
             this.barBtnFromPermission,
-            this.barBtnReportAbsence});
+            this.barBtnReportAbsence,
+            this.barBtnChangePassword});
 			this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl1.MaxItemId = 38;
+			this.ribbonControl1.MaxItemId = 39;
 			this.ribbonControl1.Name = "ribbonControl1";
 			this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -360,6 +362,7 @@
 			// ribbonPageGroup2
 			// 
 			this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
+			this.ribbonPageGroup2.ItemLinks.Add(this.barBtnChangePassword);
 			this.ribbonPageGroup2.ItemLinks.Add(this.barBtnLogout);
 			this.ribbonPageGroup2.Name = "ribbonPageGroup2";
 			this.ribbonPageGroup2.Text = "Account";
@@ -374,6 +377,14 @@
 			// xtraTabbedMdiManager1
 			// 
 			this.xtraTabbedMdiManager1.MdiParent = this;
+			// 
+			// barBtnChangePassword
+			// 
+			this.barBtnChangePassword.Caption = "Changes Password";
+			this.barBtnChangePassword.Id = 38;
+			this.barBtnChangePassword.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnChangePassword.LargeGlyph")));
+			this.barBtnChangePassword.Name = "barBtnChangePassword";
+			this.barBtnChangePassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnChangePassword_ItemClick);
 			// 
 			// FormMain
 			// 
@@ -433,5 +444,6 @@
 		private DevExpress.XtraBars.BarButtonItem barBtnFromPermission;
 		private DevExpress.XtraBars.BarButtonItem barBtnReportAbsence;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+		private DevExpress.XtraBars.BarButtonItem barBtnChangePassword;
 	}
 }

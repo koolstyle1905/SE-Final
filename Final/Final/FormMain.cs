@@ -9,7 +9,7 @@ namespace Final
 {
 	public partial class FormMain : RibbonForm
 	{
-		private EmployeeDto employee;
+		private readonly EmployeeDto employee;
 		private readonly FormLogin formLogin;
 
 		public FormMain(EmployeeDto employee, FormLogin formLogin)
@@ -96,7 +96,7 @@ namespace Final
 
 		private void barBtnFromPermission_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			var formPermission = new FormPermission();
+			var formPermission = new FormPermission(employee);
 			formPermission.ShowDialog();
 		}
 
@@ -129,6 +129,10 @@ namespace Final
 		private void barBtnSetting_ItemClick(object sender, ItemClickEventArgs e)
 		{
 			new FormConfig().ShowDialog();
+		}
+
+		private void barBtnChangePassword_ItemClick(object sender, ItemClickEventArgs e)
+		{
 		}
 	}
 }

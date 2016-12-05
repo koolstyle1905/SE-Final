@@ -20,15 +20,18 @@ namespace Business
 				c.CreateMap<Priority, PriorityDto>();
 				c.CreateMap<Class, ClassDto>();
 				c.CreateMap<Faculty, FacultyDto>();
+				c.CreateMap<TemporaryAbsence, TemporaryAbsenceDto>();
 
 				c.CreateMap<BuildingDto, Building>();
 				c.CreateMap<CarerDto, Carer>();
 				c.CreateMap<ClubDto, Club>();
 				c.CreateMap<EmployeeDto, Employee>();
-				c.CreateMap<StudentDto, Student>();
+				c.CreateMap<StudentDto, Student>()
+					.ForMember(d => d.ClassId, o => o.MapFrom(s => s.Class.ClassId));
 				c.CreateMap<PriorityDto, Priority>();
 				c.CreateMap<ClassDto, Class>();
 				c.CreateMap<FacultyDto, Faculty>();
+				c.CreateMap<TemporaryAbsenceDto, TemporaryAbsence>();
 			});
 		}
 	}

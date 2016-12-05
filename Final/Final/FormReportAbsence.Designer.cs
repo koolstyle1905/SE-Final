@@ -29,21 +29,25 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.attendanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.colAttendanceId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colNumOfStudent = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.reportAbsenceDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.attendanceBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.reportAbsenceDtoBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// gridControl1
 			// 
-			this.gridControl1.DataSource = this.attendanceBindingSource;
+			this.gridControl1.DataSource = this.reportAbsenceDtoBindingSource;
 			this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			gridLevelNode1.RelationName = "Students";
+			this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
 			this.gridControl1.Location = new System.Drawing.Point(0, 0);
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";
@@ -60,10 +64,6 @@
             this.colNumOfStudent});
 			this.gridView1.GridControl = this.gridControl1;
 			this.gridView1.Name = "gridView1";
-			// 
-			// attendanceBindingSource
-			// 
-			this.attendanceBindingSource.DataSource = typeof(DataTransfer.Attendance);
 			// 
 			// colAttendanceId
 			// 
@@ -87,6 +87,10 @@
 			this.colNumOfStudent.Visible = true;
 			this.colNumOfStudent.VisibleIndex = 2;
 			// 
+			// reportAbsenceDtoBindingSource
+			// 
+			this.reportAbsenceDtoBindingSource.DataSource = typeof(DataTransfer.ReportAbsenceDto);
+			// 
 			// FormReportAbsence
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -97,7 +101,7 @@
 			this.Text = "FormReportAbsence";
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.attendanceBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.reportAbsenceDtoBindingSource)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -106,9 +110,9 @@
 
 		private DevExpress.XtraGrid.GridControl gridControl1;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-		private System.Windows.Forms.BindingSource attendanceBindingSource;
 		private DevExpress.XtraGrid.Columns.GridColumn colAttendanceId;
 		private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate;
 		private DevExpress.XtraGrid.Columns.GridColumn colNumOfStudent;
+		private System.Windows.Forms.BindingSource reportAbsenceDtoBindingSource;
 	}
 }

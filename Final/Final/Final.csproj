@@ -177,6 +177,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DataTransfer.Attendance.datasource" />
+    <None Include="Properties\DataSources\DataTransfer.ReportAbsenceDto.datasource" />
     <None Include="Properties\DataSources\DataTransfer.RoomDto.datasource" />
     <None Include="Properties\DataSources\DataTransfer.StudentDto.datasource" />
     <None Include="Properties\Settings.settings">

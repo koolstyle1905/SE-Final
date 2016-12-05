@@ -13,7 +13,7 @@ namespace DataAccess
 		{
 		}
 
-		public virtual DbSet<Attendance> Attendances { get; set; }
+		public virtual DbSet<ReportAbsence> ReportAbsences { get; set; }
 
 		public virtual DbSet<Building> Buildings { get; set; }
 
@@ -51,10 +51,10 @@ namespace DataAccess
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
-			modelBuilder.Entity<Attendance>()
+			modelBuilder.Entity<ReportAbsence>()
 				.HasMany(e => e.Students)
-				.WithMany(e => e.Attendances)
-				.Map(m => m.ToTable("AttendanceDetail").MapLeftKey("AttendanceId").MapRightKey("StudentId"));
+				.WithMany(e => e.ReportAbsences)
+				.Map(m => m.ToTable("ReportDetail").MapLeftKey("ReportAbsenceId").MapRightKey("StudentId"));
 
 			modelBuilder.Entity<Carer>()
 				.Property(e => e.Phone)

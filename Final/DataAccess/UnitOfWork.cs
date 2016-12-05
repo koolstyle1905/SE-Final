@@ -14,10 +14,24 @@ namespace DataAccess
 		private FloorRepository floors;
 		private RoomRepository rooms;
 		private StudentRepository students;
+		private TemporaryAbsenceRepository temporaryAbsences;
 
 		public UnitOfWork()
 		{
 			dormitoryContext = new DormitoryContext();
+		}
+
+		public TemporaryAbsenceRepository TemporaryAbsences
+		{
+			get
+			{
+				if (temporaryAbsences != null)
+				{
+					return temporaryAbsences;
+				}
+				temporaryAbsences = new TemporaryAbsenceRepository(dormitoryContext);
+				return temporaryAbsences;
+			}
 		}
 
 		public BuildingRepository Buildings

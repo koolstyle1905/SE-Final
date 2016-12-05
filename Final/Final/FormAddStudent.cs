@@ -19,7 +19,7 @@ namespace Final
 		{
 			StudentDto newStudentDto;
 			if (Utilities.StringIsNullOrEmpty(txtStudentId.Text, txtName.Text, txtAddress.Text, txtNation.Text, txtReligion.Text,
-				txtPhone.Text, txtSsn.Text))
+				txtPhone.Text, txtSsn.Text, lookUpEditClass.Text))
 			{
 				XtraMessageBox.Show(@"Please fill in all fields", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
@@ -53,6 +53,10 @@ namespace Final
 				ClubId = ((ClubDto) lookUpEditClub.GetSelectedDataRow()).ClubId,
 				Name = txtName.Text,
 				RoomId = lockUpEditRoom.Text,
+				Class = new ClassDto
+				{
+					ClassId = lookUpEditClass.Text
+				},
 				DateOfBirth = dateTimePicker1.Value,
 				Course = int.Parse(cbbCourse.Text),
 				Address = txtAddress.Text,

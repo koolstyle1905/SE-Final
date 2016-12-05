@@ -30,6 +30,7 @@ namespace Final
 			}
 			var employee = new EmployeeDto
 			{
+				EmployeeId = "1",
 				Username = txtId.Text,
 				Password = txtPassword.Text
 			};

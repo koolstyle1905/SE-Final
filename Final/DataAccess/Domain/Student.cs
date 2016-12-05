@@ -17,7 +17,7 @@ namespace DataAccess.Domain
 			ParkingTickets = new HashSet<ParkingTicket>();
 			TemporaryAbsences = new HashSet<TemporaryAbsence>();
 			ViolationRecords = new HashSet<ViolationRecord>();
-			Attendances = new HashSet<Attendance>();
+			ReportAbsences = new HashSet<ReportAbsence>();
 			Priorities = new HashSet<Priority>();
 			DateOfBirth = new DateTime(2000, 1, 1);
 			Course = 2016;
@@ -91,7 +91,7 @@ namespace DataAccess.Domain
 		public virtual ICollection<ViolationRecord> ViolationRecords { get; set; }
 
 		[SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-		public virtual ICollection<Attendance> Attendances { get; set; }
+		public virtual ICollection<ReportAbsence> ReportAbsences { get; set; }
 
 		[SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 		public virtual ICollection<Priority> Priorities { get; set; }

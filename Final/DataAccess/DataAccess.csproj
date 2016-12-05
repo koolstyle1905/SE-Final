@@ -69,8 +69,9 @@
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\RoomRepository.cs" />
     <Compile Include="Repositories\StudentRepository.cs" />
+    <Compile Include="Repositories\TemporaryAbsenceRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
-    <Compile Include="Domain\Attendance.cs" />
+    <Compile Include="Domain\ReportAbsence.cs" />
     <Compile Include="Domain\Building.cs" />
     <Compile Include="Domain\Carer.cs" />
     <Compile Include="Domain\Class.cs" />

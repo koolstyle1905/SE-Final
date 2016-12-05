@@ -9,6 +9,20 @@ namespace Business
 	public static class StudentBusiness
 	{
 		/// <summary>
+		///     Lấy sinh viên theo mã học viên
+		/// </summary>
+		/// <param name="studetnId"></param>
+		/// <returns></returns>
+		public static StudentDto GetStudent(string studetnId)
+		{
+			using (var unitOfWork = new UnitOfWork())
+			{
+				var student = unitOfWork.Students.FindById(studetnId);
+				return Mapper.Map<Student, StudentDto>(student);
+			}
+		}
+
+		/// <summary>
 		///     Lấy ra danh sách tất cả thông tin sinh viên
 		/// </summary>
 		/// <returns></returns>
@@ -29,7 +43,9 @@ namespace Business
 		{
 			using (var unitOfWork = new UnitOfWork())
 			{
-				unitOfWork.Students.Add(Mapper.Map<StudentDto, Student>(studentDto));
+				var student = Mapper.Map<StudentDto, Student>(studentDto);
+				unitOfWork.Classes.Attach(student.Class);
+				unitOfWork.Students.Add(student);
 				unitOfWork.SaveChanges();
 			}
 		}

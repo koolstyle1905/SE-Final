@@ -438,7 +438,7 @@
 			// 
 			// lookUpEditBuilding
 			// 
-			this.lookUpEditBuilding.Location = new System.Drawing.Point(98, 28);
+			this.lookUpEditBuilding.Location = new System.Drawing.Point(98, 35);
 			this.lookUpEditBuilding.Name = "lookUpEditBuilding";
 			this.lookUpEditBuilding.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -451,7 +451,7 @@
 			// 
 			// lockUpEditRoom
 			// 
-			this.lockUpEditRoom.Location = new System.Drawing.Point(98, 56);
+			this.lockUpEditRoom.Location = new System.Drawing.Point(98, 91);
 			this.lockUpEditRoom.Name = "lockUpEditRoom";
 			this.lockUpEditRoom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -463,7 +463,7 @@
 			// 
 			// labelControl12
 			// 
-			this.labelControl12.Location = new System.Drawing.Point(14, 87);
+			this.labelControl12.Location = new System.Drawing.Point(14, 94);
 			this.labelControl12.Name = "labelControl12";
 			this.labelControl12.Size = new System.Drawing.Size(54, 16);
 			this.labelControl12.TabIndex = 23;
@@ -471,7 +471,7 @@
 			// 
 			// lookUpEditFloor
 			// 
-			this.lookUpEditFloor.Location = new System.Drawing.Point(98, 84);
+			this.lookUpEditFloor.Location = new System.Drawing.Point(98, 63);
 			this.lookUpEditFloor.Name = "lookUpEditFloor";
 			this.lookUpEditFloor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -484,7 +484,7 @@
 			// 
 			// labelControl13
 			// 
-			this.labelControl13.Location = new System.Drawing.Point(14, 34);
+			this.labelControl13.Location = new System.Drawing.Point(14, 41);
 			this.labelControl13.Name = "labelControl13";
 			this.labelControl13.Size = new System.Drawing.Size(65, 16);
 			this.labelControl13.TabIndex = 29;
@@ -492,7 +492,7 @@
 			// 
 			// labelControl14
 			// 
-			this.labelControl14.Location = new System.Drawing.Point(14, 59);
+			this.labelControl14.Location = new System.Drawing.Point(14, 66);
 			this.labelControl14.Name = "labelControl14";
 			this.labelControl14.Size = new System.Drawing.Size(50, 16);
 			this.labelControl14.TabIndex = 30;

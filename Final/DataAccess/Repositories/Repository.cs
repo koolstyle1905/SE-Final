@@ -84,6 +84,11 @@ namespace DataAccess.Repositories
 			context.Entry(entity).State = EntityState.Modified;
 		}
 
+		public void Attach(TEntity entity)
+		{
+			DbSet.Attach(entity);
+		}
+
 		public bool Any(Expression<Func<TEntity, bool>> predicate)
 		{
 			return DbSet.Any(predicate);

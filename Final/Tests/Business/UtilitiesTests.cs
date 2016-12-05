@@ -3,10 +3,10 @@ using NUnit.Framework;
 
 namespace Tests.Business
 {
-	[TestFixture()]
+	[TestFixture]
 	public class UtilitiesTests
 	{
-		[Test()]
+		[Test]
 		[TestCase("", "S00001")]
 		[TestCase("S00001", "S00002")]
 		[TestCase("S00001", "S00002")]
