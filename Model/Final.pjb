@@ -472,7 +472,7 @@ Shadow=0</a:DisplayPreferences>
 <o:DependencyLinkSymbol Id="o4">
 <a:ModificationDate>1480520586</a:ModificationDate>
 <a:Rect>((-6100,1416), (2279,10159))</a:Rect>
-<a:ListOfPoints>((-5700,9094),(-1,9127),(-1,1816))</a:ListOfPoints>
+<a:ListOfPoints>((-5700,9093),(-1,9127),(-1,1816))</a:ListOfPoints>
 <a:CornerStyle>1</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>5518853</a:LineColor>
@@ -491,7 +491,7 @@ Shadow=0</a:DisplayPreferences>
 <o:ModelDocumentSymbol Id="o5">
 <a:ModificationDate>1477822334</a:ModificationDate>
 <a:IconMode>2</a:IconMode>
-<a:Rect>((-6900,7894), (-4500,10294))</a:Rect>
+<a:Rect>((-6900,7893), (-4500,10293))</a:Rect>
 <a:LineColor>12034707</a:LineColor>
 <a:FillColor>16437422</a:FillColor>
 <a:ShadowColor>12632256</a:ShadowColor>
