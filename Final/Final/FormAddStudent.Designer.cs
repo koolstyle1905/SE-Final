@@ -67,6 +67,7 @@
 			this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
 			this.btnComfirm = new DevExpress.XtraEditors.SimpleButton();
+			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
 			this.panelControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -96,6 +97,7 @@
 			// 
 			// panelControl2
 			// 
+			this.panelControl2.Controls.Add(this.simpleButton1);
 			this.panelControl2.Controls.Add(this.groupControl2);
 			this.panelControl2.Controls.Add(this.groupControl1);
 			this.panelControl2.Controls.Add(this.btnComfirm);
@@ -502,10 +504,18 @@
 			// 
 			this.btnComfirm.Location = new System.Drawing.Point(236, 273);
 			this.btnComfirm.Name = "btnComfirm";
-			this.btnComfirm.Size = new System.Drawing.Size(235, 127);
+			this.btnComfirm.Size = new System.Drawing.Size(105, 57);
 			this.btnComfirm.TabIndex = 26;
 			this.btnComfirm.Text = "Confirm";
 			this.btnComfirm.Click += new System.EventHandler(this.btnComfirm_Click);
+			// 
+			// simpleButton1
+			// 
+			this.simpleButton1.Location = new System.Drawing.Point(366, 273);
+			this.simpleButton1.Name = "simpleButton1";
+			this.simpleButton1.Size = new System.Drawing.Size(105, 57);
+			this.simpleButton1.TabIndex = 41;
+			this.simpleButton1.Text = "Reset";
 			// 
 			// FormAddStudent
 			// 
@@ -513,6 +523,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(491, 420);
 			this.Controls.Add(this.panelControl1);
+			this.MaximizeBox = false;
 			this.Name = "FormAddStudent";
 			this.Text = "FormAddStudent";
 			this.Load += new System.EventHandler(this.FormAddStudent_Load);
@@ -579,5 +590,6 @@
 		private DevExpress.XtraEditors.GroupControl groupControl2;
 		private DevExpress.XtraEditors.LabelControl labelControl17;
 		private DevExpress.XtraEditors.GroupControl groupControl1;
+		private DevExpress.XtraEditors.SimpleButton simpleButton1;
 	}
 }

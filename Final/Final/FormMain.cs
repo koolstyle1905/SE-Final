@@ -151,5 +151,20 @@ namespace Final
 		{
 			new FormAddStudent().ShowDialog();
 		}
+
+		private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+		{
+
+		}
+
+		private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
+		{
+
+		}
+
+		private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
+		{
+
+		}
 	}
 }

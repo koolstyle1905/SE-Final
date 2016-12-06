@@ -52,3 +52,8 @@ Void gridViewStudent_RowUpdated
     edit student form the database where student is the updated student
     refesh gridControl
 End gridViewStudent_RowUpdated
+
+Void ExportToPdf
+Input : view as GridView, filename
+    view.ExportToPdf(filename)
+End ExportToPdf
