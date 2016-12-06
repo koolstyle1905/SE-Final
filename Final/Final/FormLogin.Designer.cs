@@ -32,8 +32,8 @@
 			this.lblPassword = new System.Windows.Forms.Label();
 			this.txtId = new System.Windows.Forms.TextBox();
 			this.txtPassword = new System.Windows.Forms.TextBox();
-			this.btnLogin = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+			this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
 			this.SuspendLayout();
 			// 
 			// lblID
@@ -71,33 +71,31 @@
 			this.txtPassword.TabIndex = 3;
 			this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter_KeyDown);
 			// 
-			// btnLogin
+			// simpleButton1
 			// 
-			this.btnLogin.Location = new System.Drawing.Point(143, 89);
-			this.btnLogin.Name = "btnLogin";
-			this.btnLogin.Size = new System.Drawing.Size(108, 30);
-			this.btnLogin.TabIndex = 4;
-			this.btnLogin.Text = "Login";
-			this.btnLogin.UseVisualStyleBackColor = true;
-			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+			this.simpleButton1.Location = new System.Drawing.Point(155, 88);
+			this.simpleButton1.Name = "simpleButton1";
+			this.simpleButton1.Size = new System.Drawing.Size(102, 30);
+			this.simpleButton1.TabIndex = 6;
+			this.simpleButton1.Text = "Login";
+			this.simpleButton1.Click += new System.EventHandler(this.btnLogin_Click);
 			// 
-			// button1
+			// simpleButton2
 			// 
-			this.button1.Location = new System.Drawing.Point(257, 89);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(108, 30);
-			this.button1.TabIndex = 5;
-			this.button1.Text = "Configure";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.btnConfig_Click);
+			this.simpleButton2.Location = new System.Drawing.Point(263, 89);
+			this.simpleButton2.Name = "simpleButton2";
+			this.simpleButton2.Size = new System.Drawing.Size(102, 30);
+			this.simpleButton2.TabIndex = 7;
+			this.simpleButton2.Text = "Configure";
+			this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
 			// 
 			// FormLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(385, 131);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.btnLogin);
+			this.ClientSize = new System.Drawing.Size(377, 130);
+			this.Controls.Add(this.simpleButton2);
+			this.Controls.Add(this.simpleButton1);
 			this.Controls.Add(this.txtPassword);
 			this.Controls.Add(this.txtId);
 			this.Controls.Add(this.lblPassword);
@@ -118,7 +116,7 @@
 		private System.Windows.Forms.Label lblPassword;
 		private System.Windows.Forms.TextBox txtId;
 		private System.Windows.Forms.TextBox txtPassword;
-		private System.Windows.Forms.Button btnLogin;
-		private System.Windows.Forms.Button button1;
+		private DevExpress.XtraEditors.SimpleButton simpleButton1;
+		private DevExpress.XtraEditors.SimpleButton simpleButton2;
 	}
 }

@@ -16,7 +16,7 @@ namespace Final
 			AutoMapperConfiguration.Configure();
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new FormPermission(new EmployeeDto()));
+			Application.Run(new FormLogin());
 		}
 	}
 }

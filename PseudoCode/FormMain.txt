@@ -1,0 +1,71 @@
+Begin FormMain
+
+    Begin void InitializeComponent
+        barBtnLogout
+        barBtnConfigure
+        barBtnExit        
+        barBtnRefesh
+
+        navBarStudentDetail
+        navBarAdd
+    End InitializeComponent
+
+    Begin void barBtnLogout_Click
+        Delete FormMain
+        Display FormLogin
+    End barBtnLogout_Click
+
+    Begin void barBtnConfigure_Click
+        Display dialog FormConfig
+    End barBtnConfigure_Click
+
+    Begin void barBtnExit_Click
+        Exit Application
+    End barBtnExit_Click
+
+    Begin void barBtnRefesh_Click
+        Refesh all opening form
+    End barBtnRefesh_Click
+
+    Begin navBarStudentDetail_Click
+        If FormStudent is exist Then
+            Activate FormStudent
+        EndIf
+        Else
+            Display FormStudent
+        EndElse
+    End navBarStudentDetail_Click
+
+    Begin navBarAdd_Click
+        Display dialog FormAddStudent
+    End navBarAdd_Click
+
+End FormMain
+
+
+
+Form CheckExistMdiChildren
+Input : formType
+    Foreach item in MdiChildren
+        If type of item = formType Then
+            Return item
+        EndIf
+    EndForeach
+    Return null    
+End CheckExistMdiChildren
+
+Void FormStudent_Load
+    studentList = get all student form database
+    fill students to gridControl
+    Display gridControl
+End FormStudent_Load
+
+Void gridViewStudent_RowUpdated
+    edit student form the database where student is the updated student
+    refesh gridControl
+End gridViewStudent_RowUpdated
+
+Void ExportToPdf
+Input : view as GridView, filename
+    view.ExportToPdf(filename)
+End ExportToPdf

@@ -1,0 +1,22 @@
+Begin FormConfig
+
+    Begin void InitializeComponent
+        textBoxServername
+        textBoxDatabasename
+        checkBoxWindows
+        textBoxUsername
+        textBoxPassword
+        buttonConnect
+    End InitializeComponent
+
+    Begin void buttonConnect_Click
+        Write textBoxServername
+        Write textBoxDatabasename
+        If  checkBoxWindows is not checked Then
+            Write textBoxUsername
+            Write textBoxPassword
+        EndIf
+        Delete FormConfig
+    End buttonConnect_Click
+
+End FormConfig

@@ -1,0 +1,36 @@
+Begin FormLogin
+
+    Begin void InitializeComponent
+        textBoxUsername
+        textBoxPassword
+        buttonLogin
+        buttonConfigure
+    End InitializeComponent
+
+    Begin void buttonLogin_Click
+        username = textBoxUsername
+        password = textBoxPassword
+        If username and password is empty Then
+            Display "Please fill in all fields."
+            Return
+        EndIf
+        Try
+            Check username and password in database
+            If not valid username and password Then
+                Display "Username or password isn't valid."
+                Return
+            EndIf
+        Catch
+            Display "Cannot connect to the server."
+            Return
+        EndCatch
+        EndTry
+        Display FormMain
+        Delete FormLogin
+    End buttonLogin_Click
+    
+    Begin void buttonConfigure_Click
+        Display dialog FormConfig
+    End buttonConfigure_Click
+
+End FormLogin

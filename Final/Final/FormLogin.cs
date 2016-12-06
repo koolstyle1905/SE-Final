@@ -67,5 +67,10 @@ namespace Final
 		{
 			new FormConfig().ShowDialog();
 		}
+
+		private void simpleButton2_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

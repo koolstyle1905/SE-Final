@@ -1,0 +1,54 @@
+Begin FormAddStudent
+
+    Begin void InitializeComponent
+        lookUpEditClub
+        lookUpEditBuilding
+        lookUpEditFaculty
+        lookUpEditFloor
+        lookUpEditRoom
+        lookUpEditClass
+        buttonConfirm
+        buttonReset
+    End InitializeComponent
+
+    Begin void FormAddStudent_Load
+        Fill data form the database to lookUpEditClub, lookUpEditBuilding, lookUpEditFaculty
+    End FormAddStudent_Load
+
+    Begin void lookUpEditBuilding_EditValueChanged
+        Get floors form the database where floors belong to the selected building
+        Fill floors to lookUpEditFloor
+    End lookUpEditBuilding_EditValueChanged
+    
+    Begin void lookUpEditFloor_EditValueChanged
+        Get rooms form the database where rooms belong to the selected floor
+        Fill rooms to lookUpEditRoom
+    End lookUpEditFloor_EditValueChanged
+
+    Begin void lookUpEditFaculty_EditValueChanged
+        Get classes form the database where classes belong to the selected faculty
+        Fill classes to lookUpEditClass
+    End lookUpEditFaculty_EditValueChanged
+
+    Begin void buttonConfirm_Click
+        If input information is empty Then
+            Display "Please fill in all fields."
+            Return
+        EndIf
+        If input information is not valid
+            Display "Please input valid information."
+            Return
+        EndIf
+        If student information is exist in the database
+            Display "Duplicate student. Please check the input information."
+        EndIf
+        Else
+            Add student information to the database
+        EndElse
+    End buttonConfirm_Click
+
+    Begin void buttonReset_Click
+        Clear all input information
+    End buttonReset_Click
+
+End FormAddStudent
