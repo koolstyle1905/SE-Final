@@ -90,8 +90,8 @@
 			this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
-			this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
 			this.barSubItem9 = new DevExpress.XtraBars.BarSubItem();
@@ -628,17 +628,17 @@
 			this.barButtonItem25.Id = 84;
 			this.barButtonItem25.Name = "barButtonItem25";
 			// 
-			// barButtonItem26
-			// 
-			this.barButtonItem26.Caption = "Change Vehicle";
-			this.barButtonItem26.Id = 85;
-			this.barButtonItem26.Name = "barButtonItem26";
-			// 
 			// barButtonItem27
 			// 
 			this.barButtonItem27.Caption = "View";
 			this.barButtonItem27.Id = 86;
 			this.barButtonItem27.Name = "barButtonItem27";
+			// 
+			// barButtonItem26
+			// 
+			this.barButtonItem26.Caption = "Change Vehicle";
+			this.barButtonItem26.Id = 85;
+			this.barButtonItem26.Name = "barButtonItem26";
 			// 
 			// barButtonItem28
 			// 
@@ -682,7 +682,7 @@
 			// 
 			// barButtonItem33
 			// 
-			this.barButtonItem33.Caption = "Setting";
+			this.barButtonItem33.Caption = "Configure";
 			this.barButtonItem33.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.Glyph")));
 			this.barButtonItem33.Id = 97;
 			this.barButtonItem33.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem33.LargeGlyph")));
@@ -779,6 +779,7 @@
 			// navBarGroup1
 			// 
 			this.navBarGroup1.Caption = "Student";
+			this.navBarGroup1.Expanded = true;
 			this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
 			this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),

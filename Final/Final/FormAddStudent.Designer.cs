@@ -30,6 +30,7 @@
 		{
 			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
 			this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
 			this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
 			this.lookUpEditClass = new DevExpress.XtraEditors.LookUpEdit();
 			this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
@@ -67,7 +68,6 @@
 			this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
 			this.btnComfirm = new DevExpress.XtraEditors.SimpleButton();
-			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
 			this.panelControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -106,6 +106,14 @@
 			this.panelControl2.Name = "panelControl2";
 			this.panelControl2.Size = new System.Drawing.Size(487, 416);
 			this.panelControl2.TabIndex = 0;
+			// 
+			// simpleButton1
+			// 
+			this.simpleButton1.Location = new System.Drawing.Point(312, 336);
+			this.simpleButton1.Name = "simpleButton1";
+			this.simpleButton1.Size = new System.Drawing.Size(105, 57);
+			this.simpleButton1.TabIndex = 41;
+			this.simpleButton1.Text = "Reset";
 			// 
 			// groupControl2
 			// 
@@ -432,7 +440,7 @@
 			this.groupControl1.Controls.Add(this.lookUpEditFloor);
 			this.groupControl1.Controls.Add(this.labelControl13);
 			this.groupControl1.Controls.Add(this.labelControl14);
-			this.groupControl1.Location = new System.Drawing.Point(63, 273);
+			this.groupControl1.Location = new System.Drawing.Point(71, 273);
 			this.groupControl1.Name = "groupControl1";
 			this.groupControl1.Size = new System.Drawing.Size(220, 127);
 			this.groupControl1.TabIndex = 38;
@@ -502,20 +510,12 @@
 			// 
 			// btnComfirm
 			// 
-			this.btnComfirm.Location = new System.Drawing.Point(304, 273);
+			this.btnComfirm.Location = new System.Drawing.Point(312, 273);
 			this.btnComfirm.Name = "btnComfirm";
 			this.btnComfirm.Size = new System.Drawing.Size(105, 57);
 			this.btnComfirm.TabIndex = 26;
 			this.btnComfirm.Text = "Confirm";
 			this.btnComfirm.Click += new System.EventHandler(this.btnComfirm_Click);
-			// 
-			// simpleButton1
-			// 
-			this.simpleButton1.Location = new System.Drawing.Point(304, 336);
-			this.simpleButton1.Name = "simpleButton1";
-			this.simpleButton1.Size = new System.Drawing.Size(105, 57);
-			this.simpleButton1.TabIndex = 41;
-			this.simpleButton1.Text = "Reset";
 			// 
 			// FormAddStudent
 			// 

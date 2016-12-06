@@ -1,0 +1,37 @@
+Begin FormPermission
+
+    Begin void InitializeComponent
+        lookUpEditStudent
+        comboBoxReason
+    End InitializeComponent
+
+    Begin FormPermission_Load
+        Fill students form the database to lookUpEditStudent
+    End FormPermission_Load
+
+    Begin lookUpEditStudent_EditValueChanged
+        Binding student information form selected student to the textBoxs
+    End lookUpEditStudent_EditValueChanged
+
+    Begin comboBoxReason_SelectedIndexChanged
+        If selected reason is Temporary Absence Then
+            disable Arrival Late information
+            enable Temporary Absence information
+        EndIf
+        Else
+            enable Arrival Late information
+            disable Temporary Absence information
+        EndElse
+    End comboBoxReason_SelectedIndexChanged
+
+    Begin buttonConfirm_Click
+        If input information is empty Then
+            Display "Please fill in all fields."
+            Return
+        EndIf
+        Else
+            Add permisson information to the database
+        EndElse
+    End buttonConfirm_Click
+
+End FormPermission

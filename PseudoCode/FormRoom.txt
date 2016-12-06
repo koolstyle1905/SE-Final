@@ -1,0 +1,17 @@
+Begin FormRoom
+
+    Begin void InitializeComponent
+        treeViewFloor
+        gridControlRoom
+    End InitializeComponent
+
+    Begin void FormRoom_Load
+        Create treeViewFloor form the database
+    End FormRoom_Load
+
+    Begin void treeViewFloor_NodeMouseClick
+        Get rooms form the database where rooms belong to the selected floor
+        Fill rooms to the gridControlRoom
+    End treeViewFloor_NodeMouseClick
+
+End FormRoom

@@ -5,9 +5,13 @@ Begin FormMain
         barBtnConfigure
         barBtnExit        
         barBtnRefesh
-
         navBarStudentDetail
         navBarAdd
+        navBarRemove
+        navBarRoomDetail
+        navBarChangeRoom
+        navBarPassword
+        navBarContactUs
     End InitializeComponent
 
     Begin void barBtnLogout_Click
@@ -40,6 +44,31 @@ Begin FormMain
         Display dialog FormAddStudent
     End navBarAdd_Click
 
+    Begin navBarRemove
+        Remove the selected student form the database
+    End navBarRemove
+
+    Begin navBarRoomDetail_Click
+        If FormRoom is exist Then
+            Activate FormRoom
+        EndIf
+        Else
+            Display FormRoom
+        EndElse
+    End navBarRoomDetail_Click
+
+    Begin navBarChangeRoom_Click
+       Display dialog FormChangeRoom
+    End navBarChangeRoom_Click
+
+    Begin navBarPassword_Click
+       Display dialog FormChangePassword
+    End navBarPassword_Click
+
+    Begin navBarContactUs_Click
+        Display dialog FormContactUs
+    End navBarContactUs_Click
+
 End FormMain
 
 
@@ -53,19 +82,3 @@ Input : formType
     EndForeach
     Return null    
 End CheckExistMdiChildren
-
-Void FormStudent_Load
-    studentList = get all student form database
-    fill students to gridControl
-    Display gridControl
-End FormStudent_Load
-
-Void gridViewStudent_RowUpdated
-    edit student form the database where student is the updated student
-    refesh gridControl
-End gridViewStudent_RowUpdated
-
-Void ExportToPdf
-Input : view as GridView, filename
-    view.ExportToPdf(filename)
-End ExportToPdf

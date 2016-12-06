@@ -30,7 +30,7 @@ namespace Final
 			}
 			catch (Exception)
 			{
-				XtraMessageBox.Show(@"Thông tin không hợp lệ", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				XtraMessageBox.Show(@"Please input valid information.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			try
@@ -39,7 +39,7 @@ namespace Final
 			}
 			catch (Exception)
 			{
-				XtraMessageBox.Show(@"Sinh viên đã có trong kí túc xá", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				XtraMessageBox.Show(@"Duplicate student. Please check the input information.", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			Close();
