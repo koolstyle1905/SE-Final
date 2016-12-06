@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Business;
 using DataTransfer;
 using DevExpress.XtraBars.Ribbon;
@@ -28,6 +29,9 @@ namespace Final
 			InitLookUpEditClub();
 			InitComboBoxEditCourse();
 			InitComboBoxEditGender();
+		
+			//var view = gridControl1.MainView as GridView;
+			//view?.ExportToPdf("aaaa.pdf");
 		}
 
 		private void InitLookUpEditClub()
@@ -76,6 +80,7 @@ namespace Final
 			var student = studentList[index];
 			StudentBusiness.EditStudent(student);
 			gridControl1.RefreshDataSource();
+			
 		}
 	}
 }

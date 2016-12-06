@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using Business;
 using DataTransfer;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
@@ -17,7 +18,8 @@ namespace Final
 			this.employee = employee;
 			this.formLogin = formLogin;
 			InitializeComponent();
-		}
+
+			studentDtoBindingSource.DataSource = StudentBusiness.GetAll();}
 
 		private Form CheckExist(Type formType)
 		{
@@ -133,6 +135,21 @@ namespace Final
 
 		private void barBtnChangePassword_ItemClick(object sender, ItemClickEventArgs e)
 		{
+		}
+
+		private void navBarControl1_Click(object sender, EventArgs e)
+		{
+		
+		}
+
+		private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			gridControl1.DataSource = StudentBusiness.GetAll();
+		}
+
+		private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+		{
+			new FormAddStudent().ShowDialog();
 		}
 	}
 }
