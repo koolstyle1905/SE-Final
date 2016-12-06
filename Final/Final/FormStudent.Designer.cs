@@ -36,31 +36,35 @@
 			this.colContent = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
 			this.studentDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gridViewCarer = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.gridViewStudent = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.colClassId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colStudentId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colClubId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colRoomId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colPlaceOfBirth = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colNation = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colReligion = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCourse = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colClassId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colFaculty = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colGender = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colDateOfBirth = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colSsn = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colFaculty = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colNation = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colReligion = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colPlaceOfBirth = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCourse = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+			this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-			this.gridViewCarer = new DevExpress.XtraGrid.Views.Grid.GridView();
 			((System.ComponentModel.ISupportInitialize)(this.gridViewPriorities)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.studentDtoBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridViewCarer)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridViewStudent)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
 			this.panelControl1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.gridViewCarer)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// gridViewPriorities
@@ -99,16 +103,23 @@
 			this.gridControl1.Location = new System.Drawing.Point(2, 2);
 			this.gridControl1.MainView = this.gridViewStudent;
 			this.gridControl1.Name = "gridControl1";
+			this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemGridLookUpEdit1});
 			this.gridControl1.Size = new System.Drawing.Size(1202, 705);
 			this.gridControl1.TabIndex = 0;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewCarer,
             this.gridViewStudent,
-            this.gridViewPriorities,
-            this.gridViewCarer});
+            this.gridViewPriorities});
 			// 
 			// studentDtoBindingSource
 			// 
 			this.studentDtoBindingSource.DataSource = typeof(DataTransfer.StudentDto);
+			// 
+			// gridViewCarer
+			// 
+			this.gridViewCarer.GridControl = this.gridControl1;
+			this.gridViewCarer.Name = "gridViewCarer";
 			// 
 			// gridViewStudent
 			// 
@@ -116,8 +127,8 @@
             this.colStudentId,
             this.colClubId,
             this.colRoomId,
-            this.colClassId,
             this.colFaculty,
+            this.colClassId,
             this.colName,
             this.colGender,
             this.colDateOfBirth,
@@ -132,14 +143,6 @@
 			this.gridViewStudent.Name = "gridViewStudent";
 			this.gridViewStudent.OptionsEditForm.EditFormColumnCount = 7;
 			this.gridViewStudent.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewStudent_RowUpdated);
-			// 
-			// colClassId
-			// 
-			this.colClassId.Caption = "Class";
-			this.colClassId.FieldName = "Class.ClassId";
-			this.colClassId.Name = "colClassId";
-			this.colClassId.Visible = true;
-			this.colClassId.VisibleIndex = 3;
 			// 
 			// colStudentId
 			// 
@@ -163,33 +166,21 @@
 			this.colRoomId.Visible = true;
 			this.colRoomId.VisibleIndex = 2;
 			// 
-			// colPlaceOfBirth
+			// colClassId
 			// 
-			this.colPlaceOfBirth.FieldName = "PlaceOfBirth";
-			this.colPlaceOfBirth.Name = "colPlaceOfBirth";
-			this.colPlaceOfBirth.Visible = true;
-			this.colPlaceOfBirth.VisibleIndex = 11;
+			this.colClassId.Caption = "Class";
+			this.colClassId.FieldName = "Class.ClassId";
+			this.colClassId.Name = "colClassId";
+			this.colClassId.Visible = true;
+			this.colClassId.VisibleIndex = 4;
 			// 
-			// colNation
+			// colFaculty
 			// 
-			this.colNation.FieldName = "Nation";
-			this.colNation.Name = "colNation";
-			this.colNation.Visible = true;
-			this.colNation.VisibleIndex = 12;
-			// 
-			// colReligion
-			// 
-			this.colReligion.FieldName = "Religion";
-			this.colReligion.Name = "colReligion";
-			this.colReligion.Visible = true;
-			this.colReligion.VisibleIndex = 13;
-			// 
-			// colCourse
-			// 
-			this.colCourse.FieldName = "Course";
-			this.colCourse.Name = "colCourse";
-			this.colCourse.Visible = true;
-			this.colCourse.VisibleIndex = 14;
+			this.colFaculty.Caption = "Faculty";
+			this.colFaculty.FieldName = "Class.FacultyId";
+			this.colFaculty.Name = "colFaculty";
+			this.colFaculty.Visible = true;
+			this.colFaculty.VisibleIndex = 3;
 			// 
 			// colName
 			// 
@@ -233,13 +224,48 @@
 			this.colPhone.Visible = true;
 			this.colPhone.VisibleIndex = 10;
 			// 
-			// colFaculty
+			// colNation
 			// 
-			this.colFaculty.Caption = "Faculty";
-			this.colFaculty.FieldName = "Class.Faculty.Name";
-			this.colFaculty.Name = "colFaculty";
-			this.colFaculty.Visible = true;
-			this.colFaculty.VisibleIndex = 4;
+			this.colNation.FieldName = "Nation";
+			this.colNation.Name = "colNation";
+			this.colNation.Visible = true;
+			this.colNation.VisibleIndex = 12;
+			// 
+			// colReligion
+			// 
+			this.colReligion.FieldName = "Religion";
+			this.colReligion.Name = "colReligion";
+			this.colReligion.Visible = true;
+			this.colReligion.VisibleIndex = 13;
+			// 
+			// colPlaceOfBirth
+			// 
+			this.colPlaceOfBirth.FieldName = "PlaceOfBirth";
+			this.colPlaceOfBirth.Name = "colPlaceOfBirth";
+			this.colPlaceOfBirth.Visible = true;
+			this.colPlaceOfBirth.VisibleIndex = 11;
+			// 
+			// colCourse
+			// 
+			this.colCourse.FieldName = "Course";
+			this.colCourse.Name = "colCourse";
+			this.colCourse.Visible = true;
+			this.colCourse.VisibleIndex = 14;
+			// 
+			// repositoryItemGridLookUpEdit1
+			// 
+			this.repositoryItemGridLookUpEdit1.AutoHeight = false;
+			this.repositoryItemGridLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
+			this.repositoryItemGridLookUpEdit1.View = this.repositoryItemGridLookUpEdit1View;
+			// 
+			// repositoryItemGridLookUpEdit1View
+			// 
+			this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+			this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
 			// 
 			// panelControl1
 			// 
@@ -249,11 +275,6 @@
 			this.panelControl1.Name = "panelControl1";
 			this.panelControl1.Size = new System.Drawing.Size(1206, 709);
 			this.panelControl1.TabIndex = 1;
-			// 
-			// gridViewCarer
-			// 
-			this.gridViewCarer.GridControl = this.gridControl1;
-			this.gridViewCarer.Name = "gridViewCarer";
 			// 
 			// FormStudent
 			// 
@@ -267,10 +288,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridViewPriorities)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.studentDtoBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridViewCarer)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridViewStudent)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
 			this.panelControl1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.gridViewCarer)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -299,5 +322,7 @@
 		private DevExpress.XtraGrid.Columns.GridColumn colClassId;
 		private DevExpress.XtraGrid.Columns.GridColumn colFaculty;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridViewCarer;
+		private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
+		private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
 	}
 }

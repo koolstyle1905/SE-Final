@@ -7,19 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace Final
 {
-	public partial class FormContact : Form
+	public partial class FormChangePassword : Form
 	{
-		public FormContact()
+		public FormChangePassword()
 		{
 			InitializeComponent();
-		}
-
-		private void FormContact_Load(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

@@ -432,7 +432,7 @@
 			this.groupControl1.Controls.Add(this.lookUpEditFloor);
 			this.groupControl1.Controls.Add(this.labelControl13);
 			this.groupControl1.Controls.Add(this.labelControl14);
-			this.groupControl1.Location = new System.Drawing.Point(10, 273);
+			this.groupControl1.Location = new System.Drawing.Point(63, 273);
 			this.groupControl1.Name = "groupControl1";
 			this.groupControl1.Size = new System.Drawing.Size(220, 127);
 			this.groupControl1.TabIndex = 38;
@@ -502,7 +502,7 @@
 			// 
 			// btnComfirm
 			// 
-			this.btnComfirm.Location = new System.Drawing.Point(236, 273);
+			this.btnComfirm.Location = new System.Drawing.Point(304, 273);
 			this.btnComfirm.Name = "btnComfirm";
 			this.btnComfirm.Size = new System.Drawing.Size(105, 57);
 			this.btnComfirm.TabIndex = 26;
@@ -511,7 +511,7 @@
 			// 
 			// simpleButton1
 			// 
-			this.simpleButton1.Location = new System.Drawing.Point(366, 273);
+			this.simpleButton1.Location = new System.Drawing.Point(304, 336);
 			this.simpleButton1.Name = "simpleButton1";
 			this.simpleButton1.Size = new System.Drawing.Size(105, 57);
 			this.simpleButton1.TabIndex = 41;
@@ -524,6 +524,7 @@
 			this.ClientSize = new System.Drawing.Size(491, 420);
 			this.Controls.Add(this.panelControl1);
 			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "FormAddStudent";
 			this.Text = "FormAddStudent";
 			this.Load += new System.EventHandler(this.FormAddStudent_Load);

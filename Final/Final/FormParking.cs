@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Final
 {
-	public partial class FormContact : Form
+	public partial class FormParking : Form
 	{
-		public FormContact()
+		public FormParking()
 		{
 			InitializeComponent();
-		}
-
-		private void FormContact_Load(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

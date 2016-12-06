@@ -70,37 +70,19 @@ namespace Final
 			{
 				groupTemporaryAbsence.Enabled = true;
 				groupArrivalLate.Enabled = false;
-				txtVehicleType.Enabled = false;
-				txtEngineNumber.Enabled = false;
-				txtOwnerAddress.Enabled = false;
-				txtOwnerName.Enabled = false;
-				txtLicensePlate.Enabled = false;
-				txtPaintColor.Enabled = false;
-				txtViNumber.Enabled = false;
+				
 			}
 			if (cbbReason.SelectedIndex == 1)
 			{
 				groupTemporaryAbsence.Enabled = false;
 				groupArrivalLate.Enabled = true;
-				txtVehicleType.Enabled = false;
-				txtEngineNumber.Enabled = false;
-				txtOwnerAddress.Enabled = false;
-				txtOwnerName.Enabled = false;
-				txtLicensePlate.Enabled = false;
-				txtPaintColor.Enabled = false;
-				txtViNumber.Enabled = false;
+				
 			}
 			if (cbbReason.SelectedIndex == 2)
 			{
 				groupTemporaryAbsence.Enabled = false;
 				groupArrivalLate.Enabled = false;
-				txtVehicleType.Enabled = true;
-				txtEngineNumber.Enabled = true;
-				txtOwnerAddress.Enabled = true;
-				txtOwnerName.Enabled = true;
-				txtLicensePlate.Enabled = true;
-				txtPaintColor.Enabled = true;
-				txtViNumber.Enabled = true;
+				
 			}
 		}
 
@@ -119,6 +101,11 @@ namespace Final
 				TemporaryAbsenceBusiness.Add(temporary);
 			}
 			Close();
+		}
+
+		private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

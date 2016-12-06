@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Business;
 using DataTransfer;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors.Repository;
 
 namespace Final
 {
@@ -19,7 +23,8 @@ namespace Final
 			this.formLogin = formLogin;
 			InitializeComponent();
 
-			studentDtoBindingSource.DataSource = StudentBusiness.GetAll();}
+			//studentDtoBindingSource.DataSource = StudentBusiness.GetAll();
+		}
 
 		private Form CheckExist(Type formType)
 		{
@@ -28,7 +33,8 @@ namespace Final
 
 		private void Form_Load(object sender, EventArgs e)
 		{
-		}
+	
+		} 
 
 		private void barBtnStudentList_ItemClick(object sender, ItemClickEventArgs e)
 		{
@@ -137,14 +143,19 @@ namespace Final
 		{
 		}
 
-		private void navBarControl1_Click(object sender, EventArgs e)
-		{
-		
-		}
 
 		private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
 		{
-			gridControl1.DataSource = StudentBusiness.GetAll();
+			var form = CheckExist(typeof(FormStudent));
+			if (form != null)
+			{
+				form.Activate();
+			}
+			else
+			{
+				var formStudent = new FormStudent { MdiParent = this };
+				formStudent.Show();
+			}
 		}
 
 		private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -157,14 +168,29 @@ namespace Final
 
 		}
 
-		private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
+
+		private void barButtonItem33_ItemClick(object sender, ItemClickEventArgs e)
 		{
 
 		}
 
-		private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
+		private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
 		{
+			var form = CheckExist(typeof(FormRoom));
+			if (form != null)
+			{
+				form.Activate();
+			}
+			else
+			{
+				var formStudent = new FormRoom { MdiParent = this };
+				formStudent.Show();
+			}
+		}
 
+		private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			new FormPermission(employee).ShowDialog();
 		}
 	}
 }

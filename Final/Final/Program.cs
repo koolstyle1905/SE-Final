@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Business;
+using DataTransfer;
 
 namespace Final
 {
@@ -15,7 +16,7 @@ namespace Final
 			AutoMapperConfiguration.Configure();
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new FormLogin());
+			Application.Run(new FormPermission(new EmployeeDto()));
 		}
 	}
 }

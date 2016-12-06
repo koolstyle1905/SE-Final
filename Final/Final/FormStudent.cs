@@ -29,11 +29,45 @@ namespace Final
 			InitLookUpEditClub();
 			InitComboBoxEditCourse();
 			InitComboBoxEditGender();
-		
+			InitLookUpEditClass();
+			InitLookUpEditfaculty();
 			//var view = gridControl1.MainView as GridView;
 			//view?.ExportToPdf("aaaa.pdf");
 		}
 
+		private void InitLookUpEditClass()
+		{
+			var clubList = ClassBusiness.GetClassByFacultyId("5");
+			var riLookUpClub = new RepositoryItemLookUpEdit
+			{
+				DataSource = clubList,
+				ValueMember = "ClassId",
+				DisplayMember = "ClassId",
+				DropDownRows = clubList.Count,
+				BestFitMode = BestFitMode.BestFit,
+				SearchMode = SearchMode.AutoComplete,
+				AutoSearchColumnIndex = 1,
+			};
+			riLookUpClub.PopulateColumns();
+			riLookUpClub.Columns["FacultyId"].Visible = false;
+			riLookUpClub.Columns["Faculty"].Visible = false;
+			gridViewStudent.Columns["Class.ClassId"].ColumnEdit = riLookUpClub;
+		}
+		private void InitLookUpEditfaculty()
+		{
+			var clubList = FacultyBusiness.GetAll();
+			var riLookUpClub = new RepositoryItemLookUpEdit
+			{
+				DataSource = clubList,
+				ValueMember = "FacultyId",
+				DisplayMember = "Name",
+				DropDownRows = clubList.Count,
+				BestFitMode = BestFitMode.BestFit,
+				SearchMode = SearchMode.AutoComplete,
+				AutoSearchColumnIndex = 1
+			};
+			gridViewStudent.Columns["Class.FacultyId"].ColumnEdit = riLookUpClub;
+		}
 		private void InitLookUpEditClub()
 		{
 			var clubList = ClubBusiness.GetAll();

@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
     </Compile>
     <Compile Include="FormContact.Designer.cs">
       <DependentUpon>FormContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormParking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormParking.Designer.cs">
+      <DependentUpon>FormParking.cs</DependentUpon>
     </Compile>
     <Compile Include="FormReportAbsence.cs">
       <SubType>Form</SubType>
@@ -116,6 +128,9 @@
     <EmbeddedResource Include="FormAddStudent.resx">
       <DependentUpon>FormAddStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConfig.resx">
       <DependentUpon>FormConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormParking.resx">
+      <DependentUpon>FormParking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPermission.resx">
       <DependentUpon>FormPermission.cs</DependentUpon>
