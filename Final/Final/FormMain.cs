@@ -104,13 +104,13 @@ namespace Final
 
 		private void barBtnFromPermission_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			var formPermission = new FormPermission(employee);
+			var formPermission = new FormAddPermission(employee);
 			formPermission.ShowDialog();
 		}
 
 		private void barBtnFormViolationRecord_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			var formViolationRecord = new FormViolationRecord();
+			var formViolationRecord = new FormAddViolationRecord();
 			formViolationRecord.ShowDialog();
 		}
 
@@ -190,7 +190,63 @@ namespace Final
 
 		private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			new FormPermission(employee).ShowDialog();
+			new FormAddPermission(employee).ShowDialog();
+		}
+
+		private void barButtonItem31_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			var form = CheckExist(typeof(FormReportAbsence));
+			if (form != null)
+			{
+				form.Activate();
+			}
+			else
+			{
+				var formStudent = new FormReportAbsence { MdiParent = this };
+				formStudent.Show();
+			}
+		}
+
+		private void barButtonItem36_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			var form = CheckExist(typeof(FormViolationRecord));
+			if (form != null)
+			{
+				form.Activate();
+			}
+			else
+			{
+				var formStudent = new FormViolationRecord { MdiParent = this };
+				formStudent.Show();
+			}
+		}
+
+		private void barButtonItem39_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			var form = CheckExist(typeof(FormLateArrival));
+			if (form != null)
+			{
+				form.Activate();
+			}
+			else
+			{
+				var formStudent = new FormLateArrival { MdiParent = this };
+				formStudent.Show();
+			}
+		}
+
+		private void barButtonItem40_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			var form = CheckExist(typeof(FormTemporaryAbsence));
+			if (form != null)
+			{
+				form.Activate();
+			}
+			else
+			{
+				var formStudent = new FormTemporaryAbsence { MdiParent = this };
+				formStudent.Show();
+			}
 		}
 	}
 }

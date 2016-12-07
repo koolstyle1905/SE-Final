@@ -1,0 +1,12 @@
+Begin FormStudent
+
+    Begin FormStudent_Load
+        Fill students form the database to the gridControlStudent
+    End FormStudent_Load
+
+    Begin gridViewStudent_RowUpdated
+		Update student's information to database
+		Refresh griControlStudent
+    End gridViewStudent
+
+End FormStudent

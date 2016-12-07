@@ -15,10 +15,16 @@ namespace DataAccess
 		private RoomRepository rooms;
 		private StudentRepository students;
 		private TemporaryAbsenceRepository temporaryAbsences;
+		public Rp rp;
+		public ViolationRecordRepository violationRecords;
+		public LateArrivalRepository lateArrivals;
 
 		public UnitOfWork()
 		{
 			dormitoryContext = new DormitoryContext();
+			rp = new Rp(dormitoryContext);
+			violationRecords = new ViolationRecordRepository(dormitoryContext);
+			lateArrivals = new LateArrivalRepository(dormitoryContext);
 		}
 
 		public TemporaryAbsenceRepository TemporaryAbsences

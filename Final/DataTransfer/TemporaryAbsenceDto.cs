@@ -19,8 +19,6 @@ namespace DataTransfer
 
 		public string Description { get; set; }
 
-		public EmployeeDto Employee { get; set; }
-
 		public StudentDto Student { get; set; }
 	}
 }

@@ -81,7 +81,9 @@
 			this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
 			this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
 			this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
-			this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
+			this.barSubItem11 = new DevExpress.XtraBars.BarSubItem();
+			this.barButtonItem39 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem40 = new DevExpress.XtraBars.BarButtonItem();
 			this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
 			this.barButtonItem35 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem36 = new DevExpress.XtraBars.BarButtonItem();
@@ -100,6 +102,9 @@
 			this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem37 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem38 = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -120,7 +125,6 @@
 			this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
-			this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
 			this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
 			this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
@@ -206,9 +210,14 @@
             this.barButtonItem22,
             this.barSubItem10,
             this.barButtonItem35,
-            this.barButtonItem36});
+            this.barButtonItem36,
+            this.barButtonItem37,
+            this.barButtonItem38,
+            this.barSubItem11,
+            this.barButtonItem39,
+            this.barButtonItem40});
 			this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl1.MaxItemId = 107;
+			this.ribbonControl1.MaxItemId = 112;
 			this.ribbonControl1.Name = "ribbonControl1";
 			this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -555,7 +564,7 @@
 			this.barSubItem8.Id = 101;
 			this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem22)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem11)});
 			this.barSubItem8.Name = "barSubItem8";
 			// 
 			// barButtonItem21
@@ -565,11 +574,28 @@
 			this.barButtonItem21.Name = "barButtonItem21";
 			this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick);
 			// 
-			// barButtonItem22
+			// barSubItem11
 			// 
-			this.barButtonItem22.Caption = "View";
-			this.barButtonItem22.Id = 103;
-			this.barButtonItem22.Name = "barButtonItem22";
+			this.barSubItem11.Caption = "View";
+			this.barSubItem11.Id = 109;
+			this.barSubItem11.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem39),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem40)});
+			this.barSubItem11.Name = "barSubItem11";
+			// 
+			// barButtonItem39
+			// 
+			this.barButtonItem39.Caption = "Late Arrival";
+			this.barButtonItem39.Id = 110;
+			this.barButtonItem39.Name = "barButtonItem39";
+			this.barButtonItem39.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem39_ItemClick);
+			// 
+			// barButtonItem40
+			// 
+			this.barButtonItem40.Caption = "Temporary Absence";
+			this.barButtonItem40.Id = 111;
+			this.barButtonItem40.Name = "barButtonItem40";
+			this.barButtonItem40.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem40_ItemClick);
 			// 
 			// barSubItem10
 			// 
@@ -591,6 +617,7 @@
 			this.barButtonItem36.Caption = "View";
 			this.barButtonItem36.Id = 106;
 			this.barButtonItem36.Name = "barButtonItem36";
+			this.barButtonItem36.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem36_ItemClick);
 			// 
 			// barButtonGroup3
 			// 
@@ -672,6 +699,7 @@
 			this.barButtonItem31.Caption = "View";
 			this.barButtonItem31.Id = 94;
 			this.barButtonItem31.Name = "barButtonItem31";
+			this.barButtonItem31.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem31_ItemClick);
 			// 
 			// barButtonItem32
 			// 
@@ -696,6 +724,24 @@
 			this.barButtonItem34.Id = 98;
 			this.barButtonItem34.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem34.LargeGlyph")));
 			this.barButtonItem34.Name = "barButtonItem34";
+			// 
+			// barButtonItem22
+			// 
+			this.barButtonItem22.Caption = "View";
+			this.barButtonItem22.Id = 103;
+			this.barButtonItem22.Name = "barButtonItem22";
+			// 
+			// barButtonItem37
+			// 
+			this.barButtonItem37.Caption = "Permission";
+			this.barButtonItem37.Id = 107;
+			this.barButtonItem37.Name = "barButtonItem37";
+			// 
+			// barButtonItem38
+			// 
+			this.barButtonItem38.Caption = "Violation Record";
+			this.barButtonItem38.Id = 108;
+			this.barButtonItem38.Name = "barButtonItem38";
 			// 
 			// ribbonPage1
 			// 
@@ -764,7 +810,6 @@
             this.navBarItem10,
             this.navBarItem11,
             this.navBarItem8,
-            this.navBarItem9,
             this.navBarItem12,
             this.navBarSeparatorItem1,
             this.navBarItem13});
@@ -790,7 +835,7 @@
 			// 
 			// navBarItem1
 			// 
-			this.navBarItem1.Caption = "Student details";
+			this.navBarItem1.Caption = "Student Details";
 			this.navBarItem1.Name = "navBarItem1";
 			this.navBarItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.SmallImage")));
 			this.navBarItem1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem1_LinkClicked);
@@ -821,14 +866,14 @@
 			// 
 			// navBarItem2
 			// 
-			this.navBarItem2.Caption = "Room details";
+			this.navBarItem2.Caption = "Room Details";
 			this.navBarItem2.Name = "navBarItem2";
 			this.navBarItem2.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.SmallImage")));
 			this.navBarItem2.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
 			// 
 			// navBarItem11
 			// 
-			this.navBarItem11.Caption = "Changes Room";
+			this.navBarItem11.Caption = "Change Room";
 			this.navBarItem11.Name = "navBarItem11";
 			this.navBarItem11.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem11.SmallImage")));
 			// 
@@ -873,17 +918,11 @@
 			// navBarGroup5
 			// 
 			this.navBarGroup5.Caption = "User";
+			this.navBarGroup5.Expanded = true;
 			this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem9),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem12)});
 			this.navBarGroup5.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.LargeImage")));
 			this.navBarGroup5.Name = "navBarGroup5";
-			// 
-			// navBarItem9
-			// 
-			this.navBarItem9.Caption = "Profile";
-			this.navBarItem9.Name = "navBarItem9";
-			this.navBarItem9.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.SmallImage")));
 			// 
 			// navBarItem12
 			// 
@@ -902,7 +941,7 @@
 			// 
 			// navBarItem8
 			// 
-			this.navBarItem8.Caption = "Contacts";
+			this.navBarItem8.Caption = "Contact Us";
 			this.navBarItem8.Name = "navBarItem8";
 			this.navBarItem8.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem8.SmallImage")));
 			// 
@@ -1000,7 +1039,6 @@
 		private DevExpress.XtraNavBar.NavBarItem navBarItem10;
 		private DevExpress.XtraNavBar.NavBarItem navBarItem11;
 		private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
-		private DevExpress.XtraNavBar.NavBarItem navBarItem9;
 		private DevExpress.XtraNavBar.NavBarItem navBarItem12;
 		private DevExpress.XtraNavBar.NavBarItem navBarItem8;
 		private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
@@ -1050,5 +1088,10 @@
 		private DevExpress.XtraBars.BarButtonItem barButtonItem35;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem36;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem34;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem37;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem38;
+		private DevExpress.XtraBars.BarSubItem barSubItem11;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem39;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem40;
 	}
 }

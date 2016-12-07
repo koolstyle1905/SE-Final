@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Final
 {
-	public partial class FormContact : Form
+	public partial class FormContactUs : Form
 	{
-		public FormContact()
+		public FormContactUs()
 		{
 			InitializeComponent();
 		}

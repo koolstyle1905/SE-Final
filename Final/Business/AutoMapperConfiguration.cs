@@ -21,6 +21,9 @@ namespace Business
 				c.CreateMap<Class, ClassDto>();
 				c.CreateMap<Faculty, FacultyDto>();
 				c.CreateMap<TemporaryAbsence, TemporaryAbsenceDto>();
+				c.CreateMap<ReportAbsence, ReportAbsenceDto>();
+				c.CreateMap<ViolationRecord, ViolationRecordDto>();
+				c.CreateMap<LateArrivalInfo, LateArrivalDto>();
 
 				c.CreateMap<BuildingDto, Building>();
 				c.CreateMap<CarerDto, Carer>();

@@ -1,0 +1,35 @@
+Begin FormChangeRoom
+
+     Begin FormAddPermission_Load
+        Fill students form the database to lookUpEditStudent
+    End FormAddPermission_Load
+
+    Begin lookUpEditStudent_EditValueChanged
+        Binding student information form selected student to the textBoxs
+    End lookUpEditStudent_EditValueChanged
+
+    Begin lookUpEditBuilding_EditValueChanged
+        Get floors form the database where floors belong to the selected building
+        Fill floors to lookUpEditFloor
+    End lookUpEditBuilding_EditValueChanged
+    
+    Begin lookUpEditFloor_EditValueChanged
+        Get rooms form the database where rooms belong to the selected floor
+        Fill rooms to lookUpEditRoom
+    End lookUpEditFloor_EditValueChanged
+
+    Begin buttonConfirm_Click
+        If room move to duplicate with the current room
+            Display "Please choose valid room."
+            Return
+        EndIf
+        If room move to is max
+            Display "The room is max. Please choose another room."
+            Return
+        EndIf
+        Else
+            Update student room information to the database
+        EndElse
+    End buttonConfirm_Click
+
+End FormChangeRoom

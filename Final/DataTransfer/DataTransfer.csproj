@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LateArrivalDto.cs" />
     <Compile Include="ReportAbsenceDto.cs" />
     <Compile Include="BuildingDto.cs" />
     <Compile Include="BuildingName.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="RoomDto.cs" />
     <Compile Include="StudentDto.cs" />
     <Compile Include="TemporaryAbsenceDto.cs" />
+    <Compile Include="ViolationRecordDto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

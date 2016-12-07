@@ -1,0 +1,7 @@
+Begin FormReportAbsence
+
+    Begin FormReportAbsence_Load
+        Fill report absences form the database to the gridControlReportAbsence
+    End FormReportAbsence_Load
+
+End FormReportAbsence

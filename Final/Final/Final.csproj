@@ -51,6 +51,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCancelChangeParking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCancelChangeParking.Designer.cs">
+      <DependentUpon>FormCancelChangeParking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLateArrival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLateArrival.Designer.cs">
+      <DependentUpon>FormLateArrival.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTemporaryAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemporaryAbsence.Designer.cs">
+      <DependentUpon>FormTemporaryAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViolationRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViolationRecord.Designer.cs">
+      <DependentUpon>FormViolationRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,17 +93,17 @@
     <Compile Include="FormConfig.Designer.cs">
       <DependentUpon>FormConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormContact.cs">
+    <Compile Include="FormContactUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormContact.Designer.cs">
-      <DependentUpon>FormContact.cs</DependentUpon>
+    <Compile Include="FormContactUs.Designer.cs">
+      <DependentUpon>FormContactUs.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormParking.cs">
+    <Compile Include="FormAddParking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormParking.Designer.cs">
-      <DependentUpon>FormParking.cs</DependentUpon>
+    <Compile Include="FormAddParking.Designer.cs">
+      <DependentUpon>FormAddParking.cs</DependentUpon>
     </Compile>
     <Compile Include="FormReportAbsence.cs">
       <SubType>Form</SubType>
@@ -81,11 +111,11 @@
     <Compile Include="FormReportAbsence.Designer.cs">
       <DependentUpon>FormReportAbsence.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormViolationRecord.cs">
+    <Compile Include="FormAddViolationRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormViolationRecord.Designer.cs">
-      <DependentUpon>FormViolationRecord.cs</DependentUpon>
+    <Compile Include="FormAddViolationRecord.Designer.cs">
+      <DependentUpon>FormAddViolationRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAddStudent.cs">
       <SubType>Form</SubType>
@@ -105,11 +135,11 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPermission.cs">
+    <Compile Include="FormAddPermission.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPermission.Designer.cs">
-      <DependentUpon>FormPermission.cs</DependentUpon>
+    <Compile Include="FormAddPermission.Designer.cs">
+      <DependentUpon>FormAddPermission.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRoom.cs">
       <SubType>Form</SubType>
@@ -125,6 +155,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCancelChangeParking.resx">
+      <DependentUpon>FormCancelChangeParking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLateArrival.resx">
+      <DependentUpon>FormLateArrival.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTemporaryAbsence.resx">
+      <DependentUpon>FormTemporaryAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViolationRecord.resx">
+      <DependentUpon>FormViolationRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddStudent.resx">
       <DependentUpon>FormAddStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,8 +179,8 @@
     <EmbeddedResource Include="FormConfig.resx">
       <DependentUpon>FormConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormContact.resx">
-      <DependentUpon>FormContact.cs</DependentUpon>
+    <EmbeddedResource Include="FormContactUs.resx">
+      <DependentUpon>FormContactUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -143,11 +188,11 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormParking.resx">
-      <DependentUpon>FormParking.cs</DependentUpon>
+    <EmbeddedResource Include="FormAddParking.resx">
+      <DependentUpon>FormAddParking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPermission.resx">
-      <DependentUpon>FormPermission.cs</DependentUpon>
+    <EmbeddedResource Include="FormAddPermission.resx">
+      <DependentUpon>FormAddPermission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportAbsence.resx">
       <DependentUpon>FormReportAbsence.cs</DependentUpon>
@@ -158,8 +203,8 @@
     <EmbeddedResource Include="FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormViolationRecord.resx">
-      <DependentUpon>FormViolationRecord.cs</DependentUpon>
+    <EmbeddedResource Include="FormAddViolationRecord.resx">
+      <DependentUpon>FormAddViolationRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -174,9 +219,12 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DataTransfer.Attendance.datasource" />
+    <None Include="Properties\DataSources\DataTransfer.LateArrivalDto.datasource" />
     <None Include="Properties\DataSources\DataTransfer.ReportAbsenceDto.datasource" />
     <None Include="Properties\DataSources\DataTransfer.RoomDto.datasource" />
     <None Include="Properties\DataSources\DataTransfer.StudentDto.datasource" />
+    <None Include="Properties\DataSources\DataTransfer.TemporaryAbsenceDto.datasource" />
+    <None Include="Properties\DataSources\DataTransfer.ViolationRecordDto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -194,6 +242,10 @@
     <ProjectReference Include="..\Business\Business.csproj">
       <Project>{57e75477-38f1-4a11-8f2a-db9838e53721}</Project>
       <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{56e840e4-d991-48fb-af38-cd53612ef798}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataTransfer\DataTransfer.csproj">
       <Project>{09d94957-6d12-4e93-88cf-db67ccc211b2}</Project>

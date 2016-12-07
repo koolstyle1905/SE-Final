@@ -1,13 +1,6 @@
 Begin FormLogin
 
-    Begin void InitializeComponent
-        textBoxUsername
-        textBoxPassword
-        buttonLogin
-        buttonConfigure
-    End InitializeComponent
-
-    Begin void buttonLogin_Click
+    Begin buttonLogin_Click
         username = textBoxUsername
         password = textBoxPassword
         If username and password is empty Then
@@ -29,7 +22,7 @@ Begin FormLogin
         Delete FormLogin
     End buttonLogin_Click
     
-    Begin void buttonConfigure_Click
+    Begin buttonConfigure_Click
         Display dialog FormConfig
     End buttonConfigure_Click
 

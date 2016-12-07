@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using DataAccess;
 using DataAccess.Domain;
@@ -35,6 +36,14 @@ namespace Business
 				var query = unitOfWork.TemporaryAbsences.OrderByDescending(t => t.AbsenceId).FirstOrDefault();
 				const string prefixId = "T";
 				return Utilities.NextId(query == null ? string.Empty : query.AbsenceId, prefixId);
+			}
+		}
+
+		public static List<TemporaryAbsenceDto> GetAll()
+		{
+			using (var unitOfWork = new UnitOfWork())
+			{
+				return Mapper.Map<List<TemporaryAbsence>, List<TemporaryAbsenceDto>>(unitOfWork.TemporaryAbsences.ToList());
 			}
 		}
 	}

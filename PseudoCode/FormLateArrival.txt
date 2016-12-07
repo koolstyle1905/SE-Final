@@ -1,0 +1,7 @@
+Begin FormLateArrival
+
+    Begin FormLateArrival_Load
+        Fill late arrival form the database to the gridControlLateArrival
+    End FormLateArrival_Load
+
+End FormLateArrival

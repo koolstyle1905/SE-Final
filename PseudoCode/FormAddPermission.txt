@@ -1,13 +1,8 @@
-Begin FormPermission
+Begin FormAddPermission
 
-    Begin void InitializeComponent
-        lookUpEditStudent
-        comboBoxReason
-    End InitializeComponent
-
-    Begin FormPermission_Load
+    Begin FormAddPermission_Load
         Fill students form the database to lookUpEditStudent
-    End FormPermission_Load
+    End FormAddPermission_Load
 
     Begin lookUpEditStudent_EditValueChanged
         Binding student information form selected student to the textBoxs
@@ -31,7 +26,12 @@ Begin FormPermission
         EndIf
         Else
             Add permisson information to the database
+            Delete FormAddPermission
         EndElse
     End buttonConfirm_Click
 
-End FormPermission
+    Begin buttonReset_Click
+        Clear all input information
+    End buttonReset_Click
+
+End FormAddPermission

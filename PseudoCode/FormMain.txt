@@ -1,33 +1,19 @@
 Begin FormMain
 
-    Begin void InitializeComponent
-        barBtnLogout
-        barBtnConfigure
-        barBtnExit        
-        barBtnRefesh
-        navBarStudentDetail
-        navBarAdd
-        navBarRemove
-        navBarRoomDetail
-        navBarChangeRoom
-        navBarPassword
-        navBarContactUs
-    End InitializeComponent
-
-    Begin void barBtnLogout_Click
+    Begin barBtnLogout_Click
         Delete FormMain
         Display FormLogin
     End barBtnLogout_Click
 
-    Begin void barBtnConfigure_Click
+    Begin barBtnConfigure_Click
         Display dialog FormConfig
     End barBtnConfigure_Click
 
-    Begin void barBtnExit_Click
+    Begin barBtnExit_Click
         Exit Application
     End barBtnExit_Click
 
-    Begin void barBtnRefesh_Click
+    Begin barBtnRefesh_Click
         Refesh all opening form
     End barBtnRefesh_Click
 
@@ -69,16 +55,48 @@ Begin FormMain
         Display dialog FormContactUs
     End navBarContactUs_Click
 
-End FormMain
+    Begin barButtonNewPermisson_Click
+        Display dialog FormAddPermisson
+    End barButtonNewPermisson_Click
 
-
-
-Form CheckExistMdiChildren
-Input : formType
-    Foreach item in MdiChildren
-        If type of item = formType Then
-            Return item
+    Begin barButtonViewLateArrival_Click
+        If FormLateArrival is exist Then
+            Activate FormLateArrival
         EndIf
-    EndForeach
-    Return null    
-End CheckExistMdiChildren
+        Else
+            Display FormLateArrival
+        EndElse
+    End barButtonViewLateArrival_Click
+
+    Begin barButtonViewTemporaryAbsence_Click
+        If FormTemporaryAbsence is exist Then
+            Activate FormTemporaryAbsence
+        EndIf
+        Else
+            Display FormTemporaryAbsence
+        EndElse
+    End barButtonViewLateArrival_Click
+
+    Begin barButtonNewViolationRecord_Click
+        Display dialog FormAddViolationRecord
+    End barButtonNewViolationRecord_Click
+
+    Begin barButtonViewViolationRecord_Click
+        If FormViolationRecord is exist Then
+            Activate FormViolationRecord
+        EndIf
+        Else
+            Display FormViolationRecord
+        EndElse
+    End barButtonViewViolationRecord_Click
+
+    Begin barButtonViewReportAbsence_Click
+        If FormReportAbsence is exist Then
+            Activate FormReportAbsence
+        EndIf
+        Else
+            Display FormReportAbsence
+        EndElse
+    End barButtonViewReportAbsence_Click
+
+End FormMain

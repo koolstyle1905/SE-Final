@@ -1,3 +1,4 @@
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Tests.dll.config
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Tests.dll
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\Tests.pdb
@@ -15,6 +16,5 @@ C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\AutoMapper.xml
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\EntityFramework.xml
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\bin\Debug\nunit.framework.xml
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.dll
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Tests\obj\Debug\Tests.pdb

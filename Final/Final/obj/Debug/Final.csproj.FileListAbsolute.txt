@@ -10,24 +10,29 @@ C:\Users\seven  64bit\Desktop\Final\Final\Final\obj\Debug\Final.pdb
 D:\FINAL\SE-Final new\trunk\Final\bin\Final.exe.config
 D:\FINAL\SE-Final new\trunk\Final\Final\obj\Debug\Final.exe
 D:\FINAL\SE-Final new\trunk\Final\Final\obj\Debug\Final.pdb
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.exe.config
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.exe
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.pdb
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.csprojResolveAssemblyReference.cache
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormParking2.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormLateArrival.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormViolationRecord.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormAddStudent.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormChangePassword.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormConfig.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormContactUs.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormLogin.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormMain.resources
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormPermission.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormAddParking.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormAddPermission.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormReportAbsence.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormRoom.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormStudent.resources
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormViolationRecord.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormAddViolationRecord.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.Properties.Resources.resources
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.csproj.GenerateResource.Cache
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.exe.licenses
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.exe.config
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.exe
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\bin\Final.pdb
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.exe
 C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.pdb
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormContact.resources
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormChangePassword.resources
-C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormParking.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.FormTemporaryAbsence.resources
+C:\Users\Neptune\OneDrive\GitHub\SE-Final\Final\Final\obj\Debug\Final.Form1.resources

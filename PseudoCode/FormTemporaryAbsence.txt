@@ -1,0 +1,7 @@
+Begin FormTemporaryAbsence
+
+    Begin FormTemporaryAbsence_Load
+        Fill violation records form the database to the gridControlViolationRecord
+    End FormTemporaryAbsence_Load
+
+End FormTemporaryAbsence

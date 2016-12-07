@@ -1,0 +1,7 @@
+Begin FormViolationRecord
+
+    Begin FormViolationRecord_Load
+        Fill violation records form the database to the gridControlViolationRecord
+    End FormViolationRecord_Load
+
+End FormViolationRecord

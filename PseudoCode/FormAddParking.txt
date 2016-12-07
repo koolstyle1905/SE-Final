@@ -1,0 +1,26 @@
+Begin FormAddParking
+
+    Begin FormAddParking_Load
+        Fill students form the database to lookUpEditStudent
+    End FormAddParking_Load
+
+    Begin lookUpEditStudent_EditValueChanged
+        Binding student information form selected student to the textBoxs
+    End lookUpEditStudent_EditValueChanged
+
+    Begin buttonConfirm_Click
+        If input information is empty Then
+            Display "Please fill in all fields."
+            Return
+        EndIf
+        Else
+            Add parking information to the database
+            Delete FormAddParking
+        EndElse
+    End buttonConfirm_Click
+
+    Begin buttonReset_Click
+        Clear all input information
+    End buttonReset_Click
+
+End FormAddParking

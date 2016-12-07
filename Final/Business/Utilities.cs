@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using AutoMapper;
+using DataAccess;
+using DataAccess.Domain;
+using DataTransfer;
 
 namespace Business
 {
@@ -38,6 +43,31 @@ namespace Business
 				return prefixId + zeroNumber + nextId;
 			}
 			return prefixId + nextId;
+		}
+
+
+
+		public static List<ReportAbsenceDto> rp()
+		{
+			using (var d = new UnitOfWork())
+			{
+				return Mapper.Map<List<ReportAbsence>, List<ReportAbsenceDto>>(d.rp.ToList());
+			}
+		}
+
+		public static List<ViolationRecordDto> Violation()
+		{
+			using (var d = new UnitOfWork())
+			{
+				return Mapper.Map<List<ViolationRecord>, List<ViolationRecordDto>>(d.violationRecords.ToList());
+			}
+		}
+
+		public static List<LateArrivalDto> LateArrival()
+		{
+			using (var d = new UnitOfWork())
+			{
+				return Mapper.Map<List<LateArrivalInfo>, List<LateArrivalDto>>(d.lateArrivals.ToList());}
 		}
 	}
 }

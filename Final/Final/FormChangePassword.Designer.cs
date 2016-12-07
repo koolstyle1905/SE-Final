@@ -70,19 +70,19 @@
 			// 
 			// simpleButton2
 			// 
-			this.simpleButton2.Location = new System.Drawing.Point(100, 178);
+			this.simpleButton2.Location = new System.Drawing.Point(100, 182);
 			this.simpleButton2.Name = "simpleButton2";
 			this.simpleButton2.Size = new System.Drawing.Size(85, 23);
 			this.simpleButton2.TabIndex = 7;
-			this.simpleButton2.Text = "Cancel";
+			this.simpleButton2.Text = "Reset";
 			// 
 			// simpleButton1
 			// 
-			this.simpleButton1.Location = new System.Drawing.Point(5, 178);
+			this.simpleButton1.Location = new System.Drawing.Point(5, 181);
 			this.simpleButton1.Name = "simpleButton1";
 			this.simpleButton1.Size = new System.Drawing.Size(85, 23);
 			this.simpleButton1.TabIndex = 6;
-			this.simpleButton1.Text = "Update";
+			this.simpleButton1.Text = "Confirm";
 			// 
 			// textEdit3
 			// 

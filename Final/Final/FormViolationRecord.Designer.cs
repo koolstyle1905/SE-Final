@@ -28,211 +28,140 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-			this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-			this.txtClassId = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-			this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-			this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-			this.txtStudentId = new DevComponents.DotNetBar.Controls.TextBoxX();
-			this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-			this.btnComfirm = new DevExpress.XtraEditors.SimpleButton();
-			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-			this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-			this.groupControl1.SuspendLayout();
+			this.components = new System.ComponentModel.Container();
+			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+			this.violationRecordDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.colViolationId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colEmployeeId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colStudent = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.violationRecordDtoBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// groupControl1
+			// gridControl1
 			// 
-			this.groupControl1.Controls.Add(this.textBoxX1);
-			this.groupControl1.Controls.Add(this.labelControl3);
-			this.groupControl1.Controls.Add(this.btnComfirm);
-			this.groupControl1.Controls.Add(this.textBoxX4);
-			this.groupControl1.Controls.Add(this.labelControl1);
-			this.groupControl1.Controls.Add(this.txtClassId);
-			this.groupControl1.Controls.Add(this.labelControl7);
-			this.groupControl1.Controls.Add(this.textBoxX3);
-			this.groupControl1.Controls.Add(this.labelControl5);
-			this.groupControl1.Controls.Add(this.textBoxX5);
-			this.groupControl1.Controls.Add(this.labelControl2);
-			this.groupControl1.Controls.Add(this.txtStudentId);
-			this.groupControl1.Controls.Add(this.labelControl6);
-			this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.groupControl1.Location = new System.Drawing.Point(0, 0);
-			this.groupControl1.Name = "groupControl1";
-			this.groupControl1.Size = new System.Drawing.Size(289, 346);
-			this.groupControl1.TabIndex = 0;
-			this.groupControl1.Text = "Student Information";
+			this.gridControl1.DataSource = this.violationRecordDtoBindingSource;
+			this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.gridControl1.Location = new System.Drawing.Point(0, 0);
+			this.gridControl1.MainView = this.gridView1;
+			this.gridControl1.Name = "gridControl1";
+			this.gridControl1.Size = new System.Drawing.Size(630, 523);
+			this.gridControl1.TabIndex = 0;
+			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
 			// 
-			// textBoxX4
+			// violationRecordDtoBindingSource
 			// 
+			this.violationRecordDtoBindingSource.DataSource = typeof(DataTransfer.ViolationRecordDto);
 			// 
+			// gridView1
 			// 
+			this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colViolationId,
+            this.colEmployeeId,
+            this.colDescription,
+            this.colCreatedDate,
+            this.gridColumn1,
+            this.gridColumn2,
+            this.colStudent,
+            this.gridColumn3});
+			this.gridView1.GridControl = this.gridControl1;
+			this.gridView1.Name = "gridView1";
 			// 
-			this.textBoxX4.Border.Class = "TextBoxBorder";
-			this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX4.Location = new System.Drawing.Point(155, 95);
-			this.textBoxX4.Name = "textBoxX4";
-			this.textBoxX4.PreventEnterBeep = true;
-			this.textBoxX4.Size = new System.Drawing.Size(122, 23);
-			this.textBoxX4.TabIndex = 25;
+			// colViolationId
 			// 
-			// labelControl1
+			this.colViolationId.FieldName = "ViolationId";
+			this.colViolationId.Name = "colViolationId";
+			this.colViolationId.Visible = true;
+			this.colViolationId.VisibleIndex = 0;
 			// 
-			this.labelControl1.Location = new System.Drawing.Point(19, 39);
-			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(64, 16);
-			this.labelControl1.TabIndex = 19;
-			this.labelControl1.Text = "Student Id:";
+			// colEmployeeId
 			// 
-			// txtClassId
+			this.colEmployeeId.FieldName = "EmployeeId";
+			this.colEmployeeId.Name = "colEmployeeId";
+			this.colEmployeeId.Visible = true;
+			this.colEmployeeId.VisibleIndex = 1;
 			// 
+			// colDescription
 			// 
+			this.colDescription.FieldName = "Description";
+			this.colDescription.Name = "colDescription";
+			this.colDescription.Visible = true;
+			this.colDescription.VisibleIndex = 2;
 			// 
+			// colCreatedDate
 			// 
-			this.txtClassId.Border.Class = "TextBoxBorder";
-			this.txtClassId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.txtClassId.Location = new System.Drawing.Point(155, 124);
-			this.txtClassId.Name = "txtClassId";
-			this.txtClassId.PreventEnterBeep = true;
-			this.txtClassId.Size = new System.Drawing.Size(122, 23);
-			this.txtClassId.TabIndex = 26;
+			this.colCreatedDate.FieldName = "CreatedDate";
+			this.colCreatedDate.Name = "colCreatedDate";
+			this.colCreatedDate.Visible = true;
+			this.colCreatedDate.VisibleIndex = 3;
 			// 
-			// labelControl7
+			// gridColumn1
 			// 
-			this.labelControl7.Location = new System.Drawing.Point(19, 155);
-			this.labelControl7.Name = "labelControl7";
-			this.labelControl7.Size = new System.Drawing.Size(53, 16);
-			this.labelControl7.TabIndex = 18;
-			this.labelControl7.Text = "Room Id:";
+			this.gridColumn1.Caption = "Student Id";
+			this.gridColumn1.FieldName = "Student.StudentId";
+			this.gridColumn1.Name = "gridColumn1";
+			this.gridColumn1.Visible = true;
+			this.gridColumn1.VisibleIndex = 4;
 			// 
-			// textBoxX3
+			// gridColumn2
 			// 
+			this.gridColumn2.Caption = "Room Id";
+			this.gridColumn2.FieldName = "Student.RoomId";
+			this.gridColumn2.Name = "gridColumn2";
+			this.gridColumn2.Visible = true;
+			this.gridColumn2.VisibleIndex = 5;
 			// 
+			// colStudent
 			// 
+			this.colStudent.Caption = "Student Name";
+			this.colStudent.FieldName = "Student.Name";
+			this.colStudent.Name = "colStudent";
+			this.colStudent.Visible = true;
+			this.colStudent.VisibleIndex = 7;
 			// 
-			this.textBoxX3.Border.Class = "TextBoxBorder";
-			this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX3.Location = new System.Drawing.Point(155, 66);
-			this.textBoxX3.Name = "textBoxX3";
-			this.textBoxX3.PreventEnterBeep = true;
-			this.textBoxX3.Size = new System.Drawing.Size(122, 23);
-			this.textBoxX3.TabIndex = 22;
+			// gridColumn3
 			// 
-			// labelControl5
+			this.gridColumn3.Caption = "Gender";
+			this.gridColumn3.FieldName = "Student.Gender";
+			this.gridColumn3.Name = "gridColumn3";
+			this.gridColumn3.Visible = true;
+			this.gridColumn3.VisibleIndex = 6;
 			// 
-			this.labelControl5.Location = new System.Drawing.Point(19, 68);
-			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(86, 16);
-			this.labelControl5.TabIndex = 17;
-			this.labelControl5.Text = "Student Name:";
-			// 
-			// textBoxX5
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX5.Border.Class = "TextBoxBorder";
-			this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX5.Location = new System.Drawing.Point(155, 153);
-			this.textBoxX5.Name = "textBoxX5";
-			this.textBoxX5.PreventEnterBeep = true;
-			this.textBoxX5.Size = new System.Drawing.Size(122, 23);
-			this.textBoxX5.TabIndex = 23;
-			// 
-			// labelControl2
-			// 
-			this.labelControl2.Location = new System.Drawing.Point(19, 126);
-			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(40, 16);
-			this.labelControl2.TabIndex = 21;
-			this.labelControl2.Text = "Falcuty";
-			// 
-			// txtStudentId
-			// 
-			// 
-			// 
-			// 
-			this.txtStudentId.Border.Class = "TextBoxBorder";
-			this.txtStudentId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.txtStudentId.Location = new System.Drawing.Point(155, 37);
-			this.txtStudentId.Name = "txtStudentId";
-			this.txtStudentId.PreventEnterBeep = true;
-			this.txtStudentId.Size = new System.Drawing.Size(122, 23);
-			this.txtStudentId.TabIndex = 24;
-			// 
-			// labelControl6
-			// 
-			this.labelControl6.Location = new System.Drawing.Point(19, 97);
-			this.labelControl6.Name = "labelControl6";
-			this.labelControl6.Size = new System.Drawing.Size(50, 16);
-			this.labelControl6.TabIndex = 20;
-			this.labelControl6.Text = "Class Id:";
-			// 
-			// btnComfirm
-			// 
-			this.btnComfirm.Location = new System.Drawing.Point(98, 298);
-			this.btnComfirm.Name = "btnComfirm";
-			this.btnComfirm.Size = new System.Drawing.Size(96, 36);
-			this.btnComfirm.TabIndex = 28;
-			this.btnComfirm.Text = "Confirm";
-			// 
-			// labelControl3
-			// 
-			this.labelControl3.Location = new System.Drawing.Point(19, 189);
-			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(68, 16);
-			this.labelControl3.TabIndex = 29;
-			this.labelControl3.Text = "Description:";
-			// 
-			// textBoxX1
-			// 
-			// 
-			// 
-			// 
-			this.textBoxX1.Border.Class = "TextBoxBorder";
-			this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-			this.textBoxX1.Location = new System.Drawing.Point(19, 211);
-			this.textBoxX1.Multiline = true;
-			this.textBoxX1.Name = "textBoxX1";
-			this.textBoxX1.PreventEnterBeep = true;
-			this.textBoxX1.Size = new System.Drawing.Size(258, 81);
-			this.textBoxX1.TabIndex = 30;
-			// 
-			// FormViolationRecord
+			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(289, 346);
-			this.Controls.Add(this.groupControl1);
-			this.Name = "FormViolationRecord";
+			this.ClientSize = new System.Drawing.Size(630, 523);
+			this.Controls.Add(this.gridControl1);
+			this.Name = "Form2";
 			this.Text = "FormViolationRecord";
-			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-			this.groupControl1.ResumeLayout(false);
-			this.groupControl1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.violationRecordDtoBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private DevExpress.XtraEditors.GroupControl groupControl1;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-		private DevExpress.XtraEditors.LabelControl labelControl1;
-		private DevComponents.DotNetBar.Controls.TextBoxX txtClassId;
-		private DevExpress.XtraEditors.LabelControl labelControl7;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-		private DevExpress.XtraEditors.LabelControl labelControl5;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-		private DevExpress.XtraEditors.LabelControl labelControl2;
-		private DevComponents.DotNetBar.Controls.TextBoxX txtStudentId;
-		private DevExpress.XtraEditors.LabelControl labelControl6;
-		private DevExpress.XtraEditors.SimpleButton btnComfirm;
-		private DevExpress.XtraEditors.LabelControl labelControl3;
-		private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+		private DevExpress.XtraGrid.GridControl gridControl1;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+		private System.Windows.Forms.BindingSource violationRecordDtoBindingSource;
+		private DevExpress.XtraGrid.Columns.GridColumn colViolationId;
+		private DevExpress.XtraGrid.Columns.GridColumn colEmployeeId;
+		private DevExpress.XtraGrid.Columns.GridColumn colDescription;
+		private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+		private DevExpress.XtraGrid.Columns.GridColumn colStudent;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
 	}
 }

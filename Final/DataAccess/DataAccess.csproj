@@ -52,8 +52,10 @@
     <Compile Include="Repositories\PriorityRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Repositories\RoomRepository.cs" />
+    <Compile Include="Repositories\Rp.cs" />
     <Compile Include="Repositories\StudentRepository.cs" />
     <Compile Include="Repositories\TemporaryAbsenceRepository.cs" />
+    <Compile Include="Repositories\ViolationRecordRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="Domain\ReportAbsence.cs" />
     <Compile Include="Domain\Building.cs" />

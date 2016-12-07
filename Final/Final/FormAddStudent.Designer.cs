@@ -304,9 +304,9 @@
 			// 
 			this.labelControl1.Location = new System.Drawing.Point(16, 40);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(65, 16);
+			this.labelControl1.Size = new System.Drawing.Size(64, 16);
 			this.labelControl1.TabIndex = 0;
-			this.labelControl1.Text = "Student ID:";
+			this.labelControl1.Text = "Student Id:";
 			// 
 			// txtName
 			// 
@@ -359,9 +359,9 @@
 			// 
 			this.labelControl2.Location = new System.Drawing.Point(16, 96);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(51, 16);
+			this.labelControl2.Size = new System.Drawing.Size(50, 16);
 			this.labelControl2.TabIndex = 1;
-			this.labelControl2.Text = "Class ID:";
+			this.labelControl2.Text = "Class Id:";
 			// 
 			// labelControl11
 			// 
@@ -475,9 +475,9 @@
 			// 
 			this.labelControl12.Location = new System.Drawing.Point(14, 94);
 			this.labelControl12.Name = "labelControl12";
-			this.labelControl12.Size = new System.Drawing.Size(54, 16);
+			this.labelControl12.Size = new System.Drawing.Size(53, 16);
 			this.labelControl12.TabIndex = 23;
-			this.labelControl12.Text = "Room ID:";
+			this.labelControl12.Text = "Room Id:";
 			// 
 			// lookUpEditFloor
 			// 
@@ -496,17 +496,17 @@
 			// 
 			this.labelControl13.Location = new System.Drawing.Point(14, 41);
 			this.labelControl13.Name = "labelControl13";
-			this.labelControl13.Size = new System.Drawing.Size(65, 16);
+			this.labelControl13.Size = new System.Drawing.Size(64, 16);
 			this.labelControl13.TabIndex = 29;
-			this.labelControl13.Text = "Building ID:";
+			this.labelControl13.Text = "Building Id:";
 			// 
 			// labelControl14
 			// 
 			this.labelControl14.Location = new System.Drawing.Point(14, 66);
 			this.labelControl14.Name = "labelControl14";
-			this.labelControl14.Size = new System.Drawing.Size(50, 16);
+			this.labelControl14.Size = new System.Drawing.Size(49, 16);
 			this.labelControl14.TabIndex = 30;
-			this.labelControl14.Text = "Floor ID:";
+			this.labelControl14.Text = "Floor Id:";
 			// 
 			// btnComfirm
 			// 
